@@ -6,6 +6,7 @@ module tb (
   wire clk_hash;
   wire clk_shift;
   wire clk_trng;
+  wire [63:0] comp_to_misr;
   wire enable;
   wire gating;
   wire [63:0] hash_number;
@@ -17,7 +18,9 @@ module tb (
   wire reset;
   wire ro_clk;
   wire run;
+  wire serial_in;
   wire [31:0] signature;
+  wire [63:0] wrapper_data;
 
   integer fp;
 
@@ -37,16 +40,29 @@ module tb (
     .normal_mode ( normal_mode )
   );
 
+  comparator comparator (
+    .i1 ( hash_number ),
+    .i2 ( wrapper_data ),
+    .o ( comp_to_misr )
+  );
+
+  ser_par_register wrapper_reg (
+    .rst ( reset ),
+    .o ( wrapper_data ),
+    .clk ( clk_shift ),
+    .serial_in ( serial_in )
+  );
+
   rg misr (
     .rst ( reset ),
+    .clk ( clk_shift ),
     .injectors ( misr_injectors ),
-    .q ( signature ),
-    .clk ( clk_shift )
+    .q ( signature )
   );
 
   misr_xor_tree misr_xor_tree (
     .i1 ( random_number ),
-    .i2 ( hash_number ),
+    .i2 ( comp_to_misr ),
     .o ( misr_injectors )
   );
 
@@ -58,6 +74,7 @@ module tb (
     .gating ( gating ),
     .normal_mode ( normal_mode ),
     .clk_shift ( clk_shift ),
+    .serial_in ( serial_in ),
     .enable ( enable ),
     .ready ( ready ),
     .bist ( bist ),
@@ -305,6 +322,136 @@ module tb (
 // DFT_SIGNAL {hash_number[62]}
 // DFT_SIGNAL {hash_number[63]}
 // DFT_SIGNAL {normal_mode}
+// DFT_SIGNAL {wrapper_data[0]}
+// DFT_SIGNAL {wrapper_data[1]}
+// DFT_SIGNAL {wrapper_data[2]}
+// DFT_SIGNAL {wrapper_data[3]}
+// DFT_SIGNAL {wrapper_data[4]}
+// DFT_SIGNAL {wrapper_data[5]}
+// DFT_SIGNAL {wrapper_data[6]}
+// DFT_SIGNAL {wrapper_data[7]}
+// DFT_SIGNAL {wrapper_data[8]}
+// DFT_SIGNAL {wrapper_data[9]}
+// DFT_SIGNAL {wrapper_data[10]}
+// DFT_SIGNAL {wrapper_data[11]}
+// DFT_SIGNAL {wrapper_data[12]}
+// DFT_SIGNAL {wrapper_data[13]}
+// DFT_SIGNAL {wrapper_data[14]}
+// DFT_SIGNAL {wrapper_data[15]}
+// DFT_SIGNAL {wrapper_data[16]}
+// DFT_SIGNAL {wrapper_data[17]}
+// DFT_SIGNAL {wrapper_data[18]}
+// DFT_SIGNAL {wrapper_data[19]}
+// DFT_SIGNAL {wrapper_data[20]}
+// DFT_SIGNAL {wrapper_data[21]}
+// DFT_SIGNAL {wrapper_data[22]}
+// DFT_SIGNAL {wrapper_data[23]}
+// DFT_SIGNAL {wrapper_data[24]}
+// DFT_SIGNAL {wrapper_data[25]}
+// DFT_SIGNAL {wrapper_data[26]}
+// DFT_SIGNAL {wrapper_data[27]}
+// DFT_SIGNAL {wrapper_data[28]}
+// DFT_SIGNAL {wrapper_data[29]}
+// DFT_SIGNAL {wrapper_data[30]}
+// DFT_SIGNAL {wrapper_data[31]}
+// DFT_SIGNAL {wrapper_data[32]}
+// DFT_SIGNAL {wrapper_data[33]}
+// DFT_SIGNAL {wrapper_data[34]}
+// DFT_SIGNAL {wrapper_data[35]}
+// DFT_SIGNAL {wrapper_data[36]}
+// DFT_SIGNAL {wrapper_data[37]}
+// DFT_SIGNAL {wrapper_data[38]}
+// DFT_SIGNAL {wrapper_data[39]}
+// DFT_SIGNAL {wrapper_data[40]}
+// DFT_SIGNAL {wrapper_data[41]}
+// DFT_SIGNAL {wrapper_data[42]}
+// DFT_SIGNAL {wrapper_data[43]}
+// DFT_SIGNAL {wrapper_data[44]}
+// DFT_SIGNAL {wrapper_data[45]}
+// DFT_SIGNAL {wrapper_data[46]}
+// DFT_SIGNAL {wrapper_data[47]}
+// DFT_SIGNAL {wrapper_data[48]}
+// DFT_SIGNAL {wrapper_data[49]}
+// DFT_SIGNAL {wrapper_data[50]}
+// DFT_SIGNAL {wrapper_data[51]}
+// DFT_SIGNAL {wrapper_data[52]}
+// DFT_SIGNAL {wrapper_data[53]}
+// DFT_SIGNAL {wrapper_data[54]}
+// DFT_SIGNAL {wrapper_data[55]}
+// DFT_SIGNAL {wrapper_data[56]}
+// DFT_SIGNAL {wrapper_data[57]}
+// DFT_SIGNAL {wrapper_data[58]}
+// DFT_SIGNAL {wrapper_data[59]}
+// DFT_SIGNAL {wrapper_data[60]}
+// DFT_SIGNAL {wrapper_data[61]}
+// DFT_SIGNAL {wrapper_data[62]}
+// DFT_SIGNAL {wrapper_data[63]}
+// DFT_SIGNAL {comp_to_misr[0]}
+// DFT_SIGNAL {comp_to_misr[1]}
+// DFT_SIGNAL {comp_to_misr[2]}
+// DFT_SIGNAL {comp_to_misr[3]}
+// DFT_SIGNAL {comp_to_misr[4]}
+// DFT_SIGNAL {comp_to_misr[5]}
+// DFT_SIGNAL {comp_to_misr[6]}
+// DFT_SIGNAL {comp_to_misr[7]}
+// DFT_SIGNAL {comp_to_misr[8]}
+// DFT_SIGNAL {comp_to_misr[9]}
+// DFT_SIGNAL {comp_to_misr[10]}
+// DFT_SIGNAL {comp_to_misr[11]}
+// DFT_SIGNAL {comp_to_misr[12]}
+// DFT_SIGNAL {comp_to_misr[13]}
+// DFT_SIGNAL {comp_to_misr[14]}
+// DFT_SIGNAL {comp_to_misr[15]}
+// DFT_SIGNAL {comp_to_misr[16]}
+// DFT_SIGNAL {comp_to_misr[17]}
+// DFT_SIGNAL {comp_to_misr[18]}
+// DFT_SIGNAL {comp_to_misr[19]}
+// DFT_SIGNAL {comp_to_misr[20]}
+// DFT_SIGNAL {comp_to_misr[21]}
+// DFT_SIGNAL {comp_to_misr[22]}
+// DFT_SIGNAL {comp_to_misr[23]}
+// DFT_SIGNAL {comp_to_misr[24]}
+// DFT_SIGNAL {comp_to_misr[25]}
+// DFT_SIGNAL {comp_to_misr[26]}
+// DFT_SIGNAL {comp_to_misr[27]}
+// DFT_SIGNAL {comp_to_misr[28]}
+// DFT_SIGNAL {comp_to_misr[29]}
+// DFT_SIGNAL {comp_to_misr[30]}
+// DFT_SIGNAL {comp_to_misr[31]}
+// DFT_SIGNAL {comp_to_misr[32]}
+// DFT_SIGNAL {comp_to_misr[33]}
+// DFT_SIGNAL {comp_to_misr[34]}
+// DFT_SIGNAL {comp_to_misr[35]}
+// DFT_SIGNAL {comp_to_misr[36]}
+// DFT_SIGNAL {comp_to_misr[37]}
+// DFT_SIGNAL {comp_to_misr[38]}
+// DFT_SIGNAL {comp_to_misr[39]}
+// DFT_SIGNAL {comp_to_misr[40]}
+// DFT_SIGNAL {comp_to_misr[41]}
+// DFT_SIGNAL {comp_to_misr[42]}
+// DFT_SIGNAL {comp_to_misr[43]}
+// DFT_SIGNAL {comp_to_misr[44]}
+// DFT_SIGNAL {comp_to_misr[45]}
+// DFT_SIGNAL {comp_to_misr[46]}
+// DFT_SIGNAL {comp_to_misr[47]}
+// DFT_SIGNAL {comp_to_misr[48]}
+// DFT_SIGNAL {comp_to_misr[49]}
+// DFT_SIGNAL {comp_to_misr[50]}
+// DFT_SIGNAL {comp_to_misr[51]}
+// DFT_SIGNAL {comp_to_misr[52]}
+// DFT_SIGNAL {comp_to_misr[53]}
+// DFT_SIGNAL {comp_to_misr[54]}
+// DFT_SIGNAL {comp_to_misr[55]}
+// DFT_SIGNAL {comp_to_misr[56]}
+// DFT_SIGNAL {comp_to_misr[57]}
+// DFT_SIGNAL {comp_to_misr[58]}
+// DFT_SIGNAL {comp_to_misr[59]}
+// DFT_SIGNAL {comp_to_misr[60]}
+// DFT_SIGNAL {comp_to_misr[61]}
+// DFT_SIGNAL {comp_to_misr[62]}
+// DFT_SIGNAL {comp_to_misr[63]}
+// DFT_SIGNAL {clk_shift}
+// DFT_SIGNAL {serial_in}
 // DFT_SIGNAL {misr_injectors[0]}
 // DFT_SIGNAL {misr_injectors[1]}
 // DFT_SIGNAL {misr_injectors[2]}
@@ -369,7 +516,6 @@ module tb (
 // DFT_SIGNAL {signature[29]}
 // DFT_SIGNAL {signature[30]}
 // DFT_SIGNAL {signature[31]}
-// DFT_SIGNAL {clk_shift}
 // DFT_SIGNAL {enable}
 // DFT_SIGNAL {ready}
 // DFT_SIGNAL {bist}
