@@ -1,0 +1,431 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x617BD66009326B2A",
+      "device": "xc7a15tcpg236-1",
+      "gen_directory": "../../../../random_number_generator.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "clk_wiz_0": "",
+      "reset_generator_0": "",
+      "util_vector_logic_0": "",
+      "util_vector_logic_1": "",
+      "rnd_gen_top_0": "",
+      "pulse_generator_0": ""
+    },
+    "ports": {
+      "sysclk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_clk_in1_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "r_c_input": {
+        "direction": "I"
+      },
+      "output_r": {
+        "direction": "O"
+      },
+      "clock_rnd": {
+        "type": "clk",
+        "direction": "O",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_rnd_gen_top_0_0_clock_rnd",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "ready": {
+        "direction": "O",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "PortType": {
+            "value": "undef",
+            "value_src": "ip_prop"
+          },
+          "PortType.PROP_SRC": {
+            "value": "false",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "series": {
+        "direction": "I",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "PortType": {
+            "value": "undef",
+            "value_src": "ip_prop"
+          },
+          "PortType.PROP_SRC": {
+            "value": "false",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "result": {
+        "direction": "O",
+        "left": "15",
+        "right": "0"
+      }
+    },
+    "components": {
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "design_1_clk_wiz_0_0",
+        "xci_path": "ip\\design_1_clk_wiz_0_0\\design_1_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "parameters": {
+          "CLKIN1_JITTER_PS": {
+            "value": "833.33"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "522.315"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "668.310"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "50"
+          },
+          "CLK_IN1_BOARD_INTERFACE": {
+            "value": "sys_clock"
+          },
+          "CLK_OUT1_PORT": {
+            "value": "clock"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "62.500"
+          },
+          "MMCM_CLKIN1_PERIOD": {
+            "value": "83.333"
+          },
+          "MMCM_CLKIN2_PERIOD": {
+            "value": "10.0"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "15.000"
+          },
+          "USE_LOCKED": {
+            "value": "false"
+          },
+          "USE_RESET": {
+            "value": "false"
+          }
+        }
+      },
+      "reset_generator_0": {
+        "vlnv": "xilinx.com:module_ref:reset_generator:1.0",
+        "xci_name": "design_1_reset_generator_0_0",
+        "xci_path": "ip\\design_1_reset_generator_0_0\\design_1_reset_generator_0_0.xci",
+        "inst_hier_path": "reset_generator_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "reset_generator",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clock": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "ext_reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "O"
+          }
+        }
+      },
+      "util_vector_logic_0": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "design_1_util_vector_logic_0_0",
+        "xci_path": "ip\\design_1_util_vector_logic_0_0\\design_1_util_vector_logic_0_0.xci",
+        "inst_hier_path": "util_vector_logic_0",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "util_vector_logic_1": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "design_1_util_vector_logic_0_1",
+        "xci_path": "ip\\design_1_util_vector_logic_0_1\\design_1_util_vector_logic_0_1.xci",
+        "inst_hier_path": "util_vector_logic_1",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "and"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "rnd_gen_top_0": {
+        "vlnv": "xilinx.com:module_ref:rnd_gen_top:1.0",
+        "xci_name": "design_1_rnd_gen_top_0_0",
+        "xci_path": "ip\\design_1_rnd_gen_top_0_0\\design_1_rnd_gen_top_0_0.xci",
+        "inst_hier_path": "rnd_gen_top_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "rnd_gen_top",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "r_c_input": {
+            "direction": "I"
+          },
+          "output_r": {
+            "direction": "O"
+          },
+          "clock": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "result": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "ready": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "clock_rnd": {
+            "type": "clk",
+            "direction": "O"
+          }
+        }
+      },
+      "pulse_generator_0": {
+        "vlnv": "xilinx.com:module_ref:pulse_generator:1.0",
+        "xci_name": "design_1_pulse_generator_0_0",
+        "xci_path": "ip\\design_1_pulse_generator_0_0\\design_1_pulse_generator_0_0.xci",
+        "inst_hier_path": "pulse_generator_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pulse_generator",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clock": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "trigger": {
+            "direction": "I",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "pulse": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          }
+        }
+      }
+    },
+    "nets": {
+      "clk_wiz_0_clock": {
+        "ports": [
+          "clk_wiz_0/clock",
+          "reset_generator_0/clock",
+          "rnd_gen_top_0/clock",
+          "pulse_generator_0/clock"
+        ]
+      },
+      "clk_in1_0_1": {
+        "ports": [
+          "sysclk",
+          "clk_wiz_0/clk_in1"
+        ]
+      },
+      "rnd_gen_top_0_ready": {
+        "ports": [
+          "rnd_gen_top_0/ready",
+          "util_vector_logic_1/Op2",
+          "pulse_generator_0/trigger"
+        ]
+      },
+      "r_c_input_0_1": {
+        "ports": [
+          "r_c_input",
+          "rnd_gen_top_0/r_c_input"
+        ]
+      },
+      "rnd_gen_top_0_output_r": {
+        "ports": [
+          "rnd_gen_top_0/output_r",
+          "output_r"
+        ]
+      },
+      "rnd_gen_top_0_clock_rnd": {
+        "ports": [
+          "rnd_gen_top_0/clock_rnd",
+          "clock_rnd"
+        ]
+      },
+      "reset_generator_0_reset": {
+        "ports": [
+          "reset_generator_0/reset",
+          "rnd_gen_top_0/reset"
+        ]
+      },
+      "util_vector_logic_0_Res": {
+        "ports": [
+          "util_vector_logic_0/Res",
+          "ready"
+        ]
+      },
+      "pulse_generator_0_pulse": {
+        "ports": [
+          "pulse_generator_0/pulse",
+          "util_vector_logic_0/Op1"
+        ]
+      },
+      "Op1_0_1": {
+        "ports": [
+          "series",
+          "util_vector_logic_1/Op1"
+        ]
+      },
+      "util_vector_logic_1_Res": {
+        "ports": [
+          "util_vector_logic_1/Res",
+          "reset_generator_0/ext_reset"
+        ]
+      },
+      "rnd_gen_top_0_result": {
+        "ports": [
+          "rnd_gen_top_0/result",
+          "result"
+        ]
+      }
+    }
+  }
+}

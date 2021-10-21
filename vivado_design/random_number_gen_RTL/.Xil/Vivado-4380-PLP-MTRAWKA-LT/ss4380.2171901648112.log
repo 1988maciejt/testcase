@@ -1,0 +1,14 @@
+srcscan starts
+INFO: analyzing module design_1 (VERI-9002)
+Listing tops:
+VeriTop library:xil_defaultlib mod:design_1
+END of tops
+c:/Users/mtrawka/Documents/aio/testcases/mentor/security/proof_of_concept/vivado_design/random_number_gen_RTL/random_number_gen_RTL.gen/sources_1/bd/design_1/synth/design_1.v(13): INFO: compiling module 'design_1_default' (VERI-1018)
+c:/Users/mtrawka/Documents/aio/testcases/mentor/security/proof_of_concept/vivado_design/random_number_gen_RTL/random_number_gen_RTL.gen/sources_1/bd/design_1/synth/design_1.v(53): WARNING: Module <design_1_SPI_0_0> not found while processing module instance <SPI_0> (VERI-1063)
+c:/Users/mtrawka/Documents/aio/testcases/mentor/security/proof_of_concept/vivado_design/random_number_gen_RTL/random_number_gen_RTL.gen/sources_1/bd/design_1/synth/design_1.v(60): WARNING: Module <design_1_clk_wiz_0_0> not found while processing module instance <clk_wiz_0> (VERI-1063)
+c:/Users/mtrawka/Documents/aio/testcases/mentor/security/proof_of_concept/vivado_design/random_number_gen_RTL/random_number_gen_RTL.gen/sources_1/bd/design_1/synth/design_1.v(63): WARNING: Module <design_1_inv_chain_0_0> not found while processing module instance <inv_chain_0> (VERI-1063)
+c:/Users/mtrawka/Documents/aio/testcases/mentor/security/proof_of_concept/vivado_design/random_number_gen_RTL/random_number_gen_RTL.gen/sources_1/bd/design_1/synth/design_1.v(67): WARNING: Module <design_1_latch_n_0_0> not found while processing module instance <latch_n_0> (VERI-1063)
+c:/Users/mtrawka/Documents/aio/testcases/mentor/security/proof_of_concept/vivado_design/random_number_gen_RTL/random_number_gen_RTL.gen/sources_1/bd/design_1/synth/design_1.v(71): WARNING: Module <design_1_pulse_formatter_0_0> not found while processing module instance <pulse_formatter_0> (VERI-1063)
+c:/Users/mtrawka/Documents/aio/testcases/mentor/security/proof_of_concept/vivado_design/random_number_gen_RTL/random_number_gen_RTL.gen/sources_1/bd/design_1/synth/design_1.v(74): WARNING: Module <design_1_r2o_generic_v2_0_0> not found while processing module instance <r2o_generic_v2_0> (VERI-1063)
+c:/Users/mtrawka/Documents/aio/testcases/mentor/security/proof_of_concept/vivado_design/random_number_gen_RTL/random_number_gen_RTL.gen/sources_1/bd/design_1/synth/design_1.v(77): WARNING: Module <design_1_ready_counter_0_0> not found while processing module instance <ready_counter_0> (VERI-1063)
+srcscan exits with return value 0

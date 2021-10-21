@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Jul 12 23:32:31 2021
+# Process ID: 14348
+# Current directory: C:/Users/mtrawka/Documents/aio/testcases/mentor/security/proof_of_concept/vivado_design/random_number_gen_RTL
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18468 C:\Users\mtrawka\Documents\aio\testcases\mentor\security\proof_of_concept\vivado_design\random_number_gen_RTL\random_number_gen_RTL.xpr
+# Log file: C:/Users/mtrawka/Documents/aio/testcases/mentor/security/proof_of_concept/vivado_design/random_number_gen_RTL/vivado.log
+# Journal file: C:/Users/mtrawka/Documents/aio/testcases/mentor/security/proof_of_concept/vivado_design/random_number_gen_RTL\vivado.jou
+#-----------------------------------------------------------
+start_gui
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Jul 12 23:33:25 2021...

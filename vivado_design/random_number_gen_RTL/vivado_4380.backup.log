@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Tue Jul 13 09:28:43 2021
+# Process ID: 4380
+# Current directory: C:/Users/mtrawka/Documents/aio/testcases/mentor/security/proof_of_concept/vivado_design/random_number_gen_RTL
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8680 C:\Users\mtrawka\Documents\aio\testcases\mentor\security\proof_of_concept\vivado_design\random_number_gen_RTL\random_number_gen_RTL.xpr
+# Log file: C:/Users/mtrawka/Documents/aio/testcases/mentor/security/proof_of_concept/vivado_design/random_number_gen_RTL/vivado.log
+# Journal file: C:/Users/mtrawka/Documents/aio/testcases/mentor/security/proof_of_concept/vivado_design/random_number_gen_RTL\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/mtrawka/Documents/aio/testcases/mentor/security/proof_of_concept/vivado_design/random_number_gen_RTL/random_number_gen_RTL.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/mtrawka/Documents/aio/testcases/mentor/security/proof_of_concept/vivado_design/random_number_gen_RTL'
+INFO: [Project 1-313] Project file moved from 'D:/aio/testcases/mentor/security/proof_of_concept/vivado_design/random_number_gen_RTL' since last save.
+Scanning sources...
+Finished scanning sources
+CRITICAL WARNING: [Board 49-67] The board_part definition was not found for digilentinc.com:cmod_a7-15t:part0:1.1. This can happen sometimes when you use custom board part. You can resolve this issue by setting 'board.repoPaths' parameter, pointing to the location of custom board files. Valid board_part values can be retrieved with the 'get_board_parts' Tcl command.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'design_1.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+design_1_clk_wiz_0_0
+
+INFO: [Project 1-230] Project 'random_number_gen_RTL.xpr' upgraded for this version of Vivado.
+open_project: Time (s): cpu = 00:00:32 ; elapsed = 00:00:13 . Memory (MB): peak = 1452.402 ; gain = 0.000
+report_ip_status -name ip_status 
+report_ip_status: Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 1452.402 ; gain = 0.000
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 13 09:30:15 2021...

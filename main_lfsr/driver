@@ -1,0 +1,16 @@
+set LFSR_SIZE		64
+set LFSR_COEFFS		9
+set LFSR_BALANCING	4
+set LFSR_TYPE		galois
+set MODULE_NAME		main_lfsr
+
+set polys [poly_list_primitives $LFSR_SIZE $LFSR_COEFFS -n 1 -bal $LFSR_BALANCING -disp 0]
+
+set poly [lindex $polys 0]
+
+set lfsr [lfsr_create $poly $LFSR_TYPE]
+
+lfsr_verilog_write $lfsr ${MODULE_NAME}.v -name ${MODULE_NAME} -i 1
+
+
+

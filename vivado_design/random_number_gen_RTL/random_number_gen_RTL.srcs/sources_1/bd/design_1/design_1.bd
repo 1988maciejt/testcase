@@ -1,0 +1,439 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x47815BEBA0AB034C",
+      "device": "xc7a15tcpg236-1",
+      "gen_directory": "../../../../random_number_gen_RTL.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2021.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "latch_n_0": "",
+      "SPI_0": "",
+      "clk_wiz_0": "",
+      "pulse_formatter_0": "",
+      "ready_counter_0": "",
+      "ro_injector_0": "",
+      "r2o_ring_gen_64_0": ""
+    },
+    "ports": {
+      "sysclk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "pio3"
+          },
+          "CLK_DOMAIN": {
+            "value": "design_1_sysclk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "SCLK": {
+        "direction": "I"
+      },
+      "SDIN": {
+        "direction": "I"
+      },
+      "SDOUT": {
+        "direction": "O"
+      },
+      "SSEL": {
+        "direction": "I"
+      },
+      "reset": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "ready": {
+        "direction": "O"
+      },
+      "test_pulse": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "latch_n_0": {
+        "vlnv": "xilinx.com:module_ref:latch_n:1.0",
+        "xci_name": "design_1_latch_n_0_0",
+        "xci_path": "ip\\design_1_latch_n_0_0\\design_1_latch_n_0_0.xci",
+        "inst_hier_path": "latch_n_0",
+        "parameters": {
+          "N": {
+            "value": "64"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "latch_n",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "I": {
+            "direction": "I",
+            "left": "63",
+            "right": "0",
+            "parameters": {
+              "PortWidth": {
+                "value": "64",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "O": {
+            "direction": "O",
+            "left": "63",
+            "right": "0"
+          },
+          "strobe": {
+            "direction": "I"
+          }
+        }
+      },
+      "SPI_0": {
+        "vlnv": "xilinx.com:module_ref:SPI:1.0",
+        "xci_name": "design_1_SPI_0_0",
+        "xci_path": "ip\\design_1_SPI_0_0\\design_1_SPI_0_0.xci",
+        "inst_hier_path": "SPI_0",
+        "parameters": {
+          "N": {
+            "value": "64"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "SPI",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sys_clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "SCLK": {
+            "direction": "I"
+          },
+          "SDIN": {
+            "direction": "I"
+          },
+          "SSEL": {
+            "direction": "I"
+          },
+          "SDOUT": {
+            "direction": "O"
+          },
+          "data_in": {
+            "direction": "I",
+            "left": "63",
+            "right": "0"
+          }
+        }
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "design_1_clk_wiz_0_0",
+        "xci_path": "ip\\design_1_clk_wiz_0_0\\design_1_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "parameters": {
+          "CLKIN1_JITTER_PS": {
+            "value": "100.0"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "130.958"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "98.575"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "100"
+          },
+          "CLK_IN1_BOARD_INTERFACE": {
+            "value": "sys_clock"
+          },
+          "CLK_OUT1_PORT": {
+            "value": "spi_clock"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "10.000"
+          },
+          "MMCM_CLKIN1_PERIOD": {
+            "value": "10.000"
+          },
+          "MMCM_CLKIN2_PERIOD": {
+            "value": "10.000"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "10.000"
+          },
+          "USE_LOCKED": {
+            "value": "false"
+          },
+          "USE_RESET": {
+            "value": "false"
+          }
+        }
+      },
+      "pulse_formatter_0": {
+        "vlnv": "xilinx.com:module_ref:pulse_formatter:1.0",
+        "xci_name": "design_1_pulse_formatter_0_0",
+        "xci_path": "ip\\design_1_pulse_formatter_0_0\\design_1_pulse_formatter_0_0.xci",
+        "inst_hier_path": "pulse_formatter_0",
+        "parameters": {
+          "INV_COUNT": {
+            "value": "31"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pulse_formatter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "I": {
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "O": {
+            "direction": "O"
+          }
+        }
+      },
+      "ready_counter_0": {
+        "vlnv": "xilinx.com:module_ref:ready_counter:1.0",
+        "xci_name": "design_1_ready_counter_0_0",
+        "xci_path": "ip\\design_1_ready_counter_0_0\\design_1_ready_counter_0_0.xci",
+        "inst_hier_path": "ready_counter_0",
+        "parameters": {
+          "N": {
+            "value": "8"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ready_counter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "ready": {
+            "direction": "O"
+          },
+          "enable": {
+            "direction": "O"
+          },
+          "ro_clk_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "ro_injector_0": {
+        "vlnv": "xilinx.com:module_ref:ro_injector:1.0",
+        "xci_name": "design_1_ro_injector_0_0",
+        "xci_path": "ip\\design_1_ro_injector_0_0\\design_1_ro_injector_0_0.xci",
+        "inst_hier_path": "ro_injector_0",
+        "parameters": {
+          "N": {
+            "value": "64"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ro_injector",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "enable": {
+            "direction": "I"
+          },
+          "O": {
+            "direction": "O",
+            "left": "63",
+            "right": "0"
+          }
+        }
+      },
+      "r2o_ring_gen_64_0": {
+        "vlnv": "xilinx.com:module_ref:r2o_ring_gen_64:1.0",
+        "xci_name": "design_1_r2o_ring_gen_64_0_0",
+        "xci_path": "ip\\design_1_r2o_ring_gen_64_0_0\\design_1_r2o_ring_gen_64_0_0.xci",
+        "inst_hier_path": "r2o_ring_gen_64_0",
+        "parameters": {
+          "dense": {
+            "value": "1"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "r2o_ring_gen_64",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "injectors": {
+            "direction": "I",
+            "left": "63",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "enable": {
+            "direction": "I"
+          },
+          "o": {
+            "direction": "O",
+            "left": "63",
+            "right": "0",
+            "parameters": {
+              "PortWidth": {
+                "value": "64",
+                "value_src": "ip_prop"
+              }
+            }
+          }
+        }
+      }
+    },
+    "nets": {
+      "SCLK_0_1": {
+        "ports": [
+          "SCLK",
+          "SPI_0/SCLK"
+        ]
+      },
+      "SDIN_0_1": {
+        "ports": [
+          "SDIN",
+          "SPI_0/SDIN"
+        ]
+      },
+      "SPI_0_SDOUT": {
+        "ports": [
+          "SPI_0/SDOUT",
+          "SDOUT"
+        ]
+      },
+      "SSEL_0_1": {
+        "ports": [
+          "SSEL",
+          "SPI_0/SSEL"
+        ]
+      },
+      "clk_in1_0_1": {
+        "ports": [
+          "sysclk",
+          "clk_wiz_0/clk_in1"
+        ]
+      },
+      "clk_wiz_0_spi_clock": {
+        "ports": [
+          "clk_wiz_0/spi_clock",
+          "SPI_0/sys_clk"
+        ]
+      },
+      "enable_0_1": {
+        "ports": [
+          "ready_counter_0/enable",
+          "ro_injector_0/enable",
+          "r2o_ring_gen_64_0/enable"
+        ]
+      },
+      "latch_n_0_O": {
+        "ports": [
+          "latch_n_0/O",
+          "SPI_0/data_in"
+        ]
+      },
+      "pulse_formatter_0_O": {
+        "ports": [
+          "pulse_formatter_0/O",
+          "test_pulse"
+        ]
+      },
+      "r2o_ring_gen_64_0_o": {
+        "ports": [
+          "r2o_ring_gen_64_0/o",
+          "latch_n_0/I"
+        ]
+      },
+      "ready_counter_0_ready": {
+        "ports": [
+          "ready_counter_0/ready",
+          "ready",
+          "latch_n_0/strobe"
+        ]
+      },
+      "ready_counter_0_ro_clk_out": {
+        "ports": [
+          "ready_counter_0/ro_clk_out",
+          "r2o_ring_gen_64_0/clk"
+        ]
+      },
+      "reset_0_1": {
+        "ports": [
+          "reset",
+          "pulse_formatter_0/I",
+          "ready_counter_0/reset"
+        ]
+      },
+      "ro_injector_0_O": {
+        "ports": [
+          "ro_injector_0/O",
+          "r2o_ring_gen_64_0/injectors"
+        ]
+      }
+    }
+  }
+}

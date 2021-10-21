@@ -1,0 +1,480 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Aug  2 15:40:18 2021
+| Host         : PLP-MTRAWKA-LT running 64-bit major release  (build 9200)
+| Command      : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
+| Design       : design_1_wrapper
+| Device       : xc7a15tcpg236-1
+| Speed File   : -1
+| Design State : Fully Routed
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 72
++-------------+----------+-------------------------------------------------------------+------------+
+| Rule        | Severity | Description                                                 | Violations |
++-------------+----------+-------------------------------------------------------------+------------+
+| CFGBVS-1    | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties         | 1          |
+| LUTLP-2     | Warning  | Combinatorial Loop Allowed                                  | 5          |
+| PDRC-153    | Warning  | Gated clock check                                           | 65         |
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 1          |
++-------------+----------+-------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+CFGBVS-1#1 Warning
+Missing CFGBVS and CONFIG_VOLTAGE Design Properties  
+Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+Related violations: <none>
+
+LUTLP-2#1 Warning
+Combinatorial Loop Allowed  
+12 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[16].ic_i/node_int_inferred_i_1,
+design_1_i/ro_injector_0/inst/genblk1[16].ic_i/node_int_inferred_i_2,
+design_1_i/ro_injector_0/inst/genblk1[16].ic_i/node_int_inferred_i_3,
+design_1_i/ro_injector_0/inst/genblk1[16].ic_i/node_int_inferred_i_4,
+design_1_i/ro_injector_0/inst/genblk1[16].ic_i/node_int_inferred_i_5,
+design_1_i/ro_injector_0/inst/genblk1[16].ic_i/node_int_inst,
+design_1_i/ro_injector_0/inst/genblk1[16].ic_i/node_int_inst__0,
+design_1_i/ro_injector_0/inst/genblk1[16].ic_i/node_int_inst__1,
+design_1_i/ro_injector_0/inst/genblk1[16].ic_i/node_int_inst__2,
+design_1_i/ro_injector_0/inst/genblk1[16].ic_i/node_int_inst__3,
+design_1_i/ro_injector_0/inst/genblk1[16].ic_i/node_int_inst__4
+design_1_i/ro_injector_0/inst/genblk1[16].ic_i/y_inst.
+Related violations: <none>
+
+LUTLP-2#2 Warning
+Combinatorial Loop Allowed  
+16 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[32].ic_i/node_int_inferred_i_1,
+design_1_i/ro_injector_0/inst/genblk1[32].ic_i/node_int_inferred_i_2,
+design_1_i/ro_injector_0/inst/genblk1[32].ic_i/node_int_inferred_i_3,
+design_1_i/ro_injector_0/inst/genblk1[32].ic_i/node_int_inferred_i_4,
+design_1_i/ro_injector_0/inst/genblk1[32].ic_i/node_int_inferred_i_5,
+design_1_i/ro_injector_0/inst/genblk1[32].ic_i/node_int_inferred_i_6,
+design_1_i/ro_injector_0/inst/genblk1[32].ic_i/node_int_inferred_i_7,
+design_1_i/ro_injector_0/inst/genblk1[32].ic_i/node_int_inst,
+design_1_i/ro_injector_0/inst/genblk1[32].ic_i/node_int_inst__0,
+design_1_i/ro_injector_0/inst/genblk1[32].ic_i/node_int_inst__1,
+design_1_i/ro_injector_0/inst/genblk1[32].ic_i/node_int_inst__2,
+design_1_i/ro_injector_0/inst/genblk1[32].ic_i/node_int_inst__3,
+design_1_i/ro_injector_0/inst/genblk1[32].ic_i/node_int_inst__4,
+design_1_i/ro_injector_0/inst/genblk1[32].ic_i/node_int_inst__5,
+design_1_i/ro_injector_0/inst/genblk1[32].ic_i/node_int_inst__6
+ (the first 15 of 16 listed).
+Related violations: <none>
+
+LUTLP-2#3 Warning
+Combinatorial Loop Allowed  
+20 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[48].ic_i/node_int_inferred_i_1,
+design_1_i/ro_injector_0/inst/genblk1[48].ic_i/node_int_inferred_i_2,
+design_1_i/ro_injector_0/inst/genblk1[48].ic_i/node_int_inferred_i_3,
+design_1_i/ro_injector_0/inst/genblk1[48].ic_i/node_int_inferred_i_4,
+design_1_i/ro_injector_0/inst/genblk1[48].ic_i/node_int_inferred_i_5,
+design_1_i/ro_injector_0/inst/genblk1[48].ic_i/node_int_inferred_i_6,
+design_1_i/ro_injector_0/inst/genblk1[48].ic_i/node_int_inferred_i_7,
+design_1_i/ro_injector_0/inst/genblk1[48].ic_i/node_int_inferred_i_8,
+design_1_i/ro_injector_0/inst/genblk1[48].ic_i/node_int_inferred_i_9,
+design_1_i/ro_injector_0/inst/genblk1[48].ic_i/node_int_inst,
+design_1_i/ro_injector_0/inst/genblk1[48].ic_i/node_int_inst__0,
+design_1_i/ro_injector_0/inst/genblk1[48].ic_i/node_int_inst__1,
+design_1_i/ro_injector_0/inst/genblk1[48].ic_i/node_int_inst__2,
+design_1_i/ro_injector_0/inst/genblk1[48].ic_i/node_int_inst__3,
+design_1_i/ro_injector_0/inst/genblk1[48].ic_i/node_int_inst__4
+ (the first 15 of 20 listed).
+Related violations: <none>
+
+LUTLP-2#4 Warning
+Combinatorial Loop Allowed  
+32 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ready_counter_0/inst/pulses_gen/node_int_inferred_i_1,
+design_1_i/ready_counter_0/inst/pulses_gen/node_int_inferred_i_10,
+design_1_i/ready_counter_0/inst/pulses_gen/node_int_inferred_i_11,
+design_1_i/ready_counter_0/inst/pulses_gen/node_int_inferred_i_12,
+design_1_i/ready_counter_0/inst/pulses_gen/node_int_inferred_i_13,
+design_1_i/ready_counter_0/inst/pulses_gen/node_int_inferred_i_14,
+design_1_i/ready_counter_0/inst/pulses_gen/node_int_inferred_i_15,
+design_1_i/ready_counter_0/inst/pulses_gen/node_int_inferred_i_2,
+design_1_i/ready_counter_0/inst/pulses_gen/node_int_inferred_i_3,
+design_1_i/ready_counter_0/inst/pulses_gen/node_int_inferred_i_4,
+design_1_i/ready_counter_0/inst/pulses_gen/node_int_inferred_i_5,
+design_1_i/ready_counter_0/inst/pulses_gen/node_int_inferred_i_6,
+design_1_i/ready_counter_0/inst/pulses_gen/node_int_inferred_i_7,
+design_1_i/ready_counter_0/inst/pulses_gen/node_int_inferred_i_8,
+design_1_i/ready_counter_0/inst/pulses_gen/node_int_inferred_i_9
+ (the first 15 of 32 listed).
+Related violations: <none>
+
+LUTLP-2#5 Warning
+Combinatorial Loop Allowed  
+8 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[0].ic_i/node_int_inferred_i_1,
+design_1_i/ro_injector_0/inst/genblk1[0].ic_i/node_int_inferred_i_2,
+design_1_i/ro_injector_0/inst/genblk1[0].ic_i/node_int_inferred_i_3,
+design_1_i/ro_injector_0/inst/genblk1[0].ic_i/node_int_inst,
+design_1_i/ro_injector_0/inst/genblk1[0].ic_i/node_int_inst__0,
+design_1_i/ro_injector_0/inst/genblk1[0].ic_i/node_int_inst__1,
+design_1_i/ro_injector_0/inst/genblk1[0].ic_i/node_int_inst__2
+design_1_i/ro_injector_0/inst/genblk1[0].ic_i/y_inst.
+Related violations: <none>
+
+PDRC-153#1 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[0].dff_sr_i/s[0] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[0].dff_sr_i/Q_reg_LDC_i_1__31/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[0].dff_sr_i/Q_reg_LDC_i_1__31. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[10].dff_sr_i/s[10] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[10].dff_sr_i/Q_reg_LDC_i_1__41/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[10].dff_sr_i/Q_reg_LDC_i_1__41. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[11].dff_sr_i/s[11] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[11].dff_sr_i/Q_reg_LDC_i_1__42/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[11].dff_sr_i/Q_reg_LDC_i_1__42. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#4 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[12].dff_sr_i/s[12] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[12].dff_sr_i/Q_reg_LDC_i_1__43/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[12].dff_sr_i/Q_reg_LDC_i_1__43. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#5 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[13].dff_sr_i/s[13] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[13].dff_sr_i/Q_reg_LDC_i_1__44/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[13].dff_sr_i/Q_reg_LDC_i_1__44. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#6 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[14].dff_sr_i/s[14] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[14].dff_sr_i/Q_reg_LDC_i_1__45/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[14].dff_sr_i/Q_reg_LDC_i_1__45. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#7 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[15].dff_sr_i/s[15] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[15].dff_sr_i/Q_reg_LDC_i_1__46/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[15].dff_sr_i/Q_reg_LDC_i_1__46. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#8 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[16].dff_sr_i/s[16] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[16].dff_sr_i/Q_reg_LDC_i_1__47/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[16].dff_sr_i/Q_reg_LDC_i_1__47. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#9 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[17].dff_sr_i/s[17] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[17].dff_sr_i/Q_reg_LDC_i_1__48/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[17].dff_sr_i/Q_reg_LDC_i_1__48. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#10 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[18].dff_sr_i/s[18] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[18].dff_sr_i/Q_reg_LDC_i_1__49/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[18].dff_sr_i/Q_reg_LDC_i_1__49. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#11 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[19].dff_sr_i/s[19] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[19].dff_sr_i/Q_reg_LDC_i_1__50/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[19].dff_sr_i/Q_reg_LDC_i_1__50. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#12 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[1].dff_sr_i/s[1] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[1].dff_sr_i/Q_reg_LDC_i_1__32/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[1].dff_sr_i/Q_reg_LDC_i_1__32. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#13 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[20].dff_sr_i/s[20] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[20].dff_sr_i/Q_reg_LDC_i_1__51/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[20].dff_sr_i/Q_reg_LDC_i_1__51. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#14 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[21].dff_sr_i/s[21] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[21].dff_sr_i/Q_reg_LDC_i_1__52/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[21].dff_sr_i/Q_reg_LDC_i_1__52. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#15 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[22].dff_sr_i/s[22] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[22].dff_sr_i/Q_reg_LDC_i_1__53/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[22].dff_sr_i/Q_reg_LDC_i_1__53. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#16 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[23].dff_sr_i/s[23] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[23].dff_sr_i/Q_reg_LDC_i_1__54/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[23].dff_sr_i/Q_reg_LDC_i_1__54. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#17 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[24].dff_sr_i/s[24] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[24].dff_sr_i/Q_reg_LDC_i_1__55/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[24].dff_sr_i/Q_reg_LDC_i_1__55. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#18 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[25].dff_sr_i/s[25] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[25].dff_sr_i/Q_reg_LDC_i_1__56/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[25].dff_sr_i/Q_reg_LDC_i_1__56. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#19 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[26].dff_sr_i/s[26] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[26].dff_sr_i/Q_reg_LDC_i_1__57/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[26].dff_sr_i/Q_reg_LDC_i_1__57. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#20 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[27].dff_sr_i/s[27] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[27].dff_sr_i/Q_reg_LDC_i_1__58/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[27].dff_sr_i/Q_reg_LDC_i_1__58. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#21 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[28].dff_sr_i/s[28] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[28].dff_sr_i/Q_reg_LDC_i_1__59/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[28].dff_sr_i/Q_reg_LDC_i_1__59. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#22 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[29].dff_sr_i/s[29] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[29].dff_sr_i/Q_reg_LDC_i_1__60/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[29].dff_sr_i/Q_reg_LDC_i_1__60. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#23 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[2].dff_sr_i/s[2] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[2].dff_sr_i/Q_reg_LDC_i_1__33/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[2].dff_sr_i/Q_reg_LDC_i_1__33. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#24 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[30].dff_sr_i/s[30] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[30].dff_sr_i/Q_reg_LDC_i_1__61/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[30].dff_sr_i/Q_reg_LDC_i_1__61. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#25 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[31].dff_sr_i/s[31] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[31].dff_sr_i/Q_reg_LDC_i_1__62/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[31].dff_sr_i/Q_reg_LDC_i_1__62. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#26 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[32].dff_sr_i/s[32] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[32].dff_sr_i/Q_reg_LDC_i_1__30/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[32].dff_sr_i/Q_reg_LDC_i_1__30. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#27 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[33].dff_sr_i/s[33] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[33].dff_sr_i/Q_reg_LDC_i_1__29/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[33].dff_sr_i/Q_reg_LDC_i_1__29. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#28 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[34].dff_sr_i/s[34] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[34].dff_sr_i/Q_reg_LDC_i_1__28/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[34].dff_sr_i/Q_reg_LDC_i_1__28. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#29 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[35].dff_sr_i/s[35] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[35].dff_sr_i/Q_reg_LDC_i_1__27/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[35].dff_sr_i/Q_reg_LDC_i_1__27. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#30 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[36].dff_sr_i/s[36] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[36].dff_sr_i/Q_reg_LDC_i_1__26/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[36].dff_sr_i/Q_reg_LDC_i_1__26. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#31 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[37].dff_sr_i/s[37] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[37].dff_sr_i/Q_reg_LDC_i_1__25/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[37].dff_sr_i/Q_reg_LDC_i_1__25. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#32 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[38].dff_sr_i/s[38] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[38].dff_sr_i/Q_reg_LDC_i_1__24/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[38].dff_sr_i/Q_reg_LDC_i_1__24. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#33 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[39].dff_sr_i/s[39] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[39].dff_sr_i/Q_reg_LDC_i_1__23/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[39].dff_sr_i/Q_reg_LDC_i_1__23. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#34 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[3].dff_sr_i/s[3] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[3].dff_sr_i/Q_reg_LDC_i_1__34/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[3].dff_sr_i/Q_reg_LDC_i_1__34. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#35 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[40].dff_sr_i/s[40] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[40].dff_sr_i/Q_reg_LDC_i_1__22/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[40].dff_sr_i/Q_reg_LDC_i_1__22. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#36 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[41].dff_sr_i/s[41] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[41].dff_sr_i/Q_reg_LDC_i_1__21/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[41].dff_sr_i/Q_reg_LDC_i_1__21. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#37 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[42].dff_sr_i/s[42] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[42].dff_sr_i/Q_reg_LDC_i_1__20/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[42].dff_sr_i/Q_reg_LDC_i_1__20. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#38 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[43].dff_sr_i/s[43] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[43].dff_sr_i/Q_reg_LDC_i_1__19/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[43].dff_sr_i/Q_reg_LDC_i_1__19. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#39 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[44].dff_sr_i/s[44] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[44].dff_sr_i/Q_reg_LDC_i_1__18/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[44].dff_sr_i/Q_reg_LDC_i_1__18. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#40 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[45].dff_sr_i/s[45] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[45].dff_sr_i/Q_reg_LDC_i_1__17/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[45].dff_sr_i/Q_reg_LDC_i_1__17. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#41 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[46].dff_sr_i/s[46] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[46].dff_sr_i/Q_reg_LDC_i_1__16/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[46].dff_sr_i/Q_reg_LDC_i_1__16. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#42 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[47].dff_sr_i/s[47] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[47].dff_sr_i/Q_reg_LDC_i_1__15/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[47].dff_sr_i/Q_reg_LDC_i_1__15. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#43 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[48].dff_sr_i/s[48] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[48].dff_sr_i/Q_reg_LDC_i_1__14/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[48].dff_sr_i/Q_reg_LDC_i_1__14. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#44 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[49].dff_sr_i/s[49] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[49].dff_sr_i/Q_reg_LDC_i_1__13/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[49].dff_sr_i/Q_reg_LDC_i_1__13. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#45 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[4].dff_sr_i/s[4] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[4].dff_sr_i/Q_reg_LDC_i_1__35/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[4].dff_sr_i/Q_reg_LDC_i_1__35. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#46 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[50].dff_sr_i/s[50] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[50].dff_sr_i/Q_reg_LDC_i_1__12/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[50].dff_sr_i/Q_reg_LDC_i_1__12. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#47 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[51].dff_sr_i/s[51] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[51].dff_sr_i/Q_reg_LDC_i_1__11/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[51].dff_sr_i/Q_reg_LDC_i_1__11. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#48 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[52].dff_sr_i/s[52] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[52].dff_sr_i/Q_reg_LDC_i_1__10/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[52].dff_sr_i/Q_reg_LDC_i_1__10. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#49 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[53].dff_sr_i/s[53] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[53].dff_sr_i/Q_reg_LDC_i_1__9/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[53].dff_sr_i/Q_reg_LDC_i_1__9. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#50 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[54].dff_sr_i/s[54] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[54].dff_sr_i/Q_reg_LDC_i_1__8/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[54].dff_sr_i/Q_reg_LDC_i_1__8. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#51 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[55].dff_sr_i/s[55] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[55].dff_sr_i/Q_reg_LDC_i_1__7/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[55].dff_sr_i/Q_reg_LDC_i_1__7. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#52 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[56].dff_sr_i/s[56] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[56].dff_sr_i/Q_reg_LDC_i_1__6/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[56].dff_sr_i/Q_reg_LDC_i_1__6. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#53 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[57].dff_sr_i/s[57] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[57].dff_sr_i/Q_reg_LDC_i_1__5/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[57].dff_sr_i/Q_reg_LDC_i_1__5. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#54 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[58].dff_sr_i/s[58] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[58].dff_sr_i/Q_reg_LDC_i_1__4/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[58].dff_sr_i/Q_reg_LDC_i_1__4. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#55 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[59].dff_sr_i/s[59] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[59].dff_sr_i/Q_reg_LDC_i_1__3/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[59].dff_sr_i/Q_reg_LDC_i_1__3. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#56 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[5].dff_sr_i/s[5] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[5].dff_sr_i/Q_reg_LDC_i_1__36/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[5].dff_sr_i/Q_reg_LDC_i_1__36. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#57 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[60].dff_sr_i/s[60] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[60].dff_sr_i/Q_reg_LDC_i_1__2/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[60].dff_sr_i/Q_reg_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#58 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[61].dff_sr_i/s[61] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[61].dff_sr_i/Q_reg_LDC_i_1__1/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[61].dff_sr_i/Q_reg_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#59 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[62].dff_sr_i/s[62] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[62].dff_sr_i/Q_reg_LDC_i_1__0/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[62].dff_sr_i/Q_reg_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#60 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[63].dff_sr_i/s[63] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[63].dff_sr_i/Q_reg_LDC_i_1/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[63].dff_sr_i/Q_reg_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#61 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[6].dff_sr_i/s[6] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[6].dff_sr_i/Q_reg_LDC_i_1__37/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[6].dff_sr_i/Q_reg_LDC_i_1__37. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#62 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[7].dff_sr_i/s[7] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[7].dff_sr_i/Q_reg_LDC_i_1__38/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[7].dff_sr_i/Q_reg_LDC_i_1__38. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#63 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[8].dff_sr_i/s[8] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[8].dff_sr_i/Q_reg_LDC_i_1__39/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[8].dff_sr_i/Q_reg_LDC_i_1__39. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#64 Warning
+Gated clock check  
+Net design_1_i/SPI_0/inst/main_reg/genblk1[9].dff_sr_i/s[9] is a gated clock net sourced by a combinational pin design_1_i/SPI_0/inst/main_reg/genblk1[9].dff_sr_i/Q_reg_LDC_i_1__40/O, cell design_1_i/SPI_0/inst/main_reg/genblk1[9].dff_sr_i/Q_reg_LDC_i_1__40. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#65 Warning
+Gated clock check  
+Net design_1_i/ready_counter_0/inst/pulses_gen/y is a gated clock net sourced by a combinational pin design_1_i/ready_counter_0/inst/pulses_gen/y_inst/O, cell design_1_i/ready_counter_0/inst/pulses_gen/y_inst. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT design_1_i/ready_counter_0/inst/pulses_gen/y_inst is driving clock pin of 10 cells. This could lead to large hold time violations. Involved cells are:
+design_1_i/ready_counter_0/inst/counter_reg[0],
+design_1_i/ready_counter_0/inst/counter_reg[1],
+design_1_i/ready_counter_0/inst/counter_reg[2],
+design_1_i/ready_counter_0/inst/counter_reg[3],
+design_1_i/ready_counter_0/inst/counter_reg[4],
+design_1_i/ready_counter_0/inst/counter_reg[5],
+design_1_i/ready_counter_0/inst/counter_reg[6],
+design_1_i/ready_counter_0/inst/counter_reg[7],
+design_1_i/ready_counter_0/inst/enable_int_reg
+design_1_i/ready_counter_0/inst/ready_reg
+Related violations: <none>
+
+

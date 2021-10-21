@@ -1,0 +1,276 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Aug  2 15:39:37 2021
+| Host         : PLP-MTRAWKA-LT running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
+| Design       : design_1_wrapper
+| Device       : xc7a15t
+---------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   198 |
+|    Minimum number of control sets                        |   198 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |  1364 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   198 |
+| >= 0 to < 4        |   195 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     2 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              66 |           13 |
+| No           | No                    | Yes                    |              64 |           64 |
+| No           | Yes                   | No                     |             128 |           74 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              74 |           67 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------------------------------+----------------------------------------------------+-----------------------------------------------------------+------------------+----------------+--------------+
+|                        Clock Signal                        |                    Enable Signal                   |                      Set/Reset Signal                     | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------------------------------------------------+----------------------------------------------------+-----------------------------------------------------------+------------------+----------------+--------------+
+|  design_1_i/clk_wiz_0/inst/spi_clock                       |                                                    |                                                           |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[63].dff_sr_i/s[63] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[63].dff_sr_i/r[63] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[7].dff_sr_i/s[7]   |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[7].dff_sr_i/r[7]   |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[8].dff_sr_i/s[8]   |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[8].dff_sr_i/r[8]   |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[9].dff_sr_i/s[9]   |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[9].dff_sr_i/r[9]   |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    |                                                           |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[2].dff_sr_i/r[2]   |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[30].dff_sr_i/r[30] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[31].dff_sr_i/r[31] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[32].dff_sr_i/r[32] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[33].dff_sr_i/r[33] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[35].dff_sr_i/r[35] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[34].dff_sr_i/r[34] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[36].dff_sr_i/r[36] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[37].dff_sr_i/r[37] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[39].dff_sr_i/r[39] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[38].dff_sr_i/r[38] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[3].dff_sr_i/r[3]   |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[40].dff_sr_i/r[40] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[41].dff_sr_i/r[41] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[42].dff_sr_i/r[42] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[43].dff_sr_i/r[43] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[45].dff_sr_i/r[45] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[44].dff_sr_i/r[44] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[46].dff_sr_i/r[46] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[48].dff_sr_i/r[48] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[47].dff_sr_i/r[47] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[49].dff_sr_i/r[49] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[4].dff_sr_i/r[4]   |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[50].dff_sr_i/r[50] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[51].dff_sr_i/r[51] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[52].dff_sr_i/r[52] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[54].dff_sr_i/r[54] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[53].dff_sr_i/r[53] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[55].dff_sr_i/r[55] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[56].dff_sr_i/r[56] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[58].dff_sr_i/r[58] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[57].dff_sr_i/r[57] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[59].dff_sr_i/r[59] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[5].dff_sr_i/r[5]   |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[60].dff_sr_i/r[60] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[61].dff_sr_i/r[61] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[62].dff_sr_i/r[62] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[0].dff_sr_i/r[0]   |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[10].dff_sr_i/r[10] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[11].dff_sr_i/r[11] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[14].dff_sr_i/r[14] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[12].dff_sr_i/r[12] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[13].dff_sr_i/r[13] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[16].dff_sr_i/r[16] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[15].dff_sr_i/r[15] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[17].dff_sr_i/r[17] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[18].dff_sr_i/r[18] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[19].dff_sr_i/r[19] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[1].dff_sr_i/r[1]   |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[21].dff_sr_i/r[21] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[20].dff_sr_i/r[20] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[22].dff_sr_i/r[22] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[23].dff_sr_i/r[23] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[24].dff_sr_i/r[24] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[25].dff_sr_i/r[25] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[26].dff_sr_i/r[26] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[28].dff_sr_i/r[28] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[27].dff_sr_i/r[27] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[29].dff_sr_i/r[29] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[6].dff_sr_i/r[6]   |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[63].dff_sr_i/r[63] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[8].dff_sr_i/r[8]   |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[7].dff_sr_i/r[7]   |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[9].dff_sr_i/r[9]   |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[30].dff_sr_i/s[30] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[2].dff_sr_i/s[2]   |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[31].dff_sr_i/s[31] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[32].dff_sr_i/s[32] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[33].dff_sr_i/s[33] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[34].dff_sr_i/s[34] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[35].dff_sr_i/s[35] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[36].dff_sr_i/s[36] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[37].dff_sr_i/s[37] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[39].dff_sr_i/s[39] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[38].dff_sr_i/s[38] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[3].dff_sr_i/s[3]   |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[41].dff_sr_i/s[41] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[40].dff_sr_i/s[40] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[42].dff_sr_i/s[42] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[43].dff_sr_i/s[43] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[45].dff_sr_i/s[45] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[46].dff_sr_i/s[46] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[44].dff_sr_i/s[44] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[47].dff_sr_i/s[47] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[48].dff_sr_i/s[48] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[4].dff_sr_i/s[4]   |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[49].dff_sr_i/s[49] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[50].dff_sr_i/s[50] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[51].dff_sr_i/s[51] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[53].dff_sr_i/s[53] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[54].dff_sr_i/s[54] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[52].dff_sr_i/s[52] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[56].dff_sr_i/s[56] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[55].dff_sr_i/s[55] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[57].dff_sr_i/s[57] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[58].dff_sr_i/s[58] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[5].dff_sr_i/s[5]   |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[59].dff_sr_i/s[59] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[60].dff_sr_i/s[60] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[62].dff_sr_i/s[62] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[61].dff_sr_i/s[61] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[0].dff_sr_i/s[0]   |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[10].dff_sr_i/s[10] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[11].dff_sr_i/s[11] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[14].dff_sr_i/s[14] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[12].dff_sr_i/s[12] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[13].dff_sr_i/s[13] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[16].dff_sr_i/s[16] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[15].dff_sr_i/s[15] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[17].dff_sr_i/s[17] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[18].dff_sr_i/s[18] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[19].dff_sr_i/s[19] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[1].dff_sr_i/s[1]   |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[20].dff_sr_i/s[20] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[21].dff_sr_i/s[21] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[22].dff_sr_i/s[22] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[24].dff_sr_i/s[24] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[23].dff_sr_i/s[23] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[26].dff_sr_i/s[26] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[25].dff_sr_i/s[25] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[29].dff_sr_i/s[29] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[27].dff_sr_i/s[27] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[28].dff_sr_i/s[28] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[6].dff_sr_i/s[6]   |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[63].dff_sr_i/s[63] |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[7].dff_sr_i/s[7]   |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[8].dff_sr_i/s[8]   |                1 |              1 |         1.00 |
+|  SCLK_IBUF                                                 | SSEL_IBUF                                          | design_1_i/SPI_0/inst/main_reg/genblk1[9].dff_sr_i/s[9]   |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[30].dff_sr_i/s[30] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[30].dff_sr_i/r[30] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[2].dff_sr_i/s[2]   |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[2].dff_sr_i/r[2]   |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[31].dff_sr_i/s[31] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[31].dff_sr_i/r[31] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[32].dff_sr_i/s[32] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[32].dff_sr_i/r[32] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[33].dff_sr_i/s[33] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[33].dff_sr_i/r[33] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[34].dff_sr_i/s[34] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[34].dff_sr_i/r[34] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[35].dff_sr_i/s[35] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[35].dff_sr_i/r[35] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[36].dff_sr_i/s[36] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[36].dff_sr_i/r[36] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[37].dff_sr_i/s[37] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[37].dff_sr_i/r[37] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[39].dff_sr_i/s[39] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[39].dff_sr_i/r[39] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[38].dff_sr_i/s[38] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[38].dff_sr_i/r[38] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[3].dff_sr_i/s[3]   |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[3].dff_sr_i/r[3]   |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[41].dff_sr_i/s[41] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[41].dff_sr_i/r[41] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[40].dff_sr_i/s[40] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[40].dff_sr_i/r[40] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[42].dff_sr_i/s[42] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[42].dff_sr_i/r[42] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[43].dff_sr_i/s[43] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[43].dff_sr_i/r[43] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[45].dff_sr_i/s[45] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[45].dff_sr_i/r[45] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[46].dff_sr_i/s[46] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[46].dff_sr_i/r[46] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[44].dff_sr_i/s[44] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[44].dff_sr_i/r[44] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[47].dff_sr_i/s[47] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[47].dff_sr_i/r[47] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[48].dff_sr_i/s[48] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[48].dff_sr_i/r[48] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[4].dff_sr_i/s[4]   |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[4].dff_sr_i/r[4]   |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[49].dff_sr_i/s[49] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[49].dff_sr_i/r[49] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[50].dff_sr_i/s[50] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[50].dff_sr_i/r[50] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[51].dff_sr_i/s[51] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[51].dff_sr_i/r[51] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[53].dff_sr_i/s[53] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[53].dff_sr_i/r[53] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[54].dff_sr_i/s[54] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[54].dff_sr_i/r[54] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[52].dff_sr_i/s[52] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[52].dff_sr_i/r[52] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[56].dff_sr_i/s[56] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[56].dff_sr_i/r[56] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[55].dff_sr_i/s[55] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[55].dff_sr_i/r[55] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[57].dff_sr_i/s[57] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[57].dff_sr_i/r[57] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[58].dff_sr_i/s[58] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[58].dff_sr_i/r[58] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[5].dff_sr_i/s[5]   |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[5].dff_sr_i/r[5]   |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[59].dff_sr_i/s[59] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[59].dff_sr_i/r[59] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[60].dff_sr_i/s[60] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[60].dff_sr_i/r[60] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[62].dff_sr_i/s[62] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[62].dff_sr_i/r[62] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[61].dff_sr_i/s[61] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[61].dff_sr_i/r[61] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[0].dff_sr_i/s[0]   |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[0].dff_sr_i/r[0]   |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[10].dff_sr_i/s[10] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[10].dff_sr_i/r[10] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[11].dff_sr_i/s[11] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[11].dff_sr_i/r[11] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[14].dff_sr_i/s[14] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[14].dff_sr_i/r[14] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[12].dff_sr_i/s[12] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[12].dff_sr_i/r[12] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[13].dff_sr_i/s[13] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[13].dff_sr_i/r[13] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[16].dff_sr_i/s[16] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[16].dff_sr_i/r[16] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[15].dff_sr_i/s[15] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[15].dff_sr_i/r[15] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[17].dff_sr_i/s[17] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[17].dff_sr_i/r[17] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[18].dff_sr_i/s[18] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[18].dff_sr_i/r[18] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[19].dff_sr_i/s[19] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[19].dff_sr_i/r[19] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[1].dff_sr_i/s[1]   |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[1].dff_sr_i/r[1]   |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[20].dff_sr_i/s[20] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[20].dff_sr_i/r[20] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[21].dff_sr_i/s[21] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[21].dff_sr_i/r[21] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[22].dff_sr_i/s[22] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[22].dff_sr_i/r[22] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[24].dff_sr_i/s[24] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[24].dff_sr_i/r[24] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[23].dff_sr_i/s[23] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[23].dff_sr_i/r[23] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[26].dff_sr_i/s[26] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[26].dff_sr_i/r[26] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[25].dff_sr_i/s[25] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[25].dff_sr_i/r[25] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[29].dff_sr_i/s[29] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[29].dff_sr_i/r[29] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[27].dff_sr_i/s[27] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[27].dff_sr_i/r[27] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[28].dff_sr_i/s[28] |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[28].dff_sr_i/r[28] |                1 |              1 |         1.00 |
+|  design_1_i/SPI_0/inst/main_reg/genblk1[6].dff_sr_i/s[6]   |                                                    | design_1_i/SPI_0/inst/main_reg/genblk1[6].dff_sr_i/r[6]   |                1 |              1 |         1.00 |
+|  design_1_i/ready_counter_0/inst/pulses_gen/y              | design_1_i/ready_counter_0/inst/counter_full       | reset_IBUF                                                |                1 |              2 |         2.00 |
+|  design_1_i/ready_counter_0/inst/pulses_gen/y              | design_1_i/ready_counter_0/inst/counter[0]_i_1_n_0 | reset_IBUF                                                |                2 |              8 |         4.00 |
+|  design_1_i/ready_counter_0/inst/ready                     |                                                    |                                                           |               11 |             64 |         5.82 |
+|  design_1_i/ready_counter_0/inst/ro_clk_out                |                                                    | design_1_i/r2o_ring_gen_64_0/inst/p_0_in                  |               10 |             64 |         6.40 |
++------------------------------------------------------------+----------------------------------------------------+-----------------------------------------------------------+------------------+----------------+--------------+
+
+

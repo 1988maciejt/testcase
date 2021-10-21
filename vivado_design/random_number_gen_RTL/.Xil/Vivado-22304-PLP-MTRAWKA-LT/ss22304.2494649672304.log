@@ -1,0 +1,8 @@
+srcscan starts
+INFO: analyzing module design_1_SPI_0_0 (VERI-9002)
+Listing tops:
+VeriTop library:xil_defaultlib mod:design_1_SPI_0_0
+END of tops
+c:/Users/mtrawka/Documents/aio/testcases/mentor/security/proof_of_concept/vivado_design/random_number_gen_RTL/random_number_gen_RTL.gen/sources_1/bd/design_1/ip/design_1_SPI_0_0/synth/design_1_SPI_0_0.v(58): INFO: compiling module 'design_1_SPI_0_0_default' (VERI-1018)
+c:/Users/mtrawka/Documents/aio/testcases/mentor/security/proof_of_concept/vivado_design/random_number_gen_RTL/random_number_gen_RTL.gen/sources_1/bd/design_1/ip/design_1_SPI_0_0/synth/design_1_SPI_0_0.v(76): WARNING: Module <SPI> not found while processing module instance <inst> (VERI-1063)
+srcscan exits with return value 0
