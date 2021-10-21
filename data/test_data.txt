@@ -1,0 +1,8 @@
+"set 2 0" 	ok
+"set 3 1" 	ok
+"set 4 1" 	ok
+"set 5 0" 	ok
+"get 5" 	0
+"get 4" 	1
+"get 3" 	1
+"get 2" 	0
