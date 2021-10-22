@@ -29,88 +29,88 @@ proc add_xor {name a b {pslope 0.004} {nslope 0.004}} {
 }
 
 proc update {} {
-	variable circuit
-	variable resolution_ns
-	variable noise_amplitude
-	set gates [dict keys $circuit]
-	foreach gate $gates {
-		set type [dict get $circuit $gate type]
-		set y_v [dict get $circuit $gate y]
-		set pslope [dict get $circuit $gate pslope]
-		set nslope [dict get $circuit $gate nslope]
-		if {$type eq "not"} {
-			set a [dict get $circuit $gate a]
-			set a_v [dict get $circuit $a y]
-			if {$a_v > 0.5} {
-				set y_v [expr {$y_v - $resolution_ns * $nslope}]
-			} else {
-				set y_v [expr {$y_v + $resolution_ns * $pslope}]
-			}
-		} 
-		if {$type eq "xor"} {
-			set a [dict get $circuit $gate a]
-			set a_v [dict get $circuit $a y]
-			set b [dict get $circuit $gate b]
-			set b_v [dict get $circuit $b y]
-			set a_l 0
-			set b_l 0
-			set d [expr {abs($a_v - $b_v)}]
-			if {$d < 0.7} {
-				set y_v [expr {$y_v - $resolution_ns * $nslope}]
-			} else {
-				set y_v [expr {$y_v + $resolution_ns * $pslope}]
-			}
-		} 
-		if {$y_v > 1} {
-			set y_v 1
-		}
-		if {$y_v < 0} {
-			set y_v 0
-		}
-		set y_v [expr {$y_v + (rand() - 0.5) * 2 * $noise_amplitude}]
-		dict set circuit $gate y_int $y_v
+    variable circuit
+    variable resolution_ns
+    variable noise_amplitude
+    set gates [dict keys $circuit]
+    foreach gate $gates {
+	set type [dict get $circuit $gate type]
+	set y_v [dict get $circuit $gate y]
+	set pslope [dict get $circuit $gate pslope]
+	set nslope [dict get $circuit $gate nslope]
+	if {$type eq "not"} {
+	    set a [dict get $circuit $gate a]
+	    set a_v [dict get $circuit $a y]
+	    if {$a_v > 0.5} {
+		set y_v [expr {$y_v - $resolution_ns * $nslope}]
+	    } else {
+		set y_v [expr {$y_v + $resolution_ns * $pslope}]
+	    }
+	} 
+	if {$type eq "xor"} {
+	    set a [dict get $circuit $gate a]
+	    set a_v [dict get $circuit $a y]
+	    set b [dict get $circuit $gate b]
+	    set b_v [dict get $circuit $b y]
+	    set a_l 0
+	    set b_l 0
+	    set d [expr {abs($a_v - $b_v)}]
+	    if {$d < 0.7} {
+		set y_v [expr {$y_v - $resolution_ns * $nslope}]
+	    } else {
+		set y_v [expr {$y_v + $resolution_ns * $pslope}]
+	    }
+	} 
+	if {$y_v > 1} {
+	    set y_v 1
 	}
-	foreach gate $gates {
-		dict set circuit $gate y [dict get $circuit $gate y_int]
+	if {$y_v < 0} {
+	    set y_v 0
 	}
+	set y_v [expr {$y_v + (rand() - 0.5) * 2 * $noise_amplitude}]
+	dict set circuit $gate y_int $y_v
+    }
+    foreach gate $gates {
+	dict set circuit $gate y [dict get $circuit $gate y_int]
+    }
 }
 
 proc cumulate {} {
-	variable circuit
-	variable results
-	variable index 
-	variable resolution_ns
-	variable cumulate_logic_values
-	set gates [dict keys $circuit]
-	set vec [list]
-	lappend vec [expr {$index * $resolution_ns}]
-	set offset 0
-	foreach gate $gates {
-		set y [dict get $circuit $gate y]
-		if {[dict get $circuit $gate type] eq "not"} {
-		  if {$cumulate_logic_values} {
-			if {$y > 0.5} {
-			  set y 1
-			} else {
-			  set y 0
-			}
-		  } 
-		  set y [expr {$y + $offset}]
-		  lappend vec $y
-		  set offset [expr {$offset + 1.5}]
+    variable circuit
+    variable results
+    variable index 
+    variable resolution_ns
+    variable cumulate_logic_values
+    set gates [dict keys $circuit]
+    set vec [list]
+    lappend vec [expr {$index * $resolution_ns}]
+    set offset 0
+    foreach gate $gates {
+	set y [dict get $circuit $gate y]
+	if {[dict get $circuit $gate type] eq "not"} {
+	    if {$cumulate_logic_values} {
+		if {$y > 0.5} {
+		    set y 1
+		} else {
+		    set y 0
 		}
+	    } 
+	    set y [expr {$y + $offset}]
+	    lappend vec $y
+	    set offset [expr {$offset + 1.5}]
 	}
-	incr index
-	lappend results $vec
+    }
+    incr index
+    lappend results $vec
 }
 
 proc presults {} {
-	variable results
-	print "3 2 1 x 0"
-	print "----------"
-	foreach r $results {
-		print $r
-	}
+    variable results
+    print "3 2 1 x 0"
+    print "----------"
+    foreach r $results {
+	print $r
+    }
 }
 
 
@@ -159,8 +159,8 @@ for {set i 0} {$i < [expr {$n - 1}]} {incr i} {
 
 cumulate
 for {set i 0} {$i < $sim_steps} {incr i} {
-	update
-	cumulate
+    update
+    cumulate
 }
 
 set plotscript {
@@ -170,14 +170,14 @@ set grid
 
 for {set i 0} {$i < $n} {incr i} {
   if {$i eq 0} {
-	append plotscript "plot 'results/sim.txt' using 1:2 w l"
+	append plotscript "plot 'sim.txt' using 1:2 w l"
   } else {
     append plotscript ", '' using 1:[expr {$i + 2}] w l"
   }
 }
 append plotscript "; pause -1"
 
-file_write results/sim.txt [format_list $results]
-file_write results/plot.p $plotscript
+file_write sim.txt [format_list $results]
+file_write plot.p $plotscript
 
-exec -ignorestderr gnuplot results/plot.p &
+exec -ignorestderr gnuplot plot.p &
