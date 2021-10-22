@@ -1,4 +1,4 @@
-set filename {data/r2o_ca_64b}
+set filename {../data/r2o_ca_64b}
 variable nsize 64
 variable histo_height 10
 variable numbers_to_visualization 150
@@ -202,7 +202,7 @@ proc finish_correlation2 {} {
             [expr {7.3 + $i * 4}]mm \
             -class legend
   }
-  file_write "results/correlation.svg" [svg_eval $csvg]
+  file_write "correlation.svg" [svg_eval $csvg]
 }
 
 
@@ -227,7 +227,7 @@ foreach num $lines {
       }
     }
     if {$numbers_to_visualization eq 0} {
-      file_write "results/visualization_${count_of_visualizations}.svg" [svg_eval $svg]  
+      file_write "visualization_${count_of_visualizations}.svg" [svg_eval $svg]  
       dict set svg objects [list]
       incr count_of_visualizations -1
       if {$count_of_visualizations > 0} {
