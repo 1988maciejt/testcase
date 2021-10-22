@@ -1,30 +1,30 @@
 set TRNG_SIZE               64
 set TRNG_POLY_INTEGER       0x5(9)459(4)1
 set TRNG_VERILOG_NAME       trng
-set TRNG_VERILOG_FILE       results/trng.v
+set TRNG_VERILOG_FILE       trng.v
 set TRNG_VERILOG_INSTANCE   trng
 set INJECTORS_COUNT         8
 
-set FSM_VERILOG_FILE        data/fsm.v
+set FSM_VERILOG_FILE        ../data/fsm.v
 set FSM_VERILOG_INSTANCE    fsm
 
-set MXT_VERILOG_FILE        data/misr_xor_tree.v
+set MXT_VERILOG_FILE        ../data/misr_xor_tree.v
 set MXT_VERILOG_INSTANCE    misr_xor_tree
 
-set MISR_VERILOG_FILE       results/misr.v
+set MISR_VERILOG_FILE       misr.v
 set MISR_VERILOG_INSTANCE   misr
 
 set TOP_VERILOG_NAME        tb
-set TOP_VERILOG_FILE        results/tb.v
+set TOP_VERILOG_FILE        tb.v
 
-set HASH_VERILOG_FILE       data/hash.v
+set HASH_VERILOG_FILE       ../data/hash.v
 set HASH_VERILOG_INSTANCE   hash
 
-set COMP_VERILOG_FILE       data/comparator.v
+set COMP_VERILOG_FILE       ../data/comparator.v
 set COMP_VERILOG_INSTANCE   comparator
 
-set SPR_VERILOG_FILE       	data/ser_par_reg.v
-set SPR_VERILOG_INSTANCE   	wrapper_reg
+set SPR_VERILOG_FILE        ../data/ser_par_reg.v
+set SPR_VERILOG_INSTANCE    wrapper_reg
 
 set THIS_FAULT_ONLY         ""
 
@@ -197,23 +197,25 @@ if {$THIS_FAULT_ONLY ne ""} {
 
 verilog_simulate $tb -coverage 1
 
-if {[input "do you want to proceed with fault_sim?" -ans {y n} -default n] eq "n"} { exit }
+if {[input "do you want to proceed with fault_sim?" -ans {y n} -default n] eq "y"} { 
 
-verilog_fault_simulation $tb \
+    verilog_fault_simulation $tb \
         -callback cbk \
         -dft_signals $dft_signals \
         -workdir results \
         -faults $faults
-		
-print_section "Simulation finished."
+    
+    print_section "Simulation finished."
 
-if {[llength $not_det] > 0} {
-    print [color "Not detectable faults:" red] [color result red -i]
-    foreach nd $not_det {
-        print [color $nd red] ""
-    }    
-} else {
-    print [color "All faults are detectable." gre] [color results gre -i]
+    if {[llength $not_det] > 0} {
+	print [color "Not detectable faults:" red] [color result red -i]
+	foreach nd $not_det {
+	    print [color $nd red] ""
+	}    
+    } else {
+	print [color "All faults are detectable." gre] [color results gre -i]
+    }
+    
 }
 
 

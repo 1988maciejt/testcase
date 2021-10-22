@@ -94,7 +94,7 @@ module tb (
 
 
   initial begin 
-    $dumpfile("results/dump.vcd");
+    $dumpfile("dump.vcd");
     $dumpvars(0,tb);
   end
 
