@@ -64,7 +64,7 @@ arduino_class_add_from_template a fifo
 ## compilation and upload ##
 arduino_sketch_compile a 
 
-set sketch_diff [diff [arduino_sketch_filename results my_sketch]]
+set sketch_diff [diff [arduino_sketch_filename my_sketch]]
 
 set port [serial_first]
 if {$port eq 0} {
