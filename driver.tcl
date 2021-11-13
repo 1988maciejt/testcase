@@ -1,4 +1,4 @@
-set filename {../data/r2o_ca_64b}
+set filename {../data/r2o_dense_ring_64b}
 variable nsize 64
 variable histo_height 10
 variable numbers_to_visualization 150
@@ -158,6 +158,8 @@ proc finish_correlation2 {} {
                 -class cbit
     }
   }
+  set xclist [list]
+  lappend xclist [list bit1 bit2 correlation_percent]
   for {set i 0} {$i < $nsize} {incr i} {
     if {[expr {$i % 5}] eq 0} {
       svg_text_add csvg \
@@ -168,6 +170,7 @@ proc finish_correlation2 {} {
     }
     for {set j [expr {$i+1}]} {$j < $nsize} {incr j} {
       set cor [dict get $correlation_2 $i $j]
+	  lappend xclist [list $i $j $cor]
       if {$cor > 0} {
         set cor [expr {int(log10(($cor)/1.)* 50.)}]
       }
@@ -180,8 +183,8 @@ proc finish_correlation2 {} {
                 -fill "rgb($notstrength, $strength, 0)"
     }
   }
+  file_write_xls correlation_data.xls $xclist
   set legend_points 7
-  
   for {set i 0} {$i < $legend_points} {incr i} {
     set cor [expr {($legend_points - $i - 1) * $cmax / ($legend_points - 1)}]
     if {$cor > 0} {
