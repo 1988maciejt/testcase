@@ -126,14 +126,17 @@ proc wgl_patterns {wgl {pattern "*"}} {
 }
 
 proc wgl_to_waveforms {wgl_or_file {pattern_name "?"} args} {
-    set args [args_parse {{-frequency 1M}} $args]
+    set args [args_parse {{-frequency 1000000} {-oversampling 1} {-delay 0}} $args]
     set freq [dict get $args -frequency]
+    set oversampling [dict get $args -oversampling]
+    set delay [dict get $args -delay]
+    set logic_freq [expr {$freq / $oversampling}] 
     if {[type $wgl_or_file] eq "wgl"} {
         set wgl $wgl_or_file
     } else {
         set wgl [wgl_read $wgl_or_file]
     }
-    set res ""
+    set res "open(\"Patterns\");\n"
     set signals [wgl_signals $wgl -dir in -pat $pattern_name]
     if {[llength $signals] < 1} {
         print_error "No signals for pattern '$pattern_name'. Check if the pattern does not exists."
@@ -157,14 +160,24 @@ proc wgl_to_waveforms {wgl_or_file {pattern_name "?"} args} {
 "Patterns.Channels.${sig}.Samples.text = \"${len}\";
 Patterns.Channels.${sig}.Output.text = \"PP\";
 Patterns.Channels.${sig}.Type.text = \"custom\";
-Patterns.Channels.${sig}.Frequency.text = \"${freq}\";
+Patterns.Channels.${sig}.Frequency.text = \"${freq} Hz\";
 Patterns.Channels.${sig}.custom = ${vec2};
 "
     }
+    append res "Patterns.States.Run.text = \"[expr {$len * 1000000000 / $freq}] ns\";\n"
+    append res "Patterns.States.Repeat.text = \"1\";\n"
     print [color "Make sure the Patterns includes these signals:" blue] [color wgl_to_waveforms blue -i]
     print [color "$signals" blue] [color wgl_to_waveforms blue -i]
+    set logic_samples [expr {int(($delay + $len * 1.1 / $freq) * $logic_freq)}]
+    set logic_pos [expr {$logic_samples * 0.5 / $logic_freq}]
     set signals [wgl_signals $wgl -dir out -pat $pattern_name]
-
+    append res "open(\"Logic\");\n"
+    append res "Logic.Time.Rate.text = \"${logic_freq} Hz\";\n"
+    append res "Logic.Time.Samples.text = \"${logic_samples}\";\n"
+    append res "Logic.Time.Position.text = \"${logic_pos} s\";\n"
+    append res "Logic.Trigger.Source.text = \"Patterns\";\n"
+    append res "Logic.Trigger.Trigger.text = \"Normal\";\n"
+    append res "Logic.single();\n"
     print [color "Make sure the Logic includes these signals:" blue] [color wgl_to_waveforms blue -i]
     print [color "$signals" blue] [color wgl_to_waveforms blue -i]
     return $res
@@ -174,4 +187,4 @@ Patterns.Channels.${sig}.custom = ${vec2};
 set wgl [wgl_read $filename]
 print_section "WGL  dictionary"
 print [format_dict $wgl -name WglDictionary -keys_that_are_li signals] 
- wgl_to_waveforms $wgl Loopback
+write [wgl_to_waveforms $wgl Loopback] patterns.js

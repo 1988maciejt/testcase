@@ -75,7 +75,7 @@ Waveform Sample
                     Resp06,Resp07,Resp08,Resp09,Resp10,Resp11,Resp12,Resp13,Resp14,Resp15)
 
     {Start Vectors}
-    Loop 32
+    Loop 2
       Vector(+, Match_0) := [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0];
       Vector(+, Match_0) := [0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0];
       Vector(+, Match_0) := [0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0];
