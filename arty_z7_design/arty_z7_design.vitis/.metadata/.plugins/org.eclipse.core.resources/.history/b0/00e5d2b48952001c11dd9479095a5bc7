@@ -1,0 +1,61 @@
+#ifndef HW_H
+#define HW_H
+
+#include "mt_xgpio.h"
+#include "xparameters.h"
+#include <string>
+
+using namespace std;
+
+XGpio poly, res;
+MtXGpio leds(XPAR_AXI_GPIO_LEDS_DEVICE_ID, ~0xF, ~0x3F);
+MtXGpio ctrl(XPAR_AXI_GPIO_CONTROL_DEVICE_ID);
+
+
+class TRNG {
+protected:
+	MtXgpioBit Enable_(0, 1, ctrl);
+public:
+	void start() {
+
+	}
+	bool finished() {
+
+	}
+};
+
+
+void delayMs(int ms) {
+	int dv = ms * 100000;
+	for (int i = 0; i < dv; ++i);
+}
+void delayUs(int us) {
+	int dv = us * 100000000;
+	for (int i = 0; i < dv; ++i);
+}
+
+void setCounterMax(int value) {
+	ctrl.setValue(value, 2);
+}
+
+
+
+
+string getResult() {
+	string result = "";
+	for (int i = 7; i >= 0; --i) {
+		XGpio_DiscreteWrite(&res, 2, i);
+		int r = XGpio_DiscreteRead(&res, 1);
+		for (int p = 0; p < 32; ++p) {
+			if ((0x80000000 & r) == 0) {
+				result += "0";
+			} else {
+				result += "1";
+			}
+			r <<= 1;
+		}
+	}
+	return result;
+}
+
+#endif

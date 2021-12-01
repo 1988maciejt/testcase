@@ -1,0 +1,8 @@
+#include "hw.h"
+
+using namespace std;
+
+int main() {
+	platformInit();
+	return 0;
+}

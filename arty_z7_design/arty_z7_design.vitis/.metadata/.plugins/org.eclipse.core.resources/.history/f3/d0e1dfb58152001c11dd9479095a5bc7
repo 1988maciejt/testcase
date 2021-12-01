@@ -1,0 +1,5 @@
+#include "mt_xgpio.h"
+
+MtXGpio::MtXGpio() {
+
+}

@@ -1,0 +1,11 @@
+#include "mt_xgpio.h"
+
+MtXGpio::MtXGpio(u16 deviceID) {
+	XGpio_Initialize(&myXGpio_, deviceID);
+}
+
+void MtXGpio::setDirection(int directionMask, int channel){
+
+}
+
+void MtXGpio::setValue(int value, int channel);

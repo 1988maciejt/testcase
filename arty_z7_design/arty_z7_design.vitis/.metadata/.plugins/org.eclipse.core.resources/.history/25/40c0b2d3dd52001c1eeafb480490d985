@@ -1,0 +1,18 @@
+#include "hw.h"
+#include "menu.h"
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	XGpio test;
+	XGpio_Initialize(&test, XPAR_AXI_GPIO_LED_DEVICE_ID);
+	XGpio_SetDataDirection(&test, 1, 0x3);
+	XGpio_DiscreteWrite(&test, 1, 0xF);
+	cout << endl << endl;
+	cout << "Power-up" << endl;
+	while(true) {
+		menuPrint();
+	}
+	return 0;
+}

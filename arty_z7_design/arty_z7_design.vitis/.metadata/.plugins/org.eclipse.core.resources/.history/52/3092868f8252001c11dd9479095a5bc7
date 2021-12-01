@@ -1,0 +1,17 @@
+#ifndef MT_XGPIO
+#define MT_XGPIO
+
+#include "xgpio.h"
+
+class MtXGpio {
+protected:
+	XGpio myXGpio_;
+public:
+	MtXGpio(u16 deviceID);
+	void setDirection(u32 directionMask, unsigned int channel = 1);
+	void setValue(u32 value, unsigned int channel = 1);
+};
+
+
+
+#endif

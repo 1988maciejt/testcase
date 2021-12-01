@@ -1,0 +1,14 @@
+#include "hw.h"
+
+using namespace std;
+
+int main() {
+	platformInit();\
+	int val = 0xA;
+	while(1) {
+		setLed(val);
+		val ~= val;
+		delayMs(500);
+	}
+	return 0;
+}

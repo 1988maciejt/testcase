@@ -1,0 +1,21 @@
+#include "hw.h"
+#include "menu.h"
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	cout << "Power-up" << endl;
+	cout << getResult() << endl;
+	trng.setCounterMax(1000);
+	cout << trng.finished() << endl;
+	trng.start();
+	cout << trng.finished() << endl;
+	delayMs(500);
+	cout << trng.finished() << endl;
+	cout << getResult() << endl;
+	while(true) {
+		menuPrint();
+	}
+	return 0;
+}

@@ -1,0 +1,15 @@
+#ifndef MT_XGPIO
+#define MT_XGPIO
+
+#include "xgpio.h"
+
+class MtXGpio {
+protected:
+	XGpio myXGpio;
+public:
+	MtXGpio(u16 deviceID);
+};
+
+
+
+#endif

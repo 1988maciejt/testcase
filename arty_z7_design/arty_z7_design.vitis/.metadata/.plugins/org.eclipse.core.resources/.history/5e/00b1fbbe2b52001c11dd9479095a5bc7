@@ -1,0 +1,20 @@
+#include "hw.h"
+
+void delayMs(int ms) {
+	int dv = ms * 5000;
+	for (int i = 0; i < dv; ++i);
+}
+
+void platformInitX() {
+	cout << "1";
+	XGpio_Initialize(leds, XPAR_AXI_GPIO_LEDS_DEVICE_ID);
+	cout << "2";
+	XGpio_SetDataDirection(leds, 1, ~0x0F);
+	cout << "3";
+	XGpio_SetDataDirection(leds, 2, ~0x3F);
+	cout << "4";
+}
+
+void setLed(int value) {
+	XGpio_DiscreteWrite(leds, 1, value);
+}

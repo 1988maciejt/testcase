@@ -1,0 +1,17 @@
+#include "hw.h"
+#include "menu.h"
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	cout << "Power-up" << endl;
+	while(true) {
+		leds.toggleBit(3, 1);
+		delayMs(500);
+	}
+	while(true) {
+		menuPrint();
+	}
+	return 0;
+}

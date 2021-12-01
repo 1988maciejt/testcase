@@ -1,0 +1,13 @@
+#include "hw.h"
+#include "menu.h"
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	cout << "Power-up" << endl;
+	while(true) {
+		menuPrint();
+	}
+	return 0;
+}

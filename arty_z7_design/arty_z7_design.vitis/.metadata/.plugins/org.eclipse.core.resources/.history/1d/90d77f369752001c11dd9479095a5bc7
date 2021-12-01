@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="app_v1" location="D:/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.vitis/app_v1" platform="D:/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.vitis/prototype_platform_v1/export/prototype_platform_v1/prototype_platform_v1.xpfm" platformUID="xilinx:arty-z7-20::0.0(custom)" systemProject="app_v1_system" sysConfig="prototype_platform_v1" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" language="CPP" mssSignature="2412102c67a3aa533e23b6bc9639edce">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1960840586" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.1863568622" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="empty_application"/>
+</sdkproject:SdkProject>

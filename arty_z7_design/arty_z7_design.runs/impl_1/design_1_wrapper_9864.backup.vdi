@@ -1,0 +1,631 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Wed Dec  1 19:09:14 2021
+# Process ID: 9864
+# Current directory: C:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.runs/impl_1
+# Command line: vivado.exe -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+# Log file: C:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.runs/impl_1/design_1_wrapper.vdi
+# Journal file: C:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.runs/impl_1\vivado.jou
+# Running On: MSI, OS: Windows, CPU Frequency: 2994 MHz, CPU Physical cores: 12, Host memory: 7943 MB
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.2/data/ip'.
+add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1249.430 ; gain = 0.000
+Command: link_design -top design_1_wrapper -part xc7z020clg400-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_ReconfiguredRG_0_0/design_1_ReconfiguredRG_0_0.dcp' for cell 'design_1_i/ReconfiguredRG_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_9/design_1_axi_gpio_0_9.dcp' for cell 'design_1_i/axi_gpio_buttons'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_7/design_1_axi_gpio_0_7.dcp' for cell 'design_1_i/axi_gpio_control'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_8/design_1_axi_gpio_0_8.dcp' for cell 'design_1_i/axi_gpio_leds'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_6/design_1_axi_gpio_0_6.dcp' for cell 'design_1_i/axi_gpio_polynomial'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_polynomial_0/design_1_axi_gpio_polynomial_0.dcp' for cell 'design_1_i/axi_gpio_result'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_to_256_0_0/design_1_axi_gpio_to_256_0_0.dcp' for cell 'design_1_i/axi_gpio_to_256_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_b256_to_axi_0_0/design_1_b256_to_axi_0_0.dcp' for cell 'design_1_i/b256_to_axi_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_c_counter_binary_0_0/design_1_c_counter_binary_0_0.dcp' for cell 'design_1_i/c_counter_binary_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1.dcp' for cell 'design_1_i/clk_wiz_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_control_slicer_0_3/design_1_control_slicer_0_3.dcp' for cell 'design_1_i/control_slicer_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_1/design_1_processing_system7_0_1.dcp' for cell 'design_1_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_ro_injector_0_0/design_1_ro_injector_0_0.dcp' for cell 'design_1_i/ro_injector_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_1/design_1_rst_ps7_0_100M_1.dcp' for cell 'design_1_i/rst_ps7_0_100M'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_util_reduced_logic_0_0/design_1_util_reduced_logic_0_0.dcp' for cell 'design_1_i/util_reduced_logic_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_util_vector_logic_0_0/design_1_util_vector_logic_0_0.dcp' for cell 'design_1_i/util_vector_logic_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0.dcp' for cell 'design_1_i/ps7_0_axi_periph/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.dcp' for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.144 . Memory (MB): peak = 1249.430 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 64 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_1/design_1_processing_system7_0_1.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Finished Parsing XDC File [c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_1/design_1_processing_system7_0_1.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Parsing XDC File [c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_6/design_1_axi_gpio_0_6_board.xdc] for cell 'design_1_i/axi_gpio_polynomial/U0'
+Finished Parsing XDC File [c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_6/design_1_axi_gpio_0_6_board.xdc] for cell 'design_1_i/axi_gpio_polynomial/U0'
+Parsing XDC File [c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_6/design_1_axi_gpio_0_6.xdc] for cell 'design_1_i/axi_gpio_polynomial/U0'
+Finished Parsing XDC File [c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_6/design_1_axi_gpio_0_6.xdc] for cell 'design_1_i/axi_gpio_polynomial/U0'
+Parsing XDC File [c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_1/design_1_rst_ps7_0_100M_1_board.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_1/design_1_rst_ps7_0_100M_1_board.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Parsing XDC File [c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_1/design_1_rst_ps7_0_100M_1.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_1/design_1_rst_ps7_0_100M_1.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Parsing XDC File [c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1_board.xdc] for cell 'design_1_i/clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1_board.xdc] for cell 'design_1_i/clk_wiz_0/inst'
+Parsing XDC File [c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1.xdc] for cell 'design_1_i/clk_wiz_0/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1.xdc:57]
+get_clocks: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1478.340 ; gain = 228.910
+Finished Parsing XDC File [c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1.xdc] for cell 'design_1_i/clk_wiz_0/inst'
+Parsing XDC File [c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_7/design_1_axi_gpio_0_7_board.xdc] for cell 'design_1_i/axi_gpio_control/U0'
+Finished Parsing XDC File [c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_7/design_1_axi_gpio_0_7_board.xdc] for cell 'design_1_i/axi_gpio_control/U0'
+Parsing XDC File [c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_7/design_1_axi_gpio_0_7.xdc] for cell 'design_1_i/axi_gpio_control/U0'
+Finished Parsing XDC File [c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_7/design_1_axi_gpio_0_7.xdc] for cell 'design_1_i/axi_gpio_control/U0'
+Parsing XDC File [c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_polynomial_0/design_1_axi_gpio_polynomial_0_board.xdc] for cell 'design_1_i/axi_gpio_result/U0'
+Finished Parsing XDC File [c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_polynomial_0/design_1_axi_gpio_polynomial_0_board.xdc] for cell 'design_1_i/axi_gpio_result/U0'
+Parsing XDC File [c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_polynomial_0/design_1_axi_gpio_polynomial_0.xdc] for cell 'design_1_i/axi_gpio_result/U0'
+Finished Parsing XDC File [c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_polynomial_0/design_1_axi_gpio_polynomial_0.xdc] for cell 'design_1_i/axi_gpio_result/U0'
+Parsing XDC File [c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_8/design_1_axi_gpio_0_8_board.xdc] for cell 'design_1_i/axi_gpio_leds/U0'
+Finished Parsing XDC File [c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_8/design_1_axi_gpio_0_8_board.xdc] for cell 'design_1_i/axi_gpio_leds/U0'
+Parsing XDC File [c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_8/design_1_axi_gpio_0_8.xdc] for cell 'design_1_i/axi_gpio_leds/U0'
+Finished Parsing XDC File [c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_8/design_1_axi_gpio_0_8.xdc] for cell 'design_1_i/axi_gpio_leds/U0'
+Parsing XDC File [c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_9/design_1_axi_gpio_0_9_board.xdc] for cell 'design_1_i/axi_gpio_buttons/U0'
+Finished Parsing XDC File [c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_9/design_1_axi_gpio_0_9_board.xdc] for cell 'design_1_i/axi_gpio_buttons/U0'
+Parsing XDC File [c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_9/design_1_axi_gpio_0_9.xdc] for cell 'design_1_i/axi_gpio_buttons/U0'
+Finished Parsing XDC File [c:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_9/design_1_axi_gpio_0_9.xdc] for cell 'design_1_i/axi_gpio_buttons/U0'
+Parsing XDC File [C:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.srcs/constrs_1/new/my_xdc.xdc]
+Finished Parsing XDC File [C:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.srcs/constrs_1/new/my_xdc.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1494.367 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 10 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 10 instances
+
+30 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 1494.367 ; gain = 244.938
+Command: opt_design -directive RuntimeOptimized
+INFO: [Vivado_Tcl 4-136] Directive used for opt_design is: RuntimeOptimized
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1501.520 ; gain = 7.152
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 1 Retarget
+INFO: [Opt 31-1287] Pulled Inverter design_1_i/control_slicer_0/channel1_O[0]_INST_0 into driver instance design_1_i/util_reduced_logic_0/inst/Res_INST_0, which resulted in an inversion of 2 pins
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 231a1391d
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.597 . Memory (MB): peak = 1846.875 ; gain = 68.020
+INFO: [Opt 31-389] Phase Retarget created 289 cells and removed 444 cells
+INFO: [Opt 31-1021] In phase Retarget, 849 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 1c027b853
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.640 . Memory (MB): peak = 1846.875 ; gain = 68.020
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 4 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 1632 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 25e750344
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.913 . Memory (MB): peak = 1846.875 ; gain = 68.020
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 103 cells
+INFO: [Opt 31-1021] In phase Sweep, 1648 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 BUFG optimization
+INFO: [Opt 31-194] Inserted BUFG design_1_i/axi_gpio_polynomial/U0/gpio_core_1/gpio2_io_o[31]_BUFG_inst to drive 257 load(s) on clock net design_1_i/axi_gpio_polynomial/U0/gpio_core_1/gpio2_io_o_BUFG[31]
+INFO: [Opt 31-193] Inserted 1 BUFG(s) on clock nets
+Phase 4 BUFG optimization | Checksum: 1a53beada
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.991 . Memory (MB): peak = 1846.875 ; gain = 68.020
+INFO: [Opt 31-662] Phase BUFG optimization created 1 cells of which 1 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 1a53beada
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1846.875 ; gain = 68.020
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 1a53beada
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1846.875 ; gain = 68.020
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 832 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |             289  |             444  |                                            849  |
+|  Constant propagation         |               0  |               4  |                                           1632  |
+|  Sweep                        |               0  |             103  |                                           1648  |
+|  BUFG optimization            |               1  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                            832  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1846.875 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 190071a44
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1846.875 ; gain = 68.020
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1846.875 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 190071a44
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1846.875 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+54 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1846.875 ; gain = 352.508
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.104 . Memory (MB): peak = 1846.875 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.runs/impl_1/design_1_wrapper_opt.dcp' has been generated.
+Command: place_design -directive RuntimeOptimized
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC LUTLP-2] Combinatorial Loop Allowed: 100 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[184].ic_i/node_int_inferred_i_1, design_1_i/ro_injector_0/inst/genblk1[184].ic_i/node_int_inferred_i_2, design_1_i/ro_injector_0/inst/genblk1[184].ic_i/node_int_inferred_i_3, design_1_i/ro_injector_0/inst/genblk1[184].ic_i/node_int_inferred_i_4, design_1_i/ro_injector_0/inst/genblk1[184].ic_i/node_int_inferred_i_5, design_1_i/ro_injector_0/inst/genblk1[184].ic_i/node_int_inferred_i_6, design_1_i/ro_injector_0/inst/genblk1[184].ic_i/node_int_inferred_i_7, design_1_i/ro_injector_0/inst/genblk1[184].ic_i/node_int_inferred_i_8, design_1_i/ro_injector_0/inst/genblk1[184].ic_i/node_int_inferred_i_9, design_1_i/ro_injector_0/inst/genblk1[184].ic_i/node_int_inferred_i_10, design_1_i/ro_injector_0/inst/genblk1[184].ic_i/node_int_inferred_i_11, design_1_i/ro_injector_0/inst/genblk1[184].ic_i/node_int_inferred_i_12, design_1_i/ro_injector_0/inst/genblk1[184].ic_i/node_int_inferred_i_13, design_1_i/ro_injector_0/inst/genblk1[184].ic_i/node_int_inferred_i_14, design_1_i/ro_injector_0/inst/genblk1[184].ic_i/node_int_inferred_i_15... and (the first 15 of 100 listed).
+WARNING: [DRC LUTLP-2] Combinatorial Loop Allowed: 104 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[192].ic_i/node_int_inferred_i_1__0, design_1_i/ro_injector_0/inst/genblk1[192].ic_i/node_int_inferred_i_2__0, design_1_i/ro_injector_0/inst/genblk1[192].ic_i/node_int_inferred_i_3__0, design_1_i/ro_injector_0/inst/genblk1[192].ic_i/node_int_inferred_i_4__0, design_1_i/ro_injector_0/inst/genblk1[192].ic_i/node_int_inferred_i_5__0, design_1_i/ro_injector_0/inst/genblk1[192].ic_i/node_int_inferred_i_6__0, design_1_i/ro_injector_0/inst/genblk1[192].ic_i/node_int_inferred_i_7__0, design_1_i/ro_injector_0/inst/genblk1[192].ic_i/node_int_inferred_i_8__0, design_1_i/ro_injector_0/inst/genblk1[192].ic_i/node_int_inferred_i_9__0, design_1_i/ro_injector_0/inst/genblk1[192].ic_i/node_int_inferred_i_10__0, design_1_i/ro_injector_0/inst/genblk1[192].ic_i/node_int_inferred_i_11__0, design_1_i/ro_injector_0/inst/genblk1[192].ic_i/node_int_inferred_i_12__0, design_1_i/ro_injector_0/inst/genblk1[192].ic_i/node_int_inferred_i_13__0, design_1_i/ro_injector_0/inst/genblk1[192].ic_i/node_int_inferred_i_14__0, design_1_i/ro_injector_0/inst/genblk1[192].ic_i/node_int_inferred_i_15__0... and (the first 15 of 104 listed).
+WARNING: [DRC LUTLP-2] Combinatorial Loop Allowed: 108 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[200].ic_i/node_int_inferred_i_1__1, design_1_i/ro_injector_0/inst/genblk1[200].ic_i/node_int_inferred_i_2__1, design_1_i/ro_injector_0/inst/genblk1[200].ic_i/node_int_inferred_i_3__1, design_1_i/ro_injector_0/inst/genblk1[200].ic_i/node_int_inferred_i_4__1, design_1_i/ro_injector_0/inst/genblk1[200].ic_i/node_int_inferred_i_5__1, design_1_i/ro_injector_0/inst/genblk1[200].ic_i/node_int_inferred_i_6__1, design_1_i/ro_injector_0/inst/genblk1[200].ic_i/node_int_inferred_i_7__1, design_1_i/ro_injector_0/inst/genblk1[200].ic_i/node_int_inferred_i_8__1, design_1_i/ro_injector_0/inst/genblk1[200].ic_i/node_int_inferred_i_9__1, design_1_i/ro_injector_0/inst/genblk1[200].ic_i/node_int_inferred_i_10__1, design_1_i/ro_injector_0/inst/genblk1[200].ic_i/node_int_inferred_i_11__1, design_1_i/ro_injector_0/inst/genblk1[200].ic_i/node_int_inferred_i_12__1, design_1_i/ro_injector_0/inst/genblk1[200].ic_i/node_int_inferred_i_13__1, design_1_i/ro_injector_0/inst/genblk1[200].ic_i/node_int_inferred_i_14__1, design_1_i/ro_injector_0/inst/genblk1[200].ic_i/node_int_inferred_i_15__1... and (the first 15 of 108 listed).
+WARNING: [DRC LUTLP-2] Combinatorial Loop Allowed: 112 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[208].ic_i/node_int_inferred_i_1__2, design_1_i/ro_injector_0/inst/genblk1[208].ic_i/node_int_inferred_i_2__2, design_1_i/ro_injector_0/inst/genblk1[208].ic_i/node_int_inferred_i_3__2, design_1_i/ro_injector_0/inst/genblk1[208].ic_i/node_int_inferred_i_4__2, design_1_i/ro_injector_0/inst/genblk1[208].ic_i/node_int_inferred_i_5__2, design_1_i/ro_injector_0/inst/genblk1[208].ic_i/node_int_inferred_i_6__2, design_1_i/ro_injector_0/inst/genblk1[208].ic_i/node_int_inferred_i_7__2, design_1_i/ro_injector_0/inst/genblk1[208].ic_i/node_int_inferred_i_8__2, design_1_i/ro_injector_0/inst/genblk1[208].ic_i/node_int_inferred_i_9__2, design_1_i/ro_injector_0/inst/genblk1[208].ic_i/node_int_inferred_i_10__2, design_1_i/ro_injector_0/inst/genblk1[208].ic_i/node_int_inferred_i_11__2, design_1_i/ro_injector_0/inst/genblk1[208].ic_i/node_int_inferred_i_12__2, design_1_i/ro_injector_0/inst/genblk1[208].ic_i/node_int_inferred_i_13__2, design_1_i/ro_injector_0/inst/genblk1[208].ic_i/node_int_inferred_i_14__2, design_1_i/ro_injector_0/inst/genblk1[208].ic_i/node_int_inferred_i_15__2... and (the first 15 of 112 listed).
+WARNING: [DRC LUTLP-2] Combinatorial Loop Allowed: 116 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[216].ic_i/node_int_inferred_i_1__3, design_1_i/ro_injector_0/inst/genblk1[216].ic_i/node_int_inferred_i_2__3, design_1_i/ro_injector_0/inst/genblk1[216].ic_i/node_int_inferred_i_3__3, design_1_i/ro_injector_0/inst/genblk1[216].ic_i/node_int_inferred_i_4__3, design_1_i/ro_injector_0/inst/genblk1[216].ic_i/node_int_inferred_i_5__3, design_1_i/ro_injector_0/inst/genblk1[216].ic_i/node_int_inferred_i_6__3, design_1_i/ro_injector_0/inst/genblk1[216].ic_i/node_int_inferred_i_7__3, design_1_i/ro_injector_0/inst/genblk1[216].ic_i/node_int_inferred_i_8__3, design_1_i/ro_injector_0/inst/genblk1[216].ic_i/node_int_inferred_i_9__3, design_1_i/ro_injector_0/inst/genblk1[216].ic_i/node_int_inferred_i_10__3, design_1_i/ro_injector_0/inst/genblk1[216].ic_i/node_int_inferred_i_11__3, design_1_i/ro_injector_0/inst/genblk1[216].ic_i/node_int_inferred_i_12__3, design_1_i/ro_injector_0/inst/genblk1[216].ic_i/node_int_inferred_i_13__3, design_1_i/ro_injector_0/inst/genblk1[216].ic_i/node_int_inferred_i_14__3, design_1_i/ro_injector_0/inst/genblk1[216].ic_i/node_int_inferred_i_15__3... and (the first 15 of 116 listed).
+WARNING: [DRC LUTLP-2] Combinatorial Loop Allowed: 120 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[224].ic_i/node_int_inferred_i_1__4, design_1_i/ro_injector_0/inst/genblk1[224].ic_i/node_int_inferred_i_2__4, design_1_i/ro_injector_0/inst/genblk1[224].ic_i/node_int_inferred_i_3__4, design_1_i/ro_injector_0/inst/genblk1[224].ic_i/node_int_inferred_i_4__4, design_1_i/ro_injector_0/inst/genblk1[224].ic_i/node_int_inferred_i_5__4, design_1_i/ro_injector_0/inst/genblk1[224].ic_i/node_int_inferred_i_6__4, design_1_i/ro_injector_0/inst/genblk1[224].ic_i/node_int_inferred_i_7__4, design_1_i/ro_injector_0/inst/genblk1[224].ic_i/node_int_inferred_i_8__4, design_1_i/ro_injector_0/inst/genblk1[224].ic_i/node_int_inferred_i_9__4, design_1_i/ro_injector_0/inst/genblk1[224].ic_i/node_int_inferred_i_10__4, design_1_i/ro_injector_0/inst/genblk1[224].ic_i/node_int_inferred_i_11__4, design_1_i/ro_injector_0/inst/genblk1[224].ic_i/node_int_inferred_i_12__4, design_1_i/ro_injector_0/inst/genblk1[224].ic_i/node_int_inferred_i_13__4, design_1_i/ro_injector_0/inst/genblk1[224].ic_i/node_int_inferred_i_14__4, design_1_i/ro_injector_0/inst/genblk1[224].ic_i/node_int_inferred_i_15__4... and (the first 15 of 120 listed).
+WARNING: [DRC LUTLP-2] Combinatorial Loop Allowed: 124 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[232].ic_i/node_int_inferred_i_1__5, design_1_i/ro_injector_0/inst/genblk1[232].ic_i/node_int_inferred_i_2__5, design_1_i/ro_injector_0/inst/genblk1[232].ic_i/node_int_inferred_i_3__5, design_1_i/ro_injector_0/inst/genblk1[232].ic_i/node_int_inferred_i_4__5, design_1_i/ro_injector_0/inst/genblk1[232].ic_i/node_int_inferred_i_5__5, design_1_i/ro_injector_0/inst/genblk1[232].ic_i/node_int_inferred_i_6__5, design_1_i/ro_injector_0/inst/genblk1[232].ic_i/node_int_inferred_i_7__5, design_1_i/ro_injector_0/inst/genblk1[232].ic_i/node_int_inferred_i_8__5, design_1_i/ro_injector_0/inst/genblk1[232].ic_i/node_int_inferred_i_9__5, design_1_i/ro_injector_0/inst/genblk1[232].ic_i/node_int_inferred_i_10__5, design_1_i/ro_injector_0/inst/genblk1[232].ic_i/node_int_inferred_i_11__5, design_1_i/ro_injector_0/inst/genblk1[232].ic_i/node_int_inferred_i_12__5, design_1_i/ro_injector_0/inst/genblk1[232].ic_i/node_int_inferred_i_13__5, design_1_i/ro_injector_0/inst/genblk1[232].ic_i/node_int_inferred_i_14__5, design_1_i/ro_injector_0/inst/genblk1[232].ic_i/node_int_inferred_i_15__5... and (the first 15 of 124 listed).
+WARNING: [DRC LUTLP-2] Combinatorial Loop Allowed: 128 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[240].ic_i/node_int_inferred_i_1__6, design_1_i/ro_injector_0/inst/genblk1[240].ic_i/node_int_inferred_i_2__6, design_1_i/ro_injector_0/inst/genblk1[240].ic_i/node_int_inferred_i_3__6, design_1_i/ro_injector_0/inst/genblk1[240].ic_i/node_int_inferred_i_4__6, design_1_i/ro_injector_0/inst/genblk1[240].ic_i/node_int_inferred_i_5__6, design_1_i/ro_injector_0/inst/genblk1[240].ic_i/node_int_inferred_i_6__6, design_1_i/ro_injector_0/inst/genblk1[240].ic_i/node_int_inferred_i_7__6, design_1_i/ro_injector_0/inst/genblk1[240].ic_i/node_int_inferred_i_8__6, design_1_i/ro_injector_0/inst/genblk1[240].ic_i/node_int_inferred_i_9__6, design_1_i/ro_injector_0/inst/genblk1[240].ic_i/node_int_inferred_i_10__6, design_1_i/ro_injector_0/inst/genblk1[240].ic_i/node_int_inferred_i_11__6, design_1_i/ro_injector_0/inst/genblk1[240].ic_i/node_int_inferred_i_12__6, design_1_i/ro_injector_0/inst/genblk1[240].ic_i/node_int_inferred_i_13__6, design_1_i/ro_injector_0/inst/genblk1[240].ic_i/node_int_inferred_i_14__6, design_1_i/ro_injector_0/inst/genblk1[240].ic_i/node_int_inferred_i_15__6... and (the first 15 of 128 listed).
+WARNING: [DRC LUTLP-2] Combinatorial Loop Allowed: 132 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[248].ic_i/node_int_inferred_i_1__7, design_1_i/ro_injector_0/inst/genblk1[248].ic_i/node_int_inferred_i_2__7, design_1_i/ro_injector_0/inst/genblk1[248].ic_i/node_int_inferred_i_3__7, design_1_i/ro_injector_0/inst/genblk1[248].ic_i/node_int_inferred_i_4__7, design_1_i/ro_injector_0/inst/genblk1[248].ic_i/node_int_inferred_i_5__7, design_1_i/ro_injector_0/inst/genblk1[248].ic_i/node_int_inferred_i_6__7, design_1_i/ro_injector_0/inst/genblk1[248].ic_i/node_int_inferred_i_7__7, design_1_i/ro_injector_0/inst/genblk1[248].ic_i/node_int_inferred_i_8__7, design_1_i/ro_injector_0/inst/genblk1[248].ic_i/node_int_inferred_i_9__7, design_1_i/ro_injector_0/inst/genblk1[248].ic_i/node_int_inferred_i_10__7, design_1_i/ro_injector_0/inst/genblk1[248].ic_i/node_int_inferred_i_11__7, design_1_i/ro_injector_0/inst/genblk1[248].ic_i/node_int_inferred_i_12__7, design_1_i/ro_injector_0/inst/genblk1[248].ic_i/node_int_inferred_i_13__7, design_1_i/ro_injector_0/inst/genblk1[248].ic_i/node_int_inferred_i_14__7, design_1_i/ro_injector_0/inst/genblk1[248].ic_i/node_int_inferred_i_15__7... and (the first 15 of 132 listed).
+WARNING: [DRC LUTLP-2] Combinatorial Loop Allowed: 72 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[128].ic_i/node_int_inferred_i_1, design_1_i/ro_injector_0/inst/genblk1[128].ic_i/node_int_inferred_i_2, design_1_i/ro_injector_0/inst/genblk1[128].ic_i/node_int_inferred_i_3, design_1_i/ro_injector_0/inst/genblk1[128].ic_i/node_int_inferred_i_4, design_1_i/ro_injector_0/inst/genblk1[128].ic_i/node_int_inferred_i_5, design_1_i/ro_injector_0/inst/genblk1[128].ic_i/node_int_inferred_i_6, design_1_i/ro_injector_0/inst/genblk1[128].ic_i/node_int_inferred_i_7, design_1_i/ro_injector_0/inst/genblk1[128].ic_i/node_int_inferred_i_8, design_1_i/ro_injector_0/inst/genblk1[128].ic_i/node_int_inferred_i_9, design_1_i/ro_injector_0/inst/genblk1[128].ic_i/node_int_inferred_i_10, design_1_i/ro_injector_0/inst/genblk1[128].ic_i/node_int_inferred_i_11, design_1_i/ro_injector_0/inst/genblk1[128].ic_i/node_int_inferred_i_12, design_1_i/ro_injector_0/inst/genblk1[128].ic_i/node_int_inferred_i_13, design_1_i/ro_injector_0/inst/genblk1[128].ic_i/node_int_inferred_i_14, design_1_i/ro_injector_0/inst/genblk1[128].ic_i/node_int_inferred_i_15... and (the first 15 of 72 listed).
+WARNING: [DRC LUTLP-2] Combinatorial Loop Allowed: 76 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[136].ic_i/node_int_inferred_i_1, design_1_i/ro_injector_0/inst/genblk1[136].ic_i/node_int_inferred_i_2, design_1_i/ro_injector_0/inst/genblk1[136].ic_i/node_int_inferred_i_3, design_1_i/ro_injector_0/inst/genblk1[136].ic_i/node_int_inferred_i_4, design_1_i/ro_injector_0/inst/genblk1[136].ic_i/node_int_inferred_i_5, design_1_i/ro_injector_0/inst/genblk1[136].ic_i/node_int_inferred_i_6, design_1_i/ro_injector_0/inst/genblk1[136].ic_i/node_int_inferred_i_7, design_1_i/ro_injector_0/inst/genblk1[136].ic_i/node_int_inferred_i_8, design_1_i/ro_injector_0/inst/genblk1[136].ic_i/node_int_inferred_i_9, design_1_i/ro_injector_0/inst/genblk1[136].ic_i/node_int_inferred_i_10, design_1_i/ro_injector_0/inst/genblk1[136].ic_i/node_int_inferred_i_11, design_1_i/ro_injector_0/inst/genblk1[136].ic_i/node_int_inferred_i_12, design_1_i/ro_injector_0/inst/genblk1[136].ic_i/node_int_inferred_i_13, design_1_i/ro_injector_0/inst/genblk1[136].ic_i/node_int_inferred_i_14, design_1_i/ro_injector_0/inst/genblk1[136].ic_i/node_int_inferred_i_15... and (the first 15 of 76 listed).
+WARNING: [DRC LUTLP-2] Combinatorial Loop Allowed: 80 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[144].ic_i/node_int_inferred_i_1, design_1_i/ro_injector_0/inst/genblk1[144].ic_i/node_int_inferred_i_2, design_1_i/ro_injector_0/inst/genblk1[144].ic_i/node_int_inferred_i_3, design_1_i/ro_injector_0/inst/genblk1[144].ic_i/node_int_inferred_i_4, design_1_i/ro_injector_0/inst/genblk1[144].ic_i/node_int_inferred_i_5, design_1_i/ro_injector_0/inst/genblk1[144].ic_i/node_int_inferred_i_6, design_1_i/ro_injector_0/inst/genblk1[144].ic_i/node_int_inferred_i_7, design_1_i/ro_injector_0/inst/genblk1[144].ic_i/node_int_inferred_i_8, design_1_i/ro_injector_0/inst/genblk1[144].ic_i/node_int_inferred_i_9, design_1_i/ro_injector_0/inst/genblk1[144].ic_i/node_int_inferred_i_10, design_1_i/ro_injector_0/inst/genblk1[144].ic_i/node_int_inferred_i_11, design_1_i/ro_injector_0/inst/genblk1[144].ic_i/node_int_inferred_i_12, design_1_i/ro_injector_0/inst/genblk1[144].ic_i/node_int_inferred_i_13, design_1_i/ro_injector_0/inst/genblk1[144].ic_i/node_int_inferred_i_14, design_1_i/ro_injector_0/inst/genblk1[144].ic_i/node_int_inferred_i_15... and (the first 15 of 80 listed).
+WARNING: [DRC LUTLP-2] Combinatorial Loop Allowed: 84 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[152].ic_i/node_int_inferred_i_1, design_1_i/ro_injector_0/inst/genblk1[152].ic_i/node_int_inferred_i_2, design_1_i/ro_injector_0/inst/genblk1[152].ic_i/node_int_inferred_i_3, design_1_i/ro_injector_0/inst/genblk1[152].ic_i/node_int_inferred_i_4, design_1_i/ro_injector_0/inst/genblk1[152].ic_i/node_int_inferred_i_5, design_1_i/ro_injector_0/inst/genblk1[152].ic_i/node_int_inferred_i_6, design_1_i/ro_injector_0/inst/genblk1[152].ic_i/node_int_inferred_i_7, design_1_i/ro_injector_0/inst/genblk1[152].ic_i/node_int_inferred_i_8, design_1_i/ro_injector_0/inst/genblk1[152].ic_i/node_int_inferred_i_9, design_1_i/ro_injector_0/inst/genblk1[152].ic_i/node_int_inferred_i_10, design_1_i/ro_injector_0/inst/genblk1[152].ic_i/node_int_inferred_i_11, design_1_i/ro_injector_0/inst/genblk1[152].ic_i/node_int_inferred_i_12, design_1_i/ro_injector_0/inst/genblk1[152].ic_i/node_int_inferred_i_13, design_1_i/ro_injector_0/inst/genblk1[152].ic_i/node_int_inferred_i_14, design_1_i/ro_injector_0/inst/genblk1[152].ic_i/node_int_inferred_i_15... and (the first 15 of 84 listed).
+WARNING: [DRC LUTLP-2] Combinatorial Loop Allowed: 88 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[160].ic_i/node_int_inferred_i_1, design_1_i/ro_injector_0/inst/genblk1[160].ic_i/node_int_inferred_i_2, design_1_i/ro_injector_0/inst/genblk1[160].ic_i/node_int_inferred_i_3, design_1_i/ro_injector_0/inst/genblk1[160].ic_i/node_int_inferred_i_4, design_1_i/ro_injector_0/inst/genblk1[160].ic_i/node_int_inferred_i_5, design_1_i/ro_injector_0/inst/genblk1[160].ic_i/node_int_inferred_i_6, design_1_i/ro_injector_0/inst/genblk1[160].ic_i/node_int_inferred_i_7, design_1_i/ro_injector_0/inst/genblk1[160].ic_i/node_int_inferred_i_8, design_1_i/ro_injector_0/inst/genblk1[160].ic_i/node_int_inferred_i_9, design_1_i/ro_injector_0/inst/genblk1[160].ic_i/node_int_inferred_i_10, design_1_i/ro_injector_0/inst/genblk1[160].ic_i/node_int_inferred_i_11, design_1_i/ro_injector_0/inst/genblk1[160].ic_i/node_int_inferred_i_12, design_1_i/ro_injector_0/inst/genblk1[160].ic_i/node_int_inferred_i_13, design_1_i/ro_injector_0/inst/genblk1[160].ic_i/node_int_inferred_i_14, design_1_i/ro_injector_0/inst/genblk1[160].ic_i/node_int_inferred_i_15... and (the first 15 of 88 listed).
+WARNING: [DRC LUTLP-2] Combinatorial Loop Allowed: 92 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[168].ic_i/node_int_inferred_i_1, design_1_i/ro_injector_0/inst/genblk1[168].ic_i/node_int_inferred_i_2, design_1_i/ro_injector_0/inst/genblk1[168].ic_i/node_int_inferred_i_3, design_1_i/ro_injector_0/inst/genblk1[168].ic_i/node_int_inferred_i_4, design_1_i/ro_injector_0/inst/genblk1[168].ic_i/node_int_inferred_i_5, design_1_i/ro_injector_0/inst/genblk1[168].ic_i/node_int_inferred_i_6, design_1_i/ro_injector_0/inst/genblk1[168].ic_i/node_int_inferred_i_7, design_1_i/ro_injector_0/inst/genblk1[168].ic_i/node_int_inferred_i_8, design_1_i/ro_injector_0/inst/genblk1[168].ic_i/node_int_inferred_i_9, design_1_i/ro_injector_0/inst/genblk1[168].ic_i/node_int_inferred_i_10, design_1_i/ro_injector_0/inst/genblk1[168].ic_i/node_int_inferred_i_11, design_1_i/ro_injector_0/inst/genblk1[168].ic_i/node_int_inferred_i_12, design_1_i/ro_injector_0/inst/genblk1[168].ic_i/node_int_inferred_i_13, design_1_i/ro_injector_0/inst/genblk1[168].ic_i/node_int_inferred_i_14, design_1_i/ro_injector_0/inst/genblk1[168].ic_i/node_int_inferred_i_15... and (the first 15 of 92 listed).
+WARNING: [DRC LUTLP-2] Combinatorial Loop Allowed: 96 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[176].ic_i/node_int_inferred_i_1, design_1_i/ro_injector_0/inst/genblk1[176].ic_i/node_int_inferred_i_2, design_1_i/ro_injector_0/inst/genblk1[176].ic_i/node_int_inferred_i_3, design_1_i/ro_injector_0/inst/genblk1[176].ic_i/node_int_inferred_i_4, design_1_i/ro_injector_0/inst/genblk1[176].ic_i/node_int_inferred_i_5, design_1_i/ro_injector_0/inst/genblk1[176].ic_i/node_int_inferred_i_6, design_1_i/ro_injector_0/inst/genblk1[176].ic_i/node_int_inferred_i_7, design_1_i/ro_injector_0/inst/genblk1[176].ic_i/node_int_inferred_i_8, design_1_i/ro_injector_0/inst/genblk1[176].ic_i/node_int_inferred_i_9, design_1_i/ro_injector_0/inst/genblk1[176].ic_i/node_int_inferred_i_10, design_1_i/ro_injector_0/inst/genblk1[176].ic_i/node_int_inferred_i_11, design_1_i/ro_injector_0/inst/genblk1[176].ic_i/node_int_inferred_i_12, design_1_i/ro_injector_0/inst/genblk1[176].ic_i/node_int_inferred_i_13, design_1_i/ro_injector_0/inst/genblk1[176].ic_i/node_int_inferred_i_14, design_1_i/ro_injector_0/inst/genblk1[176].ic_i/node_int_inferred_i_15... and (the first 15 of 96 listed).
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 16 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 46-5] The placer was invoked with the 'RuntimeOptimized' directive.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1862.098 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: fa382601
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1862.098 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1862.098 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1b9dbcab9
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.661 . Memory (MB): peak = 1862.098 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 1e0164df9
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1862.098 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1e0164df9
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1862.098 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 1e0164df9
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1862.098 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 19951ebe5
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1862.098 ; gain = 0.000
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 14e75a5da
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1862.098 ; gain = 0.000
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 12637ef4f
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1862.098 ; gain = 0.000
+
+Phase 2.4 Global Placement Core
+Phase 2.4 Global Placement Core | Checksum: 11ea0d502
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 1862.098 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 11ea0d502
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 1862.098 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: d9d06d46
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 1862.098 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1ad8e1708
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 1862.098 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 17f270aa0
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 1862.098 ; gain = 0.000
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 17f270aa0
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 1862.098 ; gain = 0.000
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 105480526
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:11 . Memory (MB): peak = 1862.098 ; gain = 0.000
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 130672d42
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:12 . Memory (MB): peak = 1862.098 ; gain = 0.000
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 55a778c3
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 1862.098 ; gain = 0.000
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 55a778c3
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 1862.098 ; gain = 0.000
+
+Phase 3.9 Fast Optimization
+Phase 3.9 Fast Optimization | Checksum: 12539b1b3
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:16 . Memory (MB): peak = 1862.098 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 12539b1b3
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:17 . Memory (MB): peak = 1862.098 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 254990fcf
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.551 | TNS=-141.462 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1f14bc8e3
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.167 . Memory (MB): peak = 1866.930 ; gain = 0.008
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Ending Physical Synthesis Task | Checksum: 21d3f27c4
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.195 . Memory (MB): peak = 1866.930 ; gain = 0.008
+Phase 4.1.1.1 BUFG Insertion | Checksum: 254990fcf
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:18 . Memory (MB): peak = 1866.930 ; gain = 4.832
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-8.248. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 105837e85
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:19 . Memory (MB): peak = 1866.930 ; gain = 4.832
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:19 . Memory (MB): peak = 1866.930 ; gain = 4.832
+Phase 4.1 Post Commit Optimization | Checksum: 105837e85
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:19 . Memory (MB): peak = 1866.930 ; gain = 4.832
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 105837e85
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:19 . Memory (MB): peak = 1866.930 ; gain = 4.832
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                1x1|                1x1|
+|___________|___________________|___________________|
+|      South|                1x1|                1x1|
+|___________|___________________|___________________|
+|       East|                1x1|                1x1|
+|___________|___________________|___________________|
+|       West|                1x1|                1x1|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 105837e85
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:20 . Memory (MB): peak = 1866.930 ; gain = 4.832
+Phase 4.3 Placer Reporting | Checksum: 105837e85
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:20 . Memory (MB): peak = 1866.930 ; gain = 4.832
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1866.930 ; gain = 0.000
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:20 . Memory (MB): peak = 1866.930 ; gain = 4.832
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 8d88ed40
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:20 . Memory (MB): peak = 1866.930 ; gain = 4.832
+Ending Placer Task | Checksum: 59538b2f
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:20 . Memory (MB): peak = 1866.930 ; gain = 4.832
+INFO: [Common 17-83] Releasing license: Implementation
+73 Infos, 16 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:21 . Memory (MB): peak = 1866.930 ; gain = 20.055
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.404 . Memory (MB): peak = 1875.887 ; gain = 8.957
+INFO: [Common 17-1381] The checkpoint 'C:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.runs/impl_1/design_1_wrapper_placed.dcp' has been generated.
+Command: route_design -directive RuntimeOptimized
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC LUTLP-2] Combinatorial Loop Allowed: 100 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[184].ic_i/node_int_inferred_i_1, design_1_i/ro_injector_0/inst/genblk1[184].ic_i/node_int_inferred_i_2, design_1_i/ro_injector_0/inst/genblk1[184].ic_i/node_int_inferred_i_3, design_1_i/ro_injector_0/inst/genblk1[184].ic_i/node_int_inferred_i_4, design_1_i/ro_injector_0/inst/genblk1[184].ic_i/node_int_inferred_i_5, design_1_i/ro_injector_0/inst/genblk1[184].ic_i/node_int_inferred_i_6, design_1_i/ro_injector_0/inst/genblk1[184].ic_i/node_int_inferred_i_7, design_1_i/ro_injector_0/inst/genblk1[184].ic_i/node_int_inferred_i_8, design_1_i/ro_injector_0/inst/genblk1[184].ic_i/node_int_inferred_i_9, design_1_i/ro_injector_0/inst/genblk1[184].ic_i/node_int_inferred_i_10, design_1_i/ro_injector_0/inst/genblk1[184].ic_i/node_int_inferred_i_11, design_1_i/ro_injector_0/inst/genblk1[184].ic_i/node_int_inferred_i_12, design_1_i/ro_injector_0/inst/genblk1[184].ic_i/node_int_inferred_i_13, design_1_i/ro_injector_0/inst/genblk1[184].ic_i/node_int_inferred_i_14, design_1_i/ro_injector_0/inst/genblk1[184].ic_i/node_int_inferred_i_15... and (the first 15 of 100 listed).
+WARNING: [DRC LUTLP-2] Combinatorial Loop Allowed: 104 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[192].ic_i/node_int_inferred_i_1__0, design_1_i/ro_injector_0/inst/genblk1[192].ic_i/node_int_inferred_i_2__0, design_1_i/ro_injector_0/inst/genblk1[192].ic_i/node_int_inferred_i_3__0, design_1_i/ro_injector_0/inst/genblk1[192].ic_i/node_int_inferred_i_4__0, design_1_i/ro_injector_0/inst/genblk1[192].ic_i/node_int_inferred_i_5__0, design_1_i/ro_injector_0/inst/genblk1[192].ic_i/node_int_inferred_i_6__0, design_1_i/ro_injector_0/inst/genblk1[192].ic_i/node_int_inferred_i_7__0, design_1_i/ro_injector_0/inst/genblk1[192].ic_i/node_int_inferred_i_8__0, design_1_i/ro_injector_0/inst/genblk1[192].ic_i/node_int_inferred_i_9__0, design_1_i/ro_injector_0/inst/genblk1[192].ic_i/node_int_inferred_i_10__0, design_1_i/ro_injector_0/inst/genblk1[192].ic_i/node_int_inferred_i_11__0, design_1_i/ro_injector_0/inst/genblk1[192].ic_i/node_int_inferred_i_12__0, design_1_i/ro_injector_0/inst/genblk1[192].ic_i/node_int_inferred_i_13__0, design_1_i/ro_injector_0/inst/genblk1[192].ic_i/node_int_inferred_i_14__0, design_1_i/ro_injector_0/inst/genblk1[192].ic_i/node_int_inferred_i_15__0... and (the first 15 of 104 listed).
+WARNING: [DRC LUTLP-2] Combinatorial Loop Allowed: 108 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[200].ic_i/node_int_inferred_i_1__1, design_1_i/ro_injector_0/inst/genblk1[200].ic_i/node_int_inferred_i_2__1, design_1_i/ro_injector_0/inst/genblk1[200].ic_i/node_int_inferred_i_3__1, design_1_i/ro_injector_0/inst/genblk1[200].ic_i/node_int_inferred_i_4__1, design_1_i/ro_injector_0/inst/genblk1[200].ic_i/node_int_inferred_i_5__1, design_1_i/ro_injector_0/inst/genblk1[200].ic_i/node_int_inferred_i_6__1, design_1_i/ro_injector_0/inst/genblk1[200].ic_i/node_int_inferred_i_7__1, design_1_i/ro_injector_0/inst/genblk1[200].ic_i/node_int_inferred_i_8__1, design_1_i/ro_injector_0/inst/genblk1[200].ic_i/node_int_inferred_i_9__1, design_1_i/ro_injector_0/inst/genblk1[200].ic_i/node_int_inferred_i_10__1, design_1_i/ro_injector_0/inst/genblk1[200].ic_i/node_int_inferred_i_11__1, design_1_i/ro_injector_0/inst/genblk1[200].ic_i/node_int_inferred_i_12__1, design_1_i/ro_injector_0/inst/genblk1[200].ic_i/node_int_inferred_i_13__1, design_1_i/ro_injector_0/inst/genblk1[200].ic_i/node_int_inferred_i_14__1, design_1_i/ro_injector_0/inst/genblk1[200].ic_i/node_int_inferred_i_15__1... and (the first 15 of 108 listed).
+WARNING: [DRC LUTLP-2] Combinatorial Loop Allowed: 112 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[208].ic_i/node_int_inferred_i_1__2, design_1_i/ro_injector_0/inst/genblk1[208].ic_i/node_int_inferred_i_2__2, design_1_i/ro_injector_0/inst/genblk1[208].ic_i/node_int_inferred_i_3__2, design_1_i/ro_injector_0/inst/genblk1[208].ic_i/node_int_inferred_i_4__2, design_1_i/ro_injector_0/inst/genblk1[208].ic_i/node_int_inferred_i_5__2, design_1_i/ro_injector_0/inst/genblk1[208].ic_i/node_int_inferred_i_6__2, design_1_i/ro_injector_0/inst/genblk1[208].ic_i/node_int_inferred_i_7__2, design_1_i/ro_injector_0/inst/genblk1[208].ic_i/node_int_inferred_i_8__2, design_1_i/ro_injector_0/inst/genblk1[208].ic_i/node_int_inferred_i_9__2, design_1_i/ro_injector_0/inst/genblk1[208].ic_i/node_int_inferred_i_10__2, design_1_i/ro_injector_0/inst/genblk1[208].ic_i/node_int_inferred_i_11__2, design_1_i/ro_injector_0/inst/genblk1[208].ic_i/node_int_inferred_i_12__2, design_1_i/ro_injector_0/inst/genblk1[208].ic_i/node_int_inferred_i_13__2, design_1_i/ro_injector_0/inst/genblk1[208].ic_i/node_int_inferred_i_14__2, design_1_i/ro_injector_0/inst/genblk1[208].ic_i/node_int_inferred_i_15__2... and (the first 15 of 112 listed).
+WARNING: [DRC LUTLP-2] Combinatorial Loop Allowed: 116 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[216].ic_i/node_int_inferred_i_1__3, design_1_i/ro_injector_0/inst/genblk1[216].ic_i/node_int_inferred_i_2__3, design_1_i/ro_injector_0/inst/genblk1[216].ic_i/node_int_inferred_i_3__3, design_1_i/ro_injector_0/inst/genblk1[216].ic_i/node_int_inferred_i_4__3, design_1_i/ro_injector_0/inst/genblk1[216].ic_i/node_int_inferred_i_5__3, design_1_i/ro_injector_0/inst/genblk1[216].ic_i/node_int_inferred_i_6__3, design_1_i/ro_injector_0/inst/genblk1[216].ic_i/node_int_inferred_i_7__3, design_1_i/ro_injector_0/inst/genblk1[216].ic_i/node_int_inferred_i_8__3, design_1_i/ro_injector_0/inst/genblk1[216].ic_i/node_int_inferred_i_9__3, design_1_i/ro_injector_0/inst/genblk1[216].ic_i/node_int_inferred_i_10__3, design_1_i/ro_injector_0/inst/genblk1[216].ic_i/node_int_inferred_i_11__3, design_1_i/ro_injector_0/inst/genblk1[216].ic_i/node_int_inferred_i_12__3, design_1_i/ro_injector_0/inst/genblk1[216].ic_i/node_int_inferred_i_13__3, design_1_i/ro_injector_0/inst/genblk1[216].ic_i/node_int_inferred_i_14__3, design_1_i/ro_injector_0/inst/genblk1[216].ic_i/node_int_inferred_i_15__3... and (the first 15 of 116 listed).
+WARNING: [DRC LUTLP-2] Combinatorial Loop Allowed: 120 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[224].ic_i/node_int_inferred_i_1__4, design_1_i/ro_injector_0/inst/genblk1[224].ic_i/node_int_inferred_i_2__4, design_1_i/ro_injector_0/inst/genblk1[224].ic_i/node_int_inferred_i_3__4, design_1_i/ro_injector_0/inst/genblk1[224].ic_i/node_int_inferred_i_4__4, design_1_i/ro_injector_0/inst/genblk1[224].ic_i/node_int_inferred_i_5__4, design_1_i/ro_injector_0/inst/genblk1[224].ic_i/node_int_inferred_i_6__4, design_1_i/ro_injector_0/inst/genblk1[224].ic_i/node_int_inferred_i_7__4, design_1_i/ro_injector_0/inst/genblk1[224].ic_i/node_int_inferred_i_8__4, design_1_i/ro_injector_0/inst/genblk1[224].ic_i/node_int_inferred_i_9__4, design_1_i/ro_injector_0/inst/genblk1[224].ic_i/node_int_inferred_i_10__4, design_1_i/ro_injector_0/inst/genblk1[224].ic_i/node_int_inferred_i_11__4, design_1_i/ro_injector_0/inst/genblk1[224].ic_i/node_int_inferred_i_12__4, design_1_i/ro_injector_0/inst/genblk1[224].ic_i/node_int_inferred_i_13__4, design_1_i/ro_injector_0/inst/genblk1[224].ic_i/node_int_inferred_i_14__4, design_1_i/ro_injector_0/inst/genblk1[224].ic_i/node_int_inferred_i_15__4... and (the first 15 of 120 listed).
+WARNING: [DRC LUTLP-2] Combinatorial Loop Allowed: 124 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[232].ic_i/node_int_inferred_i_1__5, design_1_i/ro_injector_0/inst/genblk1[232].ic_i/node_int_inferred_i_2__5, design_1_i/ro_injector_0/inst/genblk1[232].ic_i/node_int_inferred_i_3__5, design_1_i/ro_injector_0/inst/genblk1[232].ic_i/node_int_inferred_i_4__5, design_1_i/ro_injector_0/inst/genblk1[232].ic_i/node_int_inferred_i_5__5, design_1_i/ro_injector_0/inst/genblk1[232].ic_i/node_int_inferred_i_6__5, design_1_i/ro_injector_0/inst/genblk1[232].ic_i/node_int_inferred_i_7__5, design_1_i/ro_injector_0/inst/genblk1[232].ic_i/node_int_inferred_i_8__5, design_1_i/ro_injector_0/inst/genblk1[232].ic_i/node_int_inferred_i_9__5, design_1_i/ro_injector_0/inst/genblk1[232].ic_i/node_int_inferred_i_10__5, design_1_i/ro_injector_0/inst/genblk1[232].ic_i/node_int_inferred_i_11__5, design_1_i/ro_injector_0/inst/genblk1[232].ic_i/node_int_inferred_i_12__5, design_1_i/ro_injector_0/inst/genblk1[232].ic_i/node_int_inferred_i_13__5, design_1_i/ro_injector_0/inst/genblk1[232].ic_i/node_int_inferred_i_14__5, design_1_i/ro_injector_0/inst/genblk1[232].ic_i/node_int_inferred_i_15__5... and (the first 15 of 124 listed).
+WARNING: [DRC LUTLP-2] Combinatorial Loop Allowed: 128 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[240].ic_i/node_int_inferred_i_1__6, design_1_i/ro_injector_0/inst/genblk1[240].ic_i/node_int_inferred_i_2__6, design_1_i/ro_injector_0/inst/genblk1[240].ic_i/node_int_inferred_i_3__6, design_1_i/ro_injector_0/inst/genblk1[240].ic_i/node_int_inferred_i_4__6, design_1_i/ro_injector_0/inst/genblk1[240].ic_i/node_int_inferred_i_5__6, design_1_i/ro_injector_0/inst/genblk1[240].ic_i/node_int_inferred_i_6__6, design_1_i/ro_injector_0/inst/genblk1[240].ic_i/node_int_inferred_i_7__6, design_1_i/ro_injector_0/inst/genblk1[240].ic_i/node_int_inferred_i_8__6, design_1_i/ro_injector_0/inst/genblk1[240].ic_i/node_int_inferred_i_9__6, design_1_i/ro_injector_0/inst/genblk1[240].ic_i/node_int_inferred_i_10__6, design_1_i/ro_injector_0/inst/genblk1[240].ic_i/node_int_inferred_i_11__6, design_1_i/ro_injector_0/inst/genblk1[240].ic_i/node_int_inferred_i_12__6, design_1_i/ro_injector_0/inst/genblk1[240].ic_i/node_int_inferred_i_13__6, design_1_i/ro_injector_0/inst/genblk1[240].ic_i/node_int_inferred_i_14__6, design_1_i/ro_injector_0/inst/genblk1[240].ic_i/node_int_inferred_i_15__6... and (the first 15 of 128 listed).
+WARNING: [DRC LUTLP-2] Combinatorial Loop Allowed: 132 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[248].ic_i/node_int_inferred_i_1__7, design_1_i/ro_injector_0/inst/genblk1[248].ic_i/node_int_inferred_i_2__7, design_1_i/ro_injector_0/inst/genblk1[248].ic_i/node_int_inferred_i_3__7, design_1_i/ro_injector_0/inst/genblk1[248].ic_i/node_int_inferred_i_4__7, design_1_i/ro_injector_0/inst/genblk1[248].ic_i/node_int_inferred_i_5__7, design_1_i/ro_injector_0/inst/genblk1[248].ic_i/node_int_inferred_i_6__7, design_1_i/ro_injector_0/inst/genblk1[248].ic_i/node_int_inferred_i_7__7, design_1_i/ro_injector_0/inst/genblk1[248].ic_i/node_int_inferred_i_8__7, design_1_i/ro_injector_0/inst/genblk1[248].ic_i/node_int_inferred_i_9__7, design_1_i/ro_injector_0/inst/genblk1[248].ic_i/node_int_inferred_i_10__7, design_1_i/ro_injector_0/inst/genblk1[248].ic_i/node_int_inferred_i_11__7, design_1_i/ro_injector_0/inst/genblk1[248].ic_i/node_int_inferred_i_12__7, design_1_i/ro_injector_0/inst/genblk1[248].ic_i/node_int_inferred_i_13__7, design_1_i/ro_injector_0/inst/genblk1[248].ic_i/node_int_inferred_i_14__7, design_1_i/ro_injector_0/inst/genblk1[248].ic_i/node_int_inferred_i_15__7... and (the first 15 of 132 listed).
+WARNING: [DRC LUTLP-2] Combinatorial Loop Allowed: 72 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[128].ic_i/node_int_inferred_i_1, design_1_i/ro_injector_0/inst/genblk1[128].ic_i/node_int_inferred_i_2, design_1_i/ro_injector_0/inst/genblk1[128].ic_i/node_int_inferred_i_3, design_1_i/ro_injector_0/inst/genblk1[128].ic_i/node_int_inferred_i_4, design_1_i/ro_injector_0/inst/genblk1[128].ic_i/node_int_inferred_i_5, design_1_i/ro_injector_0/inst/genblk1[128].ic_i/node_int_inferred_i_6, design_1_i/ro_injector_0/inst/genblk1[128].ic_i/node_int_inferred_i_7, design_1_i/ro_injector_0/inst/genblk1[128].ic_i/node_int_inferred_i_8, design_1_i/ro_injector_0/inst/genblk1[128].ic_i/node_int_inferred_i_9, design_1_i/ro_injector_0/inst/genblk1[128].ic_i/node_int_inferred_i_10, design_1_i/ro_injector_0/inst/genblk1[128].ic_i/node_int_inferred_i_11, design_1_i/ro_injector_0/inst/genblk1[128].ic_i/node_int_inferred_i_12, design_1_i/ro_injector_0/inst/genblk1[128].ic_i/node_int_inferred_i_13, design_1_i/ro_injector_0/inst/genblk1[128].ic_i/node_int_inferred_i_14, design_1_i/ro_injector_0/inst/genblk1[128].ic_i/node_int_inferred_i_15... and (the first 15 of 72 listed).
+WARNING: [DRC LUTLP-2] Combinatorial Loop Allowed: 76 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[136].ic_i/node_int_inferred_i_1, design_1_i/ro_injector_0/inst/genblk1[136].ic_i/node_int_inferred_i_2, design_1_i/ro_injector_0/inst/genblk1[136].ic_i/node_int_inferred_i_3, design_1_i/ro_injector_0/inst/genblk1[136].ic_i/node_int_inferred_i_4, design_1_i/ro_injector_0/inst/genblk1[136].ic_i/node_int_inferred_i_5, design_1_i/ro_injector_0/inst/genblk1[136].ic_i/node_int_inferred_i_6, design_1_i/ro_injector_0/inst/genblk1[136].ic_i/node_int_inferred_i_7, design_1_i/ro_injector_0/inst/genblk1[136].ic_i/node_int_inferred_i_8, design_1_i/ro_injector_0/inst/genblk1[136].ic_i/node_int_inferred_i_9, design_1_i/ro_injector_0/inst/genblk1[136].ic_i/node_int_inferred_i_10, design_1_i/ro_injector_0/inst/genblk1[136].ic_i/node_int_inferred_i_11, design_1_i/ro_injector_0/inst/genblk1[136].ic_i/node_int_inferred_i_12, design_1_i/ro_injector_0/inst/genblk1[136].ic_i/node_int_inferred_i_13, design_1_i/ro_injector_0/inst/genblk1[136].ic_i/node_int_inferred_i_14, design_1_i/ro_injector_0/inst/genblk1[136].ic_i/node_int_inferred_i_15... and (the first 15 of 76 listed).
+WARNING: [DRC LUTLP-2] Combinatorial Loop Allowed: 80 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[144].ic_i/node_int_inferred_i_1, design_1_i/ro_injector_0/inst/genblk1[144].ic_i/node_int_inferred_i_2, design_1_i/ro_injector_0/inst/genblk1[144].ic_i/node_int_inferred_i_3, design_1_i/ro_injector_0/inst/genblk1[144].ic_i/node_int_inferred_i_4, design_1_i/ro_injector_0/inst/genblk1[144].ic_i/node_int_inferred_i_5, design_1_i/ro_injector_0/inst/genblk1[144].ic_i/node_int_inferred_i_6, design_1_i/ro_injector_0/inst/genblk1[144].ic_i/node_int_inferred_i_7, design_1_i/ro_injector_0/inst/genblk1[144].ic_i/node_int_inferred_i_8, design_1_i/ro_injector_0/inst/genblk1[144].ic_i/node_int_inferred_i_9, design_1_i/ro_injector_0/inst/genblk1[144].ic_i/node_int_inferred_i_10, design_1_i/ro_injector_0/inst/genblk1[144].ic_i/node_int_inferred_i_11, design_1_i/ro_injector_0/inst/genblk1[144].ic_i/node_int_inferred_i_12, design_1_i/ro_injector_0/inst/genblk1[144].ic_i/node_int_inferred_i_13, design_1_i/ro_injector_0/inst/genblk1[144].ic_i/node_int_inferred_i_14, design_1_i/ro_injector_0/inst/genblk1[144].ic_i/node_int_inferred_i_15... and (the first 15 of 80 listed).
+WARNING: [DRC LUTLP-2] Combinatorial Loop Allowed: 84 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[152].ic_i/node_int_inferred_i_1, design_1_i/ro_injector_0/inst/genblk1[152].ic_i/node_int_inferred_i_2, design_1_i/ro_injector_0/inst/genblk1[152].ic_i/node_int_inferred_i_3, design_1_i/ro_injector_0/inst/genblk1[152].ic_i/node_int_inferred_i_4, design_1_i/ro_injector_0/inst/genblk1[152].ic_i/node_int_inferred_i_5, design_1_i/ro_injector_0/inst/genblk1[152].ic_i/node_int_inferred_i_6, design_1_i/ro_injector_0/inst/genblk1[152].ic_i/node_int_inferred_i_7, design_1_i/ro_injector_0/inst/genblk1[152].ic_i/node_int_inferred_i_8, design_1_i/ro_injector_0/inst/genblk1[152].ic_i/node_int_inferred_i_9, design_1_i/ro_injector_0/inst/genblk1[152].ic_i/node_int_inferred_i_10, design_1_i/ro_injector_0/inst/genblk1[152].ic_i/node_int_inferred_i_11, design_1_i/ro_injector_0/inst/genblk1[152].ic_i/node_int_inferred_i_12, design_1_i/ro_injector_0/inst/genblk1[152].ic_i/node_int_inferred_i_13, design_1_i/ro_injector_0/inst/genblk1[152].ic_i/node_int_inferred_i_14, design_1_i/ro_injector_0/inst/genblk1[152].ic_i/node_int_inferred_i_15... and (the first 15 of 84 listed).
+WARNING: [DRC LUTLP-2] Combinatorial Loop Allowed: 88 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[160].ic_i/node_int_inferred_i_1, design_1_i/ro_injector_0/inst/genblk1[160].ic_i/node_int_inferred_i_2, design_1_i/ro_injector_0/inst/genblk1[160].ic_i/node_int_inferred_i_3, design_1_i/ro_injector_0/inst/genblk1[160].ic_i/node_int_inferred_i_4, design_1_i/ro_injector_0/inst/genblk1[160].ic_i/node_int_inferred_i_5, design_1_i/ro_injector_0/inst/genblk1[160].ic_i/node_int_inferred_i_6, design_1_i/ro_injector_0/inst/genblk1[160].ic_i/node_int_inferred_i_7, design_1_i/ro_injector_0/inst/genblk1[160].ic_i/node_int_inferred_i_8, design_1_i/ro_injector_0/inst/genblk1[160].ic_i/node_int_inferred_i_9, design_1_i/ro_injector_0/inst/genblk1[160].ic_i/node_int_inferred_i_10, design_1_i/ro_injector_0/inst/genblk1[160].ic_i/node_int_inferred_i_11, design_1_i/ro_injector_0/inst/genblk1[160].ic_i/node_int_inferred_i_12, design_1_i/ro_injector_0/inst/genblk1[160].ic_i/node_int_inferred_i_13, design_1_i/ro_injector_0/inst/genblk1[160].ic_i/node_int_inferred_i_14, design_1_i/ro_injector_0/inst/genblk1[160].ic_i/node_int_inferred_i_15... and (the first 15 of 88 listed).
+WARNING: [DRC LUTLP-2] Combinatorial Loop Allowed: 92 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[168].ic_i/node_int_inferred_i_1, design_1_i/ro_injector_0/inst/genblk1[168].ic_i/node_int_inferred_i_2, design_1_i/ro_injector_0/inst/genblk1[168].ic_i/node_int_inferred_i_3, design_1_i/ro_injector_0/inst/genblk1[168].ic_i/node_int_inferred_i_4, design_1_i/ro_injector_0/inst/genblk1[168].ic_i/node_int_inferred_i_5, design_1_i/ro_injector_0/inst/genblk1[168].ic_i/node_int_inferred_i_6, design_1_i/ro_injector_0/inst/genblk1[168].ic_i/node_int_inferred_i_7, design_1_i/ro_injector_0/inst/genblk1[168].ic_i/node_int_inferred_i_8, design_1_i/ro_injector_0/inst/genblk1[168].ic_i/node_int_inferred_i_9, design_1_i/ro_injector_0/inst/genblk1[168].ic_i/node_int_inferred_i_10, design_1_i/ro_injector_0/inst/genblk1[168].ic_i/node_int_inferred_i_11, design_1_i/ro_injector_0/inst/genblk1[168].ic_i/node_int_inferred_i_12, design_1_i/ro_injector_0/inst/genblk1[168].ic_i/node_int_inferred_i_13, design_1_i/ro_injector_0/inst/genblk1[168].ic_i/node_int_inferred_i_14, design_1_i/ro_injector_0/inst/genblk1[168].ic_i/node_int_inferred_i_15... and (the first 15 of 92 listed).
+WARNING: [DRC LUTLP-2] Combinatorial Loop Allowed: 96 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: design_1_i/ro_injector_0/inst/genblk1[176].ic_i/node_int_inferred_i_1, design_1_i/ro_injector_0/inst/genblk1[176].ic_i/node_int_inferred_i_2, design_1_i/ro_injector_0/inst/genblk1[176].ic_i/node_int_inferred_i_3, design_1_i/ro_injector_0/inst/genblk1[176].ic_i/node_int_inferred_i_4, design_1_i/ro_injector_0/inst/genblk1[176].ic_i/node_int_inferred_i_5, design_1_i/ro_injector_0/inst/genblk1[176].ic_i/node_int_inferred_i_6, design_1_i/ro_injector_0/inst/genblk1[176].ic_i/node_int_inferred_i_7, design_1_i/ro_injector_0/inst/genblk1[176].ic_i/node_int_inferred_i_8, design_1_i/ro_injector_0/inst/genblk1[176].ic_i/node_int_inferred_i_9, design_1_i/ro_injector_0/inst/genblk1[176].ic_i/node_int_inferred_i_10, design_1_i/ro_injector_0/inst/genblk1[176].ic_i/node_int_inferred_i_11, design_1_i/ro_injector_0/inst/genblk1[176].ic_i/node_int_inferred_i_12, design_1_i/ro_injector_0/inst/genblk1[176].ic_i/node_int_inferred_i_13, design_1_i/ro_injector_0/inst/genblk1[176].ic_i/node_int_inferred_i_14, design_1_i/ro_injector_0/inst/genblk1[176].ic_i/node_int_inferred_i_15... and (the first 15 of 96 listed).
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 16 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-270] Using Router directive 'RuntimeOptimized'.
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: 42fa2422 ConstDB: 0 ShapeSum: 1659670d RouteDB: 0
+Post Restoration Checksum: NetGraph: 93ed701e NumContArr: abe52e71 Constraints: 0 Timing: 0
+Phase 1 Build RT Design | Checksum: 13fd29e8f
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:23 . Memory (MB): peak = 1970.387 ; gain = 80.262
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 13fd29e8f
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:23 . Memory (MB): peak = 1970.387 ; gain = 80.262
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 13fd29e8f
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:23 . Memory (MB): peak = 1977.000 ; gain = 86.875
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 13fd29e8f
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:23 . Memory (MB): peak = 1977.000 ; gain = 86.875
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 1be8290e0
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:25 . Memory (MB): peak = 2002.734 ; gain = 112.609
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-8.274 | TNS=-127.236| WHS=-0.184 | THS=-53.887|
+
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.00346899 %
+  Global Horizontal Routing Utilization  = 0.000169033 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 5065
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 5065
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 206ada43f
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:25 . Memory (MB): peak = 2002.734 ; gain = 112.609
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: 206ada43f
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:25 . Memory (MB): peak = 2002.734 ; gain = 112.609
+Phase 3 Initial Routing | Checksum: 1baadcd9c
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:26 . Memory (MB): peak = 2002.734 ; gain = 112.609
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 250
+ Number of Nodes with overlaps = 14
+ Number of Nodes with overlaps = 12
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-8.587 | TNS=-403.970| WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 19ec02de4
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:28 . Memory (MB): peak = 2002.734 ; gain = 112.609
+Phase 4 Rip-up And Reroute | Checksum: 19ec02de4
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:28 . Memory (MB): peak = 2002.734 ; gain = 112.609
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: 11c1d80e0
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:29 . Memory (MB): peak = 2004.023 ; gain = 113.898
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 11c1d80e0
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:29 . Memory (MB): peak = 2004.023 ; gain = 113.898
+Phase 5 Delay and Skew Optimization | Checksum: 11c1d80e0
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:29 . Memory (MB): peak = 2004.023 ; gain = 113.898
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 1c640512b
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:29 . Memory (MB): peak = 2004.023 ; gain = 113.898
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-8.585 | TNS=-403.435| WHS=0.045  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 1827de9dc
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:29 . Memory (MB): peak = 2004.023 ; gain = 113.898
+Phase 6 Post Hold Fix | Checksum: 1827de9dc
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:29 . Memory (MB): peak = 2004.023 ; gain = 113.898
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.569173 %
+  Global Horizontal Routing Utilization  = 0.770453 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 42.3423%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 36.9369%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 55.8824%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 47.0588%, No Congested Regions.
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+
+Phase 7 Route finalize | Checksum: 1403f6e35
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:29 . Memory (MB): peak = 2004.023 ; gain = 113.898
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 1403f6e35
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:29 . Memory (MB): peak = 2004.023 ; gain = 113.898
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 1d29ecc88
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:30 . Memory (MB): peak = 2004.023 ; gain = 113.898
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-8.585 | TNS=-403.435| WHS=0.045  | THS=0.000  |
+
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 10 Post Router Timing | Checksum: 1d29ecc88
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:30 . Memory (MB): peak = 2004.023 ; gain = 113.898
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:30 . Memory (MB): peak = 2004.023 ; gain = 113.898
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+87 Infos, 33 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:32 . Memory (MB): peak = 2004.023 ; gain = 128.137
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.517 . Memory (MB): peak = 2019.727 ; gain = 15.703
+INFO: [Common 17-1381] The checkpoint 'C:/Users/macie/Desktop/testcases/mentor_security_trng_2.0/arty_z7_design/arty_z7_design.runs/impl_1/design_1_wrapper_routed.dcp' has been generated.
+INFO: [Common 17-206] Exiting Vivado at Wed Dec  1 19:10:53 2021...

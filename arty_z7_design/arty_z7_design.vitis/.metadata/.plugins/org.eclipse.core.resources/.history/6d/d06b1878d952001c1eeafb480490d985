@@ -1,0 +1,16 @@
+#include "hw.h"
+#include "menu.h"
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	leds.test();
+	leds.setValue(0xFF, 2);
+	cout << endl << endl;
+	cout << "Power-up" << endl;
+	while(true) {
+		menuPrint();
+	}
+	return 0;
+}

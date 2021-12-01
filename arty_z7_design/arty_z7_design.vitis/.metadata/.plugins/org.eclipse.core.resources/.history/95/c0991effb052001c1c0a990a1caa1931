@@ -1,0 +1,56 @@
+#ifndef MENU_H
+#define MENU_H
+
+#include "hw.h"
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+enum MenuPositions {
+	UNDEFINED, MAIN
+};
+
+MenuPositions MenuPos = MAIN;
+
+void menuPrint() {
+	if (MenuPos == MAIN) {
+		cout << endl;
+		cout << "Select option:" << endl;
+		cout << "1: get current config" << endl;
+		cout << "2: set polynomial" << endl;
+		cout << "3: set counter max" << endl;
+		cout << "4: get samples" << endl;
+		int option;
+		cout << "> ";
+		cin >> option;
+		if (option == 1) {
+			cout << "COUNTER_MAX \t: " << trng.getCounterMax() << endl;
+		} else if (option == 2) {
+			string polystr;
+			cout << "Binary polynomial (without X0) >";
+			cin >> polystr;
+			cout << endl;
+			trng.setPoly(polystr);
+		} else if (option == 3) {
+			unsigned int cmax = 0;
+			while (cmax < 3) {
+				cout << endl << "Max value > ";
+				cin >> cmax;
+				cout << endl;
+				if (cmax < 3) cout << "Minimum accepted value is 3" << endl;
+			}
+			trng.setCounterMax(cmax);
+		} else if (option == 4) {
+			trng.start();
+			while(!trng.finished());
+			cout << "{ ";
+			cout << " { " << getResult() << " } " << endl;
+		}
+	} else {
+		cout << "ERROR: Undefined menu position!" << endl;
+	}
+}
+
+
+#endif

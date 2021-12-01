@@ -1,0 +1,17 @@
+#include "hw.h"
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	platformInit();
+	cout << "Power-up" << endl;
+	int val = 0xA;
+	while(1) {
+		setLed(val);
+		val = ~val;
+		cout << "here" << endl;
+		delayMs(500);
+	}
+	return 0;
+}

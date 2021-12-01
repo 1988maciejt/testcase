@@ -1,0 +1,24 @@
+#ifndef MT_XGPIO
+#define MT_XGPIO
+
+#include "xgpio.h"
+
+class MtXGpio {
+protected:
+	XGpio myXGpio_;
+	u32 oValue_ = 0x0;
+public:
+	MtXGpio(u16 deviceID);
+	MtXGpio(u16 deviceID, u32 directionMask1);
+	MtXGpio(u16 deviceID, u32 directionMask1, u32 directionMask2);
+	void setDirection(u32 directionMask, unsigned int channel = 1);
+	void setValue(u32 value, unsigned int channel = 1);
+	u32 getValue(unsigned int channel = 1);
+	void setBit(unsigned int bitIndex, bool bitValue, unsigned int channel = 1);
+	void toggleBit(unsigned int bitIndex, unsigned int channel = 1);
+	bool getBit(unsigned int bitIndex, unsigned int channel = 1);
+};
+
+
+
+#endif

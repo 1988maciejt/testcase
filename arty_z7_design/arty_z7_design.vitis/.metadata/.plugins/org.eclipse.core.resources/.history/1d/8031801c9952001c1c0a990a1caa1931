@@ -1,0 +1,36 @@
+#ifndef MENU_H
+#define MENU_H
+
+#include "hw.h"
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+enum MenuPositions {
+	UNDEFINED, MAIN
+};
+
+MenuPositions MenuPos = MAIN;
+
+void menuPrint() {
+	if (MenuPos == MAIN) {
+		cout << endl;
+		cout << "Select option:" << endl;
+		cout << "1: get current config" << endl;
+		cout << "2: set polynomial" << endl;
+		cout << "3: set counter max" << endl;
+		cout << "4: get samples" << endl;
+		int option;
+		cout << "> ";
+		cin >> option;
+		if (option == 1) {
+			cout << "COUNTER_MAX \t: " << trng.getCounterMax() << endl;
+		}
+	} else {
+		cout << "ERROR: Undefined menu position!" << endl;
+	}
+}
+
+
+#endif
