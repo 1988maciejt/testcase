@@ -12,6 +12,7 @@ class MtXGpio {
 protected:
 	XGpio myXGpio_;
 	u32 oValue_[2] = { 0x0, 0x0 };
+	u32 dir[2] = { 0xFFFFFFFF, 0xFFFFFFFF };
 public:
 	MtXGpio(u16 deviceID);
 	MtXGpio(u16 deviceID, u32 directionMask1);
@@ -22,10 +23,8 @@ public:
 	void setBit(bool bitValue, unsigned int bitIndex, unsigned int channel = 1);
 	void toggleBit(unsigned int bitIndex, unsigned int channel = 1);
 	bool getBit(unsigned int bitIndex, unsigned int channel = 1);
-	void test() {
-		XGpio_SetDataDirection(&myXGpio_, 1, ~0xF);
-		XGpio_DiscreteWrite(&myXGpio_, 1, 0x5);
-	}
+	void setBitDirectionOutput(unsigned int bitIndex, unsigned int channel = 1);
+	void setBitDirectionInput(unsigned int bitIndex, unsigned int channel = 1);
 };
 
 
@@ -35,32 +34,16 @@ protected:
 	unsigned int index_ = 0;
 	MtXGpio* mtxgpio_ = nullptr;
 public:
-	MtXgpioBit(unsigned int index, unsigned int channel, MtXGpio& mtxgpio) {
-		channel_ = channel;
-		index_ = index;
-		mtxgpio_ = &mtxgpio;
-	}
-	unsigned int channel() {
-		return channel_;
-	}
-	unsigned int index() {
-		return index_;
-	}
-	void set() {
-		mtxgpio_->setBit(TRUE, index_, channel_);
-	}
-	void set(bool value) {
-		mtxgpio_->setBit(value, index_, channel_);
-	}
-	void reset() {
-		mtxgpio_->setBit(FALSE, index_, channel_);
-	}
-	void toggle() {
-		mtxgpio_->toggleBit(index_, channel_);
-	}
-	bool get() {
-		return mtxgpio_->getBit(index_, channel_);
-	}
+	MtXgpioBit(unsigned int index, unsigned int channel, MtXGpio& mtxgpio);
+	unsigned int channel();
+	unsigned int index();
+	void set();
+	void set(bool value);
+	void reset();
+	void toggle();
+	bool get();
+	void setInput();
+	void setOutput();
 };
 
 #endif

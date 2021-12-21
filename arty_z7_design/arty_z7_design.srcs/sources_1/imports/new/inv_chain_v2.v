@@ -1,3 +1,30 @@
+/*
+  inv_chain_v2 - example: 
+	
+	#N=3
+
+ a -> |NOT> -+-> |NOT> -+-> |NOT> -+-> y
+             |          |          |
+           node[2]    node[1]    node[0]
+
+  In fact, inverters are implemented using NAND gates,
+	to allow disabling the entire inverter chain.
+
+  EXAMPLE OF USE - INJECTOR:
+	
+	wire injector_output, enable;
+	module inv_chain_v2 # (
+    .N(3)
+  ) INSTANCE_NAME (
+    .y(injector_output),
+    .a(injector_output),
+    .enable(enable),
+    .node()
+  );
+
+*/
+
+
 module inv_chain_v2 # (
   parameter N = 9
 ) (
