@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"python.autoComplete.extraPaths": [
+			"../../bin",
+			"data"
+		],
+		"python.analysis.extraPaths": [
+			"../../bin",
+			"data"
+		],
+	}
+}
