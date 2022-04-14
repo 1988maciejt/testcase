@@ -22,7 +22,7 @@ ro_count_list = [1,2,4,8]
 # What to measure:
 SERIES_HISTOGRAM = True
 PROB_OF_1 = True
-sample_size = 200
+sample_size = 500
 
 
 
@@ -56,8 +56,8 @@ for dT in dT_list:
         Aio.print("Samples count:       \t", slen)
         Aio.print()
         for Ts in Ts_list:
+            Ts = Ts * T_multiplier
             for Toffset in Toffset_list:
-                Ts = Ts * T_multiplier
                 Aio.transcriptSubsectionBegin("Sampling period = " + str(Ts) + ", Toffset = " + str(Toffset))
                 Sheet.merge_cells(start_column=column, start_row=1,end_column=column+3,end_row=1)
                 Sheet.merge_cells(start_column=column, start_row=2,end_column=column+3,end_row=2)
