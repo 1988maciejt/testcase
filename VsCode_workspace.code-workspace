@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"python.autoComplete.extraPaths": [
+			"../../bin",
+		],
+		"python.analysis.extraPaths": [
+			"../../bin"
+		],
+		"files.associations": {
+			"*.dofile": "tcl",
+			"*.dc_script": "tcl",
+			"*.tessent_meta": "tcl",
+			"vector": "cpp",
+			"ostream": "cpp"
+		},
+	}
+}
