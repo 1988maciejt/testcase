@@ -45,10 +45,11 @@ def simulate(Taps):
     Max = (1<<Taps[1])-1
     Perc = Period / Max
     Info = ' '
-    if Period==Max:
+    Print = True
+    if Period == Max:
         Info = 'MAXIMUM'
-    elif Period == Taps[1]:
-        Info = 'SIZE'
+    elif Period < (Max>>1):
+        Print = False
     else:
         PNums = list(PrimaryTable)
         Prime = True
@@ -58,7 +59,8 @@ def simulate(Taps):
                 break
         if Prime:
             Info = 'PRIME'
-    Aio.print(f'{Taps[1]};{Taps[0]};' + Res + f';{Perc};{Info}')
+    if Print:
+        Aio.print(f'{Taps[1]};{Taps[0]};' + Res + f';{Perc};{Info}')
     
     
 def generateNLArgs(Poly):
@@ -74,22 +76,22 @@ def generateNLArgs(Poly):
         Destinations.append(Tap[1])
 #    print("Sources", Sources)
 #    print("Dest", Destinations)
-    Bounds = [Size-1] + Sources + [Size>>1]
+    Bounds = [0, Size, Size-1] + Sources + [Size>>1, (Size>>1)-1]
 #    print("Bounds", Bounds)
     AndCandidates = []
     for S in Sources:
         AndCandidate = []
         Candidate = S-1
         while 1:
-            AndCandidate.append(Candidate)
             if Candidate in Bounds:
                 break
+            AndCandidate.append(Candidate)
             Candidate -= 1
         Candidate = S+1
         while 1:
-            AndCandidate.append(Candidate)
             if Candidate in Bounds:
                 break
+            AndCandidate.append(Candidate)
             Candidate += 1
 #        print("AndCandidate", AndCandidate)    
         AndCandidates.append(AndCandidate)
@@ -107,12 +109,18 @@ def generateNLArgs(Poly):
     NullNum = [0 for i in range(len(Numbers))]
     Last = False
     while 1:
-        if iNum != NullNum:
+#        print(iNum)
+        if iNum != NullNum and 0 in iNum:
             Result = [Poly.getCoefficients(), Size]
             for i in range(len(iNum)):
                 Result.append([TapSourceCandidates[i][iNum[i]], Destinations[i]])
 #            print(Result)
+#            yield Result
             Results.append(Result)
+#            if len(Results)%10 == 0:
+#                print(len(Results))
+#            if len(Results) > 10000:
+#                break
         if Last:
             break
         for i in range(len(Numbers)):
@@ -122,6 +130,6 @@ def generateNLArgs(Poly):
             else:
                 break
         if iNum == Numbers:
-            Last = True   
+            Last = True
     return Results
-    
+
