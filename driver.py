@@ -81,7 +81,7 @@ for Size in Sizes:
                     break
             if Unique:
                 UCounter += 1
-                QFiltered[QNames[i]] = seq
+                QFiltered[QNames[i]] = seq.copy()
                 
         QDict = QFiltered
         QDict.update(QShifts)
@@ -106,7 +106,7 @@ for Size in Sizes:
                     break
             if Unique:
                 UCounter += 1
-                QFiltered[QNames[i]] = seq
+                QFiltered[QNames[i]] = seq.copy()
         QDict = QFiltered
         QDict.update(QShifts)
         Aio.transcriptSubsectionBegin(f'Register + 2-input XORs. Unique: {UCounter}')
@@ -130,7 +130,7 @@ for Size in Sizes:
                     break
             if Unique:
                 UCounter += 1
-                QFiltered[QNames[i]] = seq
+                QFiltered[QNames[i]] = seq.copy()
         QDict = QFiltered
         QDict.update(QShifts)
         Aio.transcriptSubsectionBegin(f'Register + 3-input XORs. Unique: {UCounter}')
