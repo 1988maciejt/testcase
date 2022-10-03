@@ -5,15 +5,17 @@ from aio import *
 # ============================
 
 
-Sizes = range(5, 17)
+Sizes = range(5, 18)
 Coefficients = 4
 Balancing = 1
 
 for Size in Sizes:
+    
+    Aio.transcriptToHTML()
 
     poly = Polynomial.createPolynomial(Size, Coefficients, Balancing, True)
     if poly is None:
-        Aio.print("No polynomial for size", Size)
+        Aio.printError("No polynomial for size", Size)
         continue
     for polyi in poly:
         nlrgs = Nlfsr.findNLRGsWithSpecifiedPeriod(poly, InvertersAllowed=1)
@@ -21,15 +23,14 @@ for Size in Sizes:
             break
 
     if len(nlrgs) < 1:
-        Aio.print("No NLRG for polynomial", poly)
+        Aio.printError("No NLRG for polynomial", poly)
         continue
 
     for result in nlrgs:
 
         nlrg = result[0]
 
-        Aio.print("=======================================================")
-        print(repr(nlrg))
+        Aio.transcriptSectionBegin(repr(nlrg))
         nlrg.printFullInfo()
 
         # Create M-sequences at NLRG outputs
@@ -82,9 +83,9 @@ for Size in Sizes:
                 
         QDict = QFiltered
         QDict.update(QShifts)
-        Aio.print(f'----- Register outputs only. Unique: {UCounter} -------------')
+        Aio.transcriptSubsectionBegin(f'Register outputs only. Unique: {UCounter}')
         for k in sorted(QDict.keys()):
-            print(f'  {k}: \t{QDict[k]}')
+            Aio.print(f'  {k}: \t{QDict[k]}')
             
         Q += XOR2
         QNames += XOR2Names
@@ -106,9 +107,9 @@ for Size in Sizes:
                 QFiltered[QNames[i]] = seq
         QDict = QFiltered
         QDict.update(QShifts)
-        Aio.print(f'----- Register + 2-input XORs. Unique: {UCounter} -----------')
+        Aio.transcriptSubsectionBegin(f'Register + 2-input XORs. Unique: {UCounter}')
         for k in sorted(QDict.keys()):
-            print(f'  {k}: \t{QDict[k]}')
+            Aio.print(f'  {k}: \t{QDict[k]}')
 
         Q += XOR3
         QNames += XOR3Names
@@ -130,6 +131,9 @@ for Size in Sizes:
                 QFiltered[QNames[i]] = seq
         QDict = QFiltered
         QDict.update(QShifts)
-        Aio.print(f'----- Register + 3-input XORs. Unique: {UCounter} -----------')
+        Aio.transcriptSubsectionBegin(f'Register + 3-input XORs. Unique: {UCounter}')
         for k in sorted(QDict.keys()):
-            print(f'  {k}: \t{QDict[k]}')
+            Aio.print(f'  {k}: \t{QDict[k]}')
+            
+Aio.transcriptToHTML()
+        
