@@ -13,10 +13,12 @@ for Size in Sizes:
     
     Aio.transcriptToHTML()
 
-    poly = Polynomial.createPolynomial(Size, Coefficients, Balancing, True)
+    poly = Polynomial.createPolynomial(Size, Coefficients, Balancing)
     if poly is None:
-        Aio.printError("No polynomial for size", Size)
-        continue
+        poly = Polynomial.createPolynomial(Size, Coefficients, 0, False)
+        if poly is None:
+            Aio.printError("No polynomial for size", Size)
+            continue
     for polyi in poly:
         nlrgs = Nlfsr.findNLRGsWithSpecifiedPeriod(poly, InvertersAllowed=1)
         if len(nlrgs) > 0:
