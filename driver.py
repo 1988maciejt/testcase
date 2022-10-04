@@ -5,7 +5,7 @@ from aio import *
 # ============================
 
 
-Sizes = range(5, 18)
+Sizes = range(5, 17)
 Coefficients = 4
 Balancing = 1
 
@@ -32,8 +32,8 @@ for Size in Sizes:
 
         nlrg = result[0]
 
-        Aio.transcriptSectionBegin(repr(nlrg))
-        nlrg.printFullInfo()
+        Aio.transcriptSectionBegin(nlrg.getFullInfo())
+        Aio.print(repr(nlrg))
 
         # Create M-sequences at NLRG outputs
         Mers = Int.mersenne(Size)
@@ -41,7 +41,7 @@ for Size in Sizes:
         QNames = []
         for i in range(Size):
             Q.append(bitarray(Mers))
-            QNames.append(f'Q[{i}]')
+            QNames.append(f'Q{i}        ')
         bindex = 0
         for value in nlrg:
             for i in range(Size):
@@ -59,12 +59,12 @@ for Size in Sizes:
                     continue
                 xor2 = Q[q1] ^ Q[q2]
                 XOR2.append(xor2)
-                XOR2Names.append(f'Q[{q1}]^Q[{q2}]')
+                XOR2Names.append(f'Q{q1}+Q{q2}    ')
                 for q3 in range(Size):
                     if q2 >= q3:
                         continue
                     XOR3.append(xor2 ^ Q[q3])
-                    XOR3Names.append(f'Q[{q1}]^Q[{q2}]^Q[{q3}]')
+                    XOR3Names.append(f'Q{q1}+Q{q2}+Q{q3}')
             
         QFiltered = {}
         QShifts = {}
@@ -74,10 +74,10 @@ for Size in Sizes:
             Unique = True
             for key in QFiltered.keys():
                 seqf = QFiltered[key]
-                Shift = Bitarray.getShiftBetweenSequences(seqf, seq)
+                Shift = Bitarray.getShiftBetweenSequences(seq, seqf)
                 if Shift != None:
                     Unique = False
-                    QShifts[QNames[i]] = f'{key} shifted by {Shift}'
+                    QShifts[QNames[i]] = f'{key} by {Shift}'
                     break
             if Unique:
                 UCounter += 1
@@ -87,7 +87,10 @@ for Size in Sizes:
         QDict.update(QShifts)
         Aio.transcriptSubsectionBegin(f'Register outputs only. Unique: {UCounter}')
         for k in sorted(QDict.keys()):
-            Aio.print(f'  {k}: \t{QDict[k]}')
+            if Aio.isType(QDict[k], "bitarray"):
+                Aio.print(f'  {k}\t: {str(QDict[k])[10:-2]}')            
+            else:
+                Aio.print(f'  {k}\t: {QDict[k]}')
             
         Q += XOR2
         QNames += XOR2Names
@@ -99,10 +102,10 @@ for Size in Sizes:
             Unique = True
             for key in QFiltered.keys():
                 seqf = QFiltered[key]
-                Shift = Bitarray.getShiftBetweenSequences(seqf, seq)
+                Shift = Bitarray.getShiftBetweenSequences(seq, seqf)
                 if Shift != None:
                     Unique = False
-                    QShifts[QNames[i]] = f'{key} shifted by {Shift}'
+                    QShifts[QNames[i]] = f'{key} \tby {Shift}'
                     break
             if Unique:
                 UCounter += 1
@@ -111,7 +114,10 @@ for Size in Sizes:
         QDict.update(QShifts)
         Aio.transcriptSubsectionBegin(f'Register + 2-input XORs. Unique: {UCounter}')
         for k in sorted(QDict.keys()):
-            Aio.print(f'  {k}: \t{QDict[k]}')
+            if Aio.isType(QDict[k], "bitarray"):
+                Aio.print(f'  {k}\t: {str(QDict[k])[10:-2]}')            
+            else:
+                Aio.print(f'  {k}\t: {QDict[k]}')
 
         Q += XOR3
         QNames += XOR3Names
@@ -123,10 +129,10 @@ for Size in Sizes:
             Unique = True
             for key in QFiltered.keys():
                 seqf = QFiltered[key]
-                Shift = Bitarray.getShiftBetweenSequences(seqf, seq)
+                Shift = Bitarray.getShiftBetweenSequences(seq, seqf)
                 if Shift != None:
                     Unique = False
-                    QShifts[QNames[i]] = f'{key} shifted by {Shift}'
+                    QShifts[QNames[i]] = f'{key} \tby {Shift}'
                     break
             if Unique:
                 UCounter += 1
@@ -135,7 +141,10 @@ for Size in Sizes:
         QDict.update(QShifts)
         Aio.transcriptSubsectionBegin(f'Register + 3-input XORs. Unique: {UCounter}')
         for k in sorted(QDict.keys()):
-            Aio.print(f'  {k}: \t{QDict[k]}')
+            if Aio.isType(QDict[k], "bitarray"):
+                Aio.print(f'  {k}\t: {str(QDict[k])[10:-2]}')            
+            else:
+                Aio.print(f'  {k}\t: {QDict[k]}')
             
 Aio.transcriptToHTML()
         
