@@ -13,7 +13,7 @@ for Size in Sizes:
 
     nlrgs = []
     Configs = []
-    for i in range(0, 3, 2)
+    for i in range(0, 3, 2):
         poly = Polynomial.createPolynomial(Size, Coefficients+i)
         for polyi in poly:
             nlrgsi = Nlfsr.findNLRGsWithSpecifiedPeriod(poly, InvertersAllowed=1)
