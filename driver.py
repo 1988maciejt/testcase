@@ -13,19 +13,24 @@ for Size in Sizes:
     Aio.transcriptToHTML()
 
     nlrgs = []
+    Configs = []
     poly = Polynomial.createPolynomial(Size, Coefficients, LayoutFriendly=True)
     if poly is None:
         poly = Polynomial.createPolynomial(Size, Coefficients, LayoutFriendly=False)
     for polyi in poly:
         nlrgsi = Nlfsr.findNLRGsWithSpecifiedPeriod(poly, InvertersAllowed=1)
         if len(nlrgsi) > 0:
-            nlrgs.append(nlrgsi[0])
-        if len(nlrgs) >= 5:
+            for rg in nlrgsi:
+                rgi = rg[0]
+                Config = rgi._Config
+                if not (Config in Configs):
+                    nlrgs.append(rgi)
+                    Configs.append(Config)
+                    break
+        if len(nlrgs) >= 3:
             break
 
-    for result in nlrgs:
-
-        nlrg = result[0]
+    for nlrg in nlrgs:
 
         Aio.transcriptSectionBegin(nlrg.getFullInfo())
         Aio.print(repr(nlrg))
