@@ -45,11 +45,11 @@ for Size in Sizes:
         for i in range(Size):
             Q.append(bitarray(Mers))
             QNames.append(f'Q{i}        ')
-        bindex = 0
+        vindex = 0
         for value in nlrg:
             for i in range(Size):
-                Q[i][bindex] = value[i]
-            bindex += 1
+                Q[i][vindex] = value[-i-1]
+            vindex += 1
             
         # 2-input XORs
         XOR2 = []
