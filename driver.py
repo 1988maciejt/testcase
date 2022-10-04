@@ -25,7 +25,7 @@ for Size in Sizes:
                         nlrgs.append(rgi)
                         Configs.append(Config)
                         break
-            if len(nlrgs) > 4:
+            if len(nlrgs) > 4-i:
                 break
         if len(nlrgs) > 1:
             break
