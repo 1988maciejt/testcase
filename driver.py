@@ -19,13 +19,9 @@ for Size in Sizes:
     for polyi in poly:
         nlrgsi = Nlfsr.findNLRGsWithSpecifiedPeriod(poly, InvertersAllowed=1)
         if len(nlrgsi) > 0:
-            nlrgs.append(nlrgsi)
+            nlrgs.append(nlrgsi[0])
         if len(nlrgs) >= 5:
             break
-
-    if len(nlrgs) < 1:
-        Aio.printError("No NLRG for polynomial", poly)
-        continue
 
     for result in nlrgs:
 
