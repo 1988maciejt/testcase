@@ -16,8 +16,6 @@ for Size in Sizes:
     for i in range(0, 3, 2):
         poly = Polynomial.createPolynomial(Size, Coefficients+i)
         for polyi in poly:
-            if polyi.getBalancing() < 2:
-                continue
             nlrgsi = Nlfsr.findNLRGsWithSpecifiedPeriod(poly, InvertersAllowed=1)
             if len(nlrgsi) > 0:
                 for rg in nlrgsi:
