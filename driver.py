@@ -7,24 +7,20 @@ from aio import *
 
 Sizes = range(5, 17)
 Coefficients = 4
-Balancing = 1
 
 for Size in Sizes:
     
     Aio.transcriptToHTML()
 
-    poly = Polynomial.createPolynomial(Size, Coefficients, Balancing)
+    nlrgs = []
+    poly = Polynomial.createPolynomial(Size, Coefficients, LayoutFriendly=True)
     if poly is None:
-        poly = Polynomial.createPolynomial(Size, Coefficients, 0, False)
-        if poly is None:       
-            if Size > Coefficients+2:
-                poly = Polynomial.createPolynomial(Size, Coefficients+2, Balancing, False)
-            if poly is None:    
-                Aio.printError("No polynomial for size", Size)
-                continue
+        poly = Polynomial.createPolynomial(Size, Coefficients, LayoutFriendly=False)
     for polyi in poly:
-        nlrgs = Nlfsr.findNLRGsWithSpecifiedPeriod(poly, InvertersAllowed=1)
-        if len(nlrgs) > 0:
+        nlrgsi = Nlfsr.findNLRGsWithSpecifiedPeriod(poly, InvertersAllowed=1)
+        if len(nlrgsi) > 0:
+            nlrgs.append(nlrgsi)
+        if len(nlrgs) >= 5:
             break
 
     if len(nlrgs) < 1:
