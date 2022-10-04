@@ -73,7 +73,7 @@ for Size in Sizes:
             seq = Q[i]
             Unique = True
             for key in QFiltered.keys():
-                seqf = QFiltered[key]
+                seqf = QFiltered[key].copy()
                 Shift = Bitarray.getShiftBetweenSequences(seq, seqf)
                 if Shift != None:
                     Unique = False
@@ -101,7 +101,7 @@ for Size in Sizes:
             seq = Q[i]
             Unique = True
             for key in QFiltered.keys():
-                seqf = QFiltered[key]
+                seqf = QFiltered[key].copy()
                 Shift = Bitarray.getShiftBetweenSequences(seq, seqf)
                 if Shift != None:
                     Unique = False
@@ -128,7 +128,7 @@ for Size in Sizes:
             seq = Q[i]
             Unique = True
             for key in QFiltered.keys():
-                seqf = QFiltered[key]
+                seqf = QFiltered[key].copy()
                 Shift = Bitarray.getShiftBetweenSequences(seq, seqf)
                 if Shift != None:
                     Unique = False
