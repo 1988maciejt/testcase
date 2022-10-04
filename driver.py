@@ -14,9 +14,7 @@ for Size in Sizes:
 
     nlrgs = []
     Configs = []
-    poly = Polynomial.createPolynomial(Size, Coefficients, LayoutFriendly=True)
-    if poly is None:
-        poly = Polynomial.createPolynomial(Size, Coefficients, LayoutFriendly=False)
+    poly = Polynomial.createPolynomial(Size, Coefficients, LayoutFriendly=False)
     for polyi in poly:
         nlrgsi = Nlfsr.findNLRGsWithSpecifiedPeriod(poly, InvertersAllowed=1)
         if len(nlrgsi) > 0:
@@ -27,7 +25,7 @@ for Size in Sizes:
                     nlrgs.append(rgi)
                     Configs.append(Config)
                     break
-        if len(nlrgs) >= 3:
+        if len(nlrgs) > 4:
             break
 
     for nlrg in nlrgs:
