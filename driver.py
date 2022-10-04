@@ -15,9 +15,10 @@ for Size in Sizes:
 
     poly = Polynomial.createPolynomial(Size, Coefficients, Balancing)
     if poly is None:
-        poly = Polynomial.createPolynomial(Size, Coefficients+2, Balancing, False)
-        if poly is None:        
-            poly = Polynomial.createPolynomial(Size, Coefficients, 0, False)
+        poly = Polynomial.createPolynomial(Size, Coefficients, 0, False)
+        if poly is None:       
+            if Size > Coefficients+2:
+                poly = Polynomial.createPolynomial(Size, Coefficients+2, Balancing, False)
             if poly is None:    
                 Aio.printError("No polynomial for size", Size)
                 continue
