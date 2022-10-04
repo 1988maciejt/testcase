@@ -15,12 +15,12 @@ for Size in Sizes:
     Configs = []
     for i in range(0, 3, 2):
         poly = Polynomial.createPolynomial(Size, Coefficients+i)
-        cntr = 0
+        cntr = 1
         for polyi in poly:
             cntr += 1
             if cntr < 3:
                 continue
-            cntr = 0
+            cntr = 1
             nlrgsi = Nlfsr.findNLRGsWithSpecifiedPeriod(poly, InvertersAllowed=1)
             if len(nlrgsi) > 0:
                 for rg in nlrgsi:
