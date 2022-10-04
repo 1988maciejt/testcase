@@ -1,6 +1,5 @@
 # ============================
 from asyncio import FastChildWatcher
-from xml.etree.ElementTree import QName
 from aio import *
 # ============================
 
@@ -14,19 +13,23 @@ for Size in Sizes:
 
     nlrgs = []
     Configs = []
-    poly = Polynomial.createPolynomial(Size, Coefficients, LayoutFriendly=False)
-    for polyi in poly:
-        nlrgsi = Nlfsr.findNLRGsWithSpecifiedPeriod(poly, InvertersAllowed=1)
-        if len(nlrgsi) > 0:
-            for rg in nlrgsi:
-                rgi = rg[0]
-                Config = rgi._Config
-                if not (Config in Configs):
-                    nlrgs.append(rgi)
-                    Configs.append(Config)
-                    break
-        if len(nlrgs) > 4:
+    for i in range(0, 3, 2)
+        poly = Polynomial.createPolynomial(Size, Coefficients+i)
+        for polyi in poly:
+            nlrgsi = Nlfsr.findNLRGsWithSpecifiedPeriod(poly, InvertersAllowed=1)
+            if len(nlrgsi) > 0:
+                for rg in nlrgsi:
+                    rgi = rg[0]
+                    Config = rgi._Config
+                    if not (Config in Configs):
+                        nlrgs.append(rgi)
+                        Configs.append(Config)
+                        break
+            if len(nlrgs) > 4:
+                break
+        if len(nlrgs) > 1:
             break
+        
 
     for nlrg in nlrgs:
 
@@ -71,7 +74,7 @@ for Size in Sizes:
             seq = Q[i]
             Unique = True
             for key in QFiltered.keys():
-                seqf = QFiltered[key].copy()
+                seqf = QFiltered[key]
                 Shift = Bitarray.getShiftBetweenSequences(seq, seqf)
                 if Shift != None:
                     Unique = False
@@ -99,7 +102,7 @@ for Size in Sizes:
             seq = Q[i]
             Unique = True
             for key in QFiltered.keys():
-                seqf = QFiltered[key].copy()
+                seqf = QFiltered[key]
                 Shift = Bitarray.getShiftBetweenSequences(seq, seqf)
                 if Shift != None:
                     Unique = False
@@ -126,7 +129,7 @@ for Size in Sizes:
             seq = Q[i]
             Unique = True
             for key in QFiltered.keys():
-                seqf = QFiltered[key].copy()
+                seqf = QFiltered[key]
                 Shift = Bitarray.getShiftBetweenSequences(seq, seqf)
                 if Shift != None:
                     Unique = False
