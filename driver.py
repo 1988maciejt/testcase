@@ -20,5 +20,6 @@ for Size in SizeList:
       for result in results:
         nlfsr = result[0]
         if not (nlfsr._Config in UsedConfigs):
+          UsedConfigs.append(nlfsr._Config)
           Aio.print(nlfsr.getFullInfo().replace('\n', '\t'))
 
