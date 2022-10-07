@@ -4,22 +4,21 @@ from aio import *
 
 # place your code here
 
-Size = 31
-Coefficients = 5
-Balancing = 4
+SizeList = [4,5,6,7,8,9,10,11,12,13,14,15,16]
+CoefficientsList = [3,4,5,6,7,8]
+Balancing = 0
 InvertersAllowed = 1
 
-
-polys = Polynomial.listPrimitives(Size, Coefficients, Balancing)
-Aio.print(f'Found {len(polys)} polynomials.')
-Found = 0
-for i in range(len(polys)):
-  Aio.print(f'------------------------- {i}/{len(polys)} ---------------------------------')
-  polys[i].printFullInfo()
-  Results = Nlfsr.findNLRGsWithSpecifiedPeriod(polys[i], InvertersAllowed=InvertersAllowed)
-  Aio.print('RESULTS:')
-  Found += len(Results)
-  for r in Results:
-    print(r)
-  Aio.print(f'Found: {Found}')
+for Size in SizeList:
+  for Coefficients in CoefficientsList:
+    if (Coefficients) + 1 > Size:
+      continue
+    polys = Polynomial.createPolynomial(Size, Coefficients, Balancing)
+    UsedConfigs = []
+    for poly in polys:
+      results = Nlfsr.findNLRGsWithSpecifiedPeriod(poly, InvertersAllowed=1)
+      for result in results:
+        nlfsr = result[0]
+        if not (nlfsr._Config in UsedConfigs):
+          Aio.print(nlfsr.getFullInfo().replace('\n', '\t'))
 
