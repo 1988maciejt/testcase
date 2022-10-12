@@ -4,36 +4,47 @@ from aio import *
 
 # place your code here
 
-SizeList = [4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24]
-CoefficientsList = [3,4,5,6]
-BalancingList = [1,2,3,4,0]
+SizeList = [i for i in range(6,25)]
+CoefficientsList = [3,4,5,6,7]
+BalancingList = [0]
+FanoutMax = 2
+MinCountPerSize = 2
 InvertersAllowed = 1
+LayoutFriendly = 1
+
+file = open('nlfsrs.txt', 'w')
 
 for Size in SizeList:
+  sresults = []
   for Coefficients in CoefficientsList:
     Break = 0
+    cresults = []
     for Balancing in BalancingList:
       if (Coefficients) + 1 > Size:
         continue
-      polys = Polynomial.createPolynomial(Size, Coefficients, Balancing, LayoutFriendly=1)
+      polys = Polynomial.createPolynomial(Size, Coefficients, Balancing, LayoutFriendly=LayoutFriendly)
       if polys is None:
         continue
       UsedConfigs = []
       PrintHeader = 1
+      bresults = []
       for poly in polys:
-        results = Nlfsr.findNLRGsWithSpecifiedPeriod(poly, InvertersAllowed=1)
-        for result in results:
-          nlfsr = result[0]
-          if not (nlfsr._Config in UsedConfigs):
-            if PrintHeader:
-              PrintHeader = 0
-              Aio.print(f'Size: {Size}, #Coefficients: {Coefficients}, Balancing: {Balancing}')
-            UsedConfigs.append(nlfsr._Config)
-            Aio.print(nlfsr.getFullInfo().replace('\n', ',\t'))
-            Break = 1
-      if Break:
-        Aio.print('')
-        break
-    if Break:
+        bresults = Nlfsr.findNLRGsWithSpecifiedPeriod(poly, InvertersAllowed=1)
+      results = []
+      for i in range(len(bresults)):
+        if bresults[i].makeBeauty(FanoutMax):
+          results.append(bresults[i])
+      cresults += results
+    cresults = Nlfsr.filterEquivalent(cresults)
+    sresults += cresults
+    for R in cresults:
+      print(repr(R))
+      file.write(repr(R) + '\n')
+      file.flush()
+    if len(sresults) >= MinCountPerSize:
       break
-
+  Aio.print(f'Size: {Size}')
+  for R in sresults:
+    Aio.print(R.getFullInfo().replace('\n', ', \t'))
+  Aio.print('')
+file.close()
