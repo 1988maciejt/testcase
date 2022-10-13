@@ -4,11 +4,11 @@ from aio import *
 
 # place your code here
 
-SizeList = [i for i in range(6,25)]
-CoefficientsList = [3,4,5,6,7]
+SizeList = [i for i in range(7,8)]
+CoefficientsList = [4]
 BalancingList = [0]
 FanoutMax = 2
-MinCountPerSize = 2
+MinCountPerSize = 1
 InvertersAllowed = 1
 LayoutFriendly = 1
 
@@ -17,6 +17,7 @@ file = open('nlfsrs.txt', 'w')
 for Size in SizeList:
   sresults = []
   for Coefficients in CoefficientsList:
+    print (f'// Size = {Size}, Coefficients = {Coefficients}')
     Break = 0
     cresults = []
     for Balancing in BalancingList:
@@ -29,13 +30,16 @@ for Size in SizeList:
       PrintHeader = 1
       bresults = []
       for poly in polys:
-        bresults = Nlfsr.findNLRGsWithSpecifiedPeriod(poly, InvertersAllowed=1)
+        print(f'// poly: {poly}')
+        bresults = Nlfsr.findNLRGsWithSpecifiedPeriod(poly, InvertersAllowed=InvertersAllowed)
       results = []
       for i in range(len(bresults)):
-        if bresults[i].makeBeauty(FanoutMax):
-          results.append(bresults[i])
+        for FM in range(2, FanoutMax+1):
+          if bresults[i].makeBeauty(FM):
+            results.append(bresults[i])
+            break
       cresults += results
-    cresults = Nlfsr.filterEquivalent(cresults)
+    #cresults = Nlfsr.filterEquivalent(cresults)
     sresults += cresults
     for R in cresults:
       print(repr(R))
