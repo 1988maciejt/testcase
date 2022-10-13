@@ -4,8 +4,8 @@ from aio import *
 
 # place your code here
 
-SizeList = [i for i in range(7,8)]
-CoefficientsList = [4]
+SizeList = [i for i in range(6,19)]
+CoefficientsList = [3,4,5]
 BalancingList = [0]
 FanoutMax = 2
 MinCountPerSize = 1
@@ -31,7 +31,7 @@ for Size in SizeList:
       bresults = []
       for poly in polys:
         print(f'// poly: {poly}')
-        bresults = Nlfsr.findNLRGsWithSpecifiedPeriod(poly, InvertersAllowed=InvertersAllowed)
+        bresults += Nlfsr.findNLRGsWithSpecifiedPeriod(poly, InvertersAllowed=InvertersAllowed)
       results = []
       for i in range(len(bresults)):
         for FM in range(2, FanoutMax+1):
@@ -39,7 +39,7 @@ for Size in SizeList:
             results.append(bresults[i])
             break
       cresults += results
-    #cresults = Nlfsr.filterEquivalent(cresults)
+    cresults = Nlfsr.filterEquivalent(cresults)
     sresults += cresults
     for R in cresults:
       print(repr(R))
