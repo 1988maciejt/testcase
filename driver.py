@@ -4,11 +4,11 @@ from aio import *
 
 # place your code here
 
-SizeList = [i for i in range(6,19)]
-CoefficientsList = [3,4,5]
-BalancingList = [0]
+SizeList = [i for i in range(4,33)]
+CoefficientsList = [3,4,5,6]
 FanoutMax = 2
-MinCountPerSize = 1
+MaxAndCount = 3
+MinCountPerSize = 3
 InvertersAllowed = 1
 LayoutFriendly = 1
 
@@ -18,37 +18,37 @@ for Size in SizeList:
   sresults = []
   for Coefficients in CoefficientsList:
     print (f'// Size = {Size}, Coefficients = {Coefficients}')
-    Break = 0
-    cresults = []
-    for Balancing in BalancingList:
-      if (Coefficients) + 1 > Size:
-        continue
-      polys = Polynomial.createPolynomial(Size, Coefficients, Balancing, LayoutFriendly=LayoutFriendly)
-      if polys is None:
-        continue
-      UsedConfigs = []
-      PrintHeader = 1
-      bresults = []
-      for poly in polys:
-        print(f'// poly: {poly}')
-        bresults += Nlfsr.findNLRGsWithSpecifiedPeriod(poly, InvertersAllowed=InvertersAllowed)
-      results = []
-      for i in range(len(bresults)):
+    if (Coefficients) + 1 > Size:
+      continue
+    polys = Polynomial.createPolynomial(Size, Coefficients, 0, LayoutFriendly=LayoutFriendly)
+    if polys is None:
+      continue
+    polylist = []
+    for poly in polys:
+      if not (poly.getReversed() in polylist): 
+        polylist.append(poly.copy())
+    while len(polylist) > 0:
+      poly = polylist[int(uniform(0, len(polylist)))]
+      polylist.remove(poly)
+      print(f'// poly: {poly}')
+      results = Nlfsr.findNLRGsWithSpecifiedPeriod(poly, InvertersAllowed=InvertersAllowed, MaxAndCount=MaxAndCount)
+      cresults = []
+      for i in range(len(results)):
         for FM in range(2, FanoutMax+1):
-          if bresults[i].makeBeauty(FM):
-            results.append(bresults[i])
+          if results[i].makeBeauty(FM):
+            cresults.append(results[i])
             break
-      cresults += results
-    cresults = Nlfsr.filterEquivalent(cresults)
-    sresults += cresults
-    for R in cresults:
-      print(repr(R))
-      file.write(repr(R) + '\n')
-      file.flush()
+      sresults += cresults
+      sresults = Nlfsr.filterEquivalent(sresults)
+      sresults = Nlfsr.filterInverted(sresults)
+      if (len(sresults)) >= MinCountPerSize:
+        break
     if len(sresults) >= MinCountPerSize:
       break
   Aio.print(f'Size: {Size}')
   for R in sresults:
     Aio.print(R.getFullInfo().replace('\n', ', \t'))
+    file.write(repr(R) + '\n')
+  file.flush()
   Aio.print('')
 file.close()
