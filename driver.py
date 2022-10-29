@@ -35,7 +35,7 @@ file = open('nlfsrs.txt', 'w')
 for Size in SizeList:
   Aio.print(f'Size: {Size}\n')
   CoefficientsList = CoefficientsDict.get(Size, [3,4,5])
-  CoefficientsList = [6]
+  #CoefficientsList = [6]
   for Coefficients in CoefficientsList:
     print (f'// Size = {Size}, Coefficients = {Coefficients}')
     if (Coefficients) + 1 > Size:
@@ -56,7 +56,7 @@ for Size in SizeList:
       pcounter += 1
       lastlen = len(cresults)
       print(f'// poly: {poly}')
-      results = Nlfsr.findNLRGsWithSpecifiedPeriod(poly, InvertersAllowed=InvertersAllowed, MaxAndCount=MaxAndCount, BeautifullOnly=1, Filter=0)
+      results = Nlfsr.findNLRGsWithSpecifiedPeriod(poly, InvertersAllowed=InvertersAllowed, MaxAndCount=MaxAndCount, BeautifullOnly=1, Filter=1)
       cresults += results
       print(f'// FOund: {len(cresults)}')
       if pcounter > (Size<<2) and len(cresults) == lastlen:
