@@ -3,9 +3,9 @@ from aio import *
 # ============================
 
 
-SIZES = [16, 24, 32, 48, 64, 96, 128, 192, 256]
+SIZES = [16, 24, 32, 48, 64, 96, 128]
 
-Aio.print(f'Demuxes \tDense \tSize \t#Found')
+Aio.print(f'Demux \tDense \tSize \t#Found')
 for USE_DEMUXES in [1, 0]:
   for DENSE in [0, 1]:
     for Size in SIZES:
@@ -32,8 +32,8 @@ for USE_DEMUXES in [1, 0]:
           Taps.append({f'{S}-{D1}_off': None, f'{S}-{D1}_on': [S,D1]})
           Taps.append({f'{S}-{D2}_off': None, f'{S}-{D2}_on': [S,D2]})
           Taps.append({f'{S}-{D3}_off': None, f'{S}-{D3}_on': [S,D3]})
-      Found = Lfsr.listMaximumLfsrsHavingSpecifiedTaps(Size, Taps)
-      Aio.print(f'{USE_DEMUXES} \t{DENSE} \t{Size} \t{len(Found)}')
+      Found = Lfsr.listMaximumLfsrsHavingSpecifiedTaps(Size, Taps, CountOnly=1)
+      Aio.print(f'{USE_DEMUXES} \t{DENSE} \t{Size} \t{Found}')
     #  for F in Found:
     #    print(repr(F), F.MuxConfig)
     
