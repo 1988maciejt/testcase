@@ -3,7 +3,7 @@ from aio import *
 # ============================
 
 
-SIZES = [i for i in range(8, 32+1)]
+SIZES = [i for i in range(11, 32+1)]
 
 
 Aio.print(f'Demux \tDense \tSize \t#Found \t#Polys \t#UTaps \t Unused taps')
@@ -40,12 +40,15 @@ for USE_DEMUXES in [0]:
           Taps.append({f'{S}-{D1}_off': None, f'{S}-{D1}_on': [S,D1]})
           Taps.append({f'{S}-{D2}_off': None, f'{S}-{D2}_on': [S,D2]})
           Taps.append({f'{S}-{D3}_off': None, f'{S}-{D3}_on': [S,D3]})
-      for D in range(1, Step+1, 1):
+      for D in range(1, Step-1, 1):
         S = 0
         if not USE_DEMUXES:
           if not ([S,D] in AllTaps):
             AllTaps.append([S, D])
             Taps.append({f'{S}-{D}_off': None, f'{S}-{D}_on': [S,D]})
+            print("   ", [S,D])
+          else:
+            print("NOT", [S,D])
       PL = ProgrammableRingGenerator(Size, Taps)
       Aio.print(f'{USE_DEMUXES} \t{DENSE} \t{Size} \t{len(PL.getLfsrs(False))} \t{len(PL.getPolynomials())} \t{len(PL.getUsedTaps())}/{len(PL.getAllPosssibleTaps())} \t {PL.getUnusedTaps()}')
 
