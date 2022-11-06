@@ -40,7 +40,7 @@ for USE_DEMUXES in [0]:
           Taps.append({f'{S}-{D1}_off': None, f'{S}-{D1}_on': [S,D1]})
           Taps.append({f'{S}-{D2}_off': None, f'{S}-{D2}_on': [S,D2]})
           Taps.append({f'{S}-{D3}_off': None, f'{S}-{D3}_on': [S,D3]})
-      for D in range(1, Step, 1):
+      for D in range(2, Step, 1):
         S = 0
         if not USE_DEMUXES:
           if not ([S,D] in AllTaps):
