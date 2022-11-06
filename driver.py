@@ -46,9 +46,6 @@ for USE_DEMUXES in [0]:
           if not ([S,D] in AllTaps):
             AllTaps.append([S, D])
             Taps.append({f'{S}-{D}_off': None, f'{S}-{D}_on': [S,D]})
-            print("   ", [S,D])
-          else:
-            print("NOT", [S,D])
       PL = ProgrammableRingGenerator(Size, Taps)
       Aio.print(f'{USE_DEMUXES} \t{DENSE} \t{Size} \t{len(PL.getLfsrs(False))} \t{len(PL.getPolynomials())} \t{len(PL.getUsedTaps())}/{len(PL.getAllPosssibleTaps())} \t {PL.getUnusedTaps()}')
 
