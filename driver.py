@@ -3,7 +3,7 @@ from aio import *
 # ============================
 
 
-SIZES = [i for i in range(11, 32+1)]
+SIZES = [i for i in range(8, 32+1)]
 
 
 Aio.print(f'Demux \tDense \tSize \t#Found \t#Polys \t#UTaps \t Unused taps')
