@@ -12,7 +12,8 @@ for USE_DEMUXES in [0]:
     Step = 3
     Sources = []
     Taps = []
-    for S in range(Size-1, (Size>>1)-1, -Step):
+    One = Size & 1
+    for S in range(Size-1, (Size>>1)-1+One, -Step):
       Sources.append(S)
     for S in range(Step-1, (Size>>1), Step):
       Sources.append(S)
