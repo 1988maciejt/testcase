@@ -3,7 +3,7 @@ from aio import *
 # ============================
 
 
-SIZES = [i for i in range(8, 32+1)]
+SIZES = [i for i in range(24, 32+1)]
 
 
 Aio.print(f'Demux \tSize \t#Found \t#Polys \t#UTaps \t Unused taps')
@@ -38,7 +38,7 @@ for USE_DEMUXES in [0]:
         if D3 != S:
           Taps.append({f'{S}-{D3}_off': None, f'{S}-{D3}_on': [S,D3]})
     #print(Taps)
-    PL = ProgrammableRingGenerator(Size, Taps)
+    PL = ProgrammableRingGenerator(Size, Taps, 1)
     Aio.print(f'{USE_DEMUXES} \t{Size} \t{len(PL.getLfsrs(False))} \t{len(PL.getPolynomials())} \t{len(PL.getUsedTaps())}/{len(PL.getAllPosssibleTaps())} \t {PL.getUnusedTaps()}')
 
 
