@@ -3,7 +3,7 @@ from aio import *
 # ============================
 
 # load NLFSRs
-nlfsrs = NlfsrList.fromFile("../data/transcript.txt")
+nlfsrs = NlfsrList.fromFile("../data/i1.txt")
 
 NlfsrList.toXlsDatabase(nlfsrs)
 
