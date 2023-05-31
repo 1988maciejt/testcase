@@ -17,10 +17,25 @@ def Validate(ValidationList):
 
 Aio.print("AIO2 validation")
 
+
+Aio.print()
+Aio.print("class Lfsr")
+Aio.print("------------------------------------------------------------------------------------------------------")
+ValidationList = [
+    ["Lfsr([4, 1, 0], FIBONACCI).next(5)                                                      ", bitarray('0011')],
+    ["Lfsr([4, 1, 0], GALOIS).next(5)                                                         ", bitarray('1110')],
+    ["Lfsr([4, 1, 0], RING_GENERATOR).next(3)                                                 ", bitarray('0111')],
+    ["Lfsr([4, 1, 0], TIGER_RING).next(3)                                                     ", bitarray('1100')],
+    ["Lfsr([4, 1, 0], FIBONACCI).getMSequence(3)                                              ", bitarray('010011010111100')],
+    ["Lfsr([4, 1, 0], FIBONACCI).getSequences()                                               ", [bitarray('100010011010111'), bitarray('000100110101111'), bitarray('001001101011110'), bitarray('010011010111100')]],
+    ["Lfsr([4, 1, 0], FIBONACCI).getSequence(2, Length=5)                                     ", bitarray('00100')],
+]
+Validate(ValidationList)
+
+
 Aio.print()
 Aio.print("class Polynomial")
 Aio.print("------------------------------------------------------------------------------------------------------")
-
 ValidationList = [
     ["len([i for i in Polynomial.iterate(16, 3)])                                             ", 15],
     ["len([i for i in Polynomial.iterate(16, 5)])                                             ", 389],
@@ -32,7 +47,7 @@ ValidationList = [
     ["str(Polynomial.decodeUsingBerlekampMassey(Lfsr([4, 1, 0], GALOIS)))                     ", "[4, 1, 0]"],
     ["str(Polynomial.decodeUsingBerlekampMassey(Lfsr([12, 11, -8, 6, -4, 0], TIGER_RING)))    ", "[12, 11, 10, 9, 8, 7, 5, 4, 3, 2, 0]"],
     ["len(Polynomial.listPrimitives(20, 7, 3))                                                ", 6],
-    ["len(Polynomial.listDensePrimitives(32))                                                 ", 33],
+    ["len(Polynomial.listDensePrimitives(32))                                                 ", 40],
     ["len(Polynomial.listEveryNTapsPrimitives(22, 6))                                         ", 8],
 ]
 Validate(ValidationList)
