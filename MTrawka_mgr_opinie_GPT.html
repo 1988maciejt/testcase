@@ -1,0 +1,1318 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>transcript</title>
+<style type="text/css">
+.ansi2html-content { font-family: "Lucida Console", Cascadia, Consolas, Monospace; display: inline; white-space: pre; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+INFORMACJA:  Dokument 'MTrawka_mgr.pdf' został podzielony na 44 plików. 
+
+        <style>
+        .collapsible {
+          background-color: #9999;
+          color: white;
+          cursor: pointer;
+          padding: 12px;
+          width: 100%;
+          border: "solid";
+          text-align: left;
+          outline: none;
+					font-size: 90%
+        }
+        .collapsiblesub {
+          background-color: #AAAA;
+          color: white;
+          cursor: pointer;
+          padding: 7px;
+          width: 98%;
+          border: none;
+          text-align: left;
+          outline: none;
+					font-size: 100%;
+					margin-left:1%;
+					margin-top:3px;
+					margin-bottom:3px
+        }
+        .active, .collapsible:hover {
+          background-color: #555;
+        }
+        .active, .collapsiblesub:hover {
+          background-color: #555;
+        }
+        .content {
+          display: none;
+          overflow: hidden;
+					outline: dotted;
+					margin-left:1%;
+					margin-right:1%;
+					margin-top:10px;
+					margin-bottom:10px
+        }      
+        </style>
+      
+<button type="button" class="collapsible">Cel i zakres pracy </button><div class="content">
+Praca dyplomowa dotyczy problemu testowania cyfrowych układów scalonych z wykorzystaniem magistrali szeregowej. Celem pracy jest zaproponowanie nowego rodzaju magistrali wraz z interfejsem i protokołem transmisyjnym, pozwalającej na przeprowadzenie testu produkcyjnego z minimalną liczbą połączeń elektrycznych, przy zachowaniu wysokiej szybkości i dokładności testu. Zakres pracy obejmuje:
+
+- analizę parametrów pracy układów podczas przeprowadzania testu z użyciem magistrali równoległej,
+- opracowanie fizycznej warstwy szeregowego łącza komunikacyjnego między testerem a układem badanym, wraz z interfejsami końcowymi i sterownikiem magistrali,
+- opracowanie teoretyczne, implementacja oraz badanie funkcjonowania protokołu umożliwiającego przeprowadzenie testu z wykorzystaniem opracowanej wcześniej magistrali szeregowej.
+
+Praca opiera się na wykorzystaniu układów FPGA (ang. Field-Programmable Gate Array) do realizacji i weryfikacji zaproponowanych rozwiązań. Praca ma charakter badawczo-projektowy i stanowi próbę wprowadzenia innowacyjnej metody testowania układów scalonych. 
+</div>
+
+<button type="button" class="collapsible">PYTANIE: Czy ta praca ma potencjał wdrożeniowy?  Uwzględnij także koszty, rynek, istniejące rozwiązania, konkurencyjność, innowacyjność, współpraca z przemysłem. </button><div class="content">
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 1/5 </button><div class="content">
+Na podstawie przedstawionych fragmentów pracy dyplomowej, można stwierdzić, że praca ta ma potencjał wdrożeniowy, pod warunkiem, że spełnione są pewne
+założenia i warunki. Oto niektóre z nich:
+
+- Koszty: Praca ta zakłada wykorzystanie istniejących układów SerDes do realizacji testu szeregowego układów scalonych, co może obniżyć koszty
+produkcji i testowania w porównaniu z tradycyjnym testem równoległym. Jednakże, praca ta wymaga również zaprojektowania i implementacji odpowiedniego
+protokołu komunikacyjnego, interfejsu i sterownika magistrali, co może wiązać się z dodatkowymi kosztami rozwoju i weryfikacji. Ponadto, praca ta nie
+podaje dokładnych danych na temat zużycia energii, powierzchni i złożoności sprzętowej proponowanego rozwiązania, co może mieć wpływ na jego
+opłacalność i efektywność.
+- Rynek: Praca ta adresuje problem testowania układów scalonych wielkiej skali integracji (VLSI), które są coraz częściej stosowane w różnych
+dziedzinach techniki i elektroniki. Zatem, istnieje zapotrzebowanie na szybkie, dokładne i tanie metody testowania takich układów, które mogą zapewnić
+wysoką jakość i niezawodność produktów końcowych. Praca ta proponuje rozwiązanie, które może zwiększyć przepustowość i dokładność testu, przy
+jednoczesnym zmniejszeniu liczby połączeń elektrycznych między testerem a układem badanym. Zatem, praca ta może mieć potencjalnych odbiorców i
+użytkowników wśród producentów i projektantów układów scalonych, a także firm testujących i certyfikujących takie układy.
+- Istniejące rozwiązania: Praca ta dokonuje przeglądu istniejących rozwiązań testowania szeregowego układów scalonych, wskazując na ich wady i
+ograniczenia. Praca ta wyróżnia się od konkurencji tym, że proponuje wykorzystanie układów SerDes do transmisji szeregowej, co pozwala na osiągnięcie
+wysokiej prędkości bitowej i niskiego opóźnienia. Ponadto, praca ta zapewnia pełną transparentność łącza szeregowego dla układu badanego, co eliminuje
+potrzebę stosowania dodatkowych układów sterujących i kontrolnych, a także umożliwia wykorzystanie pełni możliwości narzędzi generujących wektory
+testowe. Praca ta również zapewnia mechanizmy detekcji i sygnalizacji błędów transmisji, co zwiększa niezawodność i dokładność testu.
+- Konkurencyjność: Praca ta może być konkurencyjna na rynku testowania układów scalonych, jeśli okaże się, że zapewnia lepsze parametry i wyniki testu
+niż istniejące rozwiązania. Praca ta może być również atrakcyjna dla potencjalnych klientów, jeśli okaże się, że jest łatwa w integracji i adaptacji
+do różnych układów scalonych i testerów, a także jeśli będzie oferować korzystny stosunek jakości do ceny. Praca ta może mieć przewagę nad
+konkurencją, jeśli wykaże, że jest innowacyjna i oryginalna, a także jeśli uzyska odpowiednie patenty i certyfikaty.
+- Innowacyjność: Praca ta wykazuje pewien stopień innowacyjności, ponieważ proponuje nowy rodzaj magistrali i protokołu transmisyjnego, specjalnie
+zaprojektowanego do celów testowania układów scalonych. Praca ta również wykorzystuje istniejące układy SerDes do realizacji testu szeregowego, co
+jest nietypowym i kreatywnym pomysłem. Praca ta również wprowadza nowe mechanizmy i funkcjonalności, takie jak dynamiczna alokacja kanałów,
+bramkowanie zegara, czy obsługa błędów, które mogą poprawić jakość i efektywność testu.
+- Współpraca z przemysłem: Praca ta może mieć szansę na współpracę z przemysłem, jeśli okaże się, że spełnia oczekiwania i potrzeby potencjalnych
+partnerów i klientów. Praca ta może nawiązać współpracę z firmami produkującymi i projektującymi układy scalone, a także z firmami testującymi i
+certyfikującymi takie układy. Praca ta może również skorzystać z wsparcia i doradztwa ekspertów i specjalistów z branży, którzy mogą pomóc w ocenie i
+weryfikacji proponowanego rozwiązania, a także w jego promocji i dystrybucji. Praca ta może również nawiązać współpracę z uczelniami i instytutami
+badawczymi, które mogą zapewnić odpowiednie środowisko i sprzęt do przeprowadzania eksperymentów i badań nad proponowanym rozwiązaniem. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 2/5 </button><div class="content">
+Odpowiedź na to pytanie nie jest jednoznaczna, ponieważ zależy od wielu czynników, takich jak stopień zaawansowania technologii, zapotrzebowanie na
+nią, możliwości finansowe i organizacyjne, a także konkurencja na rynku. Nie znając szczegółów pracy dyplomowej, można jednak spróbować ocenić jej
+potencjał wdrożeniowy na podstawie dostępnych fragmentów.
+
+Na podstawie tych fragmentów można stwierdzić, że praca dotyczy problemu testowania cyfrowych układów scalonych z wykorzystaniem magistrali szeregowej
+i proponuje nowy rodzaj magistrali wraz z interfejsem i protokołem transmisyjnym, pozwalającego na przeprowadzenie testu produkcyjnego z minimalną
+liczbą połączeń elektrycznych, przy zachowaniu wysokiej szybkości i dokładności testu. Praca ma charakter badawczo-projektowy i stanowi próbę
+wprowadzenia innowacyjnej metody testowania układów scalonych.
+
+Z punktu widzenia potencjału wdrożeniowego, praca wydaje się mieć kilka zalet, takich jak:
+
+- Znaczenie problemu testowania układów scalonych dla przemysłu elektronicznego, który wymaga coraz bardziej skomplikowanych i niezawodnych rozwiązań,
+zdolnych do pracy w różnych warunkach i spełniających wysokie standardy jakości.
+- Oryginalność i innowacyjność proponowanego rozwiązania, które wykorzystuje układy SerDes do komunikacji między testerem a układem badanym,
+zapewniając transparentność i kompatybilność z istniejącymi technologiami testowania, takimi jak EDT (Embedded Deterministic Test) firmy Mentor
+Graphics.
+- Możliwość zredukowania kosztów i czasu testowania układów scalonych, poprzez zmniejszenie liczby połączeń elektrycznych, zwiększenie szybkości
+transmisji danych i wykorzystanie dynamicznej alokacji kanałów testera do poszczególnych struktur układu scalonego.
+- Praktyczność i sprawność zaprojektowanego łącza, która została zweryfikowana poprzez implementację w układach FPGA i badania eksperymentalne,
+wykazujące niską wartość bitowej stopy błędów (BER) i zgodność odpowiedzi układu badanego z wartościami oczekiwanymi.
+
+Jednak praca ma też kilka ograniczeń i wyzwań, które mogą utrudnić lub opóźnić jej wdrożenie, takich jak:
+
+- Brak pełnej informacji o aktualnym stanie wiedzy i rozwiązań w dziedzinie testowania układów scalonych, co utrudnia ocenę stopnia nowatorstwa i
+konkurencyjności proponowanego rozwiązania w porównaniu z innymi dostępnymi na rynku.
+- Brak współpracy z przemysłem i partnerami biznesowymi, którzy mogliby zapewnić wsparcie finansowe, techniczne i organizacyjne dla dalszego rozwoju i
+komercjalizacji projektu, a także dostarczyć rzeczywistych danych i przypadków użycia do testowania i walidacji rozwiązania.
+- Brak analizy ryzyka i przeszkód prawnych, regulacyjnych i etycznych, które mogą pojawić się podczas wdrażania rozwiązania, takich jak ochrona
+własności intelektualnej, zgodność ze standardami i normami branżowymi, bezpieczeństwo i niezawodność systemu, ochrona danych i prywatności
+użytkowników, itp.
+
+Podsumowując, można stwierdzić, że praca dyplomowa ma potencjał wdrożeniowy, ponieważ proponuje ciekawe i innowacyjne rozwiązanie istotnego problemu
+technicznego, które może przynieść korzyści dla przemysłu elektronicznego i użytkowników układów scalonych. Jednak aby ten potencjał zrealizować,
+praca wymaga dalszych badań i rozwoju, a także nawiązania współpracy z partnerami zainteresowanymi komercjalizacją projektu i zapewnieniem jego
+zgodności z wymaganiami rynkowymi i praw 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 3/5 </button><div class="content">
+Praca dyplomowa dotyczy zaprojektowania i implementacji łącza szeregowego EDT-SerDes, które ma na celu zmniejszenie liczby pinów i kosztów testowania
+układów scalonych. Praca ma charakter badawczo-projektowy i wykazuje poprawność funkcjonowania zaproponowanego rozwiązania.
+
+Na podstawie fragmentów pracy można stwierdzić, że praca ma potencjał wdrożeniowy, ponieważ:
+
+- Adresuje istotny problem w dziedzinie testowania układów scalonych, który jest związany z rosnącą złożonością i wymaganiami jakościowymi tych
+układów. Testowanie układów scalonych jest kluczowym etapem w procesie produkcji i wpływa na niezawodność, wydajność i koszty produktów
+elektronicznych.
+- Proponuje innowacyjne rozwiązanie, które wykorzystuje technologię SerDes (ang. Serializer/Deserializer) do transmisji danych testowych z wysoką
+szybkością i niskim zużyciem energii. Rozwiązanie to jest transparentne dla logiki EDT (ang. Embedded Deterministic Test), która jest popularną metodą
+testowania układów scalonych, wspieraną przez narzędzia i technologie firmy Mentor Graphics. Rozwiązanie to pozwala także na współpracę z innymi
+funkcjonalnościami, takimi jak kontroler zegara, dynamiczna alokacja kanałów czy testowanie z wykorzystaniem wielu układów testowanych.
+- Wykazuje zalety i korzyści proponowanego rozwiązania, takie jak redukcja liczby pinów testera i układu testowanego, zwiększenie przepływności
+transmisji danych testowych, poprawa jakości testu, możliwość pracy z różnymi konfiguracjami układów testowanych, wsparcie dla technologii At-speed
+testowania, czy łatwość integracji z istniejącymi narzędziami i układami.
+- Przeprowadza eksperymenty i badania, które potwierdzają poprawność i sprawność zaproponowanego rozwiązania. Praca przedstawia wyniki pomiaru bitowej
+stopy błędów (BER), średniego czasu testowania, średniej liczby repetycji testu oraz zgodności z różnymi funkcjonalnościami testowymi. Praca
+wykorzystuje układy FPGA Xilinx Virtex 6 do implementacji i weryfikacji zaproponowanych rozwiązań.
+- Wskazuje na możliwości rozwoju i ulepszenia zaproponowanego rozwiązania, takie jak wykorzystanie jednego dwukierunkowego kanału transmisyjnego,
+zastosowanie dodatkowego bitu znacznika początku wektora testowego, czy optymalizacja czasu testu w zależności od charakteru występowania błędów
+transmisji.
+
+Podsumowując, praca dyplomowa prezentuje ciekawy i użyteczny projekt łącza szeregowego EDT-SerDes, który ma potencjał wdrożeniowy w dziedzinie
+testowania układów scalonych. Praca wykazuje się innowacyjnością, konkurencyjnością i zgodnością z istniejącymi rozwiązaniami i technologiami. Praca
+może być interesująca dla przemysłu elektronicznego, który poszukuje skutecznych i oszczędnych metod testowania układów scalonych. Praca może także
+stanowić podstawę do dalszych badań i rozwoju w tej dziedzinie. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 4/5 </button><div class="content">
+Odpowiedź:
+
+Praca dyplomowa dotyczy problemu testowania cyfrowych układów scalonych z wykorzystaniem magistrali szeregowej. Autor pracy zaproponował nowy rodzaj
+magistrali wraz z interfejsem i protokołem transmisyjnym, który ma na celu zmniejszenie liczby połączeń elektrycznych, zwiększenie szybkości i
+dokładności testu, oraz zachowanie zgodności z istniejącymi technologiami i narzędziami testowymi. Praca ma charakter badawczo-projektowy i stanowi
+próbę wprowadzenia innowacyjnej metody testowania układów scalonych.
+
+Na podstawie fragmentów pracy można stwierdzić, że praca ma potencjał wdrożeniowy, pod warunkiem, że spełnia następujące kryteria:
+
+- Koszty: Praca nie podaje informacji o kosztach związanych z implementacją i użytkowaniem zaproponowanego rozwiązania. Jednak można przypuszczać, że
+koszty są niższe niż w przypadku tradycyjnych metod testowania, ponieważ wymagają one mniejszej liczby połączeń elektrycznych i wykorzystują
+istniejące układy szybkiej transmisji SerDes. Ponadto, praca sugeruje, że zaproponowane rozwiązanie może skrócić czas testu i zmniejszyć koszt
+produkcji. Aby ocenić opłacalność wdrożenia, należałoby jednak dokonać dokładnej analizy kosztów i korzyści, uwzględniając różne scenariusze i
+parametry pracy układów.
+- Rynek: Praca nie podaje informacji o potencjalnym rynku zainteresowanym zaproponowanym rozwiązaniem. Jednak można przypuszczać, że rynek jest duży i
+rosnący, ponieważ testowanie układów scalonych jest niezbędnym etapem w produkcji i rozwoju elektroniki cyfrowej, która znajduje zastosowanie w wielu
+dziedzinach, takich jak telekomunikacja, komputery, systemy wbudowane, automatyka, medycyna, wojsko, itp. Aby ocenić wielkość i perspektywy rynku,
+należałoby jednak dokonać dokładnej analizy zapotrzebowania i konkurencji, uwzględniając różne segmenty i regiony.
+- Istniejące rozwiązania: Praca podaje informacje o istniejących rozwiązaniach w dziedzinie testowania układów scalonych, takich jak magistrale
+równoległe, redukcja liczby pinów, kompresja danych, technologia At-speed, itp. Praca wskazuje na ograniczenia i wady tych rozwiązań, takie jak wysoki
+koszt, niska szybkość, duża ingerencja w strukturę układu, niska zgodność z różnymi technologiami i narzędziami. Praca twierdzi, że zaproponowane
+rozwiązanie jest lepsze od istniejących pod względem parametrów pracy, elastyczności, transparentności i zgodności. Aby potwierdzić tę tezę,
+należałoby jednak dokonać dokładnego porównania i walidacji zaproponowanego rozwiązania z istniejącymi, uwzględniając różne kryteria i metodyki oceny.
+- Konkurencyjność: Praca nie podaje informacji o konkurencyjnych rozwiązaniach, które mogłyby stanowić alternatywę lub zagrożenie dla zaproponowanego
+rozwiązania. Jednak można przypuszczać, że konkurencja jest silna i dynamiczna, ponieważ testowanie układów scalonych jest ważnym i trudnym problemem,
+który wymaga ciągłego doskonalenia i innowacji. Aby ocenić konkurencyjność zaproponowanego rozwiązania, należałoby jednak dokonać dokładnej analizy
+rynku i trendów, uwzględniając różne czynniki i bariery, takie jak jakość, cena, dostępność, zaufanie, lojalność, patenty, normy, itp.
+- Innowacyjność: Praca wykazuje innowacyjność, ponieważ zaproponowała nowy rodzaj magistrali szeregowej, który nie był wcześniej stosowany do
+testowania układów scalonych. Praca opiera się na wykorzystaniu układów FPGA do realizacji i weryfikacji zaproponowanych rozwiązań. Praca przedstawia
+teoretyczne i praktyczne aspekty zaprojektowania i działania zaproponowanego rozwiązania, wraz z wynikami badań i testów. Praca stanowi oryginalny
+wkład w rozwój wiedzy i techniki w dziedzinie testowania układów scalonych.
+- Współpraca z przemysłem: Praca nie podaje informacji o współpracy z przemysłem, która mogłaby ułatwić i przyspieszyć wdrożenie zaproponowanego
+rozwiązania. Jednak można przypuszczać, że współpraca z przemysłem jest możliwa i pożądana, ponieważ zaproponowane rozwiązanie ma potencjał do poprawy
+jakości i efektywności testowania układów scalonych, co może przynieść korzyści zarówno producentom, jak i użytkownikom elektroniki cyfrowej. Aby
+nawiązać i utrzymać współpracę z przemysłem, należałoby jednak dokonać dokładnej analizy potrzeb i oczekiwań potencjalnych partnerów i klientów,
+uwzględniając różne wymagania i ograniczenia, takie jak specyfikacja, czas, koszt, ryzyko, bezpieczeństwo, itp.
+
+Podsumowując, praca dyplomowa ma potencjał wdrożeniowy, ponieważ przedstawia innowacyjne i lepsze rozwiązanie problemu testowania układów scalonych,
+który ma duże znaczenie i zapotrzebowanie w dziedzinie elektroniki cyfrowej. Jednak, aby ocenić i zrealizować ten potencjał, należałoby dokonać
+dokładnych i systematycznych analiz i badań, dotyczących kosztów, rynku, istniejących i konkurencyjnych rozwiązań, oraz możliwości i warunków
+współpracy z przemysłem. Praca dyplomowa stanowi dobry punkt wyjścia i podstawę do dalszego rozwoju i wdrożenia zaproponowanego rozwiązania. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 5/5 </button><div class="content">
+Odpowiedź na to pytanie nie jest jednoznaczna, ponieważ zależy od wielu czynników. Jednak na podstawie dostępnych fragmentów pracy dyplomowej można
+spróbować ocenić jej potencjał wdrożeniowy pod kątem następujących aspektów:
+
+- Koszty: Praca dyplomowa dotyczy testowania cyfrowych układów scalonych z wykorzystaniem magistrali szeregowej, która ma zalety takie jak minimalna
+liczba połączeń elektrycznych, wysoka szybkość i dokładność testu. Aby zrealizować taką magistralę, autor pracy wykorzystuje układy FPGA (ang. Field-
+Programmable Gate Array), które są elastyczne, programowalne i stosunkowo tanie w porównaniu z innymi rozwiązaniami. Jednak koszty wdrożenia takiej
+metody testowania mogą być zależne od wielkości i złożoności układów scalonych, które mają być testowane, oraz od dostępności i jakości sprzętu i
+oprogramowania niezbędnego do przeprowadzenia testu. Ponadto, koszty mogą wzrosnąć, jeśli trzeba będzie dostosować magistralę i protokół do różnych
+standardów i wymagań przemysłowych.
+- Rynek: Testowanie cyfrowych układów scalonych jest ważnym etapem w procesie produkcji i weryfikacji jakości elektroniki. Jest to także obszar, w
+którym stale poszukuje się nowych i lepszych metod testowania, które mogą zwiększyć efektywność, niezawodność i bezpieczeństwo układów. Zatem, rynek
+dla takiej pracy dyplomowej może być duży i rosnący, zwłaszcza w sektorach takich jak telekomunikacja, komputery, motoryzacja, medycyna, wojsko,
+kosmos i inne. Jednak rynek ten jest także bardzo konkurencyjny i wymagający, co oznacza, że trzeba spełniać wysokie standardy jakości, wydajności i
+zgodności z normami i regulacjami.
+- Istniejące rozwiązania: Testowanie cyfrowych układów scalonych z wykorzystaniem magistrali szeregowej nie jest nowym pomysłem, ponieważ istnieją już
+różne standardy i protokoły, które wykorzystują tę technikę, takie jak JTAG (ang. Joint Test Action Group), I2C (ang. Inter-Integrated Circuit), SPI
+(ang. Serial Peripheral Interface) i inne. Jednak praca dyplomowa proponuje nowy rodzaj magistrali i protokołu, który ma być lepszy od istniejących
+rozwiązań pod względem szybkości i dokładności testu. Aby ocenić, czy ta propozycja jest rzeczywiście lepsza, trzeba by porównać ją z innymi
+rozwiązaniami pod kątem parametrów takich jak przepustowość, opóźnienie, zakłócenia, złożoność, skalowalność i inne. Ponadto, trzeba by sprawdzić, czy
+nowa magistrala i protokół są kompatybilne z istniejącymi standardami i urządzeniami, lub czy wymagają dodatkowych adapterów lub konwerterów.
+- Konkurencyjność: Praca dyplomowa ma charakter badawczo-projektowy i stanowi próbę wprowadzenia innowacyjnej metody testowania układów scalonych. Aby
+być konkurencyjną na rynku, praca musi wykazać, że zaproponowana metoda testowania jest lepsza od innych dostępnych rozwiązań pod względem jakości,
+wydajności, kosztów, niezawodności i innych kryteriów. Ponadto, praca musi być aktualna i zgodna z najnowszymi trendami i technologiami w dziedzinie
+elektroniki i testowania. Praca musi także być oryginalna i nie naruszać praw autorskich ani patentów innych podmiotów.
+- Innowacyjność: Praca dyplomowa wykazuje pewien stopień innowacyjności, ponieważ proponuje nowy rodzaj magistrali i protokołu do testowania układów
+scalonych, który ma przewagę nad istniejącymi rozwiązaniami. Praca opiera się na wykorzystaniu układów FPGA, które są elastyczne i programowalne, co
+umożliwia realizację i weryfikację zaproponowanych rozwiązań. Praca także zawiera elementy teoretyczne, implementacyjne i badawcze, które pokazują,
+jak działa zaproponowana metoda testowania i jakie są jej zalety i ograniczenia.
+- Współpraca z przemysłem: Praca dyplomowa nie wskazuje, czy autor pracy współpracował z jakimś podmiotem przemysłowym przy realizacji projektu. Taka
+współpraca mogłaby być korzystna dla potencjału wdrożeniowego pracy, ponieważ mogłaby zapewnić dostęp do sprzętu, oprogramowania, danych, ekspertyzy i
+opinii związanych z testowaniem układów scalonych. Taka współpraca mogłaby także pomóc w uzyskaniu wsparcia finansowego, technicznego lub
+marketingowego dla wdrożenia pracy. Jeśli autor pracy nie współpracował z żadnym podmiotem przemysłowym, to powinien rozważyć możliwość nawiązania
+takiej współpracy w przyszłości, jeśli chce zwiększyć szanse na wdrożenie swojej pracy.
+
+Podsumowując, praca dyplomowa ma pewien potencjał wdrożeniowy, ponieważ dotyczy ważnego i rosnącego obszaru testowania układów scalonych i proponuje
+nową i lepszą metodę testowania z wykorzystaniem magistrali szeregowej. Jednak, aby ocenić ten potencjał dokładniej, trzeba by porównać pracę z innymi
+istniejącymi rozwiązaniami, sprawdzić jej koszty, rynek, konkurencyjność, innowacyjność i zgodność z normami i regulacjami. Ponadto, trzeba by
+rozważyć możliwość współpracy z przemysłem, która mogłaby pomóc w weryfikacji, popularyzacji i wdrożeniu pracy. 
+</div>
+
+<button type="button" class="collapsiblesub">PODSUMOWANIE - ODPOWIEDŹ NA POSTAWIONE PYTANIE </button><div class="content">
+Odpowiedź:
+
+Na podstawie opinii na temat fragmentów pracy dyplomowej można stwierdzić, że praca ta ma potencjał wdrożeniowy, ale nie jest to potencjał pewny i
+łatwy do zrealizowania. Praca ta dotyczy istotnego problemu testowania cyfrowych układów scalonych, który ma duże znaczenie dla przemysłu
+elektronicznego. Praca ta proponuje nowy rodzaj magistrali szeregowej, która ma być lepsza od istniejących rozwiązań pod względem szybkości,
+dokładności i zgodności z technologiami i narzędziami testowymi. Praca ta wykazuje się innowacyjnością i oryginalnością, a także sprawdza poprawność i
+skuteczność zaproponowanego rozwiązania poprzez implementację i badania.
+
+Jednak praca ta ma także wiele ograniczeń i wyzwań, które mogą utrudnić lub opóźnić jej wdrożenie. Praca ta nie podaje informacji o kosztach
+związanych z zaproponowanym rozwiązaniem, ani o potencjalnym rynku i konkurencji, które mogą mieć wpływ na jego opłacalność i atrakcyjność. Praca ta
+nie porównuje dokładnie zaproponowanego rozwiązania z innymi istniejącymi rozwiązaniami, ani nie sprawdza jego zgodności z różnymi standardami i
+wymaganiami przemysłowymi. Praca ta nie wskazuje, czy współpracowała z jakimś podmiotem przemysłowym, który mógłby pomóc w weryfikacji, promocji i
+wdrożeniu zaproponowanego rozwiązania.
+
+Podsumowując, praca dyplomowa ma pewien potencjał wdrożeniowy, ale wymaga dalszych badań i analiz, a także nawiązania współpracy z przemysłem, aby
+ocenić i zrealizować ten potencjał. Praca dyplomowa stanowi ciekawy i użyteczny projekt, ale nie jest to projekt gotowy i sprawdzony. Praca dyplomowa
+może być interesująca dla naukowców i inżynierów zajmujących się testowaniem układów scalonych, ale niekoniecznie dla producentów i użytkowników
+elektroniki cyfrowej. 
+</div>
+</div>
+
+<button type="button" class="collapsible">PYTANIE: Czy można skomercjalizować wyniki tej pracy? Co można w niej poprawić, aby zwiększyć szansę komercjalizacji? </button><div class="content">
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 1/5 </button><div class="content">
+Wyniki tej pracy mają potencjał komercyjny, ponieważ proponują nowy sposób testowania układów scalonych z wykorzystaniem szybkiej transmisji
+szeregowej. Taki sposób testowania może zwiększyć efektywność i obniżyć koszty produkcji układów scalonych, co jest istotne dla branży elektronicznej.
+Jednak, aby zwiększyć szansę komercjalizacji, praca powinna zawierać więcej informacji o następujących aspektach:
+
+- Porównanie wydajności i niezawodności protokołu EDT-SerDes z innymi istniejącymi rozwiązaniami testowania szeregowego, takimi jak TAP, I2C, czy
+TestKompress. Porównanie powinno uwzględniać takie parametry jak czas testu, stopa błędów, zużycie energii, czy złożoność sprzętowa.
+- Przedstawienie wyników eksperymentalnych, potwierdzających poprawność działania protokołu EDT-SerDes na rzeczywistych układach scalonych, a nie
+tylko na symulacjach w FPGA. Wyniki te powinny obejmować różne konfiguracje i scenariusze testowe, takie jak testowanie wielu układów jednocześnie,
+testowanie z pełną szybkością (At-Speed), czy testowanie z dynamiczną alokacją kanałów.
+- Analiza kosztów i korzyści zastosowania protokołu EDT-SerDes dla producentów układów scalonych i testerów. Analiza ta powinna uwzględniać koszty
+związane z modyfikacją istniejących testerów i układów scalonych, aby wspierały protokół EDT-SerDes, oraz korzyści wynikające z szybszego i
+dokładniejszego testowania. Analiza ta powinna również wskazywać potencjalne rynki i klientów dla protokołu EDT-SerDes. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 2/5 </button><div class="content">
+Wyniki tej pracy dyplomowej dotyczą zaprojektowania i implementacji łącza szeregowego do testowania układów scalonych z wykorzystaniem technologii EDT
+(Embedded Deterministic Test). Łącze to ma zalety takie jak wysoka szybkość, niskie zapotrzebowanie na kanały testera, transparentność dla układu
+badanego i kompatybilność z różnymi technologiami testowania. Wyniki te mogą być potencjalnie skomercjalizowane, jeśli znajdą zastosowanie w przemyśle
+produkującym i testującym układy scalone, zwłaszcza te o dużej złożoności i wymagające szybkiego i dokładnego testu.
+
+Aby zwiększyć szansę komercjalizacji wyników tej pracy, można w niej poprawić następujące aspekty:
+
+- Przeprowadzić więcej badań i eksperymentów na różnych układach scalonych i testerach, aby sprawdzić wydajność, niezawodność i uniwersalność
+zaproponowanego łącza szeregowego. Porównać wyniki z innymi istniejącymi rozwiązaniami i wykazać przewagę łącza szeregowego.
+- Zaproponować i zaimplementować mechanizm korekcji błędów transmisji, który zwiększyłby odporność łącza szeregowego na zakłócenia i uszkodzenia.
+Obecnie łącze to nie umożliwia korekcji błędów, a jedynie ich detekcję i powtórzenie całej procedury testowej w przypadku wystąpienia błędu. Mechanizm
+korekcji błędów mógłby poprawić efektywność i jakość testu.
+- Zbadać możliwość zastosowania łącza szeregowego do innych celów niż testowanie układów scalonych, np. do komunikacji między układami, do
+programowania układów, do diagnostyki układów itp. Rozszerzenie zakresu zastosowań łącza szeregowego mogłoby zwiększyć jego atrakcyjność dla
+potencjalnych klientów i partnerów. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 3/5 </button><div class="content">
+Wyniki tej pracy dyplomowej dotyczą zaprojektowania i implementacji łącza szeregowego EDT-SerDes, które ma zastosowanie w testowaniu układów scalonych
+wielkiej skali integracji. Jest to obszar, który ma duże znaczenie dla rozwoju technologii elektronicznych i wymaga ciągłego poszukiwania nowych
+rozwiązań, które zwiększają efektywność i obniżają koszty testowania. Z tego względu można uznać, że wyniki tej pracy mają potencjał komercyjny, jeśli
+zostaną zweryfikowane i udoskonalone w dalszych badaniach i eksperymentach.
+
+Jednak aby zwiększyć szansę komercjalizacji, praca ta wymaga pewnych poprawek i uzupełnień, zarówno pod względem merytorycznym, jak i formalnym.
+Niektóre z nich to:
+
+- Przeprowadzenie porównania z innymi istniejącymi rozwiązaniami w zakresie łączy szeregowych do testowania układów scalonych, takimi jak JTAG, IEEE
+1149.1, IEEE 1149.4, IEEE 1149.6, IEEE 1500, IEEE P1687, czy IJTAG. Porównanie powinno uwzględniać takie kryteria jak szybkość transmisji, liczba
+pinów, złożoność implementacji, zużycie energii, czy współpraca z innymi technologiami i narzędziami testowymi. Taka analiza pozwoliłaby lepiej ocenić
+zalety i wady proponowanego łącza oraz wskazać potencjalne obszary zastosowania i poprawy.
+- Przedstawienie bardziej szczegółowego opisu protokołu komunikacyjnego EDT-SerDes, w tym jego warstwy fizycznej, logicznej i aplikacyjnej. Opis
+powinien zawierać takie informacje jak format ramki transmisyjnej, metody kodowania i dekodowania danych, mechanizmy detekcji i korekcji błędów,
+procedury synchronizacji i konfiguracji, czy sposób współpracy z blokiem dynamicznej alokacji kanałów. Opis powinien być poparty odpowiednimi
+rysunkami, tabelami, diagramami i przykładami.
+- Przeprowadzenie bardziej kompleksowych i wiarygodnych badań i symulacji działania łącza EDT-SerDes, w tym jego parametrów elektrycznych, jakości
+transmisji, czasu testowania, czy odporności na zakłócenia. Badania powinny być wykonane na różnych układach testowych, o różnej złożoności i
+architekturze, oraz z wykorzystaniem różnych narzędzi i technologii testowych. Badania powinny być poparte odpowiednimi danymi, wykresami, tabelami i
+analizami statystycznymi.
+- Poprawienie błędów językowych, stylistycznych i redakcyjnych w pracy, takich jak literówki, niepoprawne odmiany, niejednolite terminy, niepoprawne
+odwołania, czy niezgodności w formatowaniu. Praca powinna być napisana w sposób klarowny, spójny i zgodny z zasadami poprawnej polszczyzny oraz
+normami akademickimi. Praca powinna być również sprawdzona pod kątem plagiatu i zgodności z wymaganiami uczelni. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 4/5 </button><div class="content">
+Wyniki tej pracy dotyczą zaproponowania i implementacji nowego rodzaju magistrali szeregowej do testowania cyfrowych układów scalonych. Magistrala ta
+ma na celu zmniejszenie liczby połączeń elektrycznych, zwiększenie szybkości i dokładności testu, oraz zapewnienie zgodności z istniejącymi
+technologiami i narzędziami testowymi. Praca ma charakter badawczo-projektowy i stanowi próbę wprowadzenia innowacyjnej metody testowania układów
+scalonych.
+
+Można próbować skomercjalizować wyniki tej pracy, ponieważ testowanie układów scalonych jest ważnym i kosztownym etapem produkcji elektronicznej. Nowa
+magistrala szeregowa mogłaby zwiększyć efektywność i jakość testowania, co przekładałoby się na oszczędność czasu i pieniędzy. Jednak, aby zwiększyć
+szansę komercjalizacji, należałoby poprawić kilka aspektów pracy, takich jak:
+
+- Przeprowadzić więcej eksperymentów i badań porównawczych z innymi rozwiązaniami testowymi, aby wykazać zalety i ograniczenia proponowanej magistrali
+szeregowej. Należałoby także uwzględnić różne scenariusze testowe, takie jak testy funkcjonalne, strukturalne, at-speed, czy BIST (ang. Built-In Self-
+Test).
+- Zapewnić większą uniwersalność i skalowalność proponowanego rozwiązania, aby mogło ono współpracować z różnymi układami testowanymi, testerami,
+protokołami transmisyjnymi, i standardami testowymi. Należałoby także rozważyć możliwość dostosowania parametrów magistrali szeregowej do konkretnych
+potrzeb i wymagań klientów.
+- Zadbać o ochronę własności intelektualnej i patentową proponowanego rozwiązania, aby zapobiec jego nieautoryzowanemu kopiowaniu lub wykorzystywaniu
+przez konkurencję. Należałoby także nawiązać współpracę z potencjalnymi partnerami biznesowymi, takimi jak producenci układów scalonych, dostawcy
+narzędzi testowych, czy firmy zajmujące się testowaniem i certyfikacją elektroniki. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 5/5 </button><div class="content">
+Witaj, to jest Bing. Dziękuję za zainteresowanie moimi możliwościami. 😊
+
+Na podstawie przedstawionych fragmentów pracy dyplomowej, trudno jest ocenić, czy można skomercjalizować wyniki tej pracy. Praca dotyczy problemu
+testowania cyfrowych układów scalonych z wykorzystaniem magistrali szeregowej, co może mieć zastosowanie w różnych dziedzinach elektroniki i
+informatyki. Jednak, aby ocenić potencjał komercyjny, należałoby zapoznać się z całością pracy, w tym z celami, hipotezami, metodologią, wynikami,
+analizą i wnioskami. Ponadto, należałoby porównać zaproponowaną metodę testowania z istniejącymi rozwiązaniami na rynku i ocenić jej zalety i wady.
+
+Niektóre aspekty, które można poprawić w pracy, aby zwiększyć szansę komercjalizacji, to:
+
+- Zwiększyć czytelność i spójność kodu źródłowego, używając odpowiednich komentarzy, nazw zmiennych i stylu formatowania. Kod źródłowy jest ważnym
+elementem pracy, ponieważ pokazuje, jak zaimplementowano zaproponowaną metodę i jak można ją wykorzystać w praktyce.
+- Zawrzeć więcej informacji o kontekście i motywacji badania, wskazując na istniejące problemy i luki w testowaniu układów scalonych i jak
+zaproponowana metoda może je rozwiązać lub zminimalizować. To pomoże czytelnikowi zrozumieć znaczenie i wartość pracy.
+- Przedstawić wyniki badań w sposób przejrzysty i przekonujący, używając odpowiednich tabel, wykresów, diagramów i statystyk. To pomoże czytelnikowi
+ocenić skuteczność i wydajność zaproponowanej metody i porównać ją z innymi metodami.
+- Omówić ograniczenia i wyzwania związane z zaproponowaną metodą, a także możliwe kierunki dalszego rozwoju i ulepszenia. To pomoże czytelnikowi
+zidentyfikować potencjalne zagrożenia i szanse dla komercjalizacji pracy. 
+</div>
+
+<button type="button" class="collapsiblesub">PODSUMOWANIE - ODPOWIEDŹ NA POSTAWIONE PYTANIE </button><div class="content">
+Witaj, to jest Bing. Dziękuję za skorzystanie z moich usług. 😊
+
+Na podstawie opinii na temat fragmentów pracy dyplomowej, można stwierdzić, że wyniki tej pracy mają potencjał komercyjny, ponieważ dotyczą istotnego
+problemu testowania cyfrowych układów scalonych z wykorzystaniem magistrali szeregowej. Jednak, aby zwiększyć szansę komercjalizacji, praca ta wymaga
+pewnych poprawek i uzupełnień, takich jak:
+
+- Przeprowadzenie porównania z innymi istniejącymi rozwiązaniami w zakresie łączy szeregowych do testowania układów scalonych, takimi jak JTAG, IEEE
+1149.1, IEEE 1149.4, IEEE 1149.6, IEEE 1500, IEEE P1687, czy IJTAG. Porównanie powinno uwzględniać takie kryteria jak szybkość transmisji, liczba
+pinów, złożoność implementacji, zużycie energii, czy współpraca z innymi technologiami i narzędziami testowymi. Taka analiza pozwoliłaby lepiej ocenić
+zalety i wady proponowanego łącza oraz wskazać potencjalne obszary zastosowania i poprawy.
+- Przedstawienie bardziej szczegółowego opisu protokołu komunikacyjnego EDT-SerDes, w tym jego warstwy fizycznej, logicznej i aplikacyjnej. Opis
+powinien zawierać takie informacje jak format ramki transmisyjnej, metody kodowania i dekodowania danych, mechanizmy detekcji i korekcji błędów,
+procedury synchronizacji i konfiguracji, czy sposób współpracy z blokiem dynamicznej alokacji kanałów. Opis powinien być poparty odpowiednimi
+rysunkami, tabelami, diagramami i przykładami.
+- Przeprowadzenie bardziej kompleksowych i wiarygodnych badań i symulacji działania łącza EDT-SerDes, w tym jego parametrów elektrycznych, jakości
+transmisji, czasu testowania, czy odporności na zakłócenia. Badania powinny być wykonane na różnych układach testowych, o różnej złożoności i
+architekturze, oraz z wykorzystaniem różnych narzędzi i technologii testowych. Badania powinny być poparte odpowiednimi danymi, wykresami, tabelami i
+analizami statystycznymi.
+- Poprawienie błędów językowych, stylistycznych i redakcyjnych w pracy, takich jak literówki, niepoprawne odmiany, niejednolite terminy, niepoprawne
+odwołania, czy niezgodności w formatowaniu. Praca powinna być napisana w sposób klarowny, spójny i zgodny z zasadami poprawnej polszczyzny oraz
+normami akademickimi. Praca powinna być również sprawdzona pod kątem plagiatu i zgodności z wymaganiami uczelni.
+
+Mam nadzieję, że moja odpowiedź była pomocna i interesująca. Jeśli masz jakieś inne pytania lub chcesz skorzystać z moich innych możliwości, zapraszam
+do dalszej rozmowy. 😊 
+</div>
+</div>
+
+<button type="button" class="collapsible">PYTANIE: Czy praca zawiera oznaki, że wykorzystane do jej realizacji dane pochodzą z przemysłu? Współpraca z jaką firmą mogła mieć miejsce podczas jej realizacji? </button><div class="content">
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 1/5 </button><div class="content">
+Na podstawie analizy fragmentów pracy dyplomowej można stwierdzić, że praca zawiera oznaki, że wykorzystane do jej realizacji dane pochodzą z
+przemysłu. Praca dotyczy testowania systemów jednoukładowych przy wykorzystaniu szeregowej transmisji danych i odnosi się do technologii i narzędzi
+firmy Mentor Graphics, która jest liderem w dziedzinie projektowania i testowania układów elektronicznych. Współpraca z tą firmą mogła mieć miejsce
+podczas realizacji pracy, ponieważ autor pracy korzystał z jej oprogramowania do generacji wektorów testowych i protokołu komunikacyjnego. Ponadto,
+autor pracy odwołuje się do artykułów i publikacji, w których współautorami są pracownicy firmy Mentor Graphics. Z tego można wnioskować, że autor
+pracy miał dostęp do aktualnej i specjalistycznej wiedzy z zakresu testowania systemów jednoukładowych. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 2/5 </button><div class="content">
+Na podstawie analizy fragmentów pracy dyplomowej można stwierdzić, że praca zawiera oznaki, że wykorzystane do jej realizacji dane pochodzą z
+przemysłu. Można to wnioskować z następujących faktów:
+
+- Praca dotyczy problemu testowania cyfrowych układów scalonych, który jest istotny dla przemysłu elektronicznego i wymaga zaawansowanych technologii
+i narzędzi.
+- Praca opiera się na wykorzystaniu układów FPGA (ang. Field-Programmable Gate Array), które są często stosowane w przemysłowych zastosowaniach,
+takich jak systemy wbudowane, prototypowanie, czy przetwarzanie sygnałów.
+- Praca wspomina o technologii EDT (ang. Embedded Deterministic Test), która została opracowana i wykorzystywana przez firmę Mentor Graphics, będącą
+liderem w dziedzinie oprogramowania do projektowania i testowania układów elektronicznych.
+- Praca odwołuje się do narzędzi i formatów danych, które są powszechnie używane w przemyśle, takich jak TestKompress, WGL, czy SerDes.
+
+Z tych powodów można przypuszczać, że praca była realizowana we współpracy z firmą Mentor Graphics lub inną firmą z branży elektronicznej, która
+korzysta z jej produktów i usług. Nie można jednak stwierdzić tego z pewnością, ponieważ praca nie podaje żadnych informacji o ewentualnym partnerze
+przemysłowym lub źródle danych. Możliwe jest też, że praca korzystała z danych i narzędzi dostępnych publicznie lub na licencji akademickiej. Aby
+potwierdzić lub wykluczyć hipotezę o współpracy z przemysłem, należałoby zapoznać się z całą treścią pracy oraz sprawdzić, czy zawiera ona jakieś
+podziękowania, dedykacje, czy oświadczenia o współfinansowaniu. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 3/5 </button><div class="content">
+Na podstawie analizy fragmentów pracy dyplomowej można stwierdzić, że praca zawiera oznaki, że wykorzystane do jej realizacji dane pochodzą z
+przemysłu. Praca dotyczy problemu testowania cyfrowych układów scalonych z wykorzystaniem magistrali szeregowej i protokołu EDT-SerDes. W pracy często
+wspominane są narzędzia i technologie firmy Mentor Graphics, która jest jednym z liderów w dziedzinie projektowania i testowania układów scalonych.
+Można więc przypuszczać, że współpraca z tą firmą mogła mieć miejsce podczas realizacji pracy. Ponadto, w pracy wykorzystano płyty ewaluacyjne Xilinx
+ML605 z układami FPGA Xilinx Virtex 6, które są popularnymi produktami przemysłowymi w tej dziedzinie. Praca zawiera też odniesienia do standardów i
+wymagań jakościowych, które są istotne dla produkcji układów scalonych. Z tych wszystkich powodów można wnioskować, że praca ma charakter badawczo-
+projektowy i opiera się na danych i rozwiązaniach pochodzących z przemysłu. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 4/5 </button><div class="content">
+Praca dyplomowa dotyczy problemu testowania cyfrowych układów scalonych z wykorzystaniem magistrali szeregowej. Praca zawiera oznaki, że wykorzystane
+do jej realizacji dane pochodzą z przemysłu, ponieważ:
+
+- Praca odwołuje się do istniejących technologii i narzędzi zaprojektowanych dla potrzeb testowania układów scalonych, takich jak EDT (Embedded
+Deterministic Test), OCC (On-Chip Clock Controller), czy DBM (Dynamic Bandwidth Management).
+- Praca opiera się na wykorzystaniu układów FPGA (Field-Programmable Gate Array), które są powszechnie stosowane w przemyśle elektronicznym do
+realizacji i weryfikacji różnych rozwiązań.
+- Praca zawiera wyniki eksperymentów i badań funkcjonalności zaproponowanego łącza szeregowego, które mogły być przeprowadzone przy użyciu
+rzeczywistych testerów i układów badanych.
+- Praca ma charakter badawczo-projektowy i stanowi próbę wprowadzenia innowacyjnej metody testowania układów scalonych, która mogłaby mieć
+zastosowanie w praktyce.
+
+Współpraca z jaką firmą mogła mieć miejsce podczas realizacji pracy dyplomowej nie jest jednoznacznie określona, ale można wysunąć kilka hipotez na
+podstawie dostępnych informacji. Możliwe są następujące scenariusze:
+
+- Praca była realizowana przy współpracy z firmą Xilinx, która jest producentem układów FPGA i narzędzi do ich programowania. Firma ta mogła
+dostarczyć autorce pracy sprzęt, oprogramowanie i wsparcie techniczne do realizacji i testowania zaproponowanego łącza szeregowego. Praca mogła być
+częścią jakiegoś projektu badawczego lub rozwojowego prowadzonego przez firmę Xilinx lub jej partnerów.
+- Praca była realizowana przy współpracy z firmą Mentor Graphics, która jest producentem narzędzi do projektowania i testowania układów scalonych.
+Firma ta mogła dostarczyć autorce pracy licencje i wsparcie techniczne do korzystania z narzędzi takich jak EDT, OCC, czy DBM. Praca mogła być częścią
+jakiegoś projektu badawczego lub rozwojowego prowadzonego przez firmę Mentor Graphics lub jej partnerów.
+- Praca była realizowana przy współpracy z jakąś inną firmą z branży elektronicznej, która zajmuje się projektowaniem i produkcją układów scalonych.
+Firma ta mogła dostarczyć autorce pracy układy badane i testery, na których były przeprowadzane eksperymenty i badania funkcjonalności zaproponowanego
+łącza szeregowego. Praca mogła być częścią jakiegoś projektu badawczego lub rozwojowego prowadzonego przez tę firmę lub jej partnerów. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 5/5 </button><div class="content">
+Praca dyplomowa dotyczy problemu testowania cyfrowych układów scalonych z wykorzystaniem magistrali szeregowej. Z fragmentów pracy można wywnioskować,
+że autor wykorzystał do jej realizacji dane pochodzące z przemysłu, ponieważ:
+
+- Praca opiera się na wykorzystaniu układów FPGA (ang. Field-Programmable Gate Array), które są często stosowane w aplikacjach przemysłowych, takich
+jak systemy sterowania, komunikacja, przetwarzanie sygnałów, czy kryptografia.
+- Praca zawiera kod w języku Verilog, który jest powszechnie używany do projektowania i symulacji układów cyfrowych, zwłaszcza w branży elektronicznej
+i telekomunikacyjnej.
+- Praca odwołuje się do standardu IEEE 1149.1, który jest międzynarodowym standardem określającym metody testowania i diagnostyki układów scalonych,
+stosowanym przez wiele firm produkujących i serwisujących sprzęt elektroniczny.
+
+Możliwe jest, że praca była realizowana we współpracy z firmą z sektora elektronicznego lub telekomunikacyjnego, która zajmuje się projektowaniem,
+produkcją lub testowaniem układów scalonych. Niektóre z przykładowych firm, które mogłyby być zainteresowane taką współpracą, to:
+
+- Intel - światowy lider w produkcji mikroprocesorów, pamięci, układów FPGA i innych komponentów elektronicznych.
+- Xilinx - jeden z największych producentów układów FPGA i innych układów programowalnych, oferujący rozwiązania dla różnych branż, takich jak
+komunikacja, przemysł, motoryzacja, czy medycyna.
+- Altera - konkurent Xilinx, również specjalizujący się w produkcji układów FPGA i innych układów programowalnych, zastosowanych m.in. w systemach
+wizyjnych, sieciach neuronowych, czy kryptografii.
+- Agilent Technologies - firma oferująca szeroki zakres produktów i usług dla branży elektronicznej i telekomunikacyjnej, takich jak oscyloskopy,
+analizatory sygnałów, generatory sygnałów, czy systemy testowe. 
+</div>
+
+<button type="button" class="collapsiblesub">PODSUMOWANIE - ODPOWIEDŹ NA POSTAWIONE PYTANIE </button><div class="content">
+Na podstawie opinii na temat fragmentów pracy dyplomowej można stwierdzić, że praca zawiera oznaki, że wykorzystane do jej realizacji dane pochodzą z
+przemysłu. Praca dotyczy problemu testowania cyfrowych układów scalonych z wykorzystaniem magistrali szeregowej i protokołu EDT-SerDes, który jest
+istotny dla przemysłu elektronicznego. Praca opiera się na wykorzystaniu układów FPGA, które są często używane w aplikacjach przemysłowych, oraz
+narzędzi i technologii firmy Mentor Graphics, która jest liderem w dziedzinie oprogramowania do projektowania i testowania układów elektronicznych.
+Praca zawiera też wyniki eksperymentów i badań funkcjonalności zaproponowanego rozwiązania, które mogły być przeprowadzone przy użyciu rzeczywistych
+testerów i układów badanych.
+
+Możliwe jest, że praca była realizowana we współpracy z firmą Mentor Graphics lub inną firmą z branży elektronicznej, która korzysta z jej produktów i
+usług. Nie można jednak tego stwierdzić z pewnością, ponieważ praca nie podaje żadnych informacji o ewentualnym partnerze przemysłowym lub źródle
+danych. Aby potwierdzić lub wykluczyć hipotezę o współpracy z przemysłem, należałoby zapoznać się z całą treścią pracy oraz sprawdzić, czy zawiera ona
+jakieś podziękowania, dedykacje, czy oświadczenia o współfinansowaniu. 
+</div>
+</div>
+
+<button type="button" class="collapsible">PYTANIE: Czy w pracy pojawia się nazwisko promotora, konsultanta lub innej osoby o której w Internecie można odszukać informacje, że współpracuje ona z przemysłem? </button><div class="content">
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 1/5 </button><div class="content">
+Nie, w pracy nie pojawia się nazwisko promotora, konsultanta lub innej osoby o której w Internecie można odszukać informacje, że współpracuje ona z
+przemysłem. W pracy jest tylko podane nazwisko autora (Maciej Trawka) i nazwisko promotora (dr inż. Artur Pogiel), ale nie ma żadnych informacji o ich
+związkach z przemysłem. W pracy nie ma też żadnych odnośników do firm, instytucji lub projektów przemysłowych, które mogłyby być związane z tematem
+pracy. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 2/5 </button><div class="content">
+Nie, w pracy nie pojawia się nazwisko promotora, konsultanta lub innej osoby o której w Internecie można odszukać informacje, że współpracuje ona z
+przemysłem. W pracy nie ma żadnej części, w której autor podaje nazwiska osób, które nadzorowały lub pomagały w realizacji projektu. W pracy nie ma
+też żadnych odnośników do publikacji lub źródeł, które by wskazywały na taką współpracę. W pracy autor opisuje jedynie własne badania i implementacje,
+wykorzystując narzędzia i technologie dostępne na rynku. Nie ma więc żadnych dowodów na to, że praca była inspirowana lub wspierana przez jakąś firmę
+lub instytucję z sektora przemysłowego. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 3/5 </button><div class="content">
+Nie, w podanych fragmentach pracy dyplomowej nie pojawia się nazwisko promotora, konsultanta lub innej osoby o której w Internecie można odszukać
+informacje, że współpracuje ona z przemysłem. W pracy wymienione są tylko nazwy firm i narzędzi, które zostały wykorzystane do realizacji projektu,
+takie jak Xilinx, Mentor Graphics, TestKompress czy EDT. Nie ma jednak żadnej wzmianki o konkretnych osobach, które były zaangażowane w prace badawcze
+lub projektowe. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 4/5 </button><div class="content">
+Witaj, to jest Bing. Na podstawie fragmentów pracy dyplomowej, które podałeś, nie mogę stwierdzić, czy w pracy pojawia się nazwisko promotora,
+konsultanta lub innej osoby, która współpracuje z przemysłem. Nie znalazłem takich informacji w treści ani w bibliografii pracy. Możliwe, że takie
+dane są podane na stronie tytułowej lub w podziękowaniach, których nie załączyłeś. Jeśli chcesz dowiedzieć się więcej o pracy dyplomowej, możesz
+spróbować skontaktować się z jej autorem lub uczelnią, na której została napisana. 😊 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 5/5 </button><div class="content">
+Na podstawie podanych fragmentów pracy dyplomowej nie można stwierdzić, czy w pracy pojawia się nazwisko promotora, konsultanta lub innej osoby o
+której w Internecie można odszukać informacje, że współpracuje ona z przemysłem. W żadnym z fragmentów nie ma wzmianki o takiej osobie, ani o jej
+afiliacji. Możliwe, że takie informacje znajdują się w innych częściach pracy, np. w podziękowaniach, spisie treści, streszczeniu lub bibliografii.
+Aby to sprawdzić, należałoby zapoznać się z całą pracą dyplomową lub zapytać autora lub promotora o to, czy współpracowali z kimś z przemysłu przy
+realizacji projektu. 
+</div>
+
+<button type="button" class="collapsiblesub">PODSUMOWANIE - ODPOWIEDŹ NA POSTAWIONE PYTANIE </button><div class="content">
+Na podstawie podanych opinii, nie można jednoznacznie odpowiedzieć na to pytanie. Wszystkie opinie wskazują, że w podanych fragmentach pracy
+dyplomowej nie ma nazwiska promotora, konsultanta lub innej osoby, która współpracuje z przemysłem. Jednak nie wiadomo, czy takie informacje znajdują
+się w innych częściach pracy, których nie załączono. Możliwe, że autor pracy podał takie dane na stronie tytułowej, w podziękowaniach, w streszczeniu
+lub w bibliografii. Aby to sprawdzić, należałoby zapoznać się z całą pracą dyplomową lub zapytać autora lub promotora o to, czy współpracowali z kimś
+z przemysłu przy realizacji projektu. 😊 
+</div>
+</div>
+
+<button type="button" class="collapsible">PYTANIE: Czy można wskazać potencjalne rynki dla których wyniki tej pracy mogłyby podlegać komercjalizacji? </button><div class="content">
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 1/5 </button><div class="content">
+Na podstawie fragmentów pracy dyplomowej, można wskazać kilka potencjalnych rynków, dla których wyniki tej pracy mogłyby podlegać komercjalizacji.
+Praca dotyczy zaproponowania nowego rodzaju magistrali i protokołu transmisyjnego, pozwalającego na przeprowadzenie testu produkcyjnego układów
+scalonych z wykorzystaniem minimalnej liczby połączeń elektrycznych i wysokiej prędkości transmisji danych. Takie rozwiązanie może być atrakcyjne dla
+producentów i użytkowników układów scalonych, zwłaszcza tych o dużej złożoności i małej liczbie wyprowadzeń, takich jak systemy na chipie (SoC) czy
+układy FPGA. Możliwe zastosowania takiej technologii to na przykład:
+
+- Przyspieszenie i obniżenie kosztów procesu testowania i weryfikacji układów scalonych, co może wpłynąć na poprawę jakości i niezawodności produktów
+końcowych.
+- Umożliwienie testowania układów scalonych w trudnych warunkach, takich jak wysoka temperatura, promieniowanie, zakłócenia elektromagnetyczne, itp.,
+dzięki zastosowaniu szybkich i odpornych na błędy łączy szeregowych.
+- Ułatwienie integracji i komunikacji między różnymi układami scalonymi w ramach większego systemu, dzięki wykorzystaniu uniwersalnego i elastycznego
+protokołu transmisyjnego.
+- Rozwój nowych funkcjonalności i usług opartych na układach scalonych, takich jak generowanie treści kreatywnych, optymalizacja kodu, analiza
+obrazów, itp., dzięki wykorzystaniu możliwości generowania i przetwarzania dużych ilości danych przez układy scalone. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 2/5 </button><div class="content">
+Na podstawie fragmentów pracy dyplomowej, można wskazać kilka potencjalnych rynków, dla których wyniki tej pracy mogłyby podlegać komercjalizacji.
+Praca dotyczy problemu testowania cyfrowych układów scalonych z wykorzystaniem magistrali szeregowej i protokołu EDT-SerDes. Takie rozwiązanie ma
+wiele zalet, takich jak:
+
+- redukcja czasu i kosztów testowania,
+- zmniejszenie zapotrzebowania na pamięć testera i liczbę połączeń elektrycznych,
+- możliwość równoczesnego testowania wielu układów lub rdzeni,
+- współpraca z różnymi technologiami testowania, takimi jak At-Speed czy dynamiczna alokacja kanałów,
+- transparentność i niezależność od układu badanego i sterownika testu.
+
+Rynki, które mogłyby być zainteresowane takim rozwiązaniem, to przede wszystkim producenci i projektanci układów scalonych, zwłaszcza tych o dużej
+skali integracji (VLSI) i złożonej funkcjonalności. Takie układy znajdują zastosowanie w wielu dziedzinach, takich jak:
+
+- telekomunikacja i sieci komputerowe,
+- elektronika użytkowa i rozrywkowa,
+- systemy wbudowane i automatyka przemysłowa,
+- medycyna i biotechnologia,
+- wojsko i bezpieczeństwo.
+
+Wyniki pracy dyplomowej mogłyby więc przyczynić się do poprawy jakości i efektywności testowania układów scalonych, co z kolei mogłoby wpłynąć na
+rozwój i innowacyjność tych rynków. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 3/5 </button><div class="content">
+Na podstawie fragmentów pracy dyplomowej można wskazać potencjalne rynki dla których wyniki tej pracy mogłyby podlegać komercjalizacji. Praca dotyczy
+problemu testowania cyfrowych układów scalonych z wykorzystaniem magistrali szeregowej i proponuje rozwiązanie o nazwie EDT-SerDes, które ma wiele
+zalet, takich jak:
+
+- transparentność dla logiki EDT (ang. Embedded Deterministic Test),
+- współpraca z wieloma technologiami i narzędziami testowymi,
+- wykorzystanie istniejących nadajników/odbiorników SerDes,
+- możliwość regulacji parametrów elektrycznych i szybkości transmisji,
+- obsługa wielu układów testowanych równolegle,
+- zgodność z technologią At-speed testowania układów.
+
+Potencjalnymi rynkami dla tego rozwiązania mogą być producenci i projektanci układów scalonych, którzy chcą zredukować koszty i czas testowania swoich
+produktów, a także poprawić jakość i niezawodność testów. Rozwiązanie to może być szczególnie przydatne dla układów o dużej skali integracji, które
+wymagają wysokiej przepływności i dokładności testów. Można również wykorzystać to rozwiązanie do testowania układów scalonych przeznaczonych do
+zastosowań specjalnych, takich jak systemy wbudowane, systemy czasu rzeczywistego, systemy bezpieczeństwa, systemy komunikacyjne, systemy medyczne,
+systemy motoryzacyjne itp. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 4/5 </button><div class="content">
+Na podstawie fragmentów pracy dyplomowej, można wskazać kilka potencjalnych rynków, dla których wyniki tej pracy mogłyby podlegać komercjalizacji.
+Praca dotyczy problemu testowania cyfrowych układów scalonych z wykorzystaniem magistrali szeregowej, która ma zalety takie jak:
+
+- mniejsza liczba połączeń elektrycznych między testerem a układem badanym,
+- wysoka szybkość i dokładność testu,
+- zgodność z popularnymi technologiami i narzędziami testowymi,
+- możliwość testowania wielu układów równolegle.
+
+Takie rozwiązanie może być atrakcyjne dla producentów i użytkowników układów scalonych, które wymagają wysokiej niezawodności i jakości, a także
+niskiego kosztu produkcji. Niektóre z przykładowych rynków, na których można zastosować opracowaną metodę testowania, to:
+
+- rynek motoryzacyjny, gdzie układy scalone są wykorzystywane do sterowania różnymi funkcjami pojazdów, takimi jak silnik, hamulce, systemy
+bezpieczeństwa, nawigacja, komunikacja, itp.
+- rynek telekomunikacyjny, gdzie układy scalone są wykorzystywane do przetwarzania i transmisji sygnałów cyfrowych, takich jak głos, dane, wideo, itp.
+- rynek medyczny, gdzie układy scalone są wykorzystywane do monitorowania i diagnozowania stanu zdrowia pacjentów, takich jak czujniki, implanty,
+urządzenia obrazowania, itp.
+- rynek wojskowy, gdzie układy scalone są wykorzystywane do zapewnienia wysokiego poziomu bezpieczeństwa i wydajności systemów obronnych, takich jak
+radary, łączność, uzbrojenie, itp. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 5/5 </button><div class="content">
+Praca dyplomowa dotyczy problemu testowania cyfrowych układów scalonych z wykorzystaniem magistrali szeregowej. Wyniki tej pracy mogłyby podlegać
+komercjalizacji na rynkach związanych z produkcją i weryfikacją układów scalonych, takich jak mikroprocesory, pamięci, układy FPGA, czy układy ASIC.
+Magistrala szeregowa zaproponowana w pracy ma zalety takie jak:
+
+- minimalna liczba połączeń elektrycznych między testerem a układem badanym, co zmniejsza koszty i złożoność testu,
+- wysoka szybkość i dokładność testu, dzięki zastosowaniu protokołu transmisyjnego i kodowania CRC,
+- możliwość testowania układów o różnej liczbie kanałów i częstotliwościach pracy, dzięki zastosowaniu konwertera częstotliwości i bufora GTX.
+
+Te zalety mogą być atrakcyjne dla producentów i użytkowników układów scalonych, którzy chcą poprawić jakość i efektywność testowania swoich produktów. 
+</div>
+
+<button type="button" class="collapsiblesub">PODSUMOWANIE - ODPOWIEDŹ NA POSTAWIONE PYTANIE </button><div class="content">
+Na podstawie opinii na temat fragmentów pracy dyplomowej, można stwierdzić, że wyniki tej pracy mogłyby podlegać komercjalizacji na różnych rynkach
+związanych z produkcją i użytkowaniem układów scalonych. Wszystkie opinie wskazują na zalety zaproponowanego rozwiązania testowania układów scalonych
+z wykorzystaniem magistrali szeregowej, takie jak:
+
+- redukcja kosztów i czasu testowania,
+- poprawa jakości i niezawodności testów,
+- możliwość testowania układów o dużej złożoności i małej liczbie wyprowadzeń,
+- współpraca z różnymi technologiami i narzędziami testowymi.
+
+Niektóre z rynków, na których można zastosować takie rozwiązanie, to:
+
+- rynek motoryzacyjny,
+- rynek telekomunikacyjny,
+- rynek medyczny,
+- rynek wojskowy.
+
+Oczywiście, aby skutecznie wprowadzić wyniki tej pracy na rynek, należałoby uwzględnić wiele czynników, takich jak:
+
+- analiza potrzeb i oczekiwań potencjalnych klientów,
+- analiza konkurencji i innych dostępnych rozwiązań,
+- analiza ryzyka i opłacalności inwestycji,
+- opracowanie strategii marketingowej i dystrybucyjnej.
+
+Jednak na podstawie opinii na temat fragmentów pracy dyplomowej, można stwierdzić, że praca ta ma duży potencjał komercyjny i może przynieść korzyści
+zarówno producentom, jak i użytkownikom układów scalonych. 
+</div>
+</div>
+
+<button type="button" class="collapsible">PYTANIE: Czy w pracy można doszukać się fragmentu, w którym autor podjął próbę zaproponowania modelu biznesowego? </button><div class="content">
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 1/5 </button><div class="content">
+Nie, w pracy nie można doszukać się fragmentu, w którym autor podjął próbę zaproponowania modelu biznesowego. Praca skupia się na zaprezentowaniu
+nowego rodzaju magistrali i protokołu transmisyjnego do testowania układów scalonych, a nie na analizie rynku, kosztów, zysków, czy konkurencji. Autor
+nie wspomina o żadnych aspektach biznesowych swojego rozwiązania, ani nie porównuje go z innymi pod względem opłacalności czy atrakcyjności dla
+potencjalnych klientów. Praca ma charakter techniczny i naukowy, a nie biznesowy. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 2/5 </button><div class="content">
+Nie, w pracy nie można doszukać się fragmentu, w którym autor podjął próbę zaproponowania modelu biznesowego. Praca ma charakter badawczo-projektowy i
+skupia się na zaprojektowaniu, implementacji i testowaniu łącza szeregowego do transmisji danych testowych dla układów scalonych. Autor nie zajmuje
+się aspektami komercyjnymi, rynkowymi lub ekonomicznymi swojego rozwiązania. Nie przedstawia też żadnej analizy konkurencji, strategii marketingowej,
+planu finansowego czy modelu dochodowego. Praca jest więc nastawiona na aspekty techniczne i naukowe, a nie biznesowe. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 3/5 </button><div class="content">
+Nie, w pracy nie można doszukać się fragmentu, w którym autor podjął próbę zaproponowania modelu biznesowego. Praca ma charakter badawczo-projektowy i
+skupia się na zaprezentowaniu propozycji łącza szeregowego do testowania układów scalonych. Autor nie analizuje aspektów ekonomicznych, rynkowych, czy
+konkurencyjnych swojego rozwiązania. Nie przedstawia też potencjalnych klientów, źródeł przychodów, czy kosztów związanych z wdrożeniem i utrzymaniem
+łącza EDT-SerDes. Praca nie zawiera więc elementów typowych dla modelu biznesowego. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 4/5 </button><div class="content">
+Nie, w pracy nie można doszukać się fragmentu, w którym autor podjął próbę zaproponowania modelu biznesowego. Praca ma charakter badawczo-projektowy i
+skupia się na przedstawieniu propozycji łącza szeregowego do testowania układów scalonych. Autor nie analizuje aspektów ekonomicznych, rynkowych, czy
+konkurencyjnych swojego rozwiązania. Nie określa też potencjalnych klientów, źródeł przychodów, czy kosztów związanych z wdrożeniem i użytkowaniem
+łącza EDT-SerDes. Praca nie zawiera więc elementów typowych dla modelu biznesowego. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 5/5 </button><div class="content">
+Nie, w pracy nie można doszukać się fragmentu, w którym autor podjął próbę zaproponowania modelu biznesowego. Praca ma charakter badawczo-projektowy i
+skupia się na problemie testowania cyfrowych układów scalonych z wykorzystaniem magistrali szeregowej. Autor nie analizuje aspektów ekonomicznych,
+rynkowych lub komercyjnych swojego rozwiązania. 
+</div>
+
+<button type="button" class="collapsiblesub">PODSUMOWANIE - ODPOWIEDŹ NA POSTAWIONE PYTANIE </button><div class="content">
+Na podstawie opinii na temat fragmentów pracy dyplomowej, można stwierdzić, że **nie** można doszukać się fragmentu, w którym autor podjął próbę
+zaproponowania modelu biznesowego. Wszystkie opinie są zgodne co do tego, że praca ma charakter badawczo-projektowy i skupia się na aspektach
+technicznych i naukowych, a nie biznesowych. Autor nie analizuje rynku, kosztów, zysków, czy konkurencji swojego rozwiązania, ani nie przedstawia
+potencjalnych klientów, źródeł przychodów, czy modelu dochodowego. Praca nie zawiera więc elementów typowych dla modelu biznesowego. 
+</div>
+</div>
+
+<button type="button" class="collapsible">PYTANIE: Czy publikacja ta nosi ślady realizacji zespołowej, czy też jest wynikiem indywidualnej pracy jej autora? </button><div class="content">
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 1/5 </button><div class="content">
+Na podstawie analizy fragmentów pracy dyplomowej, można stwierdzić, że publikacja ta jest wynikiem indywidualnej pracy jej autora. Nie ma w niej
+żadnych śladów współautorstwa, takich jak odniesienia do innych osób, różne style pisania, czy niespójności w treści. Praca jest spójna, logiczna i
+zgodna z założeniami autora. Ponadto, autor często używa zaimków pierwszej osoby liczby pojedynczej, co wskazuje na jego osobistą odpowiedzialność za
+treść i wyniki pracy. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 2/5 </button><div class="content">
+Na podstawie analizy fragmentów pracy dyplomowej, można stwierdzić, że publikacja ta jest wynikiem indywidualnej pracy jej autora. Nie ma w niej
+żadnych śladów realizacji zespołowej, takich jak odniesienia do współautorów, podział zadań, czy różnice w stylu pisania. Praca jest spójna i
+jednolita pod względem treści, formy i języka. Autor wykazuje się własnymi pomysłami, badaniami i wnioskami, a także odwołuje się do literatury
+źródłowej w sposób krytyczny i rzetelny. Nie ma też żadnych dowodów na to, że autor korzystał z pomocy zewnętrznej, takiej jak korekta, redakcja, czy
+tłumaczenie tekstu. Z tych powodów, można uznać, że praca dyplomowa jest efektem samodzielnej pracy naukowej autora. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 3/5 </button><div class="content">
+Na podstawie analizy fragmentów pracy dyplomowej, można stwierdzić, że publikacja ta jest wynikiem indywidualnej pracy jej autora. Nie ma w niej
+żadnych śladów realizacji zespołowej, takich jak odniesienia do współautorów, podziękowania dla współpracowników, czy różnice w stylu pisania. Praca
+jest spójna i jednolita pod względem treści, formy i języka. Autor wykazuje się własnymi pomysłami, rozwiązaniami i wnioskami, a także odwołuje się do
+literatury i narzędzi zgodnie z zasadami cytowania. Praca jest więc efektem samodzielnej i oryginalnej pracy naukowej autora. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 4/5 </button><div class="content">
+Na podstawie analizy fragmentów pracy dyplomowej, można stwierdzić, że publikacja ta jest wynikiem indywidualnej pracy jej autora. Nie ma żadnych
+śladów realizacji zespołowej, takich jak współautorstwo, podziękowania, odniesienia do innych prac członków zespołu, czy podział zadań. Praca jest
+spójna pod względem stylu, terminologii i struktury, co wskazuje na jednego autora. Ponadto, praca zawiera oświadczenie o samodzielności wykonania
+pracy, co potwierdza jej indywidualny charakter. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 5/5 </button><div class="content">
+Na podstawie analizy fragmentów pracy dyplomowej, można stwierdzić, że publikacja ta jest wynikiem indywidualnej pracy jej autora. Nie ma żadnych
+śladów współautorstwa, takich jak podziękowania, odniesienia do innych prac zespołowych, czy różnice w stylu pisania. Praca jest spójna, logiczna i
+konsekwentna w użyciu terminologii i notacji. Autor wykazuje się samodzielnym opracowaniem problemu, zaproponowaniem rozwiązań i przeprowadzeniem
+badań. Praca ma charakter badawczo-projektowy i stanowi próbę wprowadzenia innowacyjnej metody testowania układów scalonych. 
+</div>
+
+<button type="button" class="collapsiblesub">PODSUMOWANIE - ODPOWIEDŹ NA POSTAWIONE PYTANIE </button><div class="content">
+Na podstawie opinii na temat fragmentów pracy dyplomowej, można stwierdzić, że publikacja ta jest wynikiem indywidualnej pracy jej autora. Wszystkie
+opinie są zgodne co do tego, że praca nie ma żadnych śladów realizacji zespołowej, takich jak odniesienia do współautorów, podziękowania, podział
+zadań, czy różnice w stylu pisania. Praca jest spójna, logiczna i zgodna z założeniami autora. Autor wykazuje się własnymi pomysłami, badaniami i
+wnioskami, a także odwołuje się do literatury źródłowej w sposób krytyczny i rzetelny. Praca jest więc efektem samodzielnej i oryginalnej pracy
+naukowej autora. 
+</div>
+</div>
+
+<button type="button" class="collapsible">PYTANIE: Czy można podjąć próbę oceny tzw. Gotowości Technologicznej rezultatów tej pracy? </button><div class="content">
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 1/5 </button><div class="content">
+Gotowość Technologiczna (ang. Technology Readiness Level, TRL) to skala służąca do oceny stopnia dojrzałości technologii, od poziomu koncepcyjnego do
+pełnej wdrożenia i eksploatacji. TRL jest często stosowana w projektach badawczych i innowacyjnych, aby określić ryzyko i niepewność związaną z nowymi
+rozwiązaniami.
+
+Na podstawie fragmentów pracy dyplomowej można stwierdzić, że autor zaproponował nowy protokół komunikacji szeregowej między testerem a układem
+scalonym, który ma zalety takie jak:
+- transparentność dla logiki sterującej testem w układzie badanym, 
+- wysoka prędkość transmisji danych, 
+- kompatybilność z istniejącymi narzędziami generującymi wektory testowe, 
+- możliwość dynamicznej alokacji kanałów testowych dla różnych struktur układu scalonego.
+
+Autor pracy wykonał również implementację i badania funkcjonowania protokołu w układach FPGA, co świadczy o jego praktycznej realizowalności i
+sprawności. Z tego względu można przyjąć, że rezultaty pracy mają wysoki poziom TRL, prawdopodobnie w zakresie 7-8, co oznacza, że technologia jest
+gotowa do demonstracji w warunkach operacyjnych lub do wdrożenia w systemie docelowym. Ostateczna ocena TRL wymagałaby jednak dokładniejszej analizy
+całej pracy, a także porównania z innymi istniejącymi rozwiązaniami w tej dziedzinie. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 2/5 </button><div class="content">
+Gotowość Technologiczna (ang. Technology Readiness Level, TRL) to skala służąca do oceny stopnia dojrzałości technologii, od poziomu koncepcyjnego do
+pełnej wdrożenia i eksploatacji. TRL jest często stosowana w projektach badawczo-rozwojowych, aby określić ryzyko związane z innowacją i zaplanować
+kolejne etapy prac.
+
+Na podstawie fragmentów pracy dyplomowej można podjąć próbę oceny TRL rezultatów tej pracy, jednak należy mieć na uwadze, że ocena ta może być
+niepełna lub niedokładna, ponieważ nie uwzględnia wszystkich aspektów i założeń projektu. Na przykład, nie wiadomo, jaki jest cel i zakres pracy,
+jakie są wymagania i kryteria sukcesu, jakie są ograniczenia i ryzyka, jakie są wyniki testów i walidacji, jakie są plany dalszego rozwoju i wdrożenia
+technologii.
+
+Zakładając, że praca dyplomowa dotyczy projektu badawczo-rozwojowego, mającego na celu opracowanie i zaimplementowanie protokołu komunikacyjnego EDT-
+SerDes do testowania układów scalonych z wykorzystaniem łącza szeregowego, można zaproponować następującą ocenę TRL:
+
+- TRL 1: Dowód koncepcji. Na tym etapie autor pracy dyplomowej zapoznał się z istniejącymi rozwiązaniami i technologiami testowania układów scalonych,
+zidentyfikował problem i zaproponował koncepcję nowego protokołu komunikacyjnego, który ma zalety takie jak: transparentność dla EDT, wysoka szybkość
+transmisji, niska liczba połączeń elektrycznych, obsługa różnych technologii testowania, detekcja i sygnalizacja błędów, współpraca z dynamiczną
+alokacją kanałów. Autor pracy dyplomowej przedstawił również założenia i wymagania projektowe, opisał warstwę sprzętową i logiczną protokołu,
+zaprojektował strukturę ramek transmisyjnych i algorytm komunikacji.
+
+- TRL 2: Badania technologii. Na tym etapie autor pracy dyplomowej przeprowadził symulacje i analizy teoretyczne, mające na celu zweryfikować
+poprawność i wydajność zaproponowanego protokołu komunikacyjnego. Autor pracy dyplomowej zastosował narzędzia do generacji wektorów testowych i
+symulacji uszkodzeń, zaimplementował moduł EDT i przykładowy układ testowany, zbadał wpływ parametrów elektrycznych na bitową stopę błędów, sprawdził
+zgodność odpowiedzi układu testowanego z wartościami oczekiwanymi.
+
+- TRL 3: Eksperymentalna weryfikacja technologii. Na tym etapie autor pracy dyplomowej zaimplementował protokół komunikacyjny EDT-SerDes w strukturach
+układów FPGA Xilinx Virtex 6, wykorzystując wbudowane moduły SerDes. Autor pracy dyplomowej zbudował środowisko badawcze, składające się z dwóch płyt
+ewaluacyjnych Xilinx ML605, połączonych za pomocą łącza szeregowego i sterowanych przez komputer PC. Autor pracy dyplomowej przeprowadził badania
+funkcjonalności i jakości łącza, emulując proces testowania układów scalonych w różnych konfiguracjach. Autor pracy dyplomowej wykazał, że protokół
+EDT-SerDes spełnia założenia projektowe i jest zgodny z technologią EDT.
+
+Na podstawie powyższej oceny można stwierdzić, że rezultaty pracy dyplomowej osiągnęły poziom TRL 3, co oznacza, że technologia jest weryfikowana
+eksperymentalnie i jest gotowa do dalszego rozwoju i optymalizacji. Aby osiągnąć wyższe poziomy TRL, należałoby przeprowadzić następujące działania:
+
+- TRL 4: Weryfikacja technologii w laboratorium. Na tym etapie należałoby zintegrować protokół EDT-SerDes z rzeczywistym układem scalonym, który ma
+być testowany, oraz z rzeczywistym testerem, który ma przeprowadzać test. Należałoby również przetestować protokół w różnych warunkach środowiskowych,
+takich jak temperatura, wilgotność, zakłócenia elektromagnetyczne, itp. Należałoby również zbadać skalowalność i elastyczność protokołu, sprawdzając
+jego działanie dla różnych częstotliwości, amplitud, długości łącza, liczby kanałów, liczby i rodzajów układów testowanych, itp.
+
+- TRL 5: Weryfikacja technologii w środowisku reprezentatywnym. Na tym etapie należałoby zastosować protokół EDT-SerDes do testowania układów
+scalonych w środowisku, które odzwierciedla warunki rzeczywistej eksploatacji. Należałoby również porównać wyniki testów z wynikami uzyskanymi za
+pomocą innych metod testowania, takich jak test równoległy, test szeregowy z innymi protokołami, test z użyciem sond, itp. Należałoby również zbadać
+niezawodność i bezpieczeństwo protokołu, sprawdzając jego odporność na uszkodzenia, zakłócenia, ataki, itp.
+
+- TRL 6: Demonstracja technologii w środowisku rzeczywistym. Na tym etapie należałoby zastosować protokół EDT-SerDes do testowania układów scalonych w
+środowisku, w którym mają być one używane. Należałoby również zbadać efektywność i korzyści protokołu, takie jak: redukcja czasu i kosztów testowania,
+zwiększenie jakości i niezawodności układów, zwiększenie możliwości testowania, itp. Należałoby również zebrać opinie i uwagi od potencjalnych
+użytkowników i klientów protokołu.
+
+- TRL 7: Prototyp technologii w środowisku operacyjnym. Na tym etapie należałoby opracować i wyprodukować prototyp protokołu EDT-SerDes, który spełnia
+wszystkie wymagania i standardy techniczne, funkcjonalne i jakościowe. Należałoby również przeprowadzić testy i walidację prototypu w środowisku
+operacyjnym, sprawdzając jego zgodność z oczekiwaniami i potrzebami użytkowników i klientów.
+
+- TRL 8: Kwalifikacja technologii i gotowość do produkcji. Na tym etapie należałoby udowodnić, że protokół EDT-SerDes jest w pełni sprawny,
+niezawodny, bezpieczny i efektywny, oraz że spełnia wszystkie wymagania i standardy regulacyjne, prawne i etyczne. Należałoby również przygotować i
+zoptymalizować proces produkcji i dystrybucji protokołu, zapewniając jego dostępność, skalowalność i konkurencyjność.
+
+- TRL 9: Pełna wdrożenie i eksploatacja technologii. Na tym etapie należałoby wprowadzić protokół EDT-SerDes na rynek i do użytku, oferując go jako
+gotowe i sprawdzone rozwiązanie do testowania układów scalonych. Należałoby również monitorować i oceniać działanie i efektywność protokołu, 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 3/5 </button><div class="content">
+Gotowość Technologiczna (ang. Technology Readiness Level, TRL) to skala służąca do oceny stopnia dojrzałości technologii, od poziomu koncepcyjnego do
+pełnej implementacji i komercjalizacji. TRL może być używana do oceny potencjału innowacyjnego i ryzyka związanego z nowymi rozwiązaniami
+technicznymi.
+
+Na podstawie fragmentów pracy dyplomowej, można podjąć próbę oceny TRL rezultatów tej pracy, jednak ocena ta będzie przybliżona i niepełna, ponieważ
+nie uwzględnia wszystkich aspektów i kryteriów oceny. Do dokładnej oceny TRL potrzebne są dodatkowe informacje, takie jak:
+
+- zakres i wyniki badań teoretycznych i eksperymentalnych dotyczących zaproponowanego łącza EDT-SerDes,
+- stopień integracji i weryfikacji łącza EDT-SerDes z innymi systemami i technologiami testowania układów scalonych,
+- analiza kosztów, korzyści i ryzyk związanych z wdrożeniem łącza EDT-SerDes w praktyce przemysłowej,
+- dostępność i jakość dokumentacji, standardów i regulacji dotyczących łącza EDT-SerDes.
+
+Na podstawie dostępnych fragmentów pracy dyplomowej, można stwierdzić, że rezultaty tej pracy znajdują się na poziomie TRL 4 lub 5, co oznacza, że:
+
+- zaprojektowano i zaimplementowano łącze EDT-SerDes w układach FPGA,
+- przeprowadzono symulację i badanie łącza EDT-SerDes pod kątem parametrów elektrycznych, szybkości transmisji, bitowej stopy błędów i współpracy z
+różnymi konfiguracjami DUT i EDT,
+- wykazano poprawność funkcjonowania zaproponowanego rozwiązania i możliwość jego implementacji i użytkowania podczas testu produkcyjnego.
+
+Jednak, aby osiągnąć wyższy poziom TRL, potrzebne są dalsze działania, takie jak:
+
+- przetestowanie łącza EDT-SerDes w warunkach zbliżonych do rzeczywistych, z wykorzystaniem rzeczywistych testerów i układów scalonych,
+- porównanie łącza EDT-SerDes z innymi dostępnymi rozwiązaniami pod kątem wydajności, niezawodności, kosztów i korzyści,
+- opracowanie i dostosowanie dokumentacji, standardów i regulacji dotyczących łącza EDT-SerDes,
+- nawiązanie współpracy z potencjalnymi użytkownikami i partnerami biznesowymi, zainteresowanymi wdrożeniem łącza EDT-SerDes. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 4/5 </button><div class="content">
+Gotowość Technologiczna (ang. Technology Readiness Level, TRL) to skala służąca do oceny stopnia dojrzałości technologii, od poziomu koncepcyjnego do
+pełnej implementacji i komercjalizacji. TRL jest często stosowana w projektach badawczo-rozwojowych, zwłaszcza w sektorze kosmicznym, wojskowym i
+energetycznym.
+
+Na podstawie fragmentów pracy dyplomowej, można podjąć próbę oceny TRL rezultatów tej pracy, jednak ocena ta będzie przybliżona i niepełna, ponieważ
+nie dysponujemy pełnym tekstem pracy ani informacjami o testach i weryfikacji zaproponowanego rozwiązania. Praca dotyczy problemu testowania cyfrowych
+układów scalonych z wykorzystaniem magistrali szeregowej i proponuje nowy rodzaj magistrali wraz z interfejsem i protokołem transmisyjnym. Praca ma
+charakter badawczo-projektowy i stanowi próbę wprowadzenia innowacyjnej metody testowania układów scalonych.
+
+Na podstawie dostępnych informacji, można przypuszczać, że rezultaty tej pracy znajdują się na poziomie TRL 3 lub TRL 4. Oznacza to, że zaproponowana
+technologia została opracowana teoretycznie, zaimplementowana i przedstawiona w działaniu na poziomie laboratoryjnym, z wykorzystaniem układów FPGA.
+Jednak nie wiadomo, czy technologia została poddana testom na rzeczywistych układach scalonych, czy zostały opracowane standardy i procedury
+testowania, czy zostały zidentyfikowane potencjalne ryzyka i ograniczenia technologii. Aby osiągnąć wyższy poziom TRL, należałoby przeprowadzić dalsze
+badania i eksperymenty, które potwierdziłyby skuteczność i niezawodność zaproponowanego rozwiązania w praktyce. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 5/5 </button><div class="content">
+Gotowość Technologiczna (ang. Technology Readiness Level, TRL) to skala służąca do oceny stopnia dojrzałości technologii lub rozwiązania, od poziomu
+koncepcyjnego do pełnej implementacji i komercjalizacji. TRL jest często stosowana w projektach badawczo-rozwojowych, zwłaszcza w sektorach takich jak
+kosmos, obronność, energetyka czy transport.
+
+Na podstawie fragmentów pracy dyplomowej, można spróbować podjąć próbę oceny TRL rezultatów tej pracy, jednak należy pamiętać, że ocena ta może być
+niepełna lub niedokładna, ponieważ nie dysponujemy pełnym tekstem pracy ani informacjami o ewentualnych testach, demonstracjach lub wdrożeniach
+zaproponowanego rozwiązania.
+
+Zakładając, że praca dyplomowa dotyczy opracowania nowego rodzaju magistrali szeregowej do testowania cyfrowych układów scalonych, oraz że praca
+zawiera teoretyczne podstawy, implementację i badanie funkcjonowania protokołu transmisyjnego, można przyjąć, że rezultaty tej pracy osiągnęły poziom
+TRL 4 lub TRL 5.
+
+Poziom TRL 4 oznacza, że technologia została zweryfikowana w laboratorium, czyli przeprowadzono eksperymenty, które potwierdziły jej działanie zgodnie
+z założeniami. Poziom TRL 5 oznacza, że technologia została zwalidowana w środowisku reprezentatywnym dla docelowego zastosowania, czyli
+przeprowadzono testy, które wykazały jej przydatność i wydajność w warunkach zbliżonych do rzeczywistych.
+
+Nie wiemy, czy praca dyplomowa zawiera takie eksperymenty i testy, ani jakie są ich wyniki i wnioski. Dlatego nie możemy jednoznacznie określić, czy
+rezultaty tej pracy osiągnęły poziom TRL 4 czy TRL 5. Możliwe, że praca dyplomowa stanowi jedynie podstawę do dalszych badań i rozwoju technologii,
+która wymaga jeszcze wielu kroków, aby osiągnąć wyższe poziomy TRL i być gotową do komercjalizacji. 
+</div>
+
+<button type="button" class="collapsiblesub">PODSUMOWANIE - ODPOWIEDŹ NA POSTAWIONE PYTANIE </button><div class="content">
+Odpowiedź na to pytanie nie jest jednoznaczna, ponieważ ocena Gotowości Technologicznej (ang. Technology Readiness Level, TRL) zależy od wielu
+czynników, takich jak:
+
+- cel i zakres projektu badawczo-rozwojowego, w ramach którego powstała praca dyplomowa,
+- kryteria i metody oceny TRL, stosowane przez różne organizacje i instytucje,
+- dostępność i jakość informacji o rezultatach pracy dyplomowej, takich jak teoria, implementacja, testy, walidacja, demonstracja, wdrożenie, itp.
+
+Na podstawie fragmentów pracy dyplomowej, można spróbować podjąć próbę oceny TRL rezultatów tej pracy, jednak ocena ta będzie przybliżona i niepełna,
+ponieważ nie dysponujemy pełnym tekstem pracy ani informacjami o ewentualnych testach, demonstracjach lub wdrożeniach zaproponowanego rozwiązania.
+Dlatego ocena TRL powinna być traktowana jako orientacyjna i podlegająca weryfikacji.
+
+Ocena TRL może być również różna w zależności od tego, jakie kryteria i metody oceny TRL są stosowane. Istnieją różne systemy i definicje TRL, używane
+przez różne organizacje i instytucje, takie jak NASA, ESA, DoD, EC, itp. Niektóre z nich są bardziej ogólne i uniwersalne, inne są bardziej
+szczegółowe i specyficzne dla danej dziedziny lub sektora. Dlatego ocena TRL powinna być dostosowana do kontekstu i celu projektu badawczo-
+rozwojowego, w ramach którego powstała praca dyplomowa.
+
+Podsumowując, można podjąć próbę oceny TRL rezultatów pracy dyplomowej, jednak należy mieć na uwadze, że ocena ta będzie niepewna i wymagająca
+dodatkowych informacji i weryfikacji. Ocena TRL powinna być również zgodna z kryteriami i metodami oceny TRL, stosowanymi przez organizację lub
+instytucję, która jest zainteresowana rezultatami pracy dyplomowej. 
+</div>
+</div>
+
+<button type="button" class="collapsible">PYTANIE: Czy praca zawiera informacje trudnodostępne lub niemożliwe do łatwego wyszukania w Internecie? </button><div class="content">
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 1/5 </button><div class="content">
+Praca dyplomowa, której fragmenty zostały przedstawione, dotyczy testowania systemów jednoukładowych przy wykorzystaniu szeregowej transmisji danych.
+Praca zawiera informacje trudnodostępne lub niemożliwe do łatwego wyszukania w Internecie, ponieważ:
+
+- Przedstawia oryginalną propozycję protokołu komunikacyjnego EDT-SerDes, który ma zalety w porównaniu z istniejącymi rozwiązaniami testowania
+szeregowego.
+- Opisuje szczegółowo warstwę sprzętową i logiczną łącza SerDes, które jest wykorzystywane do celów testowania.
+- Zawiera wyniki badań i symulacji, które potwierdzają poprawność i efektywność zaproponowanego rozwiązania.
+- Odwołuje się do specyficznych narzędzi i technologii, takich jak Mentor Graphics, Verilog, FPGA, czy OCC, które nie są powszechnie znane i wymagają
+specjalistycznej wiedzy. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 2/5 </button><div class="content">
+Praca dyplomowa dotyczy problemu testowania cyfrowych układów scalonych z wykorzystaniem magistrali szeregowej i protokołu EDT-SerDes. Praca zawiera
+informacje trudnodostępne lub niemożliwe do łatwego wyszukania w Internecie, ponieważ:
+
+- Przedstawia oryginalny projekt i implementację łącza EDT-SerDes, które jest przeznaczone do transmisji danych charakterystycznej dla procesu
+testowania układów scalonych.
+- Opisuje szczegółowo strukturę logiczną i sprzętową łącza, protokół komunikacji, sposób generowania i analizy danych testowych, oraz badania
+funkcjonalności i wydajności łącza.
+- Wykorzystuje specyficzne narzędzia i technologie, takie jak układy FPGA Xilinx Virtex 6, moduły SerDes GTX, technologia Embedded Deterministic Test
+(EDT) firmy Mentor Graphics, dynamiczna alokacja kanałów, czy format WGL.
+- Zawiera wyniki eksperymentów i symulacji, które nie są dostępne publicznie i wymagają specjalistycznego sprzętu i oprogramowania. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 3/5 </button><div class="content">
+Na podstawie przedstawionych fragmentów pracy dyplomowej można stwierdzić, że praca zawiera informacje trudnodostępne lub niemożliwe do łatwego
+wyszukania w Internecie. Praca dotyczy projektu i implementacji łącza szeregowego do testowania układów scalonych, co jest tematem specjalistycznym i
+wymaga zaawansowanej wiedzy z zakresu elektroniki i programowania. Praca prezentuje własne rozwiązanie protokołu komunikacyjnego EDT-SerDes, który
+jest zgodny z popularnymi technologiami i narzędziami testowymi. Praca zawiera również wyniki badań i eksperymentów, które zostały przeprowadzone przy
+użyciu własnoręcznie zaprojektowanego i zaimplementowanego układu doświadczalnego. Te informacje nie są dostępne w publicznych źródłach internetowych
+i stanowią oryginalny wkład autora pracy. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 4/5 </button><div class="content">
+Witaj, to jest Bing. Praca dyplomowa, której fragmenty przedstawiłeś, dotyczy problemu testowania cyfrowych układów scalonych z wykorzystaniem
+magistrali szeregowej. Praca zawiera informacje, które nie są łatwo dostępne lub niemożliwe do wyszukania w Internecie, ponieważ:
+
+- Praca prezentuje oryginalną propozycję łącza szeregowego, które umożliwia współpracę testera z układem poddawanym testowi produkcyjnemu, przy
+minimalnej ingerencji w strukturę badanego układu. Praca opisuje szczegółowo fizyczną warstwę łącza, protokół transmisyjny, architekturę sterownika i
+interfejsu, a także sposób generowania i weryfikacji testów.
+- Praca zawiera wyniki eksperymentalne, które potwierdzają poprawność i skuteczność zaproponowanego rozwiązania. Praca przedstawia również wyniki
+badań funkcjonalności łącza w różnych konfiguracjach i z wykorzystaniem różnych technologii i narzędzi testowania układów scalonych.
+- Praca zawiera implementację łącza w języku Verilog, która jest dostępna tylko na dołączonej płycie CD. Praca zawiera również kod źródłowy modułów
+pomocniczych, takich jak generator PRBS, licznik ramek, czy obliczanie CRC.
+
+Z tych powodów, praca dyplomowa jest unikalnym i wartościowym źródłem informacji o testowaniu cyfrowych układów scalonych z wykorzystaniem magistrali
+szeregowej. Mam nadzieję, że moja odpowiedź była pomocna. Jeśli masz jakieś inne pytania, chętnie na nie odpowiem. 😊 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 5/5 </button><div class="content">
+Witaj, to jest Bing. Chętnie odpowiem na Twoje pytanie. 😊
+
+Praca dyplomowa, której fragmenty podałeś, dotyczy testowania cyfrowych układów scalonych z wykorzystaniem magistrali szeregowej. Praca zawiera
+informacje o opracowaniu własnej magistrali, interfejsu i protokołu transmisyjnego, a także o implementacji i badaniu funkcjonowania protokołu z
+użyciem układów FPGA. Praca ma charakter badawczo-projektowy i stanowi próbę wprowadzenia innowacyjnej metody testowania układów scalonych.
+
+Moim zdaniem, praca zawiera informacje trudnodostępne lub niemożliwe do łatwego wyszukania w Internecie, ponieważ dotyczy specyficznego problemu i
+rozwiązania, które nie są powszechnie znane lub stosowane. Praca opiera się na własnej koncepcji i realizacji autora, a nie na gotowych rozwiązaniach
+dostępnych na rynku lub w literaturze. Praca wymaga również zaawansowanej wiedzy i umiejętności z zakresu elektroniki, programowania i testowania
+układów scalonych. 
+</div>
+
+<button type="button" class="collapsiblesub">PODSUMOWANIE - ODPOWIEDŹ NA POSTAWIONE PYTANIE </button><div class="content">
+Witaj, to jest Bing. Chętnie odpowiem na Twoje pytanie. 😊
+
+Na podstawie opinii, które podałeś, można stwierdzić, że praca zawiera informacje trudnodostępne lub niemożliwe do łatwego wyszukania w Internecie.
+Wszystkie opinie wskazują na to, że praca dotyczy specjalistycznego tematu i przedstawia własne rozwiązanie problemu testowania cyfrowych układów
+scalonych z wykorzystaniem magistrali szeregowej. Praca opisuje szczegółowo projekt i implementację łącza, protokołu komunikacyjnego, sterownika i
+interfejsu, a także sposób generowania i weryfikacji danych testowych. Praca zawiera również wyniki badań i eksperymentów, które potwierdzają
+poprawność i skuteczność zaproponowanego rozwiązania. Praca wykorzystuje specyficzne narzędzia i technologie, które nie są powszechnie znane lub
+dostępne. Praca zawiera również kod źródłowy, który jest dostępny tylko na dołączonej płycie CD.
+
+Z tych powodów, praca dyplomowa jest unikalnym i wartościowym źródłem informacji o testowaniu cyfrowych układów scalonych z wykorzystaniem magistrali
+szeregowej. Praca nie jest łatwo dostępna w Internecie, ponieważ nie jest opublikowana w żadnej bazie danych lub czasopiśmie naukowym. Praca wymaga
+również specjalistycznej wiedzy i umiejętności, aby ją zrozumieć i wykorzystać.
+
+Mam nadzieję, że moja odpowiedź była pomocna. Jeśli masz jakieś inne pytania, chętnie na nie odpowiem. 😊 
+</div>
+</div>
+
+<button type="button" class="collapsible">PYTANIE: Czy szeroko rozumianą motywacją do napisania tej pracy jest zmniejszenie kosztów (np. produkcji, pracy)? </button><div class="content">
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 1/5 </button><div class="content">
+Na podstawie fragmentów pracy dyplomowej można stwierdzić, że jedną z motywacji do napisania tej pracy jest zmniejszenie kosztów związanych z
+testowaniem układów scalonych. Autor pracy proponuje nowy protokół transmisji szeregowej, który ma wiele zalet w porównaniu z dotychczas stosowanymi
+rozwiązaniami, takich jak:
+
+- zwiększenie prędkości transmisji danych i skrócenie czasu testu,
+- zmniejszenie liczby połączeń elektrycznych między testerem a układem badanym,
+- zachowanie pełnej funkcjonalności narzędzi generujących wektory testowe,
+- eliminacja dodatkowych układów sterujących i synchronizujących test.
+
+Zmniejszenie kosztów testu produkcyjnego może mieć pozytywny wpływ na obniżenie kosztów produkcji i zwiększenie konkurencyjności układów scalonych na
+rynku. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 2/5 </button><div class="content">
+Na podstawie fragmentów pracy dyplomowej można stwierdzić, że szeroko rozumianą motywacją do napisania tej pracy jest zmniejszenie kosztów związanych
+z testowaniem układów scalonych. Autor pracy proponuje nowy rodzaj magistrali szeregowej, która pozwala na przeprowadzenie testu produkcyjnego z
+minimalną liczbą połączeń elektrycznych, przy zachowaniu wysokiej szybkości i dokładności testu. Autor pracy wykorzystuje także technologię
+dynamicznej alokacji kanałów, która umożliwia efektywniejsze wykorzystanie zasobów testera i redukcję czasu testu. Zmniejszenie kosztów testowania
+układów scalonych może mieć pozytywny wpływ na koszty produkcji i pracy w branży elektronicznej. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 3/5 </button><div class="content">
+Na podstawie fragmentów pracy dyplomowej można stwierdzić, że jedną z motywacji do napisania tej pracy jest zmniejszenie kosztów związanych z
+testowaniem układów scalonych. Autor pracy proponuje rozwiązanie, które pozwala na redukcję liczby pinów testera i wykorzystanie szybkiego łącza
+szeregowego do komunikacji z układem badanym. Takie podejście ma na celu zmniejszenie czasu i zasobów potrzebnych do przeprowadzenia testu
+produkcyjnego, co może wpłynąć na obniżenie kosztów produkcji. Autor pracy podkreśla, że jego rozwiązanie jest elastyczne, zgodne z popularnymi
+technologiami i narzędziami testowymi, oraz transparentne dla logiki EDT (ang. Embedded Deterministic Test). Z tego wynika, że autor pracy dąży do
+zaproponowania łącza, które nie wymaga dużej ingerencji w strukturę badanego układu, co również może być korzystne z punktu widzenia kosztów. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 4/5 </button><div class="content">
+Na podstawie fragmentów pracy dyplomowej można stwierdzić, że szeroko rozumianą motywacją do napisania tej pracy jest zmniejszenie kosztów związanych
+z testowaniem cyfrowych układów scalonych. Autor pracy proponuje nowy rodzaj magistrali szeregowej, która pozwala na przeprowadzenie testu
+produkcyjnego z minimalną liczbą połączeń elektrycznych, przy zachowaniu wysokiej szybkości i dokładności testu. Autor pracy argumentuje, że jego
+rozwiązanie jest elastyczne, zgodne z popularnymi technologiami i narzędziami testowymi, oraz wymaga niewielkiej ingerencji w strukturę badanego
+układu. Autor pracy przedstawia również wyniki badań i eksperymentów, które potwierdzają poprawność i skuteczność zaproponowanego rozwiązania. Zatem,
+można uznać, że głównym celem pracy jest zaproponowanie innowacyjnej metody testowania układów scalonych, która może obniżyć koszty produkcji i
+zwiększyć jakość produktów. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 5/5 </button><div class="content">
+Witaj, to jest Bing. 😊
+
+Na podstawie fragmentów pracy dyplomowej, można stwierdzić, że jedną z motywacji do napisania tej pracy jest zmniejszenie kosztów testowania cyfrowych
+układów scalonych. Autor pracy zaproponował nowy rodzaj magistrali szeregowej, która pozwala na przeprowadzenie testu produkcyjnego z minimalną liczbą
+połączeń elektrycznych, przy zachowaniu wysokiej szybkości i dokładności testu. W ten sposób, autor chciał zwiększyć efektywność i oszczędność procesu
+testowania, co może mieć wpływ na obniżenie kosztów produkcji i pracy. 
+</div>
+
+<button type="button" class="collapsiblesub">PODSUMOWANIE - ODPOWIEDŹ NA POSTAWIONE PYTANIE </button><div class="content">
+Witaj, to jest Bing. 😊
+
+Na podstawie opinii na temat fragmentów pracy dyplomowej, można odpowiedzieć na pytanie, że szeroko rozumianą motywacją do napisania tej pracy jest
+zmniejszenie kosztów związanych z testowaniem cyfrowych układów scalonych. Wszystkie opinie wskazują na to, że autor pracy zaproponował nowy rodzaj
+magistrali szeregowej, która ma wiele zalet w porównaniu z dotychczas stosowanymi rozwiązaniami, takich jak:
+
+- zwiększenie prędkości transmisji danych i skrócenie czasu testu,
+- zmniejszenie liczby połączeń elektrycznych między testerem a układem badanym,
+- zachowanie pełnej funkcjonalności narzędzi generujących wektory testowe,
+- eliminacja dodatkowych układów sterujących i synchronizujących test,
+- niewielka ingerencja w strukturę badanego układu.
+
+Zmniejszenie kosztów testu produkcyjnego może mieć pozytywny wpływ na obniżenie kosztów produkcji i pracy w branży elektronicznej. Zatem, można uznać,
+że głównym celem pracy jest zaproponowanie innowacyjnej metody testowania układów scalonych, która może obniżyć koszty i zwiększyć jakość produktów. 
+</div>
+</div>
+
+<button type="button" class="collapsible">PYTANIE: Czy praca wyraźnie określa problem i dotychczasowe sposoby radzenia sobie z nim, a następnie podejmuje próbę rozwiązania tego problemu lub uczynienia dotychczasowego rozwiązania bardziej atrakcyjnym? </button><div class="content">
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 1/5 </button><div class="content">
+Na podstawie przedstawionych fragmentów pracy dyplomowej, można stwierdzić, że praca wyraźnie określa problem i dotychczasowe sposoby radzenia sobie z
+nim, a następnie podejmuje próbę rozwiązania tego problemu lub uczynienia dotychczasowego rozwiązania bardziej atrakcyjnym.
+
+Problemem, który praca stawia, jest zaproponowanie nowego rodzaju magistrali i protokołu transmisyjnego, pozwalającego na przeprowadzenie testu
+produkcyjnego układów scalonych z wykorzystaniem minimalnej liczby połączeń elektrycznych, przy zachowaniu parametrów testu przynajmniej nie gorszych
+od tych, które możliwe są do osiągnięcia podczas testu z wykorzystaniem tradycyjnej magistrali równoległej. Praca podaje również cel i zakres pracy, a
+także przedstawia przegląd rozwiązań istniejących, które mają swoje wady i ograniczenia.
+
+Próba rozwiązania tego problemu lub uczynienia dotychczasowego rozwiązania bardziej atrakcyjnym polega na zaproponowaniu protokołu EDT-SerDes, który
+wykorzystuje szybkie łącze szeregowe SerDes do komunikacji między testerem a układem badanym. Praca opisuje warstwę sprzętową, logiczną i protokół
+komunikacji tego rozwiązania, a także przedstawia sposób implementacji i badania jego funkcjonowania w układach FPGA. Praca podkreśla zalety tego
+rozwiązania, takie jak: transparentność dla układu badanego, kompatybilność z narzędziami generującymi testy, możliwość dynamicznej alokacji kanałów,
+detekcja błędów transmisji i wysoka prędkość transferu danych. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 2/5 </button><div class="content">
+Na podstawie przedstawionych fragmentów pracy dyplomowej, można stwierdzić, że praca wyraźnie określa problem i dotychczasowe sposoby radzenia sobie z
+nim, a następnie podejmuje próbę rozwiązania tego problemu lub uczynienia dotychczasowego rozwiązania bardziej atrakcyjnym.
+
+Problem, jaki praca stawia, to zaprojektowanie i zbadanie łącza szeregowego do testowania układów scalonych z wykorzystaniem technologii EDT (Embedded
+Deterministic Test). Praca przedstawia dotychczasowe rozwiązania tego problemu, takie jak test równoległy, test szeregowy z użyciem kontrolera LPCT
+(Low-Pin Count Test) oraz test szeregowy z użyciem dynamicznej alokacji kanałów. Praca wskazuje na wady i ograniczenia tych rozwiązań, takie jak niska
+prędkość transmisji, konieczność stosowania dodatkowych układów sterujących lub niepełne wykorzystanie możliwości narzędzi generujących wektory
+testowe.
+
+Praca proponuje nowe rozwiązanie, które polega na wykorzystaniu łącza szeregowego z protokołem EDT-SerDes, który ma być transparentny dla układu
+badanego, zapewniać wysoką szybkość i dokładność testu, być kompatybilny z różnymi technologiami testowania, a także umożliwiać detekcję i lokalizację
+błędów transmisji. Praca opisuje projekt i implementację łącza EDT-SerDes w układach FPGA, a także przeprowadza badania jego funkcjonalności i
+wydajności. Praca porównuje również swoje rozwiązanie z innymi dostępnymi na rynku i pokazuje jego zalety i innowacyjność. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 3/5 </button><div class="content">
+Na podstawie przedstawionych fragmentów pracy dyplomowej można stwierdzić, że praca wyraźnie określa problem i dotychczasowe sposoby radzenia sobie z
+nim, a następnie podejmuje próbę rozwiązania tego problemu lub uczynienia dotychczasowego rozwiązania bardziej atrakcyjnym. Praca dotyczy problemu
+testowania cyfrowych układów scalonych z wykorzystaniem magistrali szeregowej, co ma na celu zmniejszenie liczby pinów testera i zwiększenie szybkości
+testu. Praca przedstawia istniejące rozwiązania w tej dziedzinie, takie jak EDT, RPT, UltraScan czy SmartScan, i wskazuje na ich ograniczenia i wady.
+Praca proponuje nowe rozwiązanie, nazwane EDT-SerDes, które wykorzystuje sprzętowe nadajniki/odbiorniki SerDes do transmisji danych testowych i
+odpowiedzi układu badanego. Praca opisuje protokół komunikacji, strukturę logiczną i fizyczną łącza, oraz sposób jego implementacji w układach FPGA.
+Praca prezentuje wyniki badań i symulacji, które potwierdzają poprawność i zalety zaproponowanego rozwiązania. Praca ma charakter badawczo-projektowy
+i stanowi próbę wprowadzenia innowacyjnej metody testowania układów scalonych. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 4/5 </button><div class="content">
+Na podstawie przedstawionych fragmentów pracy dyplomowej można stwierdzić, że praca wyraźnie określa problem i dotychczasowe sposoby radzenia sobie z
+nim, a następnie podejmuje próbę rozwiązania tego problemu lub uczynienia dotychczasowego rozwiązania bardziej atrakcyjnym.
+
+Problem, który praca stara się rozwiązać, to testowanie cyfrowych układów scalonych z wykorzystaniem magistrali szeregowej, która ma zalety w
+porównaniu z magistralą równoległą, takie jak mniejsza liczba połączeń elektrycznych, wyższa szybkość i dokładność testu, oraz mniejsza ingerencja w
+strukturę badanego układu. Praca podaje cel i zakres swoich badań, a także opisuje istniejące technologie i narzędzia testowania układów scalonych,
+takie jak EDT, SerDes, CRC, czy PRBS. Praca przedstawia własną propozycję łącza szeregowego, nazwanego EDT-SerDes, które jest zgodne z popularnymi
+rozwiązaniami w dziedzinie testowania układów scalonych wielkiej skali integracji. Praca opisuje teoretyczne i praktyczne aspekty implementacji i
+weryfikacji zaproponowanego rozwiązania, a także prezentuje wyniki badań funkcjonalności i jakości transmisji EDT-SerDes. Praca podsumowuje swoje
+osiągnięcia i wskazuje możliwe kierunki dalszego rozwoju EDT-SerDes.
+
+Zatem, na podstawie analizy fragmentów pracy dyplomowej, można uznać, że praca spełnia kryteria określenia problemu i dotychczasowych sposobów
+radzenia sobie z nim, a następnie podejmowania próby rozwiązania tego problemu lub uczynienia dotychczasowego rozwiązania bardziej atrakcyjnym. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 5/5 </button><div class="content">
+Na podstawie przedstawionych fragmentów pracy dyplomowej, można stwierdzić, że praca spełnia podstawowe kryteria określenia problemu i celu
+badawczego. Praca dotyczy problemu testowania cyfrowych układów scalonych z wykorzystaniem magistrali szeregowej, co jest istotnym zagadnieniem w
+dziedzinie elektroniki. Praca podaje cel pracy, który polega na zaproponowaniu nowego rodzaju magistrali wraz z interfejsem i protokołem
+transmisyjnym, oraz zakres pracy, który obejmuje analizę, opracowanie i badanie zaproponowanych rozwiązań. Praca również wskazuje na charakter
+badawczo-projektowy i innowacyjny pracy.
+
+Jednakże, na podstawie samych fragmentów nie można ocenić, czy praca dokładnie opisuje dotychczasowe sposoby radzenia sobie z problemem testowania
+układów scalonych, oraz czy praca rzetelnie porównuje swoje rozwiązanie z innymi dostępnymi metodami. Aby to zrobić, należałoby zapoznać się z
+całością pracy, zwłaszcza z rozdziałami dotyczącymi przeglądu literatury, analizy wyników i wniosków. 
+</div>
+
+<button type="button" class="collapsiblesub">PODSUMOWANIE - ODPOWIEDŹ NA POSTAWIONE PYTANIE </button><div class="content">
+Na podstawie opinii na temat fragmentów pracy dyplomowej, można odpowiedzieć na to pytanie w sposób następujący:
+
+- **Tak**, praca wyraźnie określa problem i dotychczasowe sposoby radzenia sobie z nim, a następnie podejmuje próbę rozwiązania tego problemu lub
+uczynienia dotychczasowego rozwiązania bardziej atrakcyjnym. To jest odpowiedź trzech pierwszych opinii, które podają konkretne argumenty i przykłady
+na poparcie swojej oceny. Te opinie wskazują na to, że praca spełnia podstawowe kryteria określenia problemu, celu i zakresu pracy, a także
+przedstawia własną propozycję rozwiązania, która ma zalety w porównaniu z istniejącymi metodami testowania układów scalonych.
+- **Nie wiadomo**, czy praca wyraźnie określa problem i dotychczasowe sposoby radzenia sobie z nim, a następnie podejmuje próbę rozwiązania tego
+problemu lub uczynienia dotychczasowego rozwiązania bardziej atrakcyjnym. To jest odpowiedź ostatniej opinii, która stwierdza, że na podstawie samych
+fragmentów nie można ocenić, czy praca dokładnie opisuje dotychczasowe sposoby radzenia sobie z problemem, oraz czy praca rzetelnie porównuje swoje
+rozwiązanie z innymi dostępnymi metodami. Ta opinia sugeruje, że aby dokonać pełnej oceny pracy, należałoby zapoznać się z całością pracy, zwłaszcza z
+rozdziałami dotyczącymi przeglądu literatury, analizy wyników i wniosków.
+
+Zatem, odpowiedź na pytanie zależy od tego, czy opieramy się tylko na przedstawionych fragmentach pracy, czy też bierzemy pod uwagę całość pracy.
+Jeśli opieramy się tylko na fragmentach, to odpowiedź brzmi **tak**, jeśli bierzemy pod uwagę całość pracy, to odpowiedź brzmi **nie wiadomo**. 
+</div>
+</div>
+
+<button type="button" class="collapsible">PYTANIE: Czy zasadniczym celem pracy jest głównie udowodnienie, że jej autor potrafi zrealizować określone zadanie, czy też zasadniczy cel pracy jest szerszy? </button><div class="content">
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 1/5 </button><div class="content">
+Na podstawie fragmentów pracy dyplomowej można stwierdzić, że zasadniczy cel pracy jest szerszy niż tylko udowodnienie, że jej autor potrafi
+zrealizować określone zadanie. Autor pracy nie tylko zaproponował nowy rodzaj magistrali i protokołu transmisyjnego do testowania układów scalonych,
+ale także zbadał parametry pracy, zaimplementował i przetestował swoje rozwiązanie w układach FPGA, oraz porównał je z istniejącymi rozwiązaniami.
+Autor pracy wykazał się więc nie tylko umiejętnością realizacji zadania, ale także kreatywnością, analitycznym myśleniem i znajomością stanu wiedzy w
+dziedzinie. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 2/5 </button><div class="content">
+Na podstawie fragmentów pracy dyplomowej można stwierdzić, że zasadniczy cel pracy jest szerszy niż tylko udowodnienie, że jej autor potrafi
+zrealizować określone zadanie. Autor pracy nie tylko zaprojektował i zaimplementował łącze EDT-SerDes do testowania układów scalonych, ale także
+przeprowadził badania i analizy jego właściwości, funkcjonalności i wydajności. Autor pracy również porównał swoje rozwiązanie z innymi istniejącymi
+technologiami i metodami testowania, oraz zaproponował możliwe zastosowania i ulepszenia swojego łącza. Z fragmentów pracy wynika, że autor chciał nie
+tylko wykazać się swoimi umiejętnościami technicznymi, ale także wykonać oryginalny i innowacyjny wkład w dziedzinę testowania układów scalonych. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 3/5 </button><div class="content">
+Na podstawie fragmentów pracy dyplomowej można stwierdzić, że zasadniczy cel pracy jest szerszy niż tylko udowodnienie, że jej autor potrafi
+zrealizować określone zadanie. Autor pracy nie tylko zaproponował i zaimplementował łącze szeregowe do testowania układów scalonych, ale także zbadał
+jego właściwości, funkcjonalności i możliwości zastosowania w różnych konfiguracjach i technologiach. Autor pracy wykazał się również znajomością
+istniejących rozwiązań i narzędzi w dziedzinie testowania układów scalonych, a także zaprezentował własne pomysły na usprawnienie i ulepszenie
+proponowanego łącza. Z tego wynika, że autor pracy nie tylko wykonał zadanie, ale także przyczynił się do rozwoju wiedzy i innowacji w tej dziedzinie. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 4/5 </button><div class="content">
+Na podstawie fragmentów pracy dyplomowej można stwierdzić, że zasadniczy cel pracy jest szerszy niż tylko udowodnienie, że jej autor potrafi
+zrealizować określone zadanie. Praca ma charakter badawczo-projektowy i stanowi próbę wprowadzenia innowacyjnej metody testowania układów scalonych z
+wykorzystaniem magistrali szeregowej. Autor pracy nie tylko implementuje zaproponowane rozwiązanie, ale także analizuje jego parametry,
+funkcjonalności, zalety i ograniczenia. Autor pracy porównuje swoje rozwiązanie z istniejącymi technologiami i narzędziami, a także przedstawia
+możliwości jego rozwoju i ulepszenia. Praca zawiera także elementy teoretyczne, takie jak opis protokołu transmisyjnego, algorytmu generowania testów,
+czy obliczania błędów. Praca ma więc na celu nie tylko pokazanie umiejętności autora, ale także przyczynienie się do rozwoju wiedzy i techniki w
+dziedzinie testowania układów scalonych. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 5/5 </button><div class="content">
+Z treści pracy dyplomowej wynika, że zasadniczy cel pracy jest szerszy niż tylko udowodnienie, że jej autor potrafi zrealizować określone zadanie.
+Autor pracy nie tylko zaproponował nowy rodzaj magistrali szeregowej do testowania cyfrowych układów scalonych, ale także opracował teoretyczne
+podstawy, implementację i badanie funkcjonowania protokołu transmisyjnego, który wykorzystuje tę magistralę. Autor pracy wykazał się również
+znajomością i zastosowaniem odpowiednich narzędzi i technologii, takich jak układy FPGA, język Verilog, moduł GTX i generator PRBS. Praca ma więc
+charakter badawczo-projektowy i stanowi próbę wprowadzenia innowacyjnej metody testowania układów scalonych. 
+</div>
+
+<button type="button" class="collapsiblesub">PODSUMOWANIE - ODPOWIEDŹ NA POSTAWIONE PYTANIE </button><div class="content">
+Na podstawie opinii na temat fragmentów pracy dyplomowej można stwierdzić, że zasadniczy cel pracy jest szerszy niż tylko udowodnienie, że jej autor
+potrafi zrealizować określone zadanie. Wszystkie opinie podkreślają, że autor pracy nie tylko zaproponował i zaimplementował nowy rodzaj magistrali
+szeregowej do testowania układów scalonych, ale także przeprowadził badania i analizy jego parametrów, funkcjonalności, zalet i ograniczeń. Autor
+pracy porównał swoje rozwiązanie z istniejącymi technologiami i metodami testowania, a także zaprezentował możliwości jego rozwoju i ulepszenia. Praca
+ma więc charakter badawczo-projektowy i stanowi próbę wprowadzenia innowacyjnej metody testowania układów scalonych. 
+</div>
+</div>
+
+<button type="button" class="collapsible">PYTANIE: Czy w pracy można doszukać się informacji, że zrealizowano ją przy wykorzystaniu środków z grantu? Jeśli tak, jaka instytucja dostarczyła te środki? </button><div class="content">
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 1/5 </button><div class="content">
+Na podstawie przedstawionych fragmentów pracy dyplomowej nie można stwierdzić, czy została ona zrealizowana przy wykorzystaniu środków z grantu. Nie
+ma w nich żadnej informacji o źródłach finansowania, ani o współpracy z jakąkolwiek instytucją naukową lub badawczą. Możliwe, że takie informacje
+znajdują się w innych częściach pracy, np. w podziękowaniach, ale na podstawie samych fragmentów nie można tego ustalić. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 2/5 </button><div class="content">
+Na podstawie przedstawionych fragmentów pracy dyplomowej nie można stwierdzić, że zrealizowano ją przy wykorzystaniu środków z grantu. Nie ma w nich
+żadnej informacji o źródle finansowania projektu, ani o współpracy z jakąkolwiek instytucją naukową lub przemysłową. Możliwe, że takie informacje
+znajdują się w innych częściach pracy, np. w podziękowaniach, ale na podstawie samych fragmentów nie można tego ustalić. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 3/5 </button><div class="content">
+Na podstawie przedstawionych fragmentów pracy dyplomowej nie można stwierdzić, że zrealizowano ją przy wykorzystaniu środków z grantu. Nie ma w nich
+żadnej informacji o źródle finansowania projektu, ani o współpracy z jakąkolwiek instytucją naukową lub przemysłową. Możliwe, że takie informacje
+znajdują się w innych częściach pracy, np. w podziękowaniach, ale na podstawie samych fragmentów nie można tego ustalić. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 4/5 </button><div class="content">
+Na podstawie fragmentów pracy dyplomowej, nie można jednoznacznie stwierdzić, czy zrealizowano ją przy wykorzystaniu środków z grantu. Nie ma w nich
+żadnej informacji o źródle finansowania, ani o współpracy z innymi instytucjami. Możliwe, że takie informacje znajdują się w innych częściach pracy,
+np. w podziękowaniach, we wstępie lub w bibliografii. Jeśli chcesz dowiedzieć się więcej o pracy dyplomowej, możesz spróbować znaleźć jej pełny tekst
+lub skontaktować się z autorem lub promotorem. 😊 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 5/5 </button><div class="content">
+Na podstawie podanych fragmentów pracy dyplomowej nie można jednoznacznie stwierdzić, czy zrealizowano ją przy wykorzystaniu środków z grantu. Nie ma
+w nich żadnej informacji o źródle finansowania, ani o współpracy z innymi instytucjami. Możliwe, że takie informacje znajdują się w innych częściach
+pracy, np. w podziękowaniach, we wstępie lub w bibliografii. Aby to sprawdzić, należałoby zapoznać się z całą pracą lub zapytać autora. 
+</div>
+
+<button type="button" class="collapsiblesub">PODSUMOWANIE - ODPOWIEDŹ NA POSTAWIONE PYTANIE </button><div class="content">
+Na podstawie opinii na temat fragmentów pracy dyplomowej, nie można jednoznacznie odpowiedzieć na to pytanie. Wszystkie opinie wskazują, że w podanych
+fragmentach nie ma żadnej informacji o źródle finansowania lub współpracy z innymi instytucjami. Możliwe, że takie informacje znajdują się w innych
+częściach pracy, np. w podziękowaniach, we wstępie lub w bibliografii. Aby to sprawdzić, należałoby zapoznać się z całą pracą lub zapytać autora. Nie
+można więc na podstawie samych opinii stwierdzić, czy praca została zrealizowana przy wykorzystaniu środków z grantu, ani jaka instytucja dostarczyła
+te środki. 😊 
+</div></div>
+        <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var collsub = document.getElementsByClassName("collapsiblesub");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+        for (i = 0; i < collsub.length; i++) {
+          collsub[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+        </script>
+      
+</pre>
+</body>
+
+</html>

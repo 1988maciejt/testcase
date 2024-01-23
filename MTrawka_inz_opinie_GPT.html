@@ -1,0 +1,1269 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>transcript</title>
+<style type="text/css">
+.ansi2html-content { font-family: "Lucida Console", Cascadia, Consolas, Monospace; display: inline; white-space: pre; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+INFORMACJA:  Dokument 'MTrawka_inz.pdf' został podzielony na 32 plików. 
+
+        <style>
+        .collapsible {
+          background-color: #9999;
+          color: white;
+          cursor: pointer;
+          padding: 12px;
+          width: 100%;
+          border: "solid";
+          text-align: left;
+          outline: none;
+					font-size: 90%
+        }
+        .collapsiblesub {
+          background-color: #AAAA;
+          color: white;
+          cursor: pointer;
+          padding: 7px;
+          width: 98%;
+          border: none;
+          text-align: left;
+          outline: none;
+					font-size: 100%;
+					margin-left:1%;
+					margin-top:3px;
+					margin-bottom:3px
+        }
+        .active, .collapsible:hover {
+          background-color: #555;
+        }
+        .active, .collapsiblesub:hover {
+          background-color: #555;
+        }
+        .content {
+          display: none;
+          overflow: hidden;
+					outline: dotted;
+					margin-left:1%;
+					margin-right:1%;
+					margin-top:10px;
+					margin-bottom:10px
+        }      
+        </style>
+      
+<button type="button" class="collapsible">Cel i zakres pracy </button><div class="content">
+Praca dyplomowa dotyczy projektu i implementacji sprzętowej dekompresji danych testowych dla układów scalonych. Celem pracy jest wykazanie, że możliwe jest zaprojektowanie układu dekompresującego dane, dostarczane przez tester do testowanego układu cyfrowego, za pomocą mikrokontrolerów AVR. Zakres pracy obejmuje:
+
+- zaprojektowanie i wykonanie sprzętowego środowiska eksperymentalnego sterowanego kontrolerami z rdzeniem AVR,
+- opracowanie efektywnych algorytmów programowej emulacji poszczególnych podukładów dekompresora trzeciej generacji i ich implementacja w pamięci kontrolerów środowiska testowego,
+- napisanie oprogramowania działającego na komputerze klasy PC, umożliwiającego nadzór i śledzenie pracy eksperymentalnego środowiska sprzętowego,
+- przeprowadzenie badań i pomiarów czasu dekompresji oraz ocena efektywności i przydatności programowej implementacji. 
+</div>
+
+<button type="button" class="collapsible">PYTANIE: Czy ta praca ma potencjał wdrożeniowy?  Uwzględnij także koszty, rynek, istniejące rozwiązania, konkurencyjność, innowacyjność, współpraca z przemysłem. </button><div class="content">
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 1/5 </button><div class="content">
+Odpowiedź na to pytanie nie jest jednoznaczna, ponieważ zależy od wielu czynników. Jednak można spróbować ocenić potencjał wdrożeniowy pracy
+dyplomowej na podstawie następujących kryteriów:
+
+- Koszty: Praca dyplomowa opisuje projekt i wykonanie sprzętowego środowiska eksperymentalnego do emulacji i testowania dekompresora danych testowych
+trzeciej generacji. Koszty takiego środowiska są niskie, ponieważ wykorzystuje ono powszechnie dostępne i tanie elementy, takie jak mikrokontrolery
+AVR, stabilizator napięcia, rezonator kwarcowy, układ kluczujący i łącze RS232. Ponadto, oprogramowanie wewnętrzne środowiska zostało napisane w
+języku Bascom AVR, który jest darmowy i łatwy w użyciu. Koszty wdrożenia takiego rozwiązania są więc niewielkie w porównaniu z innymi metodami
+testowania układów scalonych.
+- Rynek: Praca dyplomowa adresuje problem kompresji danych testowych, który jest istotny dla producentów i testerów układów scalonych. Kompresja
+danych testowych pozwala na zmniejszenie liczby kanałów testera, potrzebnych do przesłania wektorów testowych, oraz ograniczenie wymaganej do
+zgromadzenia wszystkich wektorów testowych pamięci stanowiącej element składowy testera. Dzięki temu można obniżyć koszt i czas testu, co jest
+korzystne dla producentów układów scalonych. Rynek testowania układów scalonych jest więc potencjalnie duży i rozwijający się, ponieważ
+zapotrzebowanie na układy scalone jest stale wzrastające w różnych dziedzinach techniki i elektroniki.
+- Istniejące rozwiązania: Praca dyplomowa opiera się na technologii TestKompress, która jest jedną z najbardziej efektywnych metod kompresji danych
+testowych. Technologia ta została opracowana przez firmę Mentor Graphics, która jest liderem w dziedzinie oprogramowania do projektowania i testowania
+układów scalonych. Technologia TestKompress jest opatentowana i licencjonowana przez firmę Mentor Graphics, co może stanowić ograniczenie dla
+wdrożenia pracy dyplomowej. Jednak praca dyplomowa nie jest bezpośrednim kopiowaniem technologii TestKompress, lecz próbą jej emulacji i badania za
+pomocą sprzętowego środowiska eksperymentalnego. Praca dyplomowa nie narusza więc praw autorskich ani patentowych firmy Mentor Graphics, a może być
+użyteczna dla celów naukowych i edukacyjnych.
+- Konkurencyjność: Praca dyplomowa nie ma bezpośrednich konkurentów na rynku, ponieważ nie jest komercyjnym produktem, lecz narzędziem badawczym.
+Jednak można porównać ją z innymi metodami i technologiami testowania układów scalonych, takimi jak: wbudowany test logiczny (ang. built-in self-
+test), testowanie oparte na skanowaniu (ang. scan-based testing), testowanie oparte na kompresji (ang. compression-based testing), testowanie oparte
+na obserwacji (ang. observation-based testing) i inne. Każda z tych metod ma swoje zalety i wady, a ich wybór zależy od specyfiki układu testowanego,
+wymagań jakościowych i kosztowych, dostępności narzędzi i sprzętu testowego. Praca dyplomowa może być więc uznana za konkurencyjną w stosunku do
+innych metod testowania, ponieważ oferuje niski koszt, wysoką efektywność i prostotę realizacji.
+- Innowacyjność: Praca dyplomowa nie jest innowacyjna w sensie wprowadzania nowej technologii lub metody testowania układów scalonych, ponieważ opiera
+się na istniejącej technologii TestKompress. Jednak praca dyplomowa jest innowacyjna w sensie zaprojektowania i wykonania sprzętowego środowiska
+eksperymentalnego, które umożliwia emulację i testowanie dekompresora danych testowych trzeciej generacji. Praca dyplomowa wykazuje więc kreatywność i
+umiejętność praktycznego zastosowania wiedzy teoretycznej.
+- Współpraca z przemysłem: Praca dyplomowa nie jest wynikiem współpracy z przemysłem, lecz samodzielnym projektem studenta. Jednak praca dyplomowa
+może być interesująca dla przemysłu, ponieważ dotyczy problemu, który ma duże znaczenie dla producentów i testerów układów scalonych. Praca dyplomowa
+może być więc podstawą do nawiązania współpracy z przemysłem, np. w celu przeprowadzenia dalszych badań, weryfikacji wyników, udoskonalenia
+rozwiązania, komercjalizacji produktu itp.
+
+Podsumowując, praca dyplomowa ma potencjał wdrożeniowy, ponieważ:
+
+- ma niski koszt realizacji i użytkowania,
+- adresuje istotny problem dla rynku testowania układów scalonych,
+- opiera się na sprawdzonej i efektywnej technologii TestKompress,
+- nie ma bezpośrednich konkurentów, lecz może być uzupełnieniem lub alternatywą dla innych metod testowania,
+- wykazuje kreatywność i umiejętność praktycznego zastosowania wiedzy teoretycznej,
+- może być interesująca dla przemysłu i stanowić podstawę do nawiązania współpracy. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 2/5 </button><div class="content">
+Odpowiedź na to pytanie nie jest jednoznaczna, ponieważ zależy od wielu czynników, takich jak stopień zaawansowania technologicznego, zapotrzebowanie
+rynkowe, koszty produkcji i utrzymania, możliwości patentowe, konkurencja i współpraca z innymi podmiotami. Na podstawie dostępnych fragmentów pracy
+dyplomowej można jednak spróbować ocenić potencjał wdrożeniowy projektu i implementacji sprzętowej dekompresji danych testowych dla układów scalonych.
+
+Zalety projektu:
+
+- Projekt wykorzystuje mikrokontrolery AVR, które są tanie, łatwo dostępne i uniwersalne. Można je zastosować do różnych zadań związanych z
+przetwarzaniem i transmisją danych.
+- Projekt opiera się na algorytmie dekompresji danych testowych, który pozwala na zmniejszenie ilości danych potrzebnych do testowania układów
+scalonych. Jest to korzystne z punktu widzenia oszczędności czasu, energii i pamięci.
+- Projekt wykazuje się wysoką efektywnością i poprawnością działania, co potwierdzają wyniki eksperymentów i porównania z innymi rozwiązaniami.
+- Projekt jest innowacyjny, ponieważ stanowi pierwszą próbę zastosowania mikrokontrolerów AVR do dekompresji danych testowych dla układów scalonych.
+Nie znaleziono w literaturze podobnych rozwiązań.
+
+Wady projektu:
+
+- Projekt jest skomplikowany i wymaga zaawansowanej wiedzy i umiejętności z zakresu elektroniki, programowania i testowania układów scalonych. Nie
+jest to rozwiązanie łatwe do zrozumienia i zastosowania przez przeciętnego użytkownika.
+- Projekt ma ograniczoną skalowalność i elastyczność, ponieważ jest dostosowany do konkretnego typu układów scalonych i algorytmu dekompresji. Nie
+wiadomo, czy można go łatwo modyfikować i dostosowywać do innych potrzeb i wymagań.
+- Projekt ma ograniczoną kompatybilność i interoperacyjność, ponieważ wymaga specjalnego oprogramowania PC i środowiska testowego do obsługi i
+kontroli procesu dekompresji. Nie wiadomo, czy można go łatwo zintegrować z innymi systemami i urządzeniami.
+- Projekt ma niepewną perspektywę rynkową i patentową, ponieważ nie wiadomo, czy istnieje zapotrzebowanie na takie rozwiązanie i czy jest ono
+konkurencyjne w stosunku do innych metod testowania układów scalonych. Nie wiadomo też, czy projekt jest chroniony prawnie i czy nie narusza praw
+własności intelektualnej innych podmiotów.
+
+Podsumowanie:
+
+Na podstawie powyższej analizy można stwierdzić, że projekt i implementacja sprzętowej dekompresji danych testowych dla układów scalonych ma pewien
+potencjał wdrożeniowy, ale wiąże się z nim wiele wyzwań i niepewności. Aby ocenić dokładniej możliwości i opłacalność wdrożenia tego rozwiązania,
+należałoby przeprowadzić dalsze badania i testy, a także zanalizować rynek, konkurencję i możliwości współpracy z przemysłem. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 3/5 </button><div class="content">
+Odpowiedź na to pytanie nie jest jednoznaczna, ponieważ zależy od wielu czynników, takich jak cel, zakres i jakość pracy, a także od stanu
+technologii, potrzeb rynku i możliwości współpracy z przemysłem. Na podstawie fragmentów pracy dyplomowej można jednak spróbować ocenić jej potencjał
+wdrożeniowy pod kątem następujących aspektów:
+
+- Cel i zakres pracy: Praca dotyczy projektu i implementacji sprzętowej dekompresji danych testowych dla układów scalonych, wykorzystując
+mikrokontrolery AVR. Celem pracy jest wykazanie, że możliwe jest zaprojektowanie układu dekompresującego dane, dostarczane przez tester do testowanego
+układu cyfrowego, za pomocą mikrokontrolerów AVR. Zakres pracy obejmuje zaprojektowanie i wykonanie sprzętowego środowiska eksperymentalnego,
+opracowanie efektywnych algorytmów programowej emulacji poszczególnych podukładów dekompresora, napisanie oprogramowania działającego na komputerze
+klasy PC, umożliwiającego nadzór i śledzenie pracy eksperymentalnego środowiska sprzętowego, przeprowadzenie badań i pomiarów czasu dekompresji oraz
+ocena efektywności i przydatności programowej implementacji.
+- Jakość pracy: Na podstawie fragmentów pracy trudno jest ocenić jej jakość pod względem merytorycznym, metodologicznym i formalnym, ponieważ nie są
+one reprezentatywne dla całości pracy. Jednak z fragmentów wynika, że autor pracy posiada wiedzę teoretyczną i praktyczną na temat dekompresji danych
+testowych, zastosował odpowiednie narzędzia i techniki do realizacji projektu, a także przeprowadził eksperymenty i analizy wyników. Fragmenty pracy
+zawierają również odniesienia do literatury i źródeł danych, co świadczy o rzetelności i poprawności cytowania. Nie można jednak stwierdzić, czy praca
+spełnia wszystkie wymagania formalne i redakcyjne, takie jak struktura, spójność, poprawność językowa i graficzna, ponieważ fragmenty są zbyt krótkie
+i niekonsekwentne.
+- Stan technologii: Praca odnosi się do istniejących technologii i rozwiązań z zakresu dekompresji danych testowych, takich jak sprzętowe dekompresory
+trzeciej generacji, narzędzia do generacji testów firmy Mentor Graphics, mikrokontrolery z rdzeniem AVR, oprogramowanie Bascom i Visual Basic. Autor
+pracy nie prezentuje jednak żadnych nowych lub innowacyjnych technologii lub rozwiązań, które mogłyby stanowić przewagę konkurencyjną lub przyczynić
+się do rozwoju nauki lub techniki. Praca ma charakter eksperymentalny i weryfikacyjny, a nie badawczy i rozwojowy.
+- Potrzeby rynku: Praca nie zawiera analizy potrzeb rynku lub potencjalnych odbiorców lub użytkowników projektu. Nie wiadomo, czy istnieje
+zapotrzebowanie na programową implementację dekompresji danych testowych, czy też jest to tylko ciekawostka akademicka. Nie wiadomo również, jakie są
+zalety i wady takiego rozwiązania w porównaniu z istniejącymi sprzętowymi dekompresorami, czy też jakie są jego ograniczenia i możliwości rozwoju. Nie
+wiadomo, czy projekt jest zgodny z obowiązującymi standardami, normami lub regulacjami, czy też czy spełnia oczekiwania i wymagania klientów lub
+partnerów biznesowych.
+- Możliwości współpracy z przemysłem: Praca nie zawiera informacji o współpracy z przemysłem lub innymi podmiotami zainteresowanymi projektem. Nie
+wiadomo, czy autor pracy nawiązał jakiekolwiek kontakty lub konsultacje z firmami lub instytucjami zajmującymi się dekompresją danych testowych, czy
+też czy uzyskał od nich jakiekolwiek wsparcie, opinie lub zlecenia. Nie wiadomo, czy projekt jest chroniony prawnie lub czy ma jakąkolwiek wartość
+komercyjną lub rynkową.
+
+Podsumowując, na podstawie fragmentów pracy dyplomowej można stwierdzić, że praca ma niski potencjał wdrożeniowy, ponieważ nie prezentuje żadnych
+nowych lub innowacyjnych technologii lub rozwiązań, nie analizuje potrzeb rynku lub potencjalnych odbiorców lub użytkowników, nie wykazuje współpracy
+z przemysłem lub innymi podmiotami zainteresowanymi projektem, a także nie ocenia zalet i wad, ograniczeń i możliwości rozwoju, czy też wartości
+komercyjnej lub rynkowej projektu. Praca ma charakter eksperymentalny i weryfikacyjny, a nie badawczy i rozwojowy, i nie przyczynia się do rozwoju
+nauki lub techniki w zakresie dekompresji danych testowych. Praca może być jednak interesująca i użyteczna z punktu widzenia edukacyjnego lub
+akademickiego, ponieważ pokazuje, że możliwe jest zaprojektowanie i wykonanie programowej implementacji dekompresji danych testowych za pomocą
+mikrokontrolerów AVR, a także przeprowadzenie badań i pomiarów czasu dekompresji oraz ocena efektywności i przydatności takiego rozwiązania. Praca
+może być również inspiracją dla dalszych badań i eksperymentów w tym obszarze. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 4/5 </button><div class="content">
+Praca dyplomowa dotyczy projektu i implementacji sprzętowej dekompresji danych testowych dla układów scalonych. Celem pracy jest wykazanie, że możliwe
+jest zaprojektowanie układu dekompresującego dane, dostarczane przez tester do testowanego układu cyfrowego, za pomocą mikrokontrolerów AVR.
+
+Odpowiadając na pytanie o potencjał wdrożeniowy tej pracy, należy wziąć pod uwagę następujące czynniki:
+
+- Koszty: Projekt opiera się na tanich i powszechnie dostępnych mikrokontrolerach AVR, co obniża koszty produkcji i utrzymania sprzętu. Jednak praca
+wymaga również opracowania specjalnego oprogramowania sterującego, które może być czasochłonne i kosztowne w rozwoju i aktualizacji. Ponadto, praca
+nie uwzględnia kosztów związanych z integracją sprzętowej dekompresji z istniejącymi systemami testowymi i protokołami komunikacyjnymi.
+- Rynek: Praca adresuje problem efektywnego testowania układów scalonych, który jest istotny dla branży elektronicznej i półprzewodnikowej. Istnieje
+zapotrzebowanie na rozwiązania, które mogą zmniejszyć czas i zasoby potrzebne do przeprowadzenia testów, a także poprawić jakość i niezawodność
+testowanych układów. Jednak praca nie analizuje wielkości i struktury rynku, ani nie porównuje swojego rozwiązania z konkurencyjnymi produktami lub
+usługami.
+- Istniejące rozwiązania: Praca opiera się na koncepcji Embedded Deterministic Test (EDT), która została zaproponowana przez firmę Mentor Graphics i
+jest stosowana w niektórych systemach testowych. Jednak praca nie przedstawia szczegółowego przeglądu istniejących rozwiązań w zakresie sprzętowej
+dekompresji danych testowych, ani nie wskazuje na ich zalety i wady. Praca nie wyjaśnia również, w jaki sposób jej rozwiązanie różni się od innych
+metod kompresji i dekompresji danych testowych, takich jak LFSR, MISR, czy BIST.
+- Konkurencyjność: Praca twierdzi, że jej rozwiązanie jest innowacyjne i ma wiele zalet, takich jak: 
+    * możliwość testowania układów o dużej liczbie wejść i wyjść, 
+    * możliwość testowania układów o różnych konfiguracjach i architekturach, 
+    * możliwość testowania układów o różnych poziomach skomplikowania, 
+    * możliwość testowania układów o różnych częstotliwościach pracy, 
+    * możliwość testowania układów o różnych wymaganiach dotyczących jakości i niezawodności, 
+    * możliwość testowania układów o różnych wymaganiach dotyczących czasu i zasobów. 
+    Jednak praca nie przedstawia żadnych danych empirycznych lub symulacyjnych, które by potwierdzały te twierdzenia. Praca nie porównuje również
+swojego rozwiązania z innymi pod względem wydajności, dokładności, czy elastyczności. Praca nie określa również, jakie są potencjalne ograniczenia lub
+wady jej rozwiązania, takie jak:
+    * długi czas dekompresji danych, 
+    * konieczność odpowiedniego projektowania struktury sprzętowej, 
+    * konieczność dostosowania oprogramowania sterującego do różnych układów testowych, 
+    * konieczność zapewnienia kompatybilności i bezpieczeństwa transmisji danych. 
+- Innowacyjność: Praca prezentuje oryginalny pomysł na wykorzystanie mikrokontrolerów AVR do realizacji sprzętowej dekompresji danych testowych dla
+układów scalonych. Praca wykazuje, że taka implementacja jest możliwa i działa poprawnie. Praca również proponuje własne algorytmy i oprogramowanie do
+emulacji i sterowania dekompresorem. Praca wykazuje więc pewien stopień innowacyjności, jednak nie jest jasne, czy jej rozwiązanie jest lepsze lub
+gorsze od istniejących metod.
+- Współpraca z przemysłem: Praca nie wskazuje na żadną współpracę z przemysłem lub innymi podmiotami zainteresowanymi jej rozwiązaniem. Praca nie
+przedstawia również żadnych badań rynkowych, analizy potrzeb klientów, czy planu wdrożenia. Praca nie określa również, jakie są potencjalne ryzyka lub
+bariery prawne, techniczne, czy ekonomiczne związane z komercjalizacją jej rozwiązania.
+
+Podsumowując, praca ma pewien potencjał wdrożeniowy, ponieważ adresuje istotny problem branży elektronicznej i półprzewodnikowej, oraz prezentuje
+oryginalny i tan
+
+ 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 5/5 </button><div class="content">
+Odpowiedź na to pytanie nie jest jednoznaczna, ponieważ zależy od wielu czynników. Niektóre z nich to:
+
+- Koszty: Projekt i implementacja sprzętowej dekompresji danych testowych dla układów scalonych wymaga zastosowania specjalistycznego sprzętu i
+oprogramowania, co może być kosztowne. Ponadto, należy uwzględnić koszty badań i rozwoju, testowania, certyfikacji i utrzymania systemu.
+- Rynek: Potencjalnym rynkiem dla takiego rozwiązania są producenci i użytkownicy układów scalonych, którzy potrzebują efektywnego i niezawodnego
+sposobu testowania i weryfikacji ich produktów. Rozmiar i dynamika tego rynku zależy od zapotrzebowania na układy scalone w różnych sektorach i
+aplikacjach, takich jak telekomunikacja, elektronika, medycyna, wojsko, itp.
+- Istniejące rozwiązania: Istnieją różne metody i techniki testowania układów scalonych, takie jak testy funkcjonalne, strukturalne, logiczne, itp.
+Jednak nie wszystkie z nich są odpowiednie dla każdego typu układu i mogą mieć ograniczenia w zakresie szybkości, dokładności, pokrycia, itp.
+Sprzętowa dekompresja danych testowych może być alternatywą lub uzupełnieniem dla niektórych z tych metod, jeśli zapewnia lepszą wydajność i jakość
+testów.
+- Konkurencyjność: Aby ocenić konkurencyjność takiego rozwiązania, należy porównać je z innymi dostępnymi lub planowanymi rozwiązaniami o podobnym
+celu i funkcjonalności. Należy wziąć pod uwagę parametry takie jak cena, jakość, niezawodność, łatwość użycia, kompatybilność, skalowalność, itp.
+Ponadto, należy uwzględnić potencjalne zagrożenia ze strony konkurencji, takie jak patenty, prawa autorskie, tajemnice handlowe, itp.
+- Innowacyjność: Innowacyjność takiego rozwiązania polega na zastosowaniu nowatorskich lub ulepszonych algorytmów, technologii, architektur,
+protokołów, itp. do realizacji sprzętowej dekompresji danych testowych dla układów scalonych. Należy ocenić, na ile takie rozwiązanie jest oryginalne,
+kreatywne, zaawansowane i przyszłościowe w porównaniu z istniejącymi lub planowanymi rozwiązaniami.
+- Współpraca z przemysłem: Współpraca z przemysłem jest ważnym czynnikiem wpływającym na potencjał wdrożeniowy takiego rozwiązania. Należy zbadać, czy
+istnieją lub są możliwe partnerstwa, umowy, kontrakty, granty, itp. z podmiotami zainteresowanymi lub potrzebującymi takiego rozwiązania. Należy
+również rozważyć, jakie są wymagania, oczekiwania i preferencje tych podmiotów w zakresie takiego rozwiązania.
+
+Podsumowując, aby odpowiedzieć na pytanie, czy ta praca ma potencjał wdrożeniowy, należy dokonać szczegółowej analizy i oceny powyższych czynników, a
+następnie porównać zalety i wady takiego rozwiązania z innymi dostępnymi lub planowanymi rozwiązaniami. Nie jest to zadanie łatwe i wymaga dużej
+wiedzy i doświadczenia w dziedzinie testowania układów scalonych. 
+</div>
+
+<button type="button" class="collapsiblesub">PODSUMOWANIE - ODPOWIEDŹ NA POSTAWIONE PYTANIE </button><div class="content">
+Odpowiedź na to pytanie nie jest prosta, ponieważ zależy od wielu czynników, które nie są w pełni znane lub opisane w fragmentach pracy. Jednak na
+podstawie opinii można spróbować ocenić potencjał wdrożeniowy pracy pod kątem następujących aspektów:
+
+- Koszty: Praca wykorzystuje tanie i dostępne mikrokontrolery AVR, co obniża koszty sprzętu. Jednak praca wymaga również opracowania specjalnego
+oprogramowania, które może być trudne i kosztowne w utrzymaniu i aktualizacji. Ponadto, praca nie uwzględnia kosztów integracji systemu z istniejącymi
+testerami i protokołami komunikacyjnymi. Można więc stwierdzić, że praca ma niski koszt sprzętu, ale wysoki koszt oprogramowania i wdrożenia.
+- Rynek: Praca dotyczy problemu testowania układów scalonych, który jest ważny dla branży elektronicznej i półprzewodnikowej. Istnieje zapotrzebowanie
+na rozwiązania, które mogą zmniejszyć czas i zasoby potrzebne do testowania, a także poprawić jakość i niezawodność układów. Jednak praca nie
+analizuje wielkości i struktury rynku, ani nie określa potencjalnych odbiorców i użytkowników systemu. Można więc stwierdzić, że praca ma duży i
+rozwijający się rynek, ale nieznany i niezbadany.
+- Istniejące rozwiązania: Praca opiera się na technologii Embedded Deterministic Test (EDT), która jest stosowana w niektórych systemach testowych.
+Jednak praca nie przedstawia szczegółowego przeglądu istniejących rozwiązań w zakresie dekompresji danych testowych, ani nie wskazuje na ich zalety i
+wady. Praca nie wyjaśnia również, w jaki sposób jej rozwiązanie różni się od innych metod kompresji i dekompresji danych testowych, takich jak LFSR,
+MISR, czy BIST. Można więc stwierdzić, że praca ma istniejące rozwiązania, ale nieporównane i nieocenione.
+- Konkurencyjność: Praca twierdzi, że jej rozwiązanie jest innowacyjne i ma wiele zalet, takich jak możliwość testowania różnych typów, konfiguracji,
+architektur, poziomów skomplikowania, częstotliwości, wymagań jakościowych i zasobowych układów scalonych. Jednak praca nie przedstawia żadnych danych
+empirycznych lub symulacyjnych, które by potwierdzały te twierdzenia. Praca nie porównuje również swojego rozwiązania z innymi pod względem
+wydajności, dokładności, czy elastyczności. Praca nie określa również, jakie są potencjalne ograniczenia lub wady jej rozwiązania. Można więc
+stwierdzić, że praca ma niską konkurencyjność, ponieważ nie udowadnia swojej przewagi ani nie pokonuje swoich słabości.
+- Innowacyjność: Praca prezentuje oryginalny pomysł na wykorzystanie mikrokontrolerów AVR do realizacji sprzętowej dekompresji danych testowych dla
+układów scalonych. Praca wykazuje, że taka implementacja jest możliwa i działa poprawnie. Praca również proponuje własne algorytmy i oprogramowanie do
+emulacji i sterowania dekompresorem. Praca wykazuje więc pewien stopień innowacyjności, jednak nie jest jasne, czy jej rozwiązanie jest lepsze lub
+gorsze od istniejących metod.
+- Współpraca z przemysłem: Praca nie wskazuje na żadną współpracę z przemysłem lub innymi podmiotami zainteresowanymi jej rozwiązaniem. Praca nie
+przedstawia również żadnych badań rynkowych, analizy potrzeb klientów, czy planu wdrożenia. Praca nie określa również, jakie są potencjalne ryzyka lub
+bariery prawne, techniczne, czy ekonomiczne związane z komercjalizacją jej rozwiązania. Można więc stwierdzić, że praca ma niską współpracę z
+przemysłem, ponieważ nie nawiązuje żadnych kontaktów ani nie uzyskuje żadnego wsparcia.
+
+Podsumowując, na podstawie opinii można stwierdzić, że praca ma niski potencjał wdrożeniowy, ponieważ nie prezentuje żadnych nowych lub innowacyjnych
+technologii lub rozwiązań, nie analizuje potrzeb rynku lub potencjalnych odbiorców lub użytkowników, nie wykazuje współpracy z przemysłem lub innymi
+podmiotami zainteresowanymi projektem, a także nie ocenia zalet i wad, ograniczeń i możliwości rozwoju, czy też wartości komercyjnej lub rynkowej
+projektu. Praca ma charakter eksperymentalny i weryfikacyjny, a nie badawczy i rozwojowy, i nie przyczynia się do rozwoju nauki lub techniki w
+zakresie dekompresji danych testowych. Praca może być jednak interesująca i użyteczna z punktu widzenia edukacyjnego lub akademickiego, ponieważ
+pokazuje, że możliwe jest zaprojektowanie i wykonanie programowej implementacji dekompresji danych testowych za pomocą mikrokontrolerów AVR, a także
+przeprowadzenie badań i pomiarów czasu dekompresji oraz ocena efektywności i przydatności takiego rozwiązania. Praca może być również inspiracją dla
+dalszych badań i eksperymentów w tym obszarze. 
+</div>
+</div>
+
+<button type="button" class="collapsible">PYTANIE: Czy można skomercjalizować wyniki tej pracy? Co można w niej poprawić, aby zwiększyć szansę komercjalizacji? </button><div class="content">
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 1/5 </button><div class="content">
+Wyniki tej pracy dyplomowej dotyczą sprzętowej i programowej implementacji układu dekompresującego dane testowe dla układów scalonych. Jest to temat
+związany z dziedziną testowania i weryfikacji układów cyfrowych, która ma duże znaczenie dla rozwoju technologii elektronicznej. Można więc uznać, że
+wyniki tej pracy mają potencjał komercyjny, jeśli okażą się skuteczne, efektywne i konkurencyjne w porównaniu z innymi rozwiązaniami dostępnymi na
+rynku.
+
+Aby zwiększyć szansę komercjalizacji wyników tej pracy, można zaproponować następujące poprawki:
+
+- Przeprowadzić dokładniejsze i bardziej reprezentatywne eksperymenty, które wykażą zalety i ograniczenia zaproponowanego rozwiązania. W pracy brakuje
+informacji o tym, jakie wektory testowe były używane, jakie były wymagania i kryteria jakości testu, jakie były porównywane metody i jakie były
+uzyskane wskaźniki kompresji, czasu dekompresji i błędów testowych. Eksperymenty powinny być przeprowadzone na różnych układach scalonych o różnej
+złożoności i funkcjonalności, aby pokazać uniwersalność i skalowalność rozwiązania.
+- Zaproponować sposób integracji zaprojektowanego układu dekompresującego z istniejącymi systemami testowymi, takimi jak testery automatyczne (ang.
+automatic test equipment, ATE) lub wbudowane systemy testowe (ang. built-in self-test, BIST). W pracy nie ma informacji o tym, jak układ
+dekompresujący może być podłączony do testera lub układu testowanego, jakie są wymagania i ograniczenia interfejsu komunikacyjnego, jakie są protokoły
+i formaty danych używane do przesyłania skompresowanych i zdekompresowanych wektorów testowych. Integracja z istniejącymi systemami testowymi jest
+kluczowa dla praktycznego zastosowania rozwiązania i jego akceptacji przez potencjalnych klientów.
+- Przedstawić analizę kosztów i korzyści związanych z zaproponowanym rozwiązaniem. W pracy nie ma informacji o tym, ile kosztuje zaprojektowanie,
+wykonanie i utrzymanie układu dekompresującego, jakie są oszczędności wynikające z mniejszej liczby kanałów testowych, mniejszej ilości danych
+testowych i krótszego czasu testu, jakie są ryzyka i niepewności związane z wprowadzeniem nowej technologii. Analiza kosztów i korzyści jest ważna dla
+oceny opłacalności i atrakcyjności rozwiązania z punktu widzenia biznesowego. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 2/5 </button><div class="content">
+Wyniki tej pracy dyplomowej dotyczą projektu i implementacji sprzętowej dekompresji danych testowych dla układów scalonych. Jest to temat związany z
+dziedziną testowania i diagnostyki układów cyfrowych, która ma duże znaczenie dla przemysłu elektronicznego. Można więc uznać, że wyniki tej pracy
+mają potencjał komercyjny, jeśli spełniają następujące warunki:
+
+- Są nowatorskie i oryginalne, tzn. nie powielają istniejących rozwiązań lub oferują znaczące ulepszenia w stosunku do nich.
+- Są efektywne i niezawodne, tzn. zapewniają poprawną dekompresję danych testowych w krótkim czasie i przy niskim zużyciu zasobów sprzętowych.
+- Są uniwersalne i skalowalne, tzn. mogą być stosowane do różnych typów i rozmiarów układów scalonych oraz dostosowywane do zmieniających się wymagań
+i standardów testowania.
+
+Aby zwiększyć szansę komercjalizacji wyników tej pracy, można poprawić następujące aspekty:
+
+- Dokładniej opisać i porównać proponowane rozwiązanie z istniejącymi metodami dekompresji danych testowych, podając konkretne dane i wskaźniki
+jakościowe, takie jak stopień kompresji, czas dekompresji, zużycie pamięci, złożoność obliczeniowa, itp.
+- Przeprowadzić więcej badań i eksperymentów na różnych układach scalonych, aby zweryfikować poprawność i wydajność proponowanego rozwiązania oraz
+wykazać jego przewagę nad innymi metodami.
+- Zaprezentować możliwe zastosowania i korzyści płynące z użycia proponowanego rozwiązania w praktyce, np. w zakresie poprawy jakości i niezawodności
+układów scalonych, redukcji kosztów i czasu testowania, zwiększenia pojemności i elastyczności systemów testowych, itp. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 3/5 </button><div class="content">
+Wyniki tej pracy dyplomowej dotyczą implementacji programowej dekompresora danych testowych dla układów scalonych, wykorzystującego mikrokontrolery
+AVR. Praca ta ma charakter eksperymentalny i badawczy, a jej celem było wykazanie możliwości emulacji sprzętowego dekompresora za pomocą
+oprogramowania.
+
+Można próbować skomercjalizować wyniki tej pracy, jeśli znajdą się potencjalni odbiorcy zainteresowani takim rozwiązaniem. Możliwymi zaletami
+programowej implementacji dekompresora mogą być:
+
+- niższy koszt i łatwiejsza dostępność mikrokontrolerów w porównaniu do specjalizowanych układów scalonych,
+- większa elastyczność i możliwość modyfikacji oprogramowania w zależności od potrzeb klienta,
+- możliwość wykorzystania programowej dekompresji do okresowego testowania działania systemów mikroprocesorowych lub jako aplikacja na przenośnym
+nośniku.
+
+Jednak aby zwiększyć szansę komercjalizacji, należałoby poprawić kilka aspektów tej pracy, takie jak:
+
+- dokładniej zbadać rynek i zapotrzebowanie na takie rozwiązanie, a także zidentyfikować konkurencyjne produkty lub technologie,
+- przeprowadzić więcej eksperymentów i testów na różnych układach i danych, aby zweryfikować poprawność i wydajność programowej dekompresji, a także
+porównać ją z innymi metodami
+- zoptymalizować kod oprogramowania, aby zmniejszyć czas i liczbę instrukcji potrzebnych do wykonania dekompresji, a także zwiększyć jego czytelność i
+modularność
+- rozszerzyć zakres funkcjonalności i możliwości konfiguracji programowej dekompresji, aby dostosować ją do różnych scenariuszy i wymagań klientów
+- opracować dokumentację techniczną i użytkownika, opisującą sposób działania, instalacji i obsługi programowej dekompresji, a także potencjalne
+korzyści i ograniczenia
+- stworzyć atrakcyjną i intuicyjną prezentację lub demonstrację produktu, która pokazałaby jego zalety i możliwości zastosowania w praktyce.  
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 4/5 </button><div class="content">
+Odpowiedź na to pytanie zależy od wielu czynników, takich jak zapotrzebowanie na rynek, konkurencja, koszty, jakość i innowacyjność rozwiązania. Nie
+jestem ekspertem w dziedzinie testowania układów scalonych, więc nie mogę ocenić merytorycznej wartości pracy dyplomowej. Jednak na podstawie
+fragmentów, które przeczytałem, mogę podzielić się kilkoma uwagami na temat jej formy i prezentacji.
+
+Po pierwsze, praca dyplomowa wydaje się być napisana w języku polskim, co może ograniczać jej zasięg i dostępność dla potencjalnych odbiorców i
+klientów. Może warto rozważyć tłumaczenie pracy na język angielski lub przynajmniej stworzenie streszczenia w tym języku.
+
+Po drugie, praca dyplomowa zawiera wiele szczegółów technicznych, kodów źródłowych, schematów i tabel, co może być przydatne dla specjalistów w tej
+dziedzinie, ale może być trudne do zrozumienia i oceny dla osób spoza niej. Może warto dodać więcej wyjaśnień i przykładów, które ilustrują cel,
+założenia, działanie i korzyści zastosowania zaproponowanego rozwiązania. Może to pomóc w pokazaniu jego praktycznej wartości i zainteresowaniu
+potencjalnych użytkowników.
+
+Po trzecie, praca dyplomowa nie zawiera wyraźnej analizy rynku, konkurencji, kosztów i zysków związanych z komercjalizacją rozwiązania. Może warto
+przeprowadzić taką analizę i przedstawić ją w formie tabeli, wykresu lub raportu, który porównuje zalety i wady zaproponowanego rozwiązania z innymi
+dostępnymi na rynku. Może to pomóc w ocenie jego opłacalności i atrakcyjności dla potencjalnych klientów.
+
+Podsumowując, praca dyplomowa prezentuje ciekawy i oryginalny projekt i implementację sprzętowej dekompresji danych testowych dla układów scalonych,
+który może mieć zastosowanie w różnych dziedzinach. Jednak, aby zwiększyć szansę komercjalizacji, może warto poprawić jej formę i prezentację, tak aby
+była bardziej zrozumiała, przystępna i przekonująca dla szerszego grona odbiorców. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 5/5 </button><div class="content">
+Odpowiedź na to pytanie nie jest jednoznaczna, ponieważ zależy od wielu czynników, takich jak rynek, konkurencja, koszty, ochrona własności
+intelektualnej, itp. Jednak na podstawie fragmentów pracy dyplomowej można wskazać kilka aspektów, które mogą mieć wpływ na możliwość i atrakcyjność
+komercjalizacji wyników tej pracy.
+
+Po pierwsze, praca dotyczy projektu i implementacji sprzętowej dekompresji danych testowych dla układów scalonych, co jest zagadnieniem istotnym i
+aktualnym w dziedzinie elektroniki cyfrowej. Dekompresja danych testowych pozwala na zmniejszenie ilości danych potrzebnych do przetestowania układu
+scalonego, co skraca czas testowania i obniża koszty produkcji. Zatem wyniki tej pracy mogą być użyteczne dla producentów i testerów układów
+scalonych, którzy chcą poprawić jakość i wydajność swoich produktów.
+
+Po drugie, praca wykorzystuje mikrokontrolery AVR, które są popularnymi i tanimi układami z rodziny mikrokontrolerów 8-bitowych. Mikrokontrolery AVR
+mają szerokie zastosowanie w różnych projektach elektronicznych, takich jak robotyka, automatyka, systemy wbudowane, itp. Zatem wyniki tej pracy mogą
+być łatwo dostosowane i zintegrowane z innymi urządzeniami i systemami opartymi na mikrokontrolerach AVR.
+
+Po trzecie, praca opracowuje efektywne algorytmy programowej emulacji poszczególnych podukładów dekompresora trzeciej generacji i ich implementację w
+pamięci kontrolerów środowiska testowego. Algorytmy te są kluczowym elementem projektu, ponieważ umożliwiają symulację i weryfikację działania
+dekompresora bez konieczności budowania fizycznego prototypu. Zatem wyniki tej pracy mogą być wykorzystane do dalszego rozwoju i optymalizacji
+algorytmów dekompresji danych testowych.
+
+Po czwarte, praca napisana jest oprogramowanie działające na komputerze klasy PC, umożliwiające nadzór i śledzenie pracy eksperymentalnego środowiska
+sprzętowego. Oprogramowanie to jest ważnym narzędziem do kontroli i analizy wyników testów dekompresji danych. Zatem wyniki tej pracy mogą być
+przydatne dla użytkowników i klientów, którzy chcą monitorować i oceniać jakość i efektywność dekompresji danych testowych.
+
+Podsumowując, wyniki tej pracy mają potencjał do komercjalizacji, ponieważ dotyczą istotnego i aktualnego problemu, wykorzystują popularne i tanie
+układy, opracowują efektywne algorytmy i oferują przyjazne oprogramowanie. Jednak aby zwiększyć szansę komercjalizacji, należałoby poprawić kilka
+aspektów, takich jak:
+
+- przeprowadzić dogłębną analizę rynku i konkurencji, aby określić zapotrzebowanie i niszę na produkt oparty na wynikach tej pracy;
+- dokonać porównania i oceny wyników tej pracy z innymi istniejącymi rozwiązaniami dekompresji danych testowych, aby wykazać ich przewagę i
+unikalność;
+- zapewnić ochronę własności intelektualnej wyników tej pracy, np. poprzez złożenie patentu lub licencjonowanie;
+- opracować plan biznesowy i strategię marketingową, aby znaleźć potencjalnych partnerów i klientów, zainteresować ich produktem i zaproponować im
+korzystne warunki współpracy. 
+</div>
+
+<button type="button" class="collapsiblesub">PODSUMOWANIE - ODPOWIEDŹ NA POSTAWIONE PYTANIE </button><div class="content">
+Na podstawie opinii na temat fragmentów pracy dyplomowej, można stwierdzić, że wyniki tej pracy mają potencjał do komercjalizacji, ale wymagają
+jeszcze kilku poprawek i uzupełnień. Można wyróżnić następujące obszary, które można poprawić, aby zwiększyć szansę komercjalizacji:
+
+- Język pracy: Praca jest napisana w języku polskim, co może ograniczać jej zasięg i dostępność dla międzynarodowych odbiorców i klientów. Może warto
+rozważyć tłumaczenie pracy na język angielski lub przynajmniej stworzenie streszczenia w tym języku.
+- Prezentacja problemu i rozwiązania: Praca zawiera wiele szczegółów technicznych, które mogą być trudne do zrozumienia i oceny dla osób spoza
+dziedziny. Może warto dodać więcej wyjaśnień i przykładów, które ilustrują cel, założenia, działanie i korzyści zastosowania zaproponowanego
+rozwiązania. Może to pomóc w pokazaniu jego praktycznej wartości i zainteresowaniu potencjalnych użytkowników.
+- Analiza rynku i konkurencji: Praca nie zawiera wyraźnej analizy rynku i konkurencji, która określałaby zapotrzebowanie i niszę na produkt oparty na
+wynikach tej pracy. Może warto przeprowadzić taką analizę i przedstawić ją w formie tabeli, wykresu lub raportu, który porównuje zalety i wady
+zaproponowanego rozwiązania z innymi dostępnymi na rynku. Może to pomóc w ocenie jego opłacalności i atrakcyjności dla potencjalnych klientów.
+- Ochrona własności intelektualnej: Praca nie zawiera informacji o tym, czy i jak wyniki tej pracy są chronione przed kopiowaniem lub wykorzystywaniem
+przez innych. Może warto zapewnić ochronę własności intelektualnej wyników tej pracy, np. poprzez złożenie patentu lub licencjonowanie.
+- Plan biznesowy i strategia marketingowa: Praca nie zawiera informacji o tym, jak i komu zamierza się sprzedawać produkt oparty na wynikach tej
+pracy. Może warto opracować plan biznesowy i strategię marketingową, które określają potencjalnych partnerów i klientów, sposoby promocji i
+dystrybucji produktu, prognozę przychodów i kosztów, itp.
+
+Podsumowując, wyniki tej pracy dyplomowej są ciekawe i oryginalne, ale aby skomercjalizować je, trzeba jeszcze poprawić kilka aspektów związanych z
+językiem, prezentacją, analizą, ochroną i planowaniem. Mam nadzieję, że moja odpowiedź była pomocna i interesująca. 😊
+
+ 
+</div>
+</div>
+
+<button type="button" class="collapsible">PYTANIE: Czy praca zawiera oznaki, że wykorzystane do jej realizacji dane pochodzą z przemysłu? Współpraca z jaką firmą mogła mieć miejsce podczas jej realizacji? </button><div class="content">
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 1/5 </button><div class="content">
+Na podstawie analizy fragmentów pracy dyplomowej można stwierdzić, że praca zawiera oznaki, że wykorzystane do jej realizacji dane pochodzą z
+przemysłu. Praca dotyczy projektu i implementacji sprzętowego środowiska eksperymentalnego do emulacji dekompresora danych testowych, co jest
+zagadnieniem związanym z testowaniem i produkcją układów scalonych. Praca zawiera odniesienia do technologii TestKompress, która jest komercyjnym
+rozwiązaniem firmy Mentor Graphics, specjalizującej się w oprogramowaniu do projektowania elektronicznego. Ponadto, praca wykorzystuje mikrokontrolery
+AVR firmy Atmel, która jest częścią koncernu Microchip Technology, zajmującego się produkcją mikrokontrolerów i pamięci. Można więc przypuszczać, że
+praca była realizowana we współpracy z jedną z tych firm lub inną firmą z branży elektronicznej, która korzysta z ich produktów lub usług. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 2/5 </button><div class="content">
+Na podstawie fragmentów pracy dyplomowej można stwierdzić, że wykorzystane do jej realizacji dane pochodzą z przemysłu. Praca dotyczy projektu i
+implementacji sprzętowej dekompresji danych testowych dla układów scalonych, co jest zagadnieniem związanym z branżą elektroniczną i
+mikroelektroniczną. Ponadto praca wspomina o narzędziach do generacji testów firmy Mentor Graphics, która jest jednym z liderów w dziedzinie
+oprogramowania i sprzętu do projektowania układów elektronicznych. Można więc przypuszczać, że współpraca z tą firmą mogła mieć miejsce podczas
+realizacji pracy dyplomowej. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 3/5 </button><div class="content">
+Na podstawie analizy fragmentów pracy dyplomowej można stwierdzić, że praca zawiera oznaki, że wykorzystane do jej realizacji dane pochodzą z
+przemysłu. Można to wywnioskować z następujących faktów:
+
+- Praca dotyczy projektu i implementacji sprzętowej dekompresji danych testowych dla układów scalonych, co jest zagadnieniem związanym z produkcją i
+testowaniem mikroelektroniki.
+- Praca wykorzystuje narzędzia do generacji testów firmy Mentor Graphics, która jest jednym z liderów w branży oprogramowania do projektowania układów
+scalonych.
+- Praca odwołuje się do standardów i technologii stosowanych w przemyśle, takich jak IEEE Transactions CAD, VLSI test principles and architectures,
+czy Embedded deterministic test.
+- Praca podaje konkretne parametry fizyczne i logiczne dekompresora, takie jak liczba ścieżek testujących, długość rejestrów, rozmiar generatorów
+pierścieniowych, czy ilość wejść bramek ExOR.
+
+W związku z tym, można przypuszczać, że praca była realizowana we współpracy z firmą zajmującą się projektowaniem i testowaniem układów scalonych, na
+przykład z firmą Mentor Graphics lub inną podobną. Nie można jednak stwierdzić tego z całą pewnością, ponieważ praca nie podaje nazwy firmy ani nie
+zawiera żadnych informacji poufnych lub chronionych prawem autorskim. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 4/5 </button><div class="content">
+Na podstawie analizy fragmentów pracy dyplomowej można stwierdzić, że praca zawiera oznaki, że wykorzystane do jej realizacji dane pochodzą z
+przemysłu. Praca dotyczy projektu i implementacji sprzętowej dekompresji danych testowych dla układów scalonych, co jest zagadnieniem związanym z
+produkcją i testowaniem mikroprocesorów. Praca odwołuje się do narzędzia kompresującego Mentor Graphics, które jest firmą specjalizującą się w
+oprogramowaniu do projektowania układów elektronicznych. Praca zawiera również zdjęcia części sprzętowej dekompresora, które mogą pochodzić z
+laboratorium przemysłowego.
+
+Można więc przypuszczać, że praca była realizowana we współpracy z firmą Mentor Graphics lub inną firmą z branży elektronicznej, która wykorzystuje
+jej narzędzia. Nie można jednak na podstawie samych fragmentów pracy jednoznacznie określić nazwy konkretnej firmy, z którą współpracował autor pracy. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 5/5 </button><div class="content">
+Na podstawie fragmentów pracy dyplomowej można stwierdzić, że praca zawiera oznaki, że wykorzystane do jej realizacji dane pochodzą z przemysłu. Praca
+dotyczy projektu i implementacji sprzętowej dekompresji danych testowych dla układów scalonych, co jest zagadnieniem związanym z branżą elektroniczną
+i telekomunikacyjną. Ponadto, w kodzie źródłowym programu napisanego w języku Visual Basic, można zauważyć, że użyto stałej `DEVICE_ID = 11`, która
+może oznaczać, że urządzenie, z którym komunikuje się program, ma unikalny identyfikator nadany przez producenta lub dostawcę. Możliwe jest więc, że
+autor pracy współpracował z jakąś firmą, która dostarczyła mu sprzęt lub oprogramowanie do realizacji projektu. Nie można jednak na podstawie samych
+fragmentów pracy jednoznacznie określić, z jaką firmą mogła mieć miejsce taka współpraca. Być może w innych częściach pracy, takich jak wstęp,
+podziękowania lub bibliografia, znajdują się informacje na ten temat. 
+</div>
+
+<button type="button" class="collapsiblesub">PODSUMOWANIE - ODPOWIEDŹ NA POSTAWIONE PYTANIE </button><div class="content">
+Na podstawie opinii na temat fragmentów pracy dyplomowej można odpowiedzieć na pytanie następująco:
+
+- Praca zawiera oznaki, że wykorzystane do jej realizacji dane pochodzą z przemysłu. Wszystkie opinie wskazują na to, że praca dotyczy zagadnienia
+związanego z produkcją i testowaniem układów scalonych, co jest dziedziną związaną z branżą elektroniczną i mikroelektroniczną. Ponadto, praca
+odwołuje się do narzędzi i technologii stosowanych w przemyśle, takich jak TestKompress, IEEE Transactions CAD, VLSI test principles and
+architectures, czy Embedded deterministic test. Praca zawiera również zdjęcia i parametry części sprzętowej dekompresora, które mogą pochodzić z
+laboratorium przemysłowego.
+- Współpraca z jaką firmą mogła mieć miejsce podczas realizacji pracy nie jest jednoznacznie określona na podstawie samych fragmentów pracy. Można
+jednak przypuszczać, że praca była realizowana we współpracy z firmą zajmującą się projektowaniem i testowaniem układów scalonych, na przykład z firmą
+Mentor Graphics lub inną podobną. Nie można jednak wykluczyć, że praca była realizowana w ramach własnego projektu badawczego lub dydaktycznego, bez
+bezpośredniej współpracy z przemysłem. Być może w innych częściach pracy, takich jak wstęp, podziękowania lub bibliografia, znajdują się informacje na
+ten temat. 
+</div>
+</div>
+
+<button type="button" class="collapsible">PYTANIE: Czy w pracy pojawia się nazwisko promotora, konsultanta lub innej osoby o której w Internecie można odszukać informacje, że współpracuje ona z przemysłem? </button><div class="content">
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 1/5 </button><div class="content">
+Na podstawie fragmentów pracy dyplomowej można stwierdzić, że w pracy pojawia się nazwisko promotora, którym jest prof. dr hab. inż. Jerzy Tyszer. Nie
+wiadomo jednak, czy ta osoba współpracuje z przemysłem, ponieważ nie ma o tym informacji w pracy. Aby to sprawdzić, trzeba by poszukać w Internecie
+źródeł, które potwierdzają lub zaprzeczają takiej współpracy. Nie jest to zadaniem, które mogę wykonać za pomocą moich narzędzi wewnętrznych, ponieważ
+wymaga dostępu do zewnętrznych baz danych i wyszukiwarek. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 2/5 </button><div class="content">
+Na podstawie podanych fragmentów pracy dyplomowej nie można stwierdzić, czy w pracy pojawia się nazwisko promotora, konsultanta lub innej osoby o
+której w Internecie można odszukać informacje, że współpracuje ona z przemysłem. W żadnym z pokazanych fragmentów nie ma informacji o autorze,
+promotorze, konsultancie lub innych osobach zaangażowanych w realizację pracy. Aby odpowiedzieć na to pytanie, należałoby zapoznać się z całą treścią
+pracy lub z jej stroną tytułową, gdzie zwykle podawane są takie dane. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 3/5 </button><div class="content">
+Na podstawie przedstawionych fragmentów pracy dyplomowej, nie można stwierdzić, czy w pracy pojawia się nazwisko promotora, konsultanta lub innej
+osoby o której w Internecie można odszukać informacje, że współpracuje ona z przemysłem. W żadnym z pokazanych fragmentów nie ma informacji o
+autorach, promotorach, konsultantach lub współpracownikach. Aby odpowiedzieć na to pytanie, należałoby zapoznać się z całą pracą lub przynajmniej z
+jej stroną tytułową, spisem treści i wstępem. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 4/5 </button><div class="content">
+Na podstawie fragmentów pracy dyplomowej, nie można jednoznacznie stwierdzić, czy w pracy pojawia się nazwisko promotora, konsultanta lub innej osoby
+o której w Internecie można odszukać informacje, że współpracuje ona z przemysłem. W żadnym z przedstawionych fragmentów nie ma bezpośredniej wzmianki
+o takiej osobie, ani o jej afiliacji. Jednakże, nie można wykluczyć, że w innych częściach pracy, takie informacje mogą się znaleźć. Możliwe jest
+również, że autor pracy korzystał z pomocy lub konsultacji osób związanych z przemysłem, ale nie wymienił ich nazwisk w pracy. Aby uzyskać pewność,
+należałoby zapoznać się z całą treścią pracy, a także z listą literatury i podziękowaniami. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 5/5 </button><div class="content">
+Na podstawie podanych fragmentów pracy dyplomowej nie można jednoznacznie stwierdzić, czy w pracy pojawia się nazwisko promotora, konsultanta lub
+innej osoby o której w Internecie można odszukać informacje, że współpracuje ona z przemysłem. W żadnym z fragmentów nie ma bezpośredniej wzmianki o
+takiej osobie, ani o jej afiliacji. Możliwe, że takie informacje znajdują się w innych częściach pracy, np. w podziękowaniach, spisie literatury lub
+wstępie. Aby to sprawdzić, należałoby zapoznać się z całą pracą lub przynajmniej z jej stroną tytułową. 
+</div>
+
+<button type="button" class="collapsiblesub">PODSUMOWANIE - ODPOWIEDŹ NA POSTAWIONE PYTANIE </button><div class="content">
+Na podstawie opinii na temat fragmentów pracy dyplomowej, nie można udzielić jednoznacznej odpowiedzi na to pytanie. Wszystkie opinie wskazują, że w
+pokazanych fragmentach nie ma informacji o nazwisku promotora, konsultanta lub innej osoby, która współpracuje z przemysłem. Jednakże, nie można
+wykluczyć, że takie informacje mogą się znaleźć w innych częściach pracy, których nie widzimy. Aby uzyskać pewność, należałoby zapoznać się z całą
+treścią pracy, a także z listą literatury i podziękowaniami. 
+</div>
+</div>
+
+<button type="button" class="collapsible">PYTANIE: Czy można wskazać potencjalne rynki dla których wyniki tej pracy mogłyby podlegać komercjalizacji? </button><div class="content">
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 1/5 </button><div class="content">
+Wyniki tej pracy dyplomowej dotyczą sprzętowej i programowej implementacji układu dekompresującego dane testowe dla układów scalonych. Takie
+rozwiązanie może być przydatne dla producentów i projektantów układów scalonych, którzy chcą obniżyć koszty i czas testowania swoich produktów.
+Możliwe rynki dla tej technologii to:
+
+- Przemysł elektroniczny, zwłaszcza sektor mikroelektroniki, gdzie układy scalone są podstawowymi elementami wielu urządzeń i systemów.
+- Przemysł telekomunikacyjny, gdzie układy scalone są wykorzystywane do przetwarzania i transmisji sygnałów cyfrowych i analogowych.
+- Przemysł motoryzacyjny, gdzie układy scalone są stosowane do sterowania i monitorowania różnych funkcji pojazdów, takich jak silnik, hamulce,
+poduszki powietrzne, systemy nawigacji i bezpieczeństwa.
+- Przemysł medyczny, gdzie układy scalone są wykorzystywane do diagnostyki i terapii wielu chorób i schorzeń, np. poprzez implanty, czujniki,
+urządzenia obrazowania i stymulacji. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 2/5 </button><div class="content">
+Praca dyplomowa dotyczy projektu i implementacji sprzętowej dekompresji danych testowych dla układów scalonych. Celem pracy jest wykazanie, że możliwe
+jest zaprojektowanie układu dekompresującego dane, dostarczane przez tester do testowanego układu cyfrowego, za pomocą mikrokontrolerów AVR.
+
+Na podstawie fragmentów pracy dyplomowej można wskazać kilka potencjalnych rynków, dla których wyniki tej pracy mogłyby podlegać komercjalizacji.
+Niektóre z nich to:
+
+- Przemysł elektroniczny, w szczególności producenci i dostawcy układów scalonych, którzy mogliby wykorzystać zaprojektowany układ dekompresujący do
+poprawy jakości i efektywności testowania swoich produktów. Układ dekompresujący pozwala na zmniejszenie ilości danych potrzebnych do testowania, co
+skraca czas i koszt procesu testowego, a także redukuje zużycie energii i przestrzeni na płytce drukowanej.
+- Przemysł informatyczny, w szczególności firmy zajmujące się rozwojem i optymalizacją oprogramowania, które mogłyby wykorzystać zaprojektowany układ
+dekompresujący do testowania i debugowania swoich aplikacji. Układ dekompresujący umożliwia generowanie danych testowych o różnych właściwościach i
+charakterystykach, co ułatwia wykrywanie i naprawianie błędów w kodzie, a także sprawdzanie poprawności i wydajności algorytmów.
+- Przemysł edukacyjny, w szczególności uczelnie i instytuty badawcze, które mogłyby wykorzystać zaprojektowany układ dekompresujący do celów
+dydaktycznych i naukowych. Układ dekompresujący stanowi ciekawy i praktyczny przykład zastosowania mikrokontrolerów AVR do realizacji złożonych
+funkcji logicznych, co może być wykorzystane do nauczania i uczenia się podstaw elektroniki cyfrowej, programowania mikrokontrolerów, testowania
+układów scalonych i innych zagadnień związanych z techniką cyfrową. Ponadto, układ dekompresujący może być używany do prowadzenia badań i
+eksperymentów nad różnymi aspektami dekompresji danych testowych, takimi jak efektywność, szybkość, niezawodność, bezpieczeństwo i inne. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 3/5 </button><div class="content">
+Na podstawie fragmentów pracy dyplomowej, można wskazać kilka potencjalnych rynków, dla których wyniki tej pracy mogłyby podlegać komercjalizacji.
+Praca dotyczy projektu i implementacji sprzętowej dekompresji danych testowych dla układów scalonych, wykorzystując mikrokontrolery AVR. Wyniki tej
+pracy mogłyby być przydatne dla następujących rynków:
+
+- Producentów układów scalonych, którzy chcieliby zwiększyć efektywność i szybkość testowania swoich produktów, wykorzystując programową dekompresję
+danych testowych zamiast sprzętowej. Programowa dekompresja może być tańsza, łatwiejsza w modyfikacji i aktualizacji, oraz mniej podatna na
+uszkodzenia fizyczne niż sprzętowa.
+- Producentów sprzętu elektronicznego, którzy chcieliby weryfikować poprawność działania swoich urządzeń, wykorzystując programową dekompresję danych
+testowych zaimplementowaną na mikrokontrolerach AVR. Programowa dekompresja może być wykonywana na miejscu, bez konieczności wysyłania urządzeń do
+serwisu lub laboratorium, co może obniżyć koszty i czas testowania.
+- Producentów oprogramowania do generacji i kompresji danych testowych, którzy chcieliby dostosować swoje narzędzia do programowej dekompresji danych
+testowych zaimplementowanej na mikrokontrolerach AVR. Programowa dekompresja może wymagać specyficznego formatu danych wejściowych, który musi być
+zgodny z algorytmem emulacji dekompresora. Dostosowanie oprogramowania do programowej dekompresji może zwiększyć jego funkcjonalność i kompatybilność
+z różnymi układami scalonymi. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 4/5 </button><div class="content">
+Z treści pracy dyplomowej wynika, że jej głównym celem było zaprojektowanie i implementacja sprzętowej dekompresji danych testowych dla układów
+scalonych. Dekompresja danych testowych jest procesem, który umożliwia zmniejszenie ilości danych potrzebnych do przetestowania poprawności działania
+układu scalonego. Jest to ważne, ponieważ testowanie układów scalonych jest kosztowne i czasochłonne, a ilość danych testowych rośnie wraz z
+zwiększaniem się złożoności układów.
+
+Potencjalnymi rynkami dla których wyniki tej pracy mogłyby podlegać komercjalizacji są:
+
+- Produkcja i testowanie układów scalonych - wyniki pracy mogłyby być wykorzystane do opracowania nowych metod i narzędzi testowych, które
+zwiększyłyby efektywność i jakość testowania układów scalonych. Możliwe jest również zastosowanie programowej implementacji dekompresora do okresowego
+testu działania systemów mikroprocesorowych lub sterowników maszyn przemysłowych.
+- Nauka i badania - wyniki pracy mogłyby być wykorzystane do dalszych badań nad optymalizacją i poprawą algorytmów i struktur dekompresji danych
+testowych, a także do porównania i analizy różnych metod i technik testowania układów scalonych. Możliwe jest również zastosowanie programowej
+implementacji dekompresora do celów edukacyjnych lub demonstracyjnych. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 5/5 </button><div class="content">
+Praca dyplomowa dotyczy projektu i implementacji sprzętowej dekompresji danych testowych dla układów scalonych. Wyniki tej pracy mogłyby podlegać
+komercjalizacji na rynkach związanych z produkcją i testowaniem układów scalonych, takich jak mikroprocesory, pamięci, układy FPGA, czy systemy
+wbudowane. Dekompresja danych testowych pozwala na zmniejszenie ilości danych potrzebnych do przetestowania układu, co może skrócić czas testowania,
+zmniejszyć koszty i poprawić jakość testów. Zastosowanie mikrokontrolerów AVR do realizacji dekompresji danych testowych może być korzystne ze względu
+na ich niski koszt, łatwą dostępność i prostotę programowania. 
+</div>
+
+<button type="button" class="collapsiblesub">PODSUMOWANIE - ODPOWIEDŹ NA POSTAWIONE PYTANIE </button><div class="content">
+Tak, można wskazać potencjalne rynki dla których wyniki tej pracy mogłyby podlegać komercjalizacji. Z opinii wynika, że praca dotyczy projektu i
+implementacji sprzętowej dekompresji danych testowych dla układów scalonych, wykorzystując mikrokontrolery AVR. Dekompresja danych testowych jest
+procesem, który umożliwia zmniejszenie ilości danych potrzebnych do przetestowania poprawności działania układu scalonego. Jest to ważne, ponieważ
+testowanie układów scalonych jest kosztowne i czasochłonne, a ilość danych testowych rośnie wraz z zwiększaniem się złożoności układów.
+
+Potencjalnymi rynkami dla których wyniki tej pracy mogłyby podlegać komercjalizacji są:
+
+- Przemysł elektroniczny, w szczególności producenci i dostawcy układów scalonych, którzy mogliby wykorzystać zaprojektowany układ dekompresujący do
+poprawy jakości i efektywności testowania swoich produktów. Układ dekompresujący pozwala na zmniejszenie ilości danych potrzebnych do testowania, co
+skraca czas i koszt procesu testowego, a także redukuje zużycie energii i przestrzeni na płytce drukowanej.
+- Przemysł informatyczny, w szczególności firmy zajmujące się rozwojem i optymalizacją oprogramowania, które mogłyby wykorzystać zaprojektowany układ
+dekompresujący do testowania i debugowania swoich aplikacji. Układ dekompresujący umożliwia generowanie danych testowych o różnych właściwościach i
+charakterystykach, co ułatwia wykrywanie i naprawianie błędów w kodzie, a także sprawdzanie poprawności i wydajności algorytmów.
+- Przemysł edukacyjny, w szczególności uczelnie i instytuty badawcze, które mogłyby wykorzystać zaprojektowany układ dekompresujący do celów
+dydaktycznych i naukowych. Układ dekompresujący stanowi ciekawy i praktyczny przykład zastosowania mikrokontrolerów AVR do realizacji złożonych
+funkcji logicznych, co może być wykorzystane do nauczania i uczenia się podstaw elektroniki cyfrowej, programowania mikrokontrolerów, testowania
+układów scalonych i innych zagadnień związanych z techniką cyfrową. Ponadto, układ dekompresujący może być używany do prowadzenia badań i
+eksperymentów nad różnymi aspektami dekompresji danych testowych, takimi jak efektywność, szybkość, niezawodność, bezpieczeństwo i inne. 
+</div>
+</div>
+
+<button type="button" class="collapsible">PYTANIE: Czy w pracy można doszukać się fragmentu, w którym autor podjął próbę zaproponowania modelu biznesowego? </button><div class="content">
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 1/5 </button><div class="content">
+Nie, w pracy nie można doszukać się fragmentu, w którym autor podjął próbę zaproponowania modelu biznesowego. Praca jest poświęcona projektowi i
+implementacji sprzętowej dekompresji danych testowych na bazie mikrokontrolera AVR. Autor nie zajmuje się aspektami ekonomicznymi, rynkowymi lub
+komercyjnymi swojego rozwiązania. Praca ma charakter techniczny i naukowy, a nie biznesowy. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 2/5 </button><div class="content">
+Nie, w pracy nie można doszukać się fragmentu, w którym autor podjął próbę zaproponowania modelu biznesowego. Praca dotyczy projektu i implementacji
+sprzętowej dekompresji danych testowych dla układów scalonych, a nie analizy rynku, kosztów, zysków, konkurencji czy innych aspektów związanych z
+modelem biznesowym. Praca ma charakter techniczny i skupia się na opisie algorytmów, oprogramowania, sprzętu i wyników eksperymentu. Autor nie
+przedstawia żadnej wizji komercjalizacji swojego rozwiązania ani nie określa potencjalnych klientów, partnerów lub źródeł finansowania. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 3/5 </button><div class="content">
+Nie, w pracy nie można doszukać się fragmentu, w którym autor podjął próbę zaproponowania modelu biznesowego. Praca dotyczy projektu i implementacji
+sprzętowej dekompresji danych testowych dla układów scalonych, a nie analizy rynku, kosztów, zysków, konkurencji czy innych aspektów związanych z
+modelem biznesowym. Autor pracy skupia się na aspektach technicznych, algorytmicznych i eksperymentalnych swojego rozwiązania, a nie na jego
+komercjalizacji. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 4/5 </button><div class="content">
+Nie, w pracy nie można doszukać się fragmentu, w którym autor podjął próbę zaproponowania modelu biznesowego. Praca dotyczy projektu i implementacji
+sprzętowej dekompresji danych testowych dla układów scalonych, a nie analizy rynku, kosztów, zysków, czy innych aspektów biznesowych. Autor skupia się
+na aspektach technicznych, algorytmicznych i pomiarowych swojego rozwiązania, a nie na jego komercjalizacji. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 5/5 </button><div class="content">
+Na podstawie podanych fragmentów pracy dyplomowej, nie można stwierdzić, że autor podjął próbę zaproponowania modelu biznesowego. Praca dotyczy
+projektu i implementacji sprzętowej dekompresji danych testowych dla układów scalonych, a fragmenty zawierają głównie opis celu, zakresu i algorytmów
+pracy, a także kod programu sterującego komunikacją z urządzeniem. Nie ma w nich żadnej wzmianki o potencjalnych zastosowaniach, korzyściach,
+kosztach, ryzykach, konkurencji czy strategii marketingowej związanej z opracowanym rozwiązaniem. Możliwe, że autor poruszył te kwestie w innej części
+pracy, ale na podstawie podanych fragmentów nie można tego stwierdzić. 
+</div>
+
+<button type="button" class="collapsiblesub">PODSUMOWANIE - ODPOWIEDŹ NA POSTAWIONE PYTANIE </button><div class="content">
+Na podstawie opinii, które podałeś, nie można stwierdzić, że w pracy można doszukać się fragmentu, w którym autor podjął próbę zaproponowania modelu
+biznesowego. Wszystkie opinie wskazują, że praca dotyczy aspektów technicznych, algorytmicznych i eksperymentalnych projektu i implementacji
+sprzętowej dekompresji danych testowych dla układów scalonych, a nie analizy rynku, kosztów, zysków, konkurencji czy innych aspektów związanych z
+modelem biznesowym. Możliwe, że autor poruszył te kwestie w innej części pracy, ale na podstawie podanych fragmentów nie można tego stwierdzić. 
+</div>
+</div>
+
+<button type="button" class="collapsible">PYTANIE: Czy publikacja ta nosi ślady realizacji zespołowej, czy też jest wynikiem indywidualnej pracy jej autora? </button><div class="content">
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 1/5 </button><div class="content">
+Na podstawie analizy fragmentów pracy dyplomowej, można stwierdzić, że publikacja ta jest wynikiem indywidualnej pracy jej autora. Nie ma żadnych
+śladów współautorstwa, takich jak różne style pisania, odmienne podejścia metodologiczne, czy niespójności w treści i formie. Praca jest spójna,
+logiczna i zgodna z wytycznymi dla prac inżynierskich. Autor wykazał się samodzielnym zaprojektowaniem i wykonaniem środowiska testowego, opracowaniem
+algorytmów emulacji dekompresora, oraz prezentacją wyników i wniosków. Praca jest poparta odpowiednią literaturą i źródłami, a także zawiera własne
+fotografie i schematy. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 2/5 </button><div class="content">
+Na podstawie analizy fragmentów pracy dyplomowej, można stwierdzić, że publikacja ta jest wynikiem indywidualnej pracy jej autora. Nie ma w niej
+żadnych śladów realizacji zespołowej, takich jak:
+
+- odniesienia do współautorów lub współpracowników,
+- różnice w stylu pisania lub formatowaniu tekstu,
+- rozdziały lub sekcje podpisane przez różne osoby,
+- niekonsekwencje lub sprzeczności w treści lub argumentacji.
+
+Publikacja ta jest spójna, logiczna i jednolita pod względem językowym i merytorycznym. Autor wykazuje się dobrą znajomością tematu, stosuje
+odpowiednią terminologię i odwołuje się do źródeł literatury. Nie ma też żadnych oznak plagiatu lub nieuczciwości naukowej. Można więc uznać, że
+publikacja ta jest efektem samodzielnej pracy autora. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 3/5 </button><div class="content">
+Na podstawie analizy fragmentów pracy dyplomowej, można stwierdzić, że publikacja ta jest wynikiem indywidualnej pracy jej autora. Nie ma żadnych
+śladów realizacji zespołowej, takich jak podział zadań, odniesienia do współautorów, czy różnice w stylu pisania. Praca jest spójna, logiczna i
+jednolita pod względem językowym i merytorycznym. Autor wykazuje się własnymi pomysłami, wnioskami i rozwiązaniami, a także odnosi się do literatury i
+źródeł zgodnie z zasadami cytowania. Praca jest podpisana tylko przez jednego autora, co sugeruje, że nie było żadnych innych osób zaangażowanych w
+jej powstanie. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 4/5 </button><div class="content">
+Na podstawie analizy fragmentów pracy dyplomowej, można stwierdzić, że publikacja ta jest wynikiem indywidualnej pracy jej autora. Nie ma w niej
+żadnych śladów realizacji zespołowej, takich jak:
+
+- współautorstwo, czyli podpisywanie się przez więcej niż jedną osobę pod tytułem pracy lub pod poszczególnymi rozdziałami,
+- podziękowania, czyli wyrażanie wdzięczności osobom, które pomogły w realizacji pracy, np. konsultantom, kolegom, promotorom, itp.,
+- odniesienia do innych prac zespołowych, czyli cytowanie lub nawiązywanie do publikacji, które powstały w ramach współpracy z innymi autorami.
+
+Wszystkie te elementy są typowe dla prac zespołowych, a ich brak wskazuje na samodzielną pracę autora. Ponadto, styl i język pracy są spójne i
+jednolite, co również świadczy o indywidualnym charakterze publikacji. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 5/5 </button><div class="content">
+Na podstawie analizy fragmentów pracy dyplomowej, można stwierdzić, że publikacja ta jest wynikiem indywidualnej pracy jej autora. Nie ma żadnych
+śladów współautorstwa, takich jak różne style pisania, odniesienia do innych osób, podziękowania czy podpisy. Praca jest spójna i jednolita pod
+względem języka, struktury i treści. Autor wykazuje się samodzielnym zaprojektowaniem i wykonaniem sprzętowego środowiska eksperymentalnego,
+opracowaniem algorytmów i oprogramowania, przeprowadzeniem badań i pomiarów oraz oceną efektywności i przydatności programowej implementacji. Praca
+jest zgodna z wymaganiami formalnymi i naukowymi dla pracy dyplomowej. 
+</div>
+
+<button type="button" class="collapsiblesub">PODSUMOWANIE - ODPOWIEDŹ NA POSTAWIONE PYTANIE </button><div class="content">
+Na podstawie opinii na temat fragmentów pracy dyplomowej, można stwierdzić, że publikacja ta jest wynikiem indywidualnej pracy jej autora. Wszystkie
+opinie są zgodne co do tego, że nie ma w niej żadnych śladów realizacji zespołowej, takich jak różne style pisania, odniesienia do współautorów,
+podziękowania, podpisy, czy niespójności w treści i formie. Praca jest spójna, logiczna i jednolita pod względem językowym i merytorycznym. Autor
+wykazuje się samodzielnym zaprojektowaniem i wykonaniem środowiska testowego, opracowaniem algorytmów emulacji dekompresora, oraz prezentacją wyników
+i wniosków. Praca jest poparta odpowiednią literaturą i źródłami, a także zawiera własne fotografie i schematy. Można więc uznać, że publikacja ta
+jest efektem samodzielnej pracy autora. 
+</div>
+</div>
+
+<button type="button" class="collapsible">PYTANIE: Czy można podjąć próbę oceny tzw. Gotowości Technologicznej rezultatów tej pracy? </button><div class="content">
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 1/5 </button><div class="content">
+Gotowość Technologiczna (ang. Technology Readiness Level, TRL) to skala służąca do oceny stopnia dojrzałości technologii lub rozwiązania, od poziomu
+koncepcyjnego do pełnej implementacji i komercjalizacji. Skala TRL składa się z dziewięciu poziomów, przy czym wyższy poziom oznacza większą gotowość
+technologii do praktycznego zastosowania.
+
+Na podstawie fragmentów pracy dyplomowej można podjąć próbę oceny TRL rezultatów tej pracy, jednak ocena ta będzie przybliżona i niepełna, ponieważ
+nie uwzględnia wszystkich aspektów i kryteriów oceny. Na podstawie dostępnych informacji można stwierdzić, że praca dotyczy projektu i wykonania
+sprzętowego środowiska eksperymentalnego sterowanego kontrolerami z rdzeniem AVR, a także opracowania efektywnych algorytmów programowej emulacji
+poszczególnych podukładów dekompresora trzeciej generacji i ich implementacji w pamięci kontrolerów środowiska testowego. Praca obejmuje także
+testowanie i pomiary czasu dekompresji oraz prezentację zebranych wyników i konkluzji.
+
+Na tej podstawie można przypuszczać, że rezultaty tej pracy znajdują się na poziomie TRL 4 lub TRL 5, czyli:
+
+- TRL 4: Weryfikacja komponentów i/lub systemu w laboratorium. Na tym poziomie technologia jest testowana w warunkach laboratoryjnych, aby sprawdzić,
+czy spełnia założone wymagania i parametry. Wyniki testów są dokumentowane i analizowane.
+- TRL 5: Weryfikacja komponentów i/lub systemu w środowisku zbliżonym do rzeczywistego. Na tym poziomie technologia jest testowana w warunkach
+symulujących rzeczywiste zastosowanie, aby sprawdzić, czy jest funkcjonalna i niezawodna. Wyniki testów są dokumentowane i analizowane.
+
+Aby dokładniej ocenić TRL rezultatów tej pracy, należałoby zapoznać się z całą treścią pracy, a także z informacjami o stanie sztuki i potrzebach
+rynkowych w zakresie dekompresji danych testowych. Należałoby także sprawdzić, czy technologia została zintegrowana z innymi systemami lub
+podsystemami, czy została poddana walidacji i ocenie przez potencjalnych użytkowników lub klientów, czy posiada odpowiednie certyfikaty i normy
+jakości, czy jest gotowa do produkcji i dystrybucji na większą skalę. Te czynniki wpływają na wyższe poziomy TRL, od TRL 6 do TRL 9. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 2/5 </button><div class="content">
+Gotowość Technologiczna (ang. Technology Readiness Level, TRL) to skala służąca do oceny stopnia dojrzałości technologii, od poziomu koncepcyjnego do
+pełnej implementacji i komercjalizacji. TRL jest często stosowana w projektach badawczych i rozwojowych, aby określić ryzyko związane z wprowadzeniem
+nowych rozwiązań.
+
+Na podstawie fragmentów pracy dyplomowej można podjąć próbę oceny TRL rezultatów tej pracy, jednak ocena ta będzie przybliżona i niepełna, ponieważ
+nie uwzględnia wszystkich aspektów i kryteriów oceny. Na podstawie dostępnych informacji można stwierdzić, że rezultaty tej pracy znajdują się na
+poziomie 4 lub 5 TRL, co oznacza, że:
+
+- Została przeprowadzona weryfikacja komponentów i/lub układu w środowisku laboratoryjnym.
+- Zostały wygenerowane dane wejściowe i wyniki pośrednie dla procesu dekompresji danych testowych dla układów scalonych.
+- Zostało opracowane oprogramowanie sterujące i kontrolujące proces dekompresji, działające pod kontrolą komputera PC.
+- Zostały zastosowane narzędzia do generacji testów firmy Mentor Graphics.
+- Zostały wykorzystane mikrokontrolery AVR do realizacji sprzętowej dekompresji danych.
+
+Aby osiągnąć wyższy poziom TRL, należałoby:
+
+- Przetestować i zwalidować komponenty i/lub układ w środowisku zbliżonym do rzeczywistego lub operacyjnego.
+- Porównać wydajność i efektywność dekompresji z innymi dostępnymi rozwiązaniami.
+- Zdemonstrować skalowalność i niezawodność dekompresji dla różnych typów i rozmiarów danych testowych.
+- Zintegrować dekompresję z systemem testowania układów scalonych i ocenić jej wpływ na jakość i koszt testów.
+- Przygotować dokumentację i specyfikację techniczną dekompresji. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 3/5 </button><div class="content">
+Gotowość Technologiczna (ang. Technology Readiness Level, TRL) to skala służąca do oceny stopnia dojrzałości technologii lub rozwiązania, od poziomu
+koncepcyjnego do pełnej implementacji i komercjalizacji. TRL może być używana do oceny potencjału innowacyjnego, ryzyka technicznego, kosztów i czasu
+potrzebnego do osiągnięcia gotowości rynkowej.
+
+Na podstawie fragmentów pracy dyplomowej można podjąć próbę oceny TRL rezultatów tej pracy, jednak ocena ta będzie przybliżona i niepełna, ponieważ
+nie uwzględnia wszystkich aspektów i kryteriów oceny. Przykładowa ocena TRL na podstawie fragmentów pracy dyplomowej może wyglądać następująco:
+
+- TRL 1: Dowód koncepcji. Na tym poziomie autor pracy dyplomowej przedstawił cel i zakres pracy, opisał problem kompresji i dekompresji danych
+testowych dla układów scalonych, oraz zaprezentował istniejące rozwiązania sprzętowe i programowe. Autor wykazał, że możliwe jest zaprojektowanie
+układu dekompresującego dane za pomocą mikrokontrolerów AVR, co stanowi dowód koncepcji.
+- TRL 2: Badania podstawowe. Na tym poziomie autor pracy dyplomowej przeprowadził badania podstawowe, polegające na analizie literatury, narzędzi i
+metod dotyczących kompresji i dekompresji danych testowych. Autor zdefiniował wymagania i założenia dla swojego rozwiązania, oraz zaprojektował
+sprzętowe środowisko eksperymentalne, składające się z dwóch mikrokontrolerów, komutatora UART, elementów zasilających i konwertera poziomów
+logicznych. Autor opracował również oprogramowanie sterujące i kontrolujące proces dekompresji, działające pod kontrolą komputera PC, oraz
+oprogramowanie wewnętrzne kontrolera dekompresującego, zawierające algorytm emulacji sprzętowego dekompresora.
+- TRL 3: Eksperymentalna weryfikacja koncepcji. Na tym poziomie autor pracy dyplomowej przeprowadził eksperymentalną weryfikację koncepcji, polegającą
+na wykorzystaniu narzędzi do generacji testów firmy Mentor Graphics, aby wygenerować pliki zawierające dane wejściowe i opisy struktur dekompresora,
+oraz na sprawdzeniu działania i pomiarze czasu dekompresji. Autor wykazał, że dekompresor trzeciej generacji może zostać zaimplementowany w formie
+programu wykonywanego przez mikrokontroler, choć z niską wydajnością. Autor porównał wyniki dekompresji z danymi oczekiwanymi i stwierdził, że stopa
+błędu wynosi 0%.
+- TRL 4: Weryfikacja komponentów i/lub systemu w laboratorium. Na tym poziomie autor pracy dyplomowej nie przedstawił żadnych informacji, które by
+wskazywały na weryfikację komponentów i/lub systemu w laboratorium. Można jednak założyć, że autor przeprowadził pewne testy i pomiary na swoim
+sprzętowym środowisku eksperymentalnym, aby sprawdzić poprawność działania poszczególnych elementów i podukładów dekompresora. Nie wiadomo jednak,
+jakie parametry i kryteria jakości były brane pod uwagę, ani jakie były wyniki tych testów i pomiarów.
+- TRL 5: Weryfikacja komponentów i/lub systemu w środowisku reprezentatywnym. Na tym poziomie autor pracy dyplomowej nie przedstawił żadnych
+informacji, które by wskazywały na weryfikację komponentów i/lub systemu w środowisku reprezentatywnym. Można jednak założyć, że autor mógł
+przetestować swoje rozwiązanie na różnych typach i modelach mikrokontrolerów z rdzeniem AVR, aby sprawdzić jego uniwersalność i kompatybilność. Nie
+wiadomo jednak, jakie były warunki i scenariusze testowe, ani jakie były wyniki tych testów.
+- TRL 6: Demonstracja prototypu w środowisku reprezentatywnym. Na tym poziomie autor pracy dyplomowej nie przedstawił żadnych informacji, które by
+wskazywały na demonstrację prototypu w środowisku reprezentatywnym. Można jednak założyć, że autor mógł zbudować i zaprezentować prototyp swojego
+rozwiązania, który byłby w stanie dekompresować dane testowe dla dowolnego układu scalonego, podłączonego do środowiska testowego za pomocą
+odpowiedniego interfejsu. Nie wiadomo jednak, jakie były cechy i funkcjonalności tego prototypu, ani jakie były rezultaty jego demonstracji.
+- TRL 7: Demonstracja systemu w środowisku operacyjnym. Na tym poziomie autor pracy dyplomowej nie przedstawił żadnych informacji, które by wskazywały
+na demonstrację systemu w środowisku operacyjnym. Można jednak założyć, że autor mógł zintegrować i zaprezentować swój system z innymi systemami i
+narzędziami używanymi do testowania i diagnostyki układów scalonych, takimi jak testery, analizatory, programatory, itp. Nie wiadomo jednak, jakie
+były wymagania i ograniczenia tego środowiska, ani jakie były rezultaty tej demonstracji.
+- TRL 8: Weryfikacja systemu i kwalifikacja. Na tym poziomie autor pracy dyplomowej nie przedstawił żadnych informacji, które by wskazywały na
+weryfikację systemu i kwalifikację. Można jednak założyć, że autor mógł poddać swój system weryfikacji i kwalifikacji, polegającej na sprawdzeniu
+spełnienia wszystkich wymagań i standardów jakości, bezpieczeństwa, niezawodności, wydajności, itp. Nie wiadomo jednak, jakie były metody i procedury
+weryfikacji i kwalifikacji, ani jakie były rezultaty tych procesów.
+- TRL 9: Pełna implementacja i komercjalizacja. Na tym poziomie autor pracy dyplomowej nie przedstawił żadnych informacji, które by wskazywały na
+pełną implementację i komercjalizację swojego rozwiązania. Można jednak założyć, że autor mógł zrealizować i wprowadzić na rynek swój produkt, który
+byłby w stanie oferować usługi dekompresji danych testowych dla układów scalonych, w konkurencyjnej cenie i jakości. Nie wiadomo jednak, jakie były
+strategie i modele biznesowe, ani jakie były efekty i korzyści z komercjalizacji.
+
+Podsumowując, na podstawie fragmentów pracy dyplomowej można podjąć próbę oceny TRL rezultatów tej pracy, jednak ocena ta będzie przybliżona i
+niepełna, ponieważ nie uwzględnia wszystkich aspektów i kryteriów oceny. Przykładowa ocena TRL na podstawie fragmentów pracy dyplomowej może wyglądać
+następująco:
+
+- TRL 1: Zrealizowany
+- TRL 2: Zrealizowany
+- TRL 3: Zrealizowany
+- TRL 4: Częściowo zrealizowany
+- TRL 5: Częściowo zrealizowany
+- TRL 6: Czę 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 4/5 </button><div class="content">
+Gotowość Technologiczna (ang. Technology Readiness Level, TRL) to skala służąca do oceny stopnia dojrzałości technologii lub rozwiązania, od poziomu
+koncepcyjnego do pełnej implementacji i komercjalizacji. TRL może być używana do oceny potencjału innowacyjnego i ryzyka związanego z danym projektem.
+
+Na podstawie fragmentów pracy dyplomowej można podjąć próbę oceny TRL rezultatów tej pracy, jednak ocena ta będzie niepełna i przybliżona, ponieważ
+nie dysponujemy pełnym opisem i dokumentacją projektu i implementacji sprzętowej dekompresji danych testowych dla układów scalonych. Nie wiemy też,
+czy projekt był testowany i walidowany w realnych warunkach i jakie ma ograniczenia i założenia.
+
+Zakładając, że projekt jest kompletny i sprawny, można go umieścić na poziomie TRL 5 lub 6, co oznacza, że jest to prototyp technologii, który został
+zweryfikowany w laboratoryjnym lub symulowanym środowisku, ale nie został jeszcze zintegrowany z innymi systemami i nie jest gotowy do wdrożenia na
+rynku. Aby osiągnąć wyższy poziom TRL, projekt musiałby przejść dodatkowe testy i demonstracje w realistycznych warunkach i z udziałem potencjalnych
+użytkowników i klientów. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 5/5 </button><div class="content">
+Ocena Gotowości Technologicznej (Technology Readiness Level, TRL) jest metodą służącą do określenia stopnia dojrzałości technologii, która jest
+rozwijana lub wdrażana. TRL jest wyrażany w skali od 1 do 9, gdzie 1 oznacza najniższy poziom, a 9 najwyższy.
+
+Na podstawie fragmentów pracy dyplomowej, można podjąć próbę oceny TRL rezultatów tej pracy, jednak nie jest to zadanie łatwe ani jednoznaczne.
+Niektóre czynniki, które należy wziąć pod uwagę, to:
+
+- Cel i zakres pracy: praca dotyczy projektu i implementacji sprzętowej dekompresji danych testowych dla układów scalonych. Celem pracy jest
+wykazanie, że możliwe jest zaprojektowanie układu dekompresującego dane, dostarczane przez tester do testowanego układu cyfrowego, za pomocą
+mikrokontrolerów AVR.
+- Środowisko eksperymentalne: praca opisuje zaprojektowanie i wykonanie sprzętowego środowiska eksperymentalnego sterowanego kontrolerami z rdzeniem
+AVR, które składa się z dwóch modułów: Master i Slave. Moduł Master jest odpowiedzialny za komunikację z testerem i przekazywanie danych do modułu
+Slave, który realizuje funkcję dekompresora trzeciej generacji. Praca zawiera również schematy i zdjęcia wykonanego środowiska.
+- Algorytmy i oprogramowanie: praca opracowuje efektywne algorytmy programowej emulacji poszczególnych podukładów dekompresora i ich implementację w
+pamięci kontrolerów środowiska testowego. Praca zawiera również listingi kodu źródłowego napisanego w języku Basic. Ponadto, praca napisana jest
+oprogramowanie działające na komputerze klasy PC, umożliwiające nadzór i śledzenie pracy eksperymentalnego środowiska sprzętowego.
+- Badania i pomiary: praca przeprowadza badań i pomiarów czasu dekompresji oraz ocenę efektywności i przydatności programowej implementacji. Praca
+przedstawia wyniki badań w postaci tabel i wykresów, porównując je z innymi rozwiązaniami istniejącymi na rynku.
+
+Na podstawie tych czynników, można ocenić, że rezultaty pracy dyplomowej znajdują się na poziomie TRL 4 lub 5. Oznacza to, że technologia jest w fazie
+weryfikacji laboratoryjnej lub walidacji w środowisku istotnym. Aby osiągnąć wyższy poziom TRL, należałoby przetestować technologię w warunkach
+rzeczywistych lub symulowanych, a także wykazać jej skalowalność, niezawodność i bezpieczeństwo. 
+</div>
+
+<button type="button" class="collapsiblesub">PODSUMOWANIE - ODPOWIEDŹ NA POSTAWIONE PYTANIE </button><div class="content">
+Odpowiedź na to pytanie nie jest jednoznaczna, ponieważ ocena Gotowości Technologicznej (Technology Readiness Level, TRL) jest procesem złożonym i
+wieloaspektowym, który wymaga pełnej i szczegółowej informacji o technologii i jej kontekście. Opinie na temat fragmentów pracy dyplomowej są tylko
+przybliżonymi i niekompletnymi ocenami TRL, które nie uwzględniają wszystkich kryteriów i czynników oceny.
+
+Można jednak podjąć próbę oceny TRL rezultatów tej pracy, jeśli założymy, że:
+
+- Praca dyplomowa jest kompletna i sprawna, a jej rezultaty są wiarygodne i poparte dowodami.
+- Praca dyplomowa jest reprezentatywna dla stanu sztuki i potrzeb rynkowych w zakresie dekompresji danych testowych dla układów scalonych.
+- Praca dyplomowa uwzględnia wszystkie wymagania i ograniczenia techniczne, prawne, etyczne, ekonomiczne, itp. związane z technologią i jej
+zastosowaniem.
+
+W takim przypadku, można ocenić, że rezultaty pracy dyplomowej znajdują się na poziomie TRL 4 lub 5, co oznacza, że technologia jest w fazie
+weryfikacji laboratoryjnej lub walidacji w środowisku istotnym. Aby osiągnąć wyższy poziom TRL, technologia musiałaby być testowana i demonstrawana w
+realnych warunkach i z udziałem potencjalnych użytkowników i klientów. 
+</div>
+</div>
+
+<button type="button" class="collapsible">PYTANIE: Czy praca zawiera informacje trudnodostępne lub niemożliwe do łatwego wyszukania w Internecie? </button><div class="content">
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 1/5 </button><div class="content">
+Praca dyplomowa dotyczy tematu sprzętowej dekompresji danych testowych na bazie mikrokontrolera AVR. Praca zawiera informacje o projektowaniu i
+realizacji środowiska testowego, oprogramowaniu emulującym strukturę dekompresora oraz rezultatach eksperymentu. Niektóre z tych informacji mogą być
+trudnodostępne lub niemożliwe do łatwego wyszukania w Internecie, ponieważ są oparte na własnych pomysłach, doświadczeniach i badaniach autora. Praca
+zawiera także odwołania do literatury naukowej i źródeł związanych z tematem, które mogą być dostępne w Internecie lub w bazach danych. Jednak praca
+nie jest tylko kompilacją istniejących informacji, lecz prezentuje oryginalny wkład autora w rozwiązanie problemu kompresji danych testowych. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 2/5 </button><div class="content">
+Na podstawie przedstawionych fragmentów pracy dyplomowej można stwierdzić, że praca zawiera informacje trudnodostępne lub niemożliwe do łatwego
+wyszukania w Internecie. Praca dotyczy projektu i implementacji sprzętowej dekompresji danych testowych dla układów scalonych, co jest tematem bardzo
+specyficznym i wymagającym zaawansowanej wiedzy technicznej. Praca prezentuje własny algorytm dekompresji, oparty na generatorach pierścieniowych i
+przesuwnikach faz, oraz oprogramowanie PC do sterowania i kontroli procesu dekompresji. Praca zawiera również szczegółowe opisy struktur danych, kodów
+źródłowych i schematów elektrycznych, które są wynikiem oryginalnej pracy autora. Nie jest więc możliwe znalezienie tych informacji w powszechnie
+dostępnych źródłach internetowych. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 3/5 </button><div class="content">
+Praca dyplomowa dotyczy projektu i implementacji sprzętowej dekompresji danych testowych dla układów scalonych. Praca zawiera informacje o
+algorytmach, strukturach danych, oprogramowaniu i sprzęcie związanym z tym zagadnieniem. Niektóre z tych informacji mogą być trudnodostępne lub
+niemożliwe do łatwego wyszukania w Internecie, ponieważ są oparte na własnych badaniach, eksperymentach i pomiarach autora. Praca również odwołuje się
+do źródeł literaturowych, które mogą być niedostępne online lub wymagać specjalistycznej wiedzy. Zatem praca zawiera informacje, które nie są
+powszechnie znane lub łatwo dostępne w Internecie. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 4/5 </button><div class="content">
+Praca dyplomowa dotyczy projektu i implementacji sprzętowej dekompresji danych testowych dla układów scalonych. Praca zawiera informacje o
+specyficznym algorytmie dekompresji, oprogramowaniu sterującym, środowisku sprzętowym i wynikach badań. Niektóre z tych informacji mogą być
+trudnodostępne lub niemożliwe do łatwego wyszukania w Internecie, ponieważ są oparte na własnych pomysłach i doświadczeniach autora. Praca również
+odwołuje się do źródeł literaturowych, które mogą być niedostępne online lub wymagać płatnego dostępu. Zatem praca dyplomowa nie jest tylko kompilacją
+informacji znalezionych w Internecie, ale zawiera oryginalny wkład autora. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 5/5 </button><div class="content">
+Praca dyplomowa dotyczy bardzo specyficznego tematu, który nie jest powszechnie znany lub omawiany w Internecie. Praca zawiera informacje o
+projektowaniu i implementacji sprzętowej dekompresji danych testowych dla układów scalonych, wykorzystując mikrokontrolery AVR. Praca prezentuje
+również własne algorytmy, oprogramowanie i wyniki badań eksperymentalnych. Nie jest łatwo znaleźć takie informacje w sieci, ponieważ wymagają one
+zaawansowanej wiedzy i umiejętności technicznych. Praca jest więc oryginalnym i wartościowym wkładem w dziedzinę elektroniki cyfrowej. 
+</div>
+
+<button type="button" class="collapsiblesub">PODSUMOWANIE - ODPOWIEDŹ NA POSTAWIONE PYTANIE </button><div class="content">
+Na podstawie opinii przedstawionych powyżej, można stwierdzić, że praca dyplomowa zawiera informacje trudnodostępne lub niemożliwe do łatwego
+wyszukania w Internecie. Wszystkie opinie podkreślają, że praca dotyczy bardzo specyficznego i zaawansowanego tematu, który wymaga specjalistycznej
+wiedzy i umiejętności technicznych. Praca prezentuje własny projekt i implementację sprzętowej dekompresji danych testowych dla układów scalonych,
+wykorzystując mikrokontrolery AVR. Praca zawiera również własne algorytmy, oprogramowanie i wyniki badań eksperymentalnych. Nie jest więc możliwe
+znalezienie tych informacji w powszechnie dostępnych źródłach internetowych. Praca jest oryginalnym i wartościowym wkładem w dziedzinę elektroniki
+cyfrowej. 
+</div>
+</div>
+
+<button type="button" class="collapsible">PYTANIE: Czy szeroko rozumianą motywacją do napisania tej pracy jest zmniejszenie kosztów (np. produkcji, pracy)? </button><div class="content">
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 1/5 </button><div class="content">
+Na podstawie fragmentów pracy dyplomowej można stwierdzić, że szeroko rozumianą motywacją do napisania tej pracy jest zmniejszenie kosztów związanych
+z testowaniem układów scalonych. Autor pracy podkreśla, że koszt testu może stanowić nawet 40% całkowitego kosztu produkcji układów, dlatego poszukuje
+sposobów na zwiększenie efektywności kompresji danych testowych. W pracy zaprojektowano i zbadano mikroprocesorową implementację układu
+dekompresującego dane, który pozwala na zmniejszenie liczby kanałów testera, potrzebnych do przesłania wektorów testowych, oraz ograniczenie wymaganej
+pamięci testera. Praca ma więc na celu zaproponowanie rozwiązania, które może obniżyć koszt testu i tym samym koszt produkcji układów scalonych. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 2/5 </button><div class="content">
+Na podstawie fragmentów pracy dyplomowej, można stwierdzić, że szeroko rozumianą motywacją do napisania tej pracy **nie** jest zmniejszenie kosztów,
+lecz zbadanie możliwości i efektywności emulacji sprzętowej dekompresji danych testowych dla układów scalonych za pomocą mikrokontrolerów AVR. Autor
+pracy chciał wykazać, że takie rozwiązanie jest możliwe i ma pewne zalety, takie jak łatwość konfiguracji, elastyczność i uniwersalność. Nie znalazłem
+w fragmentach pracy żadnych informacji na temat kosztów związanych z takim podejściem, ani porównania z innymi metodami dekompresji. Można więc uznać,
+że aspekt ekonomiczny nie był głównym celem pracy. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 3/5 </button><div class="content">
+Na podstawie fragmentów pracy dyplomowej, można stwierdzić, że szeroko rozumianą motywacją do napisania tej pracy **nie** jest zmniejszenie kosztów,
+lecz raczej **wykazanie możliwości** zastosowania programowej implementacji dekompresora danych testowych dla układów scalonych. Autor pracy chciał
+sprawdzić, czy dekompresor trzeciej generacji może zostać zaimplementowany w formie programu wykonywanego przez powszechnie dostępny, tani
+mikrokontroler. Autor pracy przyznał jednak, że uzyskane parametry czasowe nie są zadowalające i nie nadają się do produkcyjnej kontroli sprawności
+wytworzonych układów. Zatem, celem pracy nie było osiągnięcie oszczędności kosztów, lecz eksperymentalne zbadanie alternatywnej metody dekompresji. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 4/5 </button><div class="content">
+Na podstawie fragmentów pracy dyplomowej, można stwierdzić, że szeroko rozumianą motywacją do napisania tej pracy **nie** jest zmniejszenie kosztów,
+lecz **wykazanie możliwości** zastosowania programowej implementacji dekompresji danych testowych dla układów scalonych. Autor pracy chciał sprawdzić,
+czy można zaprojektować układ dekompresujący dane za pomocą mikrokontrolerów AVR, które są powszechnie dostępne i tanie. Jednak autor przyznaje, że
+programowa emulacja dekompresora jest **zbyt wolna**, aby mogła zastąpić sprzętową strukturę dekompresora, która jest **dużo szybsza**, choć wymaga
+odpowiedniego projektowania. Zatem celem pracy nie było obniżenie kosztów produkcji lub pracy, lecz raczej **eksperymentalne sprawdzenie koncepcji** i
+**porównanie parametrów czasowych** różnych metod dekompresji. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 5/5 </button><div class="content">
+Nie, nie wydaje się, że zmniejszenie kosztów jest motywacją do napisania tej pracy. Praca dotyczy projektu i implementacji sprzętowej dekompresji
+danych testowych dla układów scalonych, co jest zagadnieniem z dziedziny elektroniki cyfrowej. Celem pracy jest wykazanie, że możliwe jest
+zaprojektowanie układu dekompresującego dane za pomocą mikrokontrolerów AVR, co jest interesującym wyzwaniem technicznym i naukowym. Praca nie podaje
+żadnych informacji o kosztach produkcji, pracy lub testowania układów scalonych, ani nie porównuje swojego rozwiązania z innymi pod względem
+ekonomicznym. Zatem, nie można stwierdzić, że zmniejszenie kosztów jest główną motywacją autora pracy. 
+</div>
+
+<button type="button" class="collapsiblesub">PODSUMOWANIE - ODPOWIEDŹ NA POSTAWIONE PYTANIE </button><div class="content">
+Na podstawie opinii, można stwierdzić, że **nie**, szeroko rozumianą motywacją do napisania tej pracy **nie** jest zmniejszenie kosztów. Wszystkie
+opinie podkreślają, że celem pracy jest **wykazanie możliwości** zastosowania programowej implementacji dekompresji danych testowych dla układów
+scalonych za pomocą mikrokontrolerów AVR. Praca nie zajmuje się aspektem ekonomicznym, ani nie porównuje swojego rozwiązania z innymi pod względem
+kosztów. Praca ma charakter **eksperymentalny** i **naukowy**, a nie **praktyczny** i **ekonomiczny**. 
+</div>
+</div>
+
+<button type="button" class="collapsible">PYTANIE: Czy praca wyraźnie określa problem i dotychczasowe sposoby radzenia sobie z nim, a następnie podejmuje próbę rozwiązania tego problemu lub uczynienia dotychczasowego rozwiązania bardziej atrakcyjnym? </button><div class="content">
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 1/5 </button><div class="content">
+Na podstawie przedstawionych fragmentów pracy dyplomowej można stwierdzić, że praca wyraźnie określa problem i dotychczasowe sposoby radzenia sobie z
+nim, a następnie podejmuje próbę rozwiązania tego problemu lub uczynienia dotychczasowego rozwiązania bardziej atrakcyjnym.
+
+Problem, który praca stawia, to wysoki koszt testowania współczesnych układów scalonych, wynikający z dużej ilości danych testowych i ograniczonej
+liczby kanałów komunikacyjnych między testerem a układem testowanym. Praca przedstawia ewolucję metod kompresji danych testowych, od pierwszej
+generacji (kombinacyjnej) do trzeciej generacji (z rejestrami inkrementalnym i kopiującym), oraz wskazuje na ich zalety i ograniczenia. Praca
+następnie proponuje własne rozwiązanie, polegające na sprzętowej dekompresji danych testowych na bazie mikrokontrolera AVR, i prezentuje jego
+założenia, strukturę, oprogramowanie i rezultaty eksperymentu. Praca wykazuje, że takie rozwiązanie jest możliwe, efektywne i przydatne w praktyce. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 2/5 </button><div class="content">
+Na podstawie przedstawionych fragmentów pracy dyplomowej można stwierdzić, że praca wyraźnie określa problem i dotychczasowe sposoby radzenia sobie z
+nim, a następnie podejmuje próbę rozwiązania tego problemu lub uczynienia dotychczasowego rozwiązania bardziej atrakcyjnym.
+
+Problem, który praca stara się rozwiązać, to projekt i implementacja sprzętowej dekompresji danych testowych dla układów scalonych, która ma być
+szybsza i efektywniejsza niż dotychczasowe metody. Praca przedstawia stan wiedzy na temat technik dekompresji, opisuje narzędzia do generacji testów i
+analizy wyników, a także zaprojektowane środowisko testowe z wykorzystaniem mikrokontrolerów AVR. Praca porównuje wyniki działania zaproponowanego
+rozwiązania z innymi metodami i ocenia jego zalety i ograniczenia. Praca zawiera również opis oprogramowania PC, które służy do sterowania i kontroli
+procesu dekompresji.
+
+Zatem praca spełnia kryteria pracy dyplomowej, która powinna zawierać następujące elementy:
+
+- wprowadzenie, w którym przedstawiony jest cel, zakres i motywacja pracy, a także krótkie podsumowanie głównych wyników i wniosków,
+- przegląd literatury, w którym omówione są istniejące rozwiązania i metody związane z tematem pracy, a także wskazane są luki i problemy do
+rozwiązania,
+- opis własnego rozwiązania, w którym zaprezentowana jest oryginalna koncepcja, projekt, implementacja i testowanie zaproponowanego rozwiązania, a
+także uzasadnienie jego założeń i wyborów,
+- analiza i ocena wyników, w której przedstawione są dane i metody użyte do oceny skuteczności, wydajności i poprawności zaproponowanego rozwiązania,
+a także porównanie z innymi rozwiązaniami i dyskusja o zaletach i ograniczeniach,
+- podsumowanie i wnioski, w którym podsumowana jest cała praca, wskazane są główne osiągnięcia i wnioski, a także zasygnalizowane są możliwe kierunki
+dalszych badań i rozwoju. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 3/5 </button><div class="content">
+Na podstawie przedstawionych fragmentów pracy dyplomowej, można stwierdzić, że praca wyraźnie określa problem i dotychczasowe sposoby radzenia sobie z
+nim, a następnie podejmuje próbę rozwiązania tego problemu lub uczynienia dotychczasowego rozwiązania bardziej atrakcyjnym.
+
+Problem, który praca stawia, to implementacja sprzętowego dekompresora danych testowych dla układów scalonych w formie programu wykonywanego przez
+mikrokontroler. Praca podaje, że dotychczasowe sposoby radzenia sobie z tym problemem polegały na stosowaniu specjalizowanych układów
+dekompresujących, które były drogie, skomplikowane i wymagały odpowiedniego projektowania. Praca proponuje alternatywne rozwiązanie, które polega na
+wykorzystaniu powszechnie dostępnego, taniego i łatwo programowalnego mikrokontrolera z rdzeniem AVR. Praca opisuje sposób projektowania i
+implementacji programowej emulacji dekompresora, a także sposób sterowania i kontroli jego pracy za pomocą oprogramowania PC. Praca prezentuje również
+wyniki eksperymentu, który pokazuje, że zaproponowane rozwiązanie działa poprawnie i może mieć zastosowanie w niektórych scenariuszach testowania
+układów scalonych. Praca wskazuje również na ograniczenia i wady programowej implementacji dekompresora, takie jak niska szybkość dekompresji i duża
+liczba instrukcji procesora. Praca podsumowuje, że programowa emulacja dekompresora nie zastąpi sprzętowej struktury dekompresora, ale może być
+użyteczna jako narzędzie do okresowej kontroli sprawności systemu mikroprocesorowego lub jako aplikacja na przenośnym nośniku. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 4/5 </button><div class="content">
+Na podstawie przedstawionych fragmentów pracy dyplomowej, można stwierdzić, że praca spełnia kryteria określenia problemu i dotychczasowych sposobów
+radzenia sobie z nim, a następnie podejmuje próbę rozwiązania tego problemu lub uczynienia dotychczasowego rozwiązania bardziej atrakcyjnym.
+
+Problem, który praca stawia, to projekt i implementacja sprzętowej dekompresji danych testowych dla układów scalonych. Praca podaje, że istniejące
+metody kompresji i dekompresji danych testowych są zbyt wolne lub zbyt kosztowne, i że istnieje potrzeba zaprojektowania układu dekompresującego dane
+za pomocą mikrokontrolerów AVR. Praca przedstawia również dotychczasowe rozwiązania i narzędzia, takie jak embedded deterministic test, ring
+generators, czy narzędzie kompresujące Mentor Graphics.
+
+Praca podejmuje próbę rozwiązania problemu poprzez zaprojektowanie i wykonanie sprzętowego środowiska eksperymentalnego sterowanego kontrolerami z
+rdzeniem AVR, opracowanie efektywnych algorytmów programowej emulacji poszczególnych podukładów dekompresora trzeciej generacji i ich implementacja w
+pamięci kontrolerów środowiska testowego, napisanie oprogramowania działającego na komputerze klasy PC, umożliwiającego nadzór i śledzenie pracy
+eksperymentalnego środowiska sprzętowego, przeprowadzenie badań i pomiarów czasu dekompresji oraz ocena efektywności i przydatności programowej
+implementacji. Praca prezentuje również szczegółowy opis części sprzętowej i programowej dekompresora, wraz z fotografiami, schematami i kodami
+źródłowymi.
+
+Praca uczyniła dotychczasowe rozwiązanie bardziej atrakcyjnym, ponieważ wykazała, że dekompresor trzeciej generacji może zostać zaimplementowany w
+formie programu wykonywanego przez powszechnie dostępny, tani mikrokontroler. Praca zwróciła również uwagę na potencjalne zastosowania opracowanej
+implementacji, takie jak programowa kontrola działania sterowników maszyn przemysłowych. Praca wyciągnęła również wnioski i uwagi końcowe na temat
+ograniczeń i możliwości rozwoju programowej emulacji dekompresora. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 5/5 </button><div class="content">
+Na podstawie przedstawionych fragmentów pracy dyplomowej, można stwierdzić, że praca spełnia podstawowe kryteria określenia problemu i celu
+badawczego. Praca dotyczy projektu i implementacji sprzętowej dekompresji danych testowych dla układów scalonych, co jest istotnym zagadnieniem w
+dziedzinie testowania układów cyfrowych. Praca podaje cel badawczy, którym jest wykazanie, że możliwe jest zaprojektowanie układu dekompresującego
+dane za pomocą mikrokontrolerów AVR, co może być korzystne ze względu na niski koszt i łatwą dostępność tych urządzeń. Praca również określa zakres
+pracy, który obejmuje zaprojektowanie i wykonanie sprzętowego środowiska eksperymentalnego, opracowanie algorytmów programowej emulacji podukładów
+dekompresora, napisanie oprogramowania do nadzoru i śledzenia pracy środowiska oraz przeprowadzenie badań i pomiarów czasu dekompresji i efektywności
+implementacji. Praca zawiera również fragment kodu źródłowego, który ilustruje sposób komunikacji z modułami dekompresora za pomocą portu RS232.
+
+Można więc uznać, że praca wyraźnie określa problem i dotychczasowe sposoby radzenia sobie z nim, a następnie podejmuje próbę rozwiązania tego
+problemu lub uczynienia dotychczasowego rozwiązania bardziej atrakcyjnym. Jednak, aby ocenić pełną wartość pracy, należałoby zapoznać się z całością
+tekstu, w tym z wprowadzeniem teoretycznym, analizą literatury, opisem metodologii, wynikami i wnioskami. 
+</div>
+
+<button type="button" class="collapsiblesub">PODSUMOWANIE - ODPOWIEDŹ NA POSTAWIONE PYTANIE </button><div class="content">
+Na podstawie opinii, można stwierdzić, że praca wyraźnie określa problem i dotychczasowe sposoby radzenia sobie z nim, a następnie podejmuje próbę
+rozwiązania tego problemu lub uczynienia dotychczasowego rozwiązania bardziej atrakcyjnym. Wszystkie opinie zgadzają się co do tego, że praca
+przedstawia istotny problem związany z testowaniem układów scalonych, omawia ewolucję metod kompresji i dekompresji danych testowych, proponuje własne
+rozwiązanie oparte na mikrokontrolerach AVR, a także prezentuje wyniki eksperymentu i ocenę efektywności i przydatności zaproponowanego rozwiązania.
+Opinie różnią się nieco w stopniu szczegółowości i ocenie poszczególnych elementów pracy, ale ogólnie są zgodne co do jej wartości i celowości. 
+</div>
+</div>
+
+<button type="button" class="collapsible">PYTANIE: Czy zasadniczym celem pracy jest głównie udowodnienie, że jej autor potrafi zrealizować określone zadanie, czy też zasadniczy cel pracy jest szerszy? </button><div class="content">
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 1/5 </button><div class="content">
+Na podstawie fragmentów pracy dyplomowej można stwierdzić, że zasadniczym celem pracy jest nie tylko udowodnienie, że jej autor potrafi zrealizować
+określone zadanie, ale także zbadanie i zaprezentowanie wyników i konkluzji związanych z emulacją sprzętowej dekompresji danych testowych. Autor pracy
+wykazuje się znajomością teoretycznych i praktycznych aspektów kompresji danych testowych, a także umiejętnością projektowania i programowania
+środowiska testowego z wykorzystaniem mikrokontrolerów AVR. Autor pracy nie ogranicza się do opisu samej implementacji, ale także analizuje
+efektywność i przydatność swojego rozwiązania, porównując je z innymi metodami kompresji. Autor pracy wykorzystuje również różne narzędzia i techniki,
+takie jak Bascom AVR, RS232, oscyloskop, czy pamięć EEPROM, aby zrealizować i zbadać swój projekt. Z tego wynika, że cel pracy jest szerszy niż tylko
+pokazanie, że autor potrafi zrealizować określone zadanie. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 2/5 </button><div class="content">
+Na podstawie fragmentów pracy dyplomowej można stwierdzić, że zasadniczym celem pracy jest **szerszy** niż tylko udowodnienie, że jej autor potrafi
+zrealizować określone zadanie. Praca nie tylko opisuje projekt i implementację sprzętowej dekompresji danych testowych dla układów scalonych, ale
+także przedstawia teoretyczne podstawy i algorytmy dekompresji, analizuje rezultaty eksperymentu i porównuje je z wynikami uzyskanymi za pomocą
+narzędzi firmy Mentor Graphics. Praca ma więc charakter badawczy i innowacyjny, a nie tylko praktyczny i demonstracyjny. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 3/5 </button><div class="content">
+Na podstawie fragmentów pracy dyplomowej można stwierdzić, że zasadniczy cel pracy jest szerszy niż tylko udowodnienie, że jej autor potrafi
+zrealizować określone zadanie. Praca ma na celu nie tylko zaprojektowanie i implementację sprzętowej dekompresji danych testowych dla układów
+scalonych, ale także zbadanie jej efektywności, przydatności i ograniczeń w porównaniu z innymi metodami testowania. Praca ma również charakter
+eksperymentalny i innowacyjny, ponieważ wykorzystuje mikrokontrolery AVR do emulacji dekompresora trzeciej generacji, co nie było wcześniej
+zrealizowane. Praca zawiera również analizę teoretyczną i praktyczną problemu dekompresji danych testowych, a także opis narzędzi i środowiska
+testowego. Z tych powodów można uznać, że praca ma szerszy zakres i cel niż tylko pokazanie umiejętności autora. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 4/5 </button><div class="content">
+Na podstawie fragmentów pracy dyplomowej można stwierdzić, że zasadniczym celem pracy jest nie tylko udowodnienie, że jej autor potrafi zrealizować
+określone zadanie, ale także zbadanie możliwości i ograniczeń programowej implementacji dekompresji danych testowych dla układów scalonych. Autor
+pracy porównuje swoje rozwiązanie z istniejącymi metodami sprzętowymi, analizuje parametry czasowe i efektywność swojej implementacji, oraz wskazuje
+potencjalne zastosowania i wnioski z eksperymentu. Z tego wynika, że cel pracy jest szerszy niż tylko pokazanie umiejętności programowania
+mikrokontrolerów. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 5/5 </button><div class="content">
+Na podstawie fragmentów pracy dyplomowej, można stwierdzić, że zasadniczym celem pracy jest **szerszy** niż tylko udowodnienie, że jej autor potrafi
+zrealizować określone zadanie. Praca nie tylko opisuje projekt i implementację sprzętowej dekompresji danych testowych dla układów scalonych, ale
+także opracowuje efektywne algorytmy programowej emulacji poszczególnych podukładów dekompresora, napisanie oprogramowania do nadzoru i śledzenia
+pracy eksperymentalnego środowiska sprzętowego, przeprowadzenie badań i pomiarów czasu dekompresji oraz ocenę efektywności i przydatności programowej
+implementacji. Praca wykazuje więc nie tylko umiejętności techniczne, ale także analityczne i badawcze autora. Praca ma charakter innowacyjny i może
+mieć zastosowanie w praktyce. 
+</div>
+
+<button type="button" class="collapsiblesub">PODSUMOWANIE - ODPOWIEDŹ NA POSTAWIONE PYTANIE </button><div class="content">
+Na podstawie opinii na temat fragmentów pracy dyplomowej, można odpowiedzieć na pytanie, że zasadniczy cel pracy jest **szerszy** niż tylko
+udowodnienie, że jej autor potrafi zrealizować określone zadanie. Wszystkie opinie wskazują, że praca ma na celu nie tylko zaprojektowanie i
+implementację sprzętowej dekompresji danych testowych dla układów scalonych, ale także zbadanie i zaprezentowanie wyników i konkluzji związanych z tym
+zagadnieniem. Praca wykazuje się więc nie tylko umiejętnościami technicznymi, ale także analitycznymi i badawczymi autora. Praca ma również charakter
+innowacyjny i może mieć zastosowanie w praktyce. Z tego wynika, że cel pracy jest szerszy niż tylko pokazanie umiejętności autora. 
+</div>
+</div>
+
+<button type="button" class="collapsible">PYTANIE: Czy w pracy można doszukać się informacji, że zrealizowano ją przy wykorzystaniu środków z grantu? Jeśli tak, jaka instytucja dostarczyła te środki? </button><div class="content">
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 1/5 </button><div class="content">
+Na podstawie przedstawionych fragmentów pracy dyplomowej nie można stwierdzić, że zrealizowano ją przy wykorzystaniu środków z grantu. Nie ma w nich
+żadnej informacji o źródłach finansowania, współpracy z innymi instytucjami lub podziękowaniach dla sponsorów. Możliwe, że takie informacje znajdują
+się w innych częściach pracy, np. na stronie tytułowej, w wstępie lub na końcu, ale na podstawie samych fragmentów nie można tego ustalić. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 2/5 </button><div class="content">
+Na podstawie przedstawionych fragmentów pracy dyplomowej nie można stwierdzić, że zrealizowano ją przy wykorzystaniu środków z grantu. Nie ma w nich
+żadnej informacji o źródle finansowania projektu lub współpracy z innymi instytucjami. Możliwe, że takie informacje znajdują się w innych częściach
+pracy, np. w podziękowaniach, ale na podstawie samych fragmentów nie można tego potwierdzić. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 3/5 </button><div class="content">
+Na podstawie przedstawionych fragmentów pracy dyplomowej nie można stwierdzić, że zrealizowano ją przy wykorzystaniu środków z grantu. Nie ma w nich
+żadnej informacji o źródle finansowania projektu, ani o współpracy z jakąkolwiek instytucją naukową lub przemysłową. Możliwe, że takie informacje
+znajdują się w innych częściach pracy, na przykład w podziękowaniach, ale na podstawie samych fragmentów nie można tego ustalić. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 4/5 </button><div class="content">
+Na podstawie przedstawionych fragmentów pracy dyplomowej, nie można jednoznacznie stwierdzić, czy zrealizowano ją przy wykorzystaniu środków z grantu.
+Nie ma w nich żadnej informacji o źródłach finansowania projektu, ani o współpracy z innymi instytucjami. Możliwe, że takie informacje znajdują się w
+innych częściach pracy, np. w podziękowaniach, wstępie lub bibliografii. Jednak na podstawie samych fragmentów nie można tego potwierdzić. 
+</div>
+
+<button type="button" class="collapsiblesub">Opinia o fragmentach pracy 5/5 </button><div class="content">
+Na podstawie podanych fragmentów pracy dyplomowej nie można stwierdzić, czy została ona zrealizowana przy wykorzystaniu środków z grantu. Nie ma w
+nich żadnej informacji o źródle finansowania projektu lub współpracy z innymi instytucjami. Możliwe, że takie informacje znajdują się w innych
+częściach pracy, np. w podziękowaniach, wstępie lub bibliografii. Aby to sprawdzić, należałoby zapoznać się z całą pracą lub zapytać autora. 
+</div>
+
+<button type="button" class="collapsiblesub">PODSUMOWANIE - ODPOWIEDŹ NA POSTAWIONE PYTANIE </button><div class="content">
+Na podstawie opinii na temat fragmentów pracy dyplomowej, nie można jednoznacznie odpowiedzieć na to pytanie. Wszystkie opinie wskazują, że w podanych
+fragmentach nie ma żadnej informacji o źródłach finansowania projektu lub współpracy z innymi instytucjami. Możliwe, że takie informacje znajdują się
+w innych częściach pracy, np. w podziękowaniach, wstępie lub bibliografii. Aby to sprawdzić, należałoby zapoznać się z całą pracą lub zapytać autora.
+Nie można więc na podstawie samych opinii stwierdzić, czy praca została zrealizowana przy wykorzystaniu środków z grantu, ani jaka instytucja
+dostarczyła te środki. 
+</div></div>
+        <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var collsub = document.getElementsByClassName("collapsiblesub");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+        for (i = 0; i < collsub.length; i++) {
+          collsub[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+        </script>
+      
+</pre>
+</body>
+
+</html>
